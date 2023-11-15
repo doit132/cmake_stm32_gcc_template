@@ -38,4 +38,11 @@
         "--pch-storage=disk"
     ],
     "clangd.serverCompletionRanking": true,
+    "cmake.configureOnOpen": true,
+    "search.exclude": {
+        // "**/.git": true,
+        "**/*.md": true,
+        "build": true,
+        ".cache": true,
+    },
 }

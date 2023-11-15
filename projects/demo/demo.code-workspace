@@ -1,7 +1,12 @@
 {
     "folders": [
         {
+            "name": "stm32_gcc_template-master",
             "path": "../.."
+        },
+        {
+            "name": "demo",
+            "path": "."
         }
     ],
     "settings": {

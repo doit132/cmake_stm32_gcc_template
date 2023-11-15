@@ -1,3 +1,4 @@
 projects/*/build/
 build/
 projects/*/.cache/
+.cache/
