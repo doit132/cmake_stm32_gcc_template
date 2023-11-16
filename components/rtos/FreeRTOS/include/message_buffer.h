@@ -63,7 +63,7 @@
 #define FREERTOS_MESSAGE_BUFFER_H
 
 #ifndef INC_FREERTOS_H
-        #error "include FreeRTOS.h must appear in source files before include message_buffer.h"
+	#error "include FreeRTOS.h must appear in source files before include message_buffer.h"
 #endif
 
 /* Message buffers are built onto of stream buffers. */
@@ -154,18 +154,15 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferCreate xMessageBufferCreate
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferCreate(xBufferSizeBytes) \
-        xStreamBufferGenericCreate((xBufferSizeBytes), (size_t)0, pdTRUE, NULL, NULL)
+#define xMessageBufferCreate(xBufferSizeBytes)                                                     \
+	xStreamBufferGenericCreate((xBufferSizeBytes), (size_t)0, pdTRUE, NULL, NULL)
 
 #if (configUSE_SB_COMPLETED_CALLBACK == 1)
-        #define xMessageBufferCreateWithCallback(xBufferSizeBytes,           \
-                                                 pxSendCompletedCallback,    \
-                                                 pxReceiveCompletedCallback) \
-                xStreamBufferGenericCreate((xBufferSizeBytes),               \
-                                           (size_t)0,                        \
-                                           pdTRUE,                           \
-                                           (pxSendCompletedCallback),        \
-                                           (pxReceiveCompletedCallback))
+	#define xMessageBufferCreateWithCallback(xBufferSizeBytes, pxSendCompletedCallback,        \
+						 pxReceiveCompletedCallback)                       \
+		xStreamBufferGenericCreate((xBufferSizeBytes), (size_t)0, pdTRUE,                  \
+					   (pxSendCompletedCallback),                              \
+					   (pxReceiveCompletedCallback))
 #endif
 
 /**
@@ -196,12 +193,14 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * structure.
  *
  * @param pxSendCompletedCallback Callback invoked when a new message is sent to the message buffer.
- * If the parameter is NULL or xMessageBufferCreate() is called without the parameter, then it will use the default
+ * If the parameter is NULL or xMessageBufferCreate() is called without the parameter, then it will
+ use the default
  * implementation provided by sbSEND_COMPLETED macro. To enable the callback,
  * configUSE_SB_COMPLETED_CALLBACK must be set to 1 in FreeRTOSConfig.h.
  *
  * @param pxReceiveCompletedCallback Callback invoked when a message is read from a
- * message buffer. If the parameter is NULL or xMessageBufferCreate() is called without the parameter, it will
+ * message buffer. If the parameter is NULL or xMessageBufferCreate() is called without the
+ parameter, it will
  * use the default implementation provided by sbRECEIVE_COMPLETED macro. To enable the callback,
  * configUSE_SB_COMPLETED_CALLBACK must be set to 1 in FreeRTOSConfig.h.
  *
@@ -242,28 +241,20 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferCreateStatic xMessageBufferCreateStatic
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferCreateStatic(xBufferSizeBytes, pucMessageBufferStorageArea, pxStaticMessageBuffer) \
-        xStreamBufferGenericCreateStatic((xBufferSizeBytes),                                             \
-                                         0,                                                              \
-                                         pdTRUE,                                                         \
-                                         (pucMessageBufferStorageArea),                                  \
-                                         (pxStaticMessageBuffer),                                        \
-                                         NULL,                                                           \
-                                         NULL)
+#define xMessageBufferCreateStatic(xBufferSizeBytes, pucMessageBufferStorageArea,                  \
+				   pxStaticMessageBuffer)                                          \
+	xStreamBufferGenericCreateStatic((xBufferSizeBytes), 0, pdTRUE,                            \
+					 (pucMessageBufferStorageArea), (pxStaticMessageBuffer),   \
+					 NULL, NULL)
 
 #if (configUSE_SB_COMPLETED_CALLBACK == 1)
-        #define xMessageBufferCreateStaticWithCallback(xBufferSizeBytes,            \
-                                                       pucMessageBufferStorageArea, \
-                                                       pxStaticMessageBuffer,       \
-                                                       pxSendCompletedCallback,     \
-                                                       pxReceiveCompletedCallback)  \
-                xStreamBufferGenericCreateStatic((xBufferSizeBytes),                \
-                                                 0,                                 \
-                                                 pdTRUE,                            \
-                                                 (pucMessageBufferStorageArea),     \
-                                                 (pxStaticMessageBuffer),           \
-                                                 (pxSendCompletedCallback),         \
-                                                 (pxReceiveCompletedCallback))
+	#define xMessageBufferCreateStaticWithCallback(                                            \
+		xBufferSizeBytes, pucMessageBufferStorageArea, pxStaticMessageBuffer,              \
+		pxSendCompletedCallback, pxReceiveCompletedCallback)                               \
+		xStreamBufferGenericCreateStatic(                                                  \
+			(xBufferSizeBytes), 0, pdTRUE, (pucMessageBufferStorageArea),              \
+			(pxStaticMessageBuffer), (pxSendCompletedCallback),                        \
+			(pxReceiveCompletedCallback))
 #endif
 
 /**
@@ -341,7 +332,8 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  *
  *  // Send an array to the message buffer, blocking for a maximum of 100ms to
  *  // wait for enough space to be available in the message buffer.
- *  xBytesSent = xMessageBufferSend( xMessageBuffer, ( void * ) ucArrayToSend, sizeof( ucArrayToSend ), x100ms );
+ *  xBytesSent = xMessageBufferSend( xMessageBuffer, ( void * ) ucArrayToSend, sizeof( ucArrayToSend
+ * ), x100ms );
  *
  *  if( xBytesSent != sizeof( ucArrayToSend ) )
  *  {
@@ -351,7 +343,8 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  *
  *  // Send the string to the message buffer.  Return immediately if there is
  *  // not enough space in the buffer.
- *  xBytesSent = xMessageBufferSend( xMessageBuffer, ( void * ) pcStringToSend, strlen( pcStringToSend ), 0 );
+ *  xBytesSent = xMessageBufferSend( xMessageBuffer, ( void * ) pcStringToSend, strlen(
+ * pcStringToSend ), 0 );
  *
  *  if( xBytesSent != strlen( pcStringToSend ) )
  *  {
@@ -363,8 +356,8 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferSend xMessageBufferSend
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferSend(xMessageBuffer, pvTxData, xDataLengthBytes, xTicksToWait) \
-        xStreamBufferSend((xMessageBuffer), (pvTxData), (xDataLengthBytes), (xTicksToWait))
+#define xMessageBufferSend(xMessageBuffer, pvTxData, xDataLengthBytes, xTicksToWait)               \
+	xStreamBufferSend((xMessageBuffer), (pvTxData), (xDataLengthBytes), (xTicksToWait))
 
 /**
  * message_buffer.h
@@ -468,8 +461,10 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferSendFromISR xMessageBufferSendFromISR
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferSendFromISR(xMessageBuffer, pvTxData, xDataLengthBytes, pxHigherPriorityTaskWoken) \
-        xStreamBufferSendFromISR((xMessageBuffer), (pvTxData), (xDataLengthBytes), (pxHigherPriorityTaskWoken))
+#define xMessageBufferSendFromISR(xMessageBuffer, pvTxData, xDataLengthBytes,                      \
+				  pxHigherPriorityTaskWoken)                                       \
+	xStreamBufferSendFromISR((xMessageBuffer), (pvTxData), (xDataLengthBytes),                 \
+				 (pxHigherPriorityTaskWoken))
 
 /**
  * message_buffer.h
@@ -557,8 +552,8 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferReceive xMessageBufferReceive
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferReceive(xMessageBuffer, pvRxData, xBufferLengthBytes, xTicksToWait) \
-        xStreamBufferReceive((xMessageBuffer), (pvRxData), (xBufferLengthBytes), (xTicksToWait))
+#define xMessageBufferReceive(xMessageBuffer, pvRxData, xBufferLengthBytes, xTicksToWait)          \
+	xStreamBufferReceive((xMessageBuffer), (pvRxData), (xBufferLengthBytes), (xTicksToWait))
 
 /**
  * message_buffer.h
@@ -658,8 +653,10 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferReceiveFromISR xMessageBufferReceiveFromISR
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferReceiveFromISR(xMessageBuffer, pvRxData, xBufferLengthBytes, pxHigherPriorityTaskWoken) \
-        xStreamBufferReceiveFromISR((xMessageBuffer), (pvRxData), (xBufferLengthBytes), (pxHigherPriorityTaskWoken))
+#define xMessageBufferReceiveFromISR(xMessageBuffer, pvRxData, xBufferLengthBytes,                 \
+				     pxHigherPriorityTaskWoken)                                    \
+	xStreamBufferReceiveFromISR((xMessageBuffer), (pvRxData), (xBufferLengthBytes),            \
+				    (pxHigherPriorityTaskWoken))
 
 /**
  * message_buffer.h
@@ -757,8 +754,8 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \ingroup MessageBufferManagement
  */
 #define xMessageBufferSpaceAvailable(xMessageBuffer) xStreamBufferSpacesAvailable(xMessageBuffer)
-#define xMessageBufferSpacesAvailable(xMessageBuffer) \
-        xStreamBufferSpacesAvailable(xMessageBuffer) /* Corrects typo in original macro name. */
+#define xMessageBufferSpacesAvailable(xMessageBuffer)                                              \
+	xStreamBufferSpacesAvailable(xMessageBuffer) /* Corrects typo in original macro name. */
 
 /**
  * message_buffer.h
@@ -777,14 +774,15 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferNextLengthBytes xMessageBufferNextLengthBytes
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferNextLengthBytes(xMessageBuffer) \
-        xStreamBufferNextMessageLengthBytes(xMessageBuffer) PRIVILEGED_FUNCTION;
+#define xMessageBufferNextLengthBytes(xMessageBuffer)                                              \
+	xStreamBufferNextMessageLengthBytes(xMessageBuffer) PRIVILEGED_FUNCTION;
 
 /**
  * message_buffer.h
  *
  * @code{c}
- * BaseType_t xMessageBufferSendCompletedFromISR( MessageBufferHandle_t xMessageBuffer, BaseType_t *pxHigherPriorityTaskWoken );
+ * BaseType_t xMessageBufferSendCompletedFromISR( MessageBufferHandle_t xMessageBuffer, BaseType_t
+ * *pxHigherPriorityTaskWoken );
  * @endcode
  *
  * For advanced users only.
@@ -817,14 +815,15 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferSendCompletedFromISR xMessageBufferSendCompletedFromISR
  * \ingroup StreamBufferManagement
  */
-#define xMessageBufferSendCompletedFromISR(xMessageBuffer, pxHigherPriorityTaskWoken) \
-        xStreamBufferSendCompletedFromISR((xMessageBuffer), (pxHigherPriorityTaskWoken))
+#define xMessageBufferSendCompletedFromISR(xMessageBuffer, pxHigherPriorityTaskWoken)              \
+	xStreamBufferSendCompletedFromISR((xMessageBuffer), (pxHigherPriorityTaskWoken))
 
 /**
  * message_buffer.h
  *
  * @code{c}
- * BaseType_t xMessageBufferReceiveCompletedFromISR( MessageBufferHandle_t xMessageBuffer, BaseType_t *pxHigherPriorityTaskWoken );
+ * BaseType_t xMessageBufferReceiveCompletedFromISR( MessageBufferHandle_t xMessageBuffer,
+ * BaseType_t *pxHigherPriorityTaskWoken );
  * @endcode
  *
  * For advanced users only.
@@ -858,8 +857,8 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferReceiveCompletedFromISR xMessageBufferReceiveCompletedFromISR
  * \ingroup StreamBufferManagement
  */
-#define xMessageBufferReceiveCompletedFromISR(xMessageBuffer, pxHigherPriorityTaskWoken) \
-        xStreamBufferReceiveCompletedFromISR((xMessageBuffer), (pxHigherPriorityTaskWoken))
+#define xMessageBufferReceiveCompletedFromISR(xMessageBuffer, pxHigherPriorityTaskWoken)           \
+	xStreamBufferReceiveCompletedFromISR((xMessageBuffer), (pxHigherPriorityTaskWoken))
 
 /* *INDENT-OFF* */
 #if defined(__cplusplus)

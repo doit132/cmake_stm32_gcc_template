@@ -38,4 +38,5 @@
     ],
     "clangd.serverCompletionRanking": true,
     "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "/home/doit/stm32_gcc_template-master/projects/stm32f4_std",
 }

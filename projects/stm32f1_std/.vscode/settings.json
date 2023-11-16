@@ -15,7 +15,7 @@
         "usart.h": "c",
         "sys.h": "c"
     },
-    "cmake.sourceDirectory": "/home/doit/stm32_gcc_template-master/projects/demo",
+    "cmake.sourceDirectory": "/home/doit/stm32_gcc_template-master/projects/stm32f1_std",
     "cmake.configureOnOpen": true,
     "search.exclude": {
         // "**/.git": true,
@@ -23,4 +23,5 @@
         "build": true,
         ".cache": true,
     },
+    "cmake.generator": "Unix Makefiles",
 }

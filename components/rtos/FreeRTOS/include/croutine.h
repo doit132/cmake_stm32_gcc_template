@@ -30,7 +30,7 @@
 #define CO_ROUTINE_H
 
 #ifndef INC_FREERTOS_H
-        #error "include FreeRTOS.h must appear in source files before include croutine.h"
+	#error "include FreeRTOS.h must appear in source files before include croutine.h"
 #endif
 
 #include "list.h"
@@ -44,20 +44,23 @@ extern "C" {
 /* Used to hide the implementation of the co-routine control block.  The
  * control block structure however has to be included in the header due to
  * the macro implementation of the co-routine functionality. */
-typedef void* CoRoutineHandle_t;
+typedef void *CoRoutineHandle_t;
 
 /* Defines the prototype to which co-routine functions must conform. */
 typedef void (*crCOROUTINE_CODE)(CoRoutineHandle_t, UBaseType_t);
 
 typedef struct corCoRoutineControlBlock {
-        crCOROUTINE_CODE pxCoRoutineFunction;
-        ListItem_t       xGenericListItem; /*< List item used to place the CRCB in ready and blocked queues. */
-        ListItem_t       xEventListItem;   /*< List item used to place the CRCB in event lists. */
-        UBaseType_t      uxPriority;       /*< The priority of the co-routine in relation to other co-routines. */
-        UBaseType_t
-                uxIndex; /*< Used to distinguish between co-routines when multiple co-routines use the same co-routine function. */
-        uint16_t uxState; /*< Used internally by the co-routine implementation. */
-} CRCB_t;                 /* Co-routine control block.  Note must be identical in size down to uxPriority with TCB_t. */
+	crCOROUTINE_CODE pxCoRoutineFunction;
+	ListItem_t xGenericListItem; /*< List item used to place the CRCB in ready and blocked
+					queues. */
+	ListItem_t xEventListItem;   /*< List item used to place the CRCB in event lists. */
+	UBaseType_t
+		uxPriority;  /*< The priority of the co-routine in relation to other co-routines. */
+	UBaseType_t uxIndex; /*< Used to distinguish between co-routines when multiple co-routines
+				use the same co-routine function. */
+	uint16_t uxState;    /*< Used internally by the co-routine implementation. */
+} CRCB_t; /* Co-routine control block.  Note must be identical in size down to uxPriority with
+	     TCB_t. */
 
 /**
  * croutine. h
@@ -91,7 +94,8 @@ typedef struct corCoRoutineControlBlock {
  * // Co-routine to be created.
  * void vFlashCoRoutine( CoRoutineHandle_t xHandle, UBaseType_t uxIndex )
  * {
- * // Variables in co-routines must be declared static if they must maintain value across a blocking call.
+ * // Variables in co-routines must be declared static if they must maintain value across a blocking
+ * call.
  * // This may not be necessary for const variables.
  * static const char cLedToFlash[ 2 ] = { 5, 6 };
  * static const TickType_t uxFlashRates[ 2 ] = { 200, 400 };
@@ -132,7 +136,8 @@ typedef struct corCoRoutineControlBlock {
  * \defgroup xCoRoutineCreate xCoRoutineCreate
  * \ingroup Tasks
  */
-BaseType_t xCoRoutineCreate(crCOROUTINE_CODE pxCoRoutineCode, UBaseType_t uxPriority, UBaseType_t uxIndex);
+BaseType_t xCoRoutineCreate(crCOROUTINE_CODE pxCoRoutineCode, UBaseType_t uxPriority,
+			    UBaseType_t uxIndex);
 
 /**
  * croutine. h
@@ -189,8 +194,8 @@ void vCoRoutineSchedule(void);
  * // Co-routine to be created.
  * void vACoRoutine( CoRoutineHandle_t xHandle, UBaseType_t uxIndex )
  * {
- * // Variables in co-routines must be declared static if they must maintain value across a blocking call.
- * static int32_t ulAVariable;
+ * // Variables in co-routines must be declared static if they must maintain value across a blocking
+ * call. static int32_t ulAVariable;
  *
  *   // Must start every co-routine with a call to crSTART();
  *   crSTART( xHandle );
@@ -207,9 +212,9 @@ void vCoRoutineSchedule(void);
  * \defgroup crSTART crSTART
  * \ingroup Tasks
  */
-#define crSTART(pxCRCB)                         \
-        switch (((CRCB_t*)(pxCRCB))->uxState) { \
-        case 0:
+#define crSTART(pxCRCB)                                                                            \
+	switch (((CRCB_t *)(pxCRCB))->uxState) {                                                   \
+	case 0:
 
 /**
  * croutine. h
@@ -224,8 +229,8 @@ void vCoRoutineSchedule(void);
  * // Co-routine to be created.
  * void vACoRoutine( CoRoutineHandle_t xHandle, UBaseType_t uxIndex )
  * {
- * // Variables in co-routines must be declared static if they must maintain value across a blocking call.
- * static int32_t ulAVariable;
+ * // Variables in co-routines must be declared static if they must maintain value across a blocking
+ * call. static int32_t ulAVariable;
  *
  *   // Must start every co-routine with a call to crSTART();
  *   crSTART( xHandle );
@@ -248,13 +253,13 @@ void vCoRoutineSchedule(void);
  * These macros are intended for internal use by the co-routine implementation
  * only.  The macros should not be used directly by application writers.
  */
-#define crSET_STATE0(xHandle)                           \
-        ((CRCB_t*)(xHandle))->uxState = (__LINE__ * 2); \
-        return;                                         \
+#define crSET_STATE0(xHandle)                                                                      \
+	((CRCB_t *)(xHandle))->uxState = (__LINE__ * 2);                                           \
+	return;                                                                                    \
 case (__LINE__ * 2):
-#define crSET_STATE1(xHandle)                                 \
-        ((CRCB_t*)(xHandle))->uxState = ((__LINE__ * 2) + 1); \
-        return;                                               \
+#define crSET_STATE1(xHandle)                                                                      \
+	((CRCB_t *)(xHandle))->uxState = ((__LINE__ * 2) + 1);                                     \
+	return;                                                                                    \
 case ((__LINE__ * 2) + 1):
 
 /**
@@ -282,7 +287,8 @@ case ((__LINE__ * 2) + 1):
  * // Co-routine to be created.
  * void vACoRoutine( CoRoutineHandle_t xHandle, UBaseType_t uxIndex )
  * {
- * // Variables in co-routines must be declared static if they must maintain value across a blocking call.
+ * // Variables in co-routines must be declared static if they must maintain value across a blocking
+ * call.
  * // This may not be necessary for const variables.
  * // We are to delay for 200ms.
  * static const xTickType xDelayTime = 200 / portTICK_PERIOD_MS;
@@ -305,11 +311,11 @@ case ((__LINE__ * 2) + 1):
  * \defgroup crDELAY crDELAY
  * \ingroup Tasks
  */
-#define crDELAY(xHandle, xTicksToDelay)                            \
-        if ((xTicksToDelay) > 0) {                                 \
-                vCoRoutineAddToDelayedList((xTicksToDelay), NULL); \
-        }                                                          \
-        crSET_STATE0((xHandle));
+#define crDELAY(xHandle, xTicksToDelay)                                                            \
+	if ((xTicksToDelay) > 0) {                                                                 \
+		vCoRoutineAddToDelayedList((xTicksToDelay), NULL);                                 \
+	}                                                                                          \
+	crSET_STATE0((xHandle));
 
 /**
  * @code{c}
@@ -365,9 +371,8 @@ case ((__LINE__ * 2) + 1):
  * // a queue.
  * static void prvCoRoutineFlashTask( CoRoutineHandle_t xHandle, UBaseType_t uxIndex )
  * {
- * // Variables in co-routines must be declared static if they must maintain value across a blocking call.
- * static BaseType_t xNumberToPost = 0;
- * static BaseType_t xResult;
+ * // Variables in co-routines must be declared static if they must maintain value across a blocking
+ * call. static BaseType_t xNumberToPost = 0; static BaseType_t xResult;
  *
  *  // Co-routines must begin with a call to crSTART().
  *  crSTART( xHandle );
@@ -396,18 +401,18 @@ case ((__LINE__ * 2) + 1):
  * \defgroup crQUEUE_SEND crQUEUE_SEND
  * \ingroup Tasks
  */
-#define crQUEUE_SEND(xHandle, pxQueue, pvItemToQueue, xTicksToWait, pxResult)           \
-        {                                                                               \
-                *(pxResult) = xQueueCRSend((pxQueue), (pvItemToQueue), (xTicksToWait)); \
-                if (*(pxResult) == errQUEUE_BLOCKED) {                                  \
-                        crSET_STATE0((xHandle));                                        \
-                        *pxResult = xQueueCRSend((pxQueue), (pvItemToQueue), 0);        \
-                }                                                                       \
-                if (*pxResult == errQUEUE_YIELD) {                                      \
-                        crSET_STATE1((xHandle));                                        \
-                        *pxResult = pdPASS;                                             \
-                }                                                                       \
-        }
+#define crQUEUE_SEND(xHandle, pxQueue, pvItemToQueue, xTicksToWait, pxResult)                      \
+	{                                                                                          \
+		*(pxResult) = xQueueCRSend((pxQueue), (pvItemToQueue), (xTicksToWait));            \
+		if (*(pxResult) == errQUEUE_BLOCKED) {                                             \
+			crSET_STATE0((xHandle));                                                   \
+			*pxResult = xQueueCRSend((pxQueue), (pvItemToQueue), 0);                   \
+		}                                                                                  \
+		if (*pxResult == errQUEUE_YIELD) {                                                 \
+			crSET_STATE1((xHandle));                                                   \
+			*pxResult = pdPASS;                                                        \
+		}                                                                                  \
+	}
 
 /**
  * croutine. h
@@ -463,9 +468,8 @@ case ((__LINE__ * 2) + 1):
  * // blocks on the queue until the number is received.
  * static void prvCoRoutineFlashWorkTask( CoRoutineHandle_t xHandle, UBaseType_t uxIndex )
  * {
- * // Variables in co-routines must be declared static if they must maintain value across a blocking call.
- * static BaseType_t xResult;
- * static UBaseType_t uxLEDToFlash;
+ * // Variables in co-routines must be declared static if they must maintain value across a blocking
+ * call. static BaseType_t xResult; static UBaseType_t uxLEDToFlash;
  *
  *  // All co-routines must start with a call to crSTART().
  *  crSTART( xHandle );
@@ -488,18 +492,18 @@ case ((__LINE__ * 2) + 1):
  * \defgroup crQUEUE_RECEIVE crQUEUE_RECEIVE
  * \ingroup Tasks
  */
-#define crQUEUE_RECEIVE(xHandle, pxQueue, pvBuffer, xTicksToWait, pxResult)           \
-        {                                                                             \
-                *(pxResult) = xQueueCRReceive((pxQueue), (pvBuffer), (xTicksToWait)); \
-                if (*(pxResult) == errQUEUE_BLOCKED) {                                \
-                        crSET_STATE0((xHandle));                                      \
-                        *(pxResult) = xQueueCRReceive((pxQueue), (pvBuffer), 0);      \
-                }                                                                     \
-                if (*(pxResult) == errQUEUE_YIELD) {                                  \
-                        crSET_STATE1((xHandle));                                      \
-                        *(pxResult) = pdPASS;                                         \
-                }                                                                     \
-        }
+#define crQUEUE_RECEIVE(xHandle, pxQueue, pvBuffer, xTicksToWait, pxResult)                        \
+	{                                                                                          \
+		*(pxResult) = xQueueCRReceive((pxQueue), (pvBuffer), (xTicksToWait));              \
+		if (*(pxResult) == errQUEUE_BLOCKED) {                                             \
+			crSET_STATE0((xHandle));                                                   \
+			*(pxResult) = xQueueCRReceive((pxQueue), (pvBuffer), 0);                   \
+		}                                                                                  \
+		if (*(pxResult) == errQUEUE_YIELD) {                                               \
+			crSET_STATE1((xHandle));                                                   \
+			*(pxResult) = pdPASS;                                                      \
+		}                                                                                  \
+	}
 
 /**
  * croutine. h
@@ -597,8 +601,8 @@ case ((__LINE__ * 2) + 1):
  * \defgroup crQUEUE_SEND_FROM_ISR crQUEUE_SEND_FROM_ISR
  * \ingroup Tasks
  */
-#define crQUEUE_SEND_FROM_ISR(pxQueue, pvItemToQueue, xCoRoutinePreviouslyWoken) \
-        xQueueCRSendFromISR((pxQueue), (pvItemToQueue), (xCoRoutinePreviouslyWoken))
+#define crQUEUE_SEND_FROM_ISR(pxQueue, pvItemToQueue, xCoRoutinePreviouslyWoken)                   \
+	xQueueCRSendFromISR((pxQueue), (pvItemToQueue), (xCoRoutinePreviouslyWoken))
 
 /**
  * croutine. h
@@ -712,8 +716,8 @@ case ((__LINE__ * 2) + 1):
  * \defgroup crQUEUE_RECEIVE_FROM_ISR crQUEUE_RECEIVE_FROM_ISR
  * \ingroup Tasks
  */
-#define crQUEUE_RECEIVE_FROM_ISR(pxQueue, pvBuffer, pxCoRoutineWoken) \
-        xQueueCRReceiveFromISR((pxQueue), (pvBuffer), (pxCoRoutineWoken))
+#define crQUEUE_RECEIVE_FROM_ISR(pxQueue, pvBuffer, pxCoRoutineWoken)                              \
+	xQueueCRReceiveFromISR((pxQueue), (pvBuffer), (pxCoRoutineWoken))
 
 /*
  * This function is intended for internal use by the co-routine macros only.
@@ -724,7 +728,7 @@ case ((__LINE__ * 2) + 1):
  * Removes the current co-routine from its ready list and places it in the
  * appropriate delayed list.
  */
-void vCoRoutineAddToDelayedList(TickType_t xTicksToDelay, List_t* pxEventList);
+void vCoRoutineAddToDelayedList(TickType_t xTicksToDelay, List_t *pxEventList);
 
 /*
  * This function is intended for internal use by the queue implementation only.
@@ -733,7 +737,7 @@ void vCoRoutineAddToDelayedList(TickType_t xTicksToDelay, List_t* pxEventList);
  * Removes the highest priority co-routine from the event list and places it in
  * the pending ready list.
  */
-BaseType_t xCoRoutineRemoveFromEventList(const List_t* pxEventList);
+BaseType_t xCoRoutineRemoveFromEventList(const List_t *pxEventList);
 
 /* *INDENT-OFF* */
 #ifdef __cplusplus
