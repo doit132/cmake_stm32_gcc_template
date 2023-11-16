@@ -79,7 +79,7 @@
 
 /**
   * @brief  Configures the priority grouping: pre-emption priority and subpriority.
-  * @param  NVIC_PriorityGroup: specifies the priority grouping bits length. 
+  * @param  NVIC_PriorityGroup: specifies the priority grouping bits length.
   *   This parameter can be one of the following values:
   *     @arg NVIC_PriorityGroup_0: 0 bits for pre-emption priority
   *                                4 bits for subpriority
@@ -146,7 +146,7 @@ void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
   *   This parameter can be one of the following values:
   *     @arg NVIC_VectTab_RAM
   *     @arg NVIC_VectTab_FLASH
-  * @param  Offset: Vector Table base offset field. This value must be a multiple 
+  * @param  Offset: Vector Table base offset field. This value must be a multiple
   *         of 0x200.
   * @retval None
   */

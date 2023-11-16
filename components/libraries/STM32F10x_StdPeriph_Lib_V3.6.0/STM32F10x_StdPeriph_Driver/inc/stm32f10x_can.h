@@ -332,7 +332,7 @@ typedef struct {
         #else
                 #define IS_CAN_FILTER_NUMBER(NUMBER) ((NUMBER) <= 27)
         #endif /* STM32F10X_CL */
-/**
+               /**
   * @}
   */
 

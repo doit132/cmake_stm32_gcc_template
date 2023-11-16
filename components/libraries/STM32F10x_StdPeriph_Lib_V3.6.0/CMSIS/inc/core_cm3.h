@@ -764,7 +764,7 @@ typedef struct {
 /* ###################  Compiler specific Intrinsics  ########################### */
 
         #if defined(__CC_ARM) /*------------------RealView Compiler -----------------*/
-        /* ARM armcc specific functions */
+                              /* ARM armcc specific functions */
 
                 #define __enable_fault_irq  __enable_fiq
                 #define __disable_fault_irq __disable_fiq
