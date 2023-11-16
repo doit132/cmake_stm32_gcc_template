@@ -74,7 +74,7 @@
 typedef struct tmrTimerControl /* The old naming convention is used to prevent breaking kernel aware debuggers. */
 {
         const char* pcTimerName;
-                /*<< Text name.  This is not used by the kernel, it is included simply to make debugging easier. */ /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+        /*<< Text name.  This is not used by the kernel, it is included simply to make debugging easier. */ /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
         ListItem_t
                 xTimerListItem; /*<< Standard linked list item as used by all kernel features for event management. */
         TickType_t xTimerPeriodInTicks; /*<< How quickly and often the timer expires. */

@@ -356,7 +356,7 @@ StreamBufferHandle_t xStreamBufferGenericCreate(size_t                         x
                 prvInitialiseNewStreamBuffer(
                         (StreamBuffer_t*)pucAllocatedMemory,
                         /* Structure at the start of the allocated memory. */
-                                /*lint !e9087 Safe cast as allocated memory is aligned. */ /*lint !e826 Area is not too small and alignment is guaranteed provided malloc() behaves as expected and returns aligned buffer. */
+                        /*lint !e9087 Safe cast as allocated memory is aligned. */ /*lint !e826 Area is not too small and alignment is guaranteed provided malloc() behaves as expected and returns aligned buffer. */
                                 pucAllocatedMemory + sizeof(StreamBuffer_t),
                         /* Storage area follows. */ /*lint !e9016 Indexing past structure valid for uint8_t pointer, also storage area has no alignment requirement. */
                         xBufferSizeBytes,
