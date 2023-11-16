@@ -5,7 +5,7 @@
             "path": "../.."
         },
         {
-            "name": "demo",
+            "name": "stm32f1_std",
             "path": "."
         }
     ],
