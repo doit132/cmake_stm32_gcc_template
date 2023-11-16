@@ -131,8 +131,6 @@ ADD_CUSTOM_COMMAND(
     TARGET "${PROJECT_NAME}"
     POST_BUILD
 
-    COMMAND mv compile_commands.json ${PATH_WORKSPACE_ROOT}
-
     # Build .hex and .bin files
     COMMAND ${OBJCOPY} -Obinary "${PROJECT_NAME}" "${OUTPUT_EXE_NAME}.bin"
     COMMAND ${OBJCOPY} -Oihex "${PROJECT_NAME}" "${OUTPUT_EXE_NAME}.hex"
