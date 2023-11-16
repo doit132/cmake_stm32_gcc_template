@@ -47,10 +47,10 @@ int main(void)
         GPIO_InitTypeDef GPIO_InitStructure;
 
         /*!< At this stage the microcontroller clock setting is already configured,
-       this is done through SystemInit() function which is called from startup
-       files before to branch to application main.
-       To reconfigure the default setting of SystemInit() function,
-       refer to system_stm32f4xx.c file */
+        this is done through SystemInit() function which is called from startup
+        files before to branch to application main.
+        To reconfigure the default setting of SystemInit() function,
+        refer to system_stm32f4xx.c file */
 
         /* SysTick end of count event each 10ms */
         RCC_GetClocksFreq(&RCC_Clocks);
