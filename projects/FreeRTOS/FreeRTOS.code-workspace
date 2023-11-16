@@ -1,0 +1,31 @@
+{
+    "folders": [
+        {
+            "name": "stm32_gcc_template-master",
+            "path": "../.."
+        },
+        {
+            "name": "FreeRTOS",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            ".clang-format": "yaml",
+            "*.toml": "toml",
+            "*.ahk": "ahk2",
+            ".clangd": "yaml",
+            ".clang-tidy": "yaml",
+            ".clang": "yaml",
+            "Kconfig": "kconfig",
+            ".ccls": "yaml",
+            "*.build": "makefile",
+            "*.bak": "Log",
+            "*.cmake": "cmake",
+            "*.ld": "linkerscript",
+            "usart.h": "c",
+            "sys.h": "c"
+        },
+        "cmake.options.statusBarVisibility": "compact"
+    }
+}

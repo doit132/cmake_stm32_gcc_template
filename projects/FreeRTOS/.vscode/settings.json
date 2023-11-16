@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        ".clang-format": "yaml",
+        "*.toml": "toml",
+        "*.ahk": "ahk2",
+        ".clangd": "yaml",
+        ".clang-tidy": "yaml",
+        ".clang": "yaml",
+        "Kconfig": "kconfig",
+        ".ccls": "yaml",
+        "*.build": "makefile",
+        "*.bak": "Log",
+        "*.cmake": "cmake",
+        "*.ld": "linkerscript",
+        "usart.h": "c",
+        "sys.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/doit/stm32_gcc_template-master/projects/FreeRTOS",
+    "cmake.configureOnOpen": true,
+    "search.exclude": {
+        // "**/.git": true,
+        "**/*.md": true,
+        "build": true,
+        ".cache": true,
+    },
+    "cmake.generator": "Unix Makefiles",
+}
