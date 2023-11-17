@@ -84,11 +84,11 @@
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 
-	#define CR1_CLEAR_MASK ((uint32_t)0x00CFE0FF)	 /*<! FMPI2C CR1 clear register Mask */
-	#define CR2_CLEAR_MASK ((uint32_t)0x07FF7FFF)	 /*<! FMPI2C CR2 clear register Mask */
+	#define CR1_CLEAR_MASK	  ((uint32_t)0x00CFE0FF) /*<! FMPI2C CR1 clear register Mask */
+	#define CR2_CLEAR_MASK	  ((uint32_t)0x07FF7FFF) /*<! FMPI2C CR2 clear register Mask */
 	#define TIMING_CLEAR_MASK ((uint32_t)0xF0FFFFFF) /*<! FMPI2C TIMING clear register Mask */
-	#define ERROR_IT_MASK ((uint32_t)0x00003F00) /*<! FMPI2C Error interrupt register Mask */
-	#define TC_IT_MASK ((uint32_t)0x000000C0)    /*<! FMPI2C TC interrupt register Mask */
+	#define ERROR_IT_MASK	  ((uint32_t)0x00003F00) /*<! FMPI2C Error interrupt register Mask */
+	#define TC_IT_MASK	  ((uint32_t)0x000000C0) /*<! FMPI2C TC interrupt register Mask */
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

@@ -109,7 +109,7 @@
 #define CR3_CLEAR_MASK ((uint16_t)(USART_CR3_RTSE | USART_CR3_CTSE))
 
 /*!< USART Interrupts mask */
-#define IT_MASK ((uint16_t)0x001F)
+#define IT_MASK	       ((uint16_t)0x001F)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

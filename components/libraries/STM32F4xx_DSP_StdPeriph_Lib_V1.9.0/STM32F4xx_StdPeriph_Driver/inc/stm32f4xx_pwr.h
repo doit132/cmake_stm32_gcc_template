@@ -69,12 +69,12 @@ extern "C" {
 	/** @defgroup PWR_Regulator_state_in_STOP_mode
 	 * @{
 	 */
-	#define PWR_MainRegulator_ON ((uint32_t)0x00000000)
+	#define PWR_MainRegulator_ON	 ((uint32_t)0x00000000)
 	#define PWR_LowPowerRegulator_ON PWR_CR_LPDS
 
 	/* --- PWR_Legacy ---*/
-	#define PWR_Regulator_ON PWR_MainRegulator_ON
-	#define PWR_Regulator_LowPower PWR_LowPowerRegulator_ON
+	#define PWR_Regulator_ON	 PWR_MainRegulator_ON
+	#define PWR_Regulator_LowPower	 PWR_LowPowerRegulator_ON
 
 	#define IS_PWR_REGULATOR(REGULATOR)                                                        \
 		(((REGULATOR) == PWR_MainRegulator_ON) || ((REGULATOR) == PWR_LowPowerRegulator_ON))
@@ -86,7 +86,7 @@ extern "C" {
 	/** @defgroup PWR_Regulator_state_in_UnderDrive_mode
 	 * @{
 	 */
-	#define PWR_MainRegulator_UnderDrive_ON PWR_CR_MRUDS
+	#define PWR_MainRegulator_UnderDrive_ON	    PWR_CR_MRUDS
 	#define PWR_LowPowerRegulator_UnderDrive_ON ((uint32_t)(PWR_CR_LPDS | PWR_CR_LPUDS))
 
 	#define IS_PWR_REGULATOR_UNDERDRIVE(REGULATOR)                                             \
@@ -148,17 +148,17 @@ extern "C" {
 	/** @defgroup PWR_Flag
 	 * @{
 	 */
-	#define PWR_FLAG_WU PWR_CSR_WUF
-	#define PWR_FLAG_SB PWR_CSR_SBF
-	#define PWR_FLAG_PVDO PWR_CSR_PVDO
-	#define PWR_FLAG_BRR PWR_CSR_BRR
-	#define PWR_FLAG_VOSRDY PWR_CSR_VOSRDY
-	#define PWR_FLAG_ODRDY PWR_CSR_ODRDY
+	#define PWR_FLAG_WU	 PWR_CSR_WUF
+	#define PWR_FLAG_SB	 PWR_CSR_SBF
+	#define PWR_FLAG_PVDO	 PWR_CSR_PVDO
+	#define PWR_FLAG_BRR	 PWR_CSR_BRR
+	#define PWR_FLAG_VOSRDY	 PWR_CSR_VOSRDY
+	#define PWR_FLAG_ODRDY	 PWR_CSR_ODRDY
 	#define PWR_FLAG_ODSWRDY PWR_CSR_ODSWRDY
-	#define PWR_FLAG_UDRDY PWR_CSR_UDSWRDY
+	#define PWR_FLAG_UDRDY	 PWR_CSR_UDSWRDY
 
 	/* --- FLAG Legacy ---*/
-	#define PWR_FLAG_REGRDY PWR_FLAG_VOSRDY
+	#define PWR_FLAG_REGRDY	 PWR_FLAG_VOSRDY
 
 	#define IS_PWR_GET_FLAG(FLAG)                                                              \
 		(((FLAG) == PWR_FLAG_WU) || ((FLAG) == PWR_FLAG_SB) ||                             \

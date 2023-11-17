@@ -144,9 +144,9 @@
 #define DMA_Stream5_IT_MASK (uint32_t)(DMA_Stream1_IT_MASK | (uint32_t)0x20000000)
 #define DMA_Stream6_IT_MASK (uint32_t)(DMA_Stream2_IT_MASK | (uint32_t)0x20000000)
 #define DMA_Stream7_IT_MASK (uint32_t)(DMA_Stream3_IT_MASK | (uint32_t)0x20000000)
-#define TRANSFER_IT_MASK (uint32_t)0x0F3C0F3C
-#define HIGH_ISR_MASK (uint32_t)0x20000000
-#define RESERVED_MASK (uint32_t)0x0F7D0F7D
+#define TRANSFER_IT_MASK    (uint32_t)0x0F3C0F3C
+#define HIGH_ISR_MASK	    (uint32_t)0x20000000
+#define RESERVED_MASK	    (uint32_t)0x0F7D0F7D
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

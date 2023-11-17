@@ -132,11 +132,11 @@ typedef struct {
 						  output */
 		#define DFSDM_Clock_InternalDiv2_Mode1                                             \
 			((uint32_t)0x00000008) /*!<  DFSDM clock coming from internal DFSDM_CKOUT  \
-						  output divided by 2 and clock change is on every                                                                      \
+						  output divided by 2 and clock change is on every \
 						  rising edge of DFSDM_CKOUT output signal */
 		#define DFSDM_Clock_InternalDiv2_Mode2                                             \
 			((uint32_t)0x0000000C) /*!<  DFSDM clock coming from internal DFSDM_CKOUT  \
-						  output divided by 2 and clock change is on every                                                                      \
+						  output divided by 2 and clock change is on every \
 						  falling edge of DFSDM_CKOUT output signal */
 
 		#define IS_DFSDM_CLOCK(CLOCK)                                                      \
@@ -158,7 +158,7 @@ typedef struct {
 						  output */
 		#define DFSDM_Input_Internal                                                       \
 			((uint32_t)0x00002000) /*!<  DFSDM clock coming from internal DFSDM_CKOUT  \
-						  output divided by 2 and clock change is on every                                                                      \
+						  output divided by 2 and clock change is on every \
 						  rising edge of DFSDM_CKOUT output signal */
 
 		#define IS_DFSDM_Input_MODE(INPUT)                                                 \
@@ -298,12 +298,15 @@ typedef struct {
 		 */
 		#define DFSDM_AWDSincOrder_Fast                                                    \
 			((uint32_t)0x00000000) /*!<  DFSDM Fast sinc filter */
-		#define DFSDM_AWDSincOrder_Sinc1 ((uint32_t)0x00400000) /*!<  DFSDM sinc1 filter   \
-									 */
-		#define DFSDM_AWDSincOrder_Sinc2 ((uint32_t)0x00800000) /*!<  DFSDM sinc2 filter   \
-									 */
-		#define DFSDM_AWDSincOrder_Sinc3 ((uint32_t)0x00C00000) /*!<  DFSDM sinc3 filter   \
-									 */
+		#define DFSDM_AWDSincOrder_Sinc1                                                   \
+			((uint32_t)0x00400000) /*!<  DFSDM sinc1 filter                            \
+						*/
+		#define DFSDM_AWDSincOrder_Sinc2                                                   \
+			((uint32_t)0x00800000) /*!<  DFSDM sinc2 filter                            \
+						*/
+		#define DFSDM_AWDSincOrder_Sinc3                                                   \
+			((uint32_t)0x00C00000) /*!<  DFSDM sinc3 filter                            \
+						*/
 
 		#define IS_DFSDM_AWD_SINC_ORDER(ORDER)                                             \
 			(((ORDER) == DFSDM_AWDSincOrder_Fast) ||                                   \
@@ -317,22 +320,30 @@ typedef struct {
 		/** @defgroup DFSDM_AWD_CHANNEL
 		 * @{
 		 */
-		#define DFSDM_AWDChannel0 ((uint32_t)0x00010000) /*!<  DFSDM AWDx guard channel 0  \
-								  */
-		#define DFSDM_AWDChannel1 ((uint32_t)0x00020000) /*!<  DFSDM AWDx guard channel 1  \
-								  */
-		#define DFSDM_AWDChannel2 ((uint32_t)0x00040000) /*!<  DFSDM AWDx guard channel 2  \
-								  */
-		#define DFSDM_AWDChannel3 ((uint32_t)0x00080000) /*!<  DFSDM AWDx guard channel 3  \
-								  */
-		#define DFSDM_AWDChannel4 ((uint32_t)0x00100000) /*!<  DFSDM AWDx guard channel 4  \
-								  */
-		#define DFSDM_AWDChannel5 ((uint32_t)0x00200000) /*!<  DFSDM AWDx guard channel 5  \
-								  */
-		#define DFSDM_AWDChannel6 ((uint32_t)0x00400000) /*!<  DFSDM AWDx guard channel 6  \
-								  */
-		#define DFSDM_AWDChannel7 ((uint32_t)0x00800000) /*!<  DFSDM AWDx guard channel 7  \
-								  */
+		#define DFSDM_AWDChannel0                                                          \
+			((uint32_t)0x00010000) /*!<  DFSDM AWDx guard channel 0                    \
+						*/
+		#define DFSDM_AWDChannel1                                                          \
+			((uint32_t)0x00020000) /*!<  DFSDM AWDx guard channel 1                    \
+						*/
+		#define DFSDM_AWDChannel2                                                          \
+			((uint32_t)0x00040000) /*!<  DFSDM AWDx guard channel 2                    \
+						*/
+		#define DFSDM_AWDChannel3                                                          \
+			((uint32_t)0x00080000) /*!<  DFSDM AWDx guard channel 3                    \
+						*/
+		#define DFSDM_AWDChannel4                                                          \
+			((uint32_t)0x00100000) /*!<  DFSDM AWDx guard channel 4                    \
+						*/
+		#define DFSDM_AWDChannel5                                                          \
+			((uint32_t)0x00200000) /*!<  DFSDM AWDx guard channel 5                    \
+						*/
+		#define DFSDM_AWDChannel6                                                          \
+			((uint32_t)0x00400000) /*!<  DFSDM AWDx guard channel 6                    \
+						*/
+		#define DFSDM_AWDChannel7                                                          \
+			((uint32_t)0x00800000) /*!<  DFSDM AWDx guard channel 7                    \
+						*/
 
 		#define IS_DFSDM_AWD_CHANNEL(CHANNEL)                                              \
 			(((CHANNEL) == DFSDM_AWDChannel0) || ((CHANNEL) == DFSDM_AWDChannel1) ||   \
@@ -346,7 +357,7 @@ typedef struct {
 		/** @defgroup DFSDM_Threshold_Selection
 		 * @{
 		 */
-		#define DFSDM_Threshold_Low ((uint8_t)0x00)  /*!<  DFSDM Low threshold */
+		#define DFSDM_Threshold_Low  ((uint8_t)0x00) /*!<  DFSDM Low threshold */
 		#define DFSDM_Threshold_High ((uint8_t)0x08) /*!<  DFSDM High threshold */
 
 		#define IS_DFSDM_Threshold(THR)                                                    \
@@ -607,8 +618,8 @@ typedef struct {
 		#define DFSDM_IT_REOC DFSDM_FLTCR2_REOCIE
 		#define DFSDM_IT_JOVR DFSDM_FLTCR2_JOVRIE
 		#define DFSDM_IT_ROVR DFSDM_FLTCR2_ROVRIE
-		#define DFSDM_IT_AWD DFSDM_FLTCR2_AWDIE
-		#define DFSDM_IT_SCD DFSDM_FLTCR2_SCDIE
+		#define DFSDM_IT_AWD  DFSDM_FLTCR2_AWDIE
+		#define DFSDM_IT_SCD  DFSDM_FLTCR2_SCDIE
 		#define DFSDM_IT_CKAB DFSDM_FLTCR2_CKABIE
 
 		#define IS_DFSDM_IT(IT)                                                            \
@@ -627,7 +638,7 @@ typedef struct {
 		#define DFSDM_FLAG_REOC DFSDM_FLTISR_REOCF
 		#define DFSDM_FLAG_JOVR DFSDM_FLTISR_JOVRF
 		#define DFSDM_FLAG_ROVR DFSDM_FLTISR_ROVRF
-		#define DFSDM_FLAG_AWD DFSDM_FLTISR_AWDF
+		#define DFSDM_FLAG_AWD	DFSDM_FLTISR_AWDF
 		#define DFSDM_FLAG_JCIP DFSDM_FLTISR_JCIP
 		#define DFSDM_FLAG_RCIP DFSDM_FLTISR_RCIP
 
@@ -800,7 +811,7 @@ typedef struct {
 
 		#define IS_DFSDM_DATA_RIGHT_BIT_SHIFT(SHIFT) ((SHIFT) < 0x20)
 
-		#define IS_DFSDM_OFFSET(OFFSET) ((OFFSET) < 0x01000000)
+		#define IS_DFSDM_OFFSET(OFFSET)		     ((OFFSET) < 0x01000000)
 
 		#if defined(STM32F413_423xx)
 			#define IS_DFSDM_ALL_CHANNEL(CHANNEL)                                      \
@@ -838,18 +849,18 @@ typedef struct {
 				(((FILTER) == DFSDM1_0) || ((FILTER) == DFSDM1_1))
 		#endif /* STM32F413_423xx */
 
-		#define IS_DFSDM_SINC_OVRSMPL_RATIO(RATIO) (((RATIO) < 0x401) && ((RATIO) >= 0x001))
+		#define IS_DFSDM_SINC_OVRSMPL_RATIO(RATIO)  (((RATIO) < 0x401) && ((RATIO) >= 0x001))
 
-		#define IS_DFSDM_INTG_OVRSMPL_RATIO(RATIO) (((RATIO) < 0x101) && ((RATIO) >= 0x001))
+		#define IS_DFSDM_INTG_OVRSMPL_RATIO(RATIO)  (((RATIO) < 0x101) && ((RATIO) >= 0x001))
 
 		#define IS_DFSDM_CLOCK_OUT_DIVIDER(DIVIDER) ((DIVIDER) < 0x101)
 
 		#define IS_DFSDM_CSD_THRESHOLD_VALUE(VALUE) ((VALUE) < 256)
 
-		#define IS_DFSDM_AWD_OVRSMPL_RATIO(RATIO) ((RATIO) < 33) && ((RATIO) >= 0x001)
+		#define IS_DFSDM_AWD_OVRSMPL_RATIO(RATIO)   ((RATIO) < 33) && ((RATIO) >= 0x001)
 
-		#define IS_DFSDM_HIGH_THRESHOLD(VALUE) ((VALUE) < 0x1000000)
-		#define IS_DFSDM_LOW_THRESHOLD(VALUE) ((VALUE) < 0x1000000)
+		#define IS_DFSDM_HIGH_THRESHOLD(VALUE)	    ((VALUE) < 0x1000000)
+		#define IS_DFSDM_LOW_THRESHOLD(VALUE)	    ((VALUE) < 0x1000000)
 /**
  * @}
  */

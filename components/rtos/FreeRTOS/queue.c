@@ -49,9 +49,9 @@
 #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE /*lint !e961 !e750 !e9021. */
 
 /* Constants used with the cRxLock and cTxLock structure members. */
-#define queueUNLOCKED ((int8_t)-1)
+#define queueUNLOCKED	       ((int8_t)-1)
 #define queueLOCKED_UNMODIFIED ((int8_t)0)
-#define queueINT8_MAX ((int8_t)127)
+#define queueINT8_MAX	       ((int8_t)127)
 
 /* When the Queue_t structure is used to represent a base queue its pcHead and
  * pcTail members are used as pointers into the queue storage area.  When the
@@ -62,8 +62,8 @@
  * is maintained.  The QueuePointers_t and SemaphoreData_t types are used to form
  * a union as their usage is mutually exclusive dependent on what the queue is
  * being used for. */
-#define uxQueueType pcHead
-#define queueQUEUE_IS_MUTEX NULL
+#define uxQueueType	       pcHead
+#define queueQUEUE_IS_MUTEX    NULL
 
 typedef struct QueuePointers {
 	int8_t *pcTail; /*< Points to the byte at the end of the queue storage area.  Once more byte
@@ -83,7 +83,7 @@ typedef struct SemaphoreData {
 /* Semaphores do not actually store or copy data, so have an item size of
  * zero. */
 #define queueSEMAPHORE_QUEUE_ITEM_LENGTH ((UBaseType_t)0)
-#define queueMUTEX_GIVE_BLOCK_TIME ((TickType_t)0U)
+#define queueMUTEX_GIVE_BLOCK_TIME	 ((TickType_t)0U)
 
 #if (configUSE_PREEMPTION == 0)
 

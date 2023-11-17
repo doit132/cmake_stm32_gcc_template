@@ -15,11 +15,11 @@
 
 // 任务优先级
 #define START_TASK_PRIO 3
-#define TASK1_PRIO 4
+#define TASK1_PRIO	4
 
 /* 任务堆栈大小	*/
-#define START_STK_SIZE 96
-#define TASK1_STK_SIZE 64
+#define START_STK_SIZE	96
+#define TASK1_STK_SIZE	64
 
 // 任务句柄
 TaskHandle_t StartTaskHandle = NULL;

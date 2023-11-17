@@ -71,7 +71,7 @@ extern "C" {
 
 	/*  CMSIS CM4 definitions */
 	#define __CM4_CMSIS_VERSION_MAIN (0x04) /*!< [31:16] CMSIS HAL main version   */
-	#define __CM4_CMSIS_VERSION_SUB (0x00)	/*!< [15:0]  CMSIS HAL sub version    */
+	#define __CM4_CMSIS_VERSION_SUB	 (0x00) /*!< [15:0]  CMSIS HAL sub version    */
 	#define __CM4_CMSIS_VERSION                                                                \
 		((__CM4_CMSIS_VERSION_MAIN << 16) |                                                \
 		 __CM4_CMSIS_VERSION_SUB) /*!< CMSIS HAL version number         */
@@ -79,13 +79,13 @@ extern "C" {
 	#define __CORTEX_M (0x04) /*!< Cortex-M Core                    */
 
 	#if defined(__CC_ARM)
-		#define __ASM __asm	  /*!< asm keyword for ARM Compiler          */
-		#define __INLINE __inline /*!< inline keyword for ARM Compiler       */
+		#define __ASM		__asm	 /*!< asm keyword for ARM Compiler          */
+		#define __INLINE	__inline /*!< inline keyword for ARM Compiler       */
 		#define __STATIC_INLINE static __inline
 
 	#elif defined(__GNUC__)
-		#define __ASM __asm	/*!< asm keyword for GNU Compiler          */
-		#define __INLINE inline /*!< inline keyword for GNU Compiler       */
+		#define __ASM		__asm  /*!< asm keyword for GNU Compiler          */
+		#define __INLINE	inline /*!< inline keyword for GNU Compiler       */
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__ICCARM__)
@@ -96,12 +96,12 @@ extern "C" {
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__TMS470__)
-		#define __ASM __asm /*!< asm keyword for TI CCS Compiler       */
+		#define __ASM		__asm /*!< asm keyword for TI CCS Compiler       */
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__TASKING__)
-		#define __ASM __asm	/*!< asm keyword for TASKING Compiler      */
-		#define __INLINE inline /*!< inline keyword for TASKING Compiler   */
+		#define __ASM		__asm  /*!< asm keyword for TASKING Compiler      */
+		#define __INLINE	inline /*!< inline keyword for TASKING Compiler   */
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__CSMC__)
@@ -259,10 +259,9 @@ extern "C" {
 		#ifdef __cplusplus
 			#define __I volatile /*!< Defines 'read only' permissions */
 		#else
-			#define __I                                                                \
-				volatile const /*!< Defines 'read only' permissions */
+			#define __I volatile const /*!< Defines 'read only' permissions */
 		#endif
-		#define __O volatile  /*!< Defines 'write only' permissions                */
+		#define __O  volatile /*!< Defines 'write only' permissions                */
 		#define __IO volatile /*!< Defines 'read / write' permissions              */
 
 /*@} end of group Cortex_M4 */
@@ -305,20 +304,20 @@ typedef union {
 } APSR_Type;
 
 		/* APSR Register Definitions */
-		#define APSR_N_Pos 31		       /*!< APSR: N Position */
-		#define APSR_N_Msk (1UL << APSR_N_Pos) /*!< APSR: N Mask */
+		#define APSR_N_Pos  31			/*!< APSR: N Position */
+		#define APSR_N_Msk  (1UL << APSR_N_Pos) /*!< APSR: N Mask */
 
-		#define APSR_Z_Pos 30		       /*!< APSR: Z Position */
-		#define APSR_Z_Msk (1UL << APSR_Z_Pos) /*!< APSR: Z Mask */
+		#define APSR_Z_Pos  30			/*!< APSR: Z Position */
+		#define APSR_Z_Msk  (1UL << APSR_Z_Pos) /*!< APSR: Z Mask */
 
-		#define APSR_C_Pos 29		       /*!< APSR: C Position */
-		#define APSR_C_Msk (1UL << APSR_C_Pos) /*!< APSR: C Mask */
+		#define APSR_C_Pos  29			/*!< APSR: C Position */
+		#define APSR_C_Msk  (1UL << APSR_C_Pos) /*!< APSR: C Mask */
 
-		#define APSR_V_Pos 28		       /*!< APSR: V Position */
-		#define APSR_V_Msk (1UL << APSR_V_Pos) /*!< APSR: V Mask */
+		#define APSR_V_Pos  28			/*!< APSR: V Position */
+		#define APSR_V_Msk  (1UL << APSR_V_Pos) /*!< APSR: V Mask */
 
-		#define APSR_Q_Pos 27		       /*!< APSR: Q Position */
-		#define APSR_Q_Msk (1UL << APSR_Q_Pos) /*!< APSR: Q Mask */
+		#define APSR_Q_Pos  27			/*!< APSR: Q Position */
+		#define APSR_Q_Msk  (1UL << APSR_Q_Pos) /*!< APSR: Q Mask */
 
 		#define APSR_GE_Pos 16			   /*!< APSR: GE Position */
 		#define APSR_GE_Msk (0xFUL << APSR_GE_Pos) /*!< APSR: GE Mask */
@@ -357,29 +356,29 @@ typedef union {
 } xPSR_Type;
 
 		/* xPSR Register Definitions */
-		#define xPSR_N_Pos 31		       /*!< xPSR: N Position */
-		#define xPSR_N_Msk (1UL << xPSR_N_Pos) /*!< xPSR: N Mask */
+		#define xPSR_N_Pos   31			 /*!< xPSR: N Position */
+		#define xPSR_N_Msk   (1UL << xPSR_N_Pos) /*!< xPSR: N Mask */
 
-		#define xPSR_Z_Pos 30		       /*!< xPSR: Z Position */
-		#define xPSR_Z_Msk (1UL << xPSR_Z_Pos) /*!< xPSR: Z Mask */
+		#define xPSR_Z_Pos   30			 /*!< xPSR: Z Position */
+		#define xPSR_Z_Msk   (1UL << xPSR_Z_Pos) /*!< xPSR: Z Mask */
 
-		#define xPSR_C_Pos 29		       /*!< xPSR: C Position */
-		#define xPSR_C_Msk (1UL << xPSR_C_Pos) /*!< xPSR: C Mask */
+		#define xPSR_C_Pos   29			 /*!< xPSR: C Position */
+		#define xPSR_C_Msk   (1UL << xPSR_C_Pos) /*!< xPSR: C Mask */
 
-		#define xPSR_V_Pos 28		       /*!< xPSR: V Position */
-		#define xPSR_V_Msk (1UL << xPSR_V_Pos) /*!< xPSR: V Mask */
+		#define xPSR_V_Pos   28			 /*!< xPSR: V Position */
+		#define xPSR_V_Msk   (1UL << xPSR_V_Pos) /*!< xPSR: V Mask */
 
-		#define xPSR_Q_Pos 27		       /*!< xPSR: Q Position */
-		#define xPSR_Q_Msk (1UL << xPSR_Q_Pos) /*!< xPSR: Q Mask */
+		#define xPSR_Q_Pos   27			 /*!< xPSR: Q Position */
+		#define xPSR_Q_Msk   (1UL << xPSR_Q_Pos) /*!< xPSR: Q Mask */
 
-		#define xPSR_IT_Pos 25			 /*!< xPSR: IT Position */
-		#define xPSR_IT_Msk (3UL << xPSR_IT_Pos) /*!< xPSR: IT Mask */
+		#define xPSR_IT_Pos  25			  /*!< xPSR: IT Position */
+		#define xPSR_IT_Msk  (3UL << xPSR_IT_Pos) /*!< xPSR: IT Mask */
 
-		#define xPSR_T_Pos 24		       /*!< xPSR: T Position */
-		#define xPSR_T_Msk (1UL << xPSR_T_Pos) /*!< xPSR: T Mask */
+		#define xPSR_T_Pos   24			 /*!< xPSR: T Position */
+		#define xPSR_T_Msk   (1UL << xPSR_T_Pos) /*!< xPSR: T Mask */
 
-		#define xPSR_GE_Pos 16			   /*!< xPSR: GE Position */
-		#define xPSR_GE_Msk (0xFUL << xPSR_GE_Pos) /*!< xPSR: GE Mask */
+		#define xPSR_GE_Pos  16			    /*!< xPSR: GE Position */
+		#define xPSR_GE_Msk  (0xFUL << xPSR_GE_Pos) /*!< xPSR: GE Mask */
 
 		#define xPSR_ISR_Pos 0				   /*!< xPSR: ISR Position */
 		#define xPSR_ISR_Msk (0x1FFUL /*<< xPSR_ISR_Pos*/) /*!< xPSR: ISR Mask */
@@ -397,15 +396,16 @@ typedef union {
 } CONTROL_Type;
 
 		/* CONTROL Register Definitions */
-		#define CONTROL_FPCA_Pos 2			   /*!< CONTROL: FPCA Position */
-		#define CONTROL_FPCA_Msk (1UL << CONTROL_FPCA_Pos) /*!< CONTROL: FPCA Mask */
+		#define CONTROL_FPCA_Pos  2			    /*!< CONTROL: FPCA Position */
+		#define CONTROL_FPCA_Msk  (1UL << CONTROL_FPCA_Pos) /*!< CONTROL: FPCA Mask */
 
 		#define CONTROL_SPSEL_Pos 1			     /*!< CONTROL: SPSEL Position */
 		#define CONTROL_SPSEL_Msk (1UL << CONTROL_SPSEL_Pos) /*!< CONTROL: SPSEL Mask */
 
 		#define CONTROL_nPRIV_Pos 0 /*!< CONTROL: nPRIV Position */
-		#define CONTROL_nPRIV_Msk (1UL /*<< CONTROL_nPRIV_Pos*/) /*!< CONTROL: nPRIV Mask  \
-									  */
+		#define CONTROL_nPRIV_Msk                                                          \
+			(1UL /*<< CONTROL_nPRIV_Pos*/) /*!< CONTROL: nPRIV Mask                    \
+							*/
 
 /*@} end of group CMSIS_CORE */
 
@@ -458,16 +458,16 @@ typedef struct {
 	__IO uint32_t CCR;    /*!< Offset: 0x014 (R/W)  Configuration Control Register    */
 	__IO uint8_t SHP[12]; /*!< Offset: 0x018 (R/W)  System Handlers Priority Registers (4-7,
 				 8-11, 12-15) */
-	__IO uint32_t SHCSR;  /*!< Offset: 0x024 (R/W)  System Handler Control and State Register  */
-	__IO uint32_t CFSR;   /*!< Offset: 0x028 (R/W)  Configurable Fault Status Register   */
-	__IO uint32_t HFSR;   /*!< Offset: 0x02C (R/W)  HardFault Status Register   */
-	__IO uint32_t DFSR;   /*!< Offset: 0x030 (R/W)  Debug Fault Status Register   */
-	__IO uint32_t MMFAR;  /*!< Offset: 0x034 (R/W)  MemManage Fault Address Register  */
-	__IO uint32_t BFAR;   /*!< Offset: 0x038 (R/W)  BusFault Address Register   */
-	__IO uint32_t AFSR;   /*!< Offset: 0x03C (R/W)  Auxiliary Fault Status Register   */
-	__I uint32_t PFR[2];  /*!< Offset: 0x040 (R/ )  Processor Feature Register  */
-	__I uint32_t DFR;     /*!< Offset: 0x048 (R/ )  Debug Feature Register     */
-	__I uint32_t ADR;     /*!< Offset: 0x04C (R/ )  Auxiliary Feature Register     */
+	__IO uint32_t SHCSR; /*!< Offset: 0x024 (R/W)  System Handler Control and State Register  */
+	__IO uint32_t CFSR;  /*!< Offset: 0x028 (R/W)  Configurable Fault Status Register   */
+	__IO uint32_t HFSR;  /*!< Offset: 0x02C (R/W)  HardFault Status Register   */
+	__IO uint32_t DFSR;  /*!< Offset: 0x030 (R/W)  Debug Fault Status Register   */
+	__IO uint32_t MMFAR; /*!< Offset: 0x034 (R/W)  MemManage Fault Address Register  */
+	__IO uint32_t BFAR;  /*!< Offset: 0x038 (R/W)  BusFault Address Register   */
+	__IO uint32_t AFSR;  /*!< Offset: 0x03C (R/W)  Auxiliary Fault Status Register   */
+	__I uint32_t PFR[2]; /*!< Offset: 0x040 (R/ )  Processor Feature Register  */
+	__I uint32_t DFR;    /*!< Offset: 0x048 (R/ )  Debug Feature Register     */
+	__I uint32_t ADR;    /*!< Offset: 0x04C (R/ )  Auxiliary Feature Register     */
 	__I uint32_t MMFR[4]; /*!< Offset: 0x050 (R/ )  Memory Model Feature Register */
 	__I uint32_t ISAR[5]; /*!< Offset: 0x060 (R/ )  Instruction Set Attributes Register */
 	uint32_t RESERVED0[5];
@@ -715,8 +715,8 @@ typedef struct {
 		#define SCB_DFSR_DWTTRAP_Msk                                                       \
 			(1UL << SCB_DFSR_DWTTRAP_Pos) /*!< SCB DFSR: DWTTRAP Mask */
 
-		#define SCB_DFSR_BKPT_Pos 1			     /*!< SCB DFSR: BKPT Position */
-		#define SCB_DFSR_BKPT_Msk (1UL << SCB_DFSR_BKPT_Pos) /*!< SCB DFSR: BKPT Mask */
+		#define SCB_DFSR_BKPT_Pos   1 /*!< SCB DFSR: BKPT Position */
+		#define SCB_DFSR_BKPT_Msk   (1UL << SCB_DFSR_BKPT_Pos) /*!< SCB DFSR: BKPT Mask */
 
 		#define SCB_DFSR_HALTED_Pos 0 /*!< SCB DFSR: HALTED Position */
 		#define SCB_DFSR_HALTED_Msk                                                        \
@@ -874,15 +874,16 @@ typedef struct {
 			(0xFUL /*<< ITM_TPR_PRIVMASK_Pos*/) /*!< ITM TPR: PRIVMASK Mask */
 
 		/* ITM Trace Control Register Definitions */
-		#define ITM_TCR_BUSY_Pos 23			   /*!< ITM TCR: BUSY Position */
-		#define ITM_TCR_BUSY_Msk (1UL << ITM_TCR_BUSY_Pos) /*!< ITM TCR: BUSY Mask */
+		#define ITM_TCR_BUSY_Pos       23 /*!< ITM TCR: BUSY Position */
+		#define ITM_TCR_BUSY_Msk       (1UL << ITM_TCR_BUSY_Pos) /*!< ITM TCR: BUSY Mask */
 
 		#define ITM_TCR_TraceBusID_Pos 16 /*!< ITM TCR: ATBID Position */
 		#define ITM_TCR_TraceBusID_Msk                                                     \
 			(0x7FUL << ITM_TCR_TraceBusID_Pos) /*!< ITM TCR: ATBID Mask */
 
-		#define ITM_TCR_GTSFREQ_Pos 10 /*!< ITM TCR: Global timestamp frequency Position   \
-						*/
+		#define ITM_TCR_GTSFREQ_Pos                                                        \
+			10 /*!< ITM TCR: Global timestamp frequency Position                       \
+			    */
 		#define ITM_TCR_GTSFREQ_Msk                                                        \
 			(3UL                                                                       \
 			 << ITM_TCR_GTSFREQ_Pos) /*!< ITM TCR: Global timestamp frequency Mask */
@@ -892,19 +893,21 @@ typedef struct {
 			(3UL << ITM_TCR_TSPrescale_Pos) /*!< ITM TCR: TSPrescale Mask */
 
 		#define ITM_TCR_SWOENA_Pos 4 /*!< ITM TCR: SWOENA Position */
-		#define ITM_TCR_SWOENA_Msk (1UL << ITM_TCR_SWOENA_Pos) /*!< ITM TCR: SWOENA Mask   \
-									*/
+		#define ITM_TCR_SWOENA_Msk                                                         \
+			(1UL << ITM_TCR_SWOENA_Pos) /*!< ITM TCR: SWOENA Mask                      \
+						     */
 
 		#define ITM_TCR_DWTENA_Pos 3 /*!< ITM TCR: DWTENA Position */
-		#define ITM_TCR_DWTENA_Msk (1UL << ITM_TCR_DWTENA_Pos) /*!< ITM TCR: DWTENA Mask   \
-									*/
+		#define ITM_TCR_DWTENA_Msk                                                         \
+			(1UL << ITM_TCR_DWTENA_Pos) /*!< ITM TCR: DWTENA Mask                      \
+						     */
 
 		#define ITM_TCR_SYNCENA_Pos 2 /*!< ITM TCR: SYNCENA Position */
 		#define ITM_TCR_SYNCENA_Msk                                                        \
 			(1UL << ITM_TCR_SYNCENA_Pos) /*!< ITM TCR: SYNCENA Mask */
 
-		#define ITM_TCR_TSENA_Pos 1			     /*!< ITM TCR: TSENA Position */
-		#define ITM_TCR_TSENA_Msk (1UL << ITM_TCR_TSENA_Pos) /*!< ITM TCR: TSENA Mask */
+		#define ITM_TCR_TSENA_Pos  1 /*!< ITM TCR: TSENA Position */
+		#define ITM_TCR_TSENA_Msk  (1UL << ITM_TCR_TSENA_Pos) /*!< ITM TCR: TSENA Mask */
 
 		#define ITM_TCR_ITMENA_Pos 0 /*!< ITM TCR: ITM Enable bit Position */
 		#define ITM_TCR_ITMENA_Msk                                                         \
@@ -931,8 +934,9 @@ typedef struct {
 			(1UL << ITM_LSR_ByteAcc_Pos) /*!< ITM LSR: ByteAcc Mask */
 
 		#define ITM_LSR_Access_Pos 1 /*!< ITM LSR: Access Position */
-		#define ITM_LSR_Access_Msk (1UL << ITM_LSR_Access_Pos) /*!< ITM LSR: Access Mask   \
-									*/
+		#define ITM_LSR_Access_Msk                                                         \
+			(1UL << ITM_LSR_Access_Pos) /*!< ITM LSR: Access Mask                      \
+						     */
 
 		#define ITM_LSR_Present_Pos 0 /*!< ITM LSR: Present Position */
 		#define ITM_LSR_Present_Msk                                                        \
@@ -1323,11 +1327,11 @@ typedef struct {
 /** \brief  Structure type to access the Memory Protection Unit (MPU).
  */
 typedef struct {
-	__I uint32_t TYPE;     /*!< Offset: 0x000 (R/ )  MPU Type Register     */
-	__IO uint32_t CTRL;    /*!< Offset: 0x004 (R/W)  MPU Control Register    */
-	__IO uint32_t RNR;     /*!< Offset: 0x008 (R/W)  MPU Region RNRber Register     */
-	__IO uint32_t RBAR;    /*!< Offset: 0x00C (R/W)  MPU Region Base Address Register    */
-	__IO uint32_t RASR;    /*!< Offset: 0x010 (R/W)  MPU Region Attribute and Size Register    */
+	__I uint32_t TYPE;  /*!< Offset: 0x000 (R/ )  MPU Type Register     */
+	__IO uint32_t CTRL; /*!< Offset: 0x004 (R/W)  MPU Control Register    */
+	__IO uint32_t RNR;  /*!< Offset: 0x008 (R/W)  MPU Region RNRber Register     */
+	__IO uint32_t RBAR; /*!< Offset: 0x00C (R/W)  MPU Region Base Address Register    */
+	__IO uint32_t RASR; /*!< Offset: 0x010 (R/W)  MPU Region Attribute and Size Register    */
 	__IO uint32_t RBAR_A1; /*!< Offset: 0x014 (R/W)  MPU Alias 1 Region Base Address Register */
 	__IO uint32_t
 		RASR_A1; /*!< Offset: 0x018 (R/W)  MPU Alias 1 Region Attribute and Size Register */
@@ -1663,8 +1667,9 @@ typedef struct {
 		#define CoreDebug_DHCSR_C_HALT_Msk                                                 \
 			(1UL << CoreDebug_DHCSR_C_HALT_Pos) /*!< CoreDebug DHCSR: C_HALT Mask */
 
-		#define CoreDebug_DHCSR_C_DEBUGEN_Pos 0 /*!< CoreDebug DHCSR: C_DEBUGEN Position   \
-							 */
+		#define CoreDebug_DHCSR_C_DEBUGEN_Pos                                              \
+			0 /*!< CoreDebug DHCSR: C_DEBUGEN Position                                 \
+			   */
 		#define CoreDebug_DHCSR_C_DEBUGEN_Msk                                              \
 			(1UL /*<< CoreDebug_DHCSR_C_DEBUGEN_Pos*/) /*!< CoreDebug DHCSR: C_DEBUGEN \
 								      Mask */
@@ -1708,14 +1713,16 @@ typedef struct {
 			(1UL << CoreDebug_DEMCR_VC_HARDERR_Pos) /*!< CoreDebug DEMCR: VC_HARDERR   \
 								   Mask */
 
-		#define CoreDebug_DEMCR_VC_INTERR_Pos 9 /*!< CoreDebug DEMCR: VC_INTERR Position   \
-							 */
+		#define CoreDebug_DEMCR_VC_INTERR_Pos                                              \
+			9 /*!< CoreDebug DEMCR: VC_INTERR Position                                 \
+			   */
 		#define CoreDebug_DEMCR_VC_INTERR_Msk                                              \
 			(1UL                                                                       \
 			 << CoreDebug_DEMCR_VC_INTERR_Pos) /*!< CoreDebug DEMCR: VC_INTERR Mask */
 
-		#define CoreDebug_DEMCR_VC_BUSERR_Pos 8 /*!< CoreDebug DEMCR: VC_BUSERR Position   \
-							 */
+		#define CoreDebug_DEMCR_VC_BUSERR_Pos                                              \
+			8 /*!< CoreDebug DEMCR: VC_BUSERR Position                                 \
+			   */
 		#define CoreDebug_DEMCR_VC_BUSERR_Msk                                              \
 			(1UL                                                                       \
 			 << CoreDebug_DEMCR_VC_BUSERR_Pos) /*!< CoreDebug DEMCR: VC_BUSERR Mask */
@@ -1726,8 +1733,9 @@ typedef struct {
 			(1UL << CoreDebug_DEMCR_VC_STATERR_Pos) /*!< CoreDebug DEMCR: VC_STATERR   \
 								   Mask */
 
-		#define CoreDebug_DEMCR_VC_CHKERR_Pos 6 /*!< CoreDebug DEMCR: VC_CHKERR Position   \
-							 */
+		#define CoreDebug_DEMCR_VC_CHKERR_Pos                                              \
+			6 /*!< CoreDebug DEMCR: VC_CHKERR Position                                 \
+			   */
 		#define CoreDebug_DEMCR_VC_CHKERR_Msk                                              \
 			(1UL                                                                       \
 			 << CoreDebug_DEMCR_VC_CHKERR_Pos) /*!< CoreDebug DEMCR: VC_CHKERR Mask */
@@ -1758,25 +1766,26 @@ typedef struct {
  */
 
 		/* Memory mapping of Cortex-M4 Hardware */
-		#define SCS_BASE (0xE000E000UL)	      /*!< System Control Space Base Address  */
-		#define ITM_BASE (0xE0000000UL)	      /*!< ITM Base Address                   */
-		#define DWT_BASE (0xE0001000UL)	      /*!< DWT Base Address                   */
-		#define TPI_BASE (0xE0040000UL)	      /*!< TPI Base Address                   */
+		#define SCS_BASE       (0xE000E000UL) /*!< System Control Space Base Address  */
+		#define ITM_BASE       (0xE0000000UL) /*!< ITM Base Address                   */
+		#define DWT_BASE       (0xE0001000UL) /*!< DWT Base Address                   */
+		#define TPI_BASE       (0xE0040000UL) /*!< TPI Base Address                   */
 		#define CoreDebug_BASE (0xE000EDF0UL) /*!< Core Debug Base Address            */
 		#define SysTick_BASE                                                               \
 			(SCS_BASE + 0x0010UL)		/*!< SysTick Base Address               */
 		#define NVIC_BASE (SCS_BASE + 0x0100UL) /*!< NVIC Base Address                  */
-		#define SCB_BASE (SCS_BASE + 0x0D00UL)	/*!< System Control Block Base Address  */
+		#define SCB_BASE  (SCS_BASE + 0x0D00UL) /*!< System Control Block Base Address  */
 
-		#define SCnSCB ((SCnSCB_Type *)SCS_BASE) /*!< System control Register not in SCB   \
-							  */
-		#define SCB ((SCB_Type *)SCB_BASE)	 /*!< SCB configuration struct           */
+		#define SCnSCB                                                                     \
+			((SCnSCB_Type *)SCS_BASE)  /*!< System control Register not in SCB         \
+						    */
+		#define SCB ((SCB_Type *)SCB_BASE) /*!< SCB configuration struct           */
 		#define SysTick                                                                    \
 			((SysTick_Type *)SysTick_BASE) /*!< SysTick configuration struct       */
 		#define NVIC ((NVIC_Type *)NVIC_BASE)  /*!< NVIC configuration struct          */
-		#define ITM ((ITM_Type *)ITM_BASE)     /*!< ITM configuration struct           */
-		#define DWT ((DWT_Type *)DWT_BASE)     /*!< DWT configuration struct           */
-		#define TPI ((TPI_Type *)TPI_BASE)     /*!< TPI configuration struct           */
+		#define ITM  ((ITM_Type *)ITM_BASE)    /*!< ITM configuration struct           */
+		#define DWT  ((DWT_Type *)DWT_BASE)    /*!< DWT configuration struct           */
+		#define TPI  ((TPI_Type *)TPI_BASE)    /*!< TPI configuration struct           */
 		#define CoreDebug                                                                  \
 			((CoreDebug_Type *)CoreDebug_BASE) /*!< Core Debug configuration struct */
 

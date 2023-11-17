@@ -101,7 +101,7 @@
 /* Private typedef -----------------------------------------------------------*/
 /* Private defines -----------------------------------------------------------*/
 
-	#define CFGR_INIT_CLEAR_MASK ((uint32_t)0xFFCFF1FE)
+	#define CFGR_INIT_CLEAR_MASK	     ((uint32_t)0xFFCFF1FE)
 	#define CFGR_TRIG_AND_POL_CLEAR_MASK ((uint32_t)0xFFF91FFF)
 /* Private macros ------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

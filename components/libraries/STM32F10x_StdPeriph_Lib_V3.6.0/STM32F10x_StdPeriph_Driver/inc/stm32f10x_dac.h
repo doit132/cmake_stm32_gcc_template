@@ -91,7 +91,7 @@ typedef struct {
 					  DAC channel only in High-density devices*/
 	#define DAC_Trigger_T3_TRGO                                                                \
 		((uint32_t)0x0000000C) /*!< TIM8 TRGO selected as external conversion trigger for  \
-					  DAC channel only in Connectivity line, Medium-density                                                         \
+					  DAC channel only in Connectivity line, Medium-density    \
 					  and Low-density Value Line devices */
 	#define DAC_Trigger_T7_TRGO                                                                \
 		((uint32_t)0x00000014) /*!< TIM7 TRGO selected as external conversion trigger for  \
@@ -101,7 +101,7 @@ typedef struct {
 					  DAC channel */
 	#define DAC_Trigger_T15_TRGO                                                               \
 		((uint32_t)0x0000001C) /*!< TIM15 TRGO selected as external conversion trigger for \
-					  DAC channel only in Medium-density and Low-density Value                                                      \
+					  DAC channel only in Medium-density and Low-density Value \
 					  Line devices*/
 	#define DAC_Trigger_T2_TRGO                                                                \
 		((uint32_t)0x00000024) /*!< TIM2 TRGO selected as external conversion trigger for  \
@@ -131,8 +131,8 @@ typedef struct {
  * @{
  */
 
-	#define DAC_WaveGeneration_None ((uint32_t)0x00000000)
-	#define DAC_WaveGeneration_Noise ((uint32_t)0x00000040)
+	#define DAC_WaveGeneration_None	    ((uint32_t)0x00000000)
+	#define DAC_WaveGeneration_Noise    ((uint32_t)0x00000040)
 	#define DAC_WaveGeneration_Triangle ((uint32_t)0x00000080)
 	#define IS_DAC_GENERATE_WAVE(WAVE)                                                         \
 		(((WAVE) == DAC_WaveGeneration_None) || ((WAVE) == DAC_WaveGeneration_Noise) ||    \
@@ -230,7 +230,7 @@ typedef struct {
  * @{
  */
 
-	#define DAC_OutputBuffer_Enable ((uint32_t)0x00000000)
+	#define DAC_OutputBuffer_Enable	 ((uint32_t)0x00000000)
 	#define DAC_OutputBuffer_Disable ((uint32_t)0x00000002)
 	#define IS_DAC_OUTPUT_BUFFER_STATE(STATE)                                                  \
 		(((STATE) == DAC_OutputBuffer_Enable) || ((STATE) == DAC_OutputBuffer_Disable))
@@ -256,7 +256,7 @@ typedef struct {
 
 	#define DAC_Align_12b_R ((uint32_t)0x00000000)
 	#define DAC_Align_12b_L ((uint32_t)0x00000004)
-	#define DAC_Align_8b_R ((uint32_t)0x00000008)
+	#define DAC_Align_8b_R	((uint32_t)0x00000008)
 	#define IS_DAC_ALIGN(ALIGN)                                                                \
 		(((ALIGN) == DAC_Align_12b_R) || ((ALIGN) == DAC_Align_12b_L) ||                   \
 		 ((ALIGN) == DAC_Align_8b_R))
@@ -268,7 +268,7 @@ typedef struct {
  * @{
  */
 
-	#define DAC_Wave_Noise ((uint32_t)0x00000040)
+	#define DAC_Wave_Noise	  ((uint32_t)0x00000040)
 	#define DAC_Wave_Triangle ((uint32_t)0x00000080)
 	#define IS_DAC_WAVE(WAVE) (((WAVE) == DAC_Wave_Noise) || ((WAVE) == DAC_Wave_Triangle))
 /**
@@ -288,8 +288,8 @@ typedef struct {
 	 * @{
 	 */
 
-		#define DAC_IT_DMAUDR ((uint32_t)0x00002000)
-		#define IS_DAC_IT(IT) (((IT) == DAC_IT_DMAUDR))
+		#define DAC_IT_DMAUDR	  ((uint32_t)0x00002000)
+		#define IS_DAC_IT(IT)	  (((IT) == DAC_IT_DMAUDR))
 
 	/**
 	 * @}
@@ -299,7 +299,7 @@ typedef struct {
 	 * @{
 	 */
 
-		#define DAC_FLAG_DMAUDR ((uint32_t)0x00002000)
+		#define DAC_FLAG_DMAUDR	  ((uint32_t)0x00002000)
 		#define IS_DAC_FLAG(FLAG) (((FLAG) == DAC_FLAG_DMAUDR))
 
 	/**

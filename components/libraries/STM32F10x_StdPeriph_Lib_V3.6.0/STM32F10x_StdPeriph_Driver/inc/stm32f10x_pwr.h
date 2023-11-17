@@ -76,7 +76,7 @@ extern "C" {
  * @{
  */
 
-	#define PWR_Regulator_ON ((uint32_t)0x00000000)
+	#define PWR_Regulator_ON       ((uint32_t)0x00000000)
 	#define PWR_Regulator_LowPower ((uint32_t)0x00000001)
 	#define IS_PWR_REGULATOR(REGULATOR)                                                        \
 		(((REGULATOR) == PWR_Regulator_ON) || ((REGULATOR) == PWR_Regulator_LowPower))
@@ -101,8 +101,8 @@ extern "C" {
  * @{
  */
 
-	#define PWR_FLAG_WU ((uint32_t)0x00000001)
-	#define PWR_FLAG_SB ((uint32_t)0x00000002)
+	#define PWR_FLAG_WU   ((uint32_t)0x00000001)
+	#define PWR_FLAG_SB   ((uint32_t)0x00000002)
 	#define PWR_FLAG_PVDO ((uint32_t)0x00000004)
 	#define IS_PWR_GET_FLAG(FLAG)                                                              \
 		(((FLAG) == PWR_FLAG_WU) || ((FLAG) == PWR_FLAG_SB) || ((FLAG) == PWR_FLAG_PVDO))

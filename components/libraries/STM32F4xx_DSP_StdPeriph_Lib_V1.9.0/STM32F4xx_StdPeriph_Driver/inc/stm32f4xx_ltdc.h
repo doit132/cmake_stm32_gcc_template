@@ -211,15 +211,15 @@ typedef struct {
  * @{
  */
 
-	#define LTDC_HorizontalSYNC ((uint32_t)0x00000FFF)
-	#define LTDC_VerticalSYNC ((uint32_t)0x000007FF)
+	#define LTDC_HorizontalSYNC    ((uint32_t)0x00000FFF)
+	#define LTDC_VerticalSYNC      ((uint32_t)0x000007FF)
 
-	#define IS_LTDC_HSYNC(HSYNC) ((HSYNC) <= LTDC_HorizontalSYNC)
-	#define IS_LTDC_VSYNC(VSYNC) ((VSYNC) <= LTDC_VerticalSYNC)
-	#define IS_LTDC_AHBP(AHBP) ((AHBP) <= LTDC_HorizontalSYNC)
-	#define IS_LTDC_AVBP(AVBP) ((AVBP) <= LTDC_VerticalSYNC)
-	#define IS_LTDC_AAW(AAW) ((AAW) <= LTDC_HorizontalSYNC)
-	#define IS_LTDC_AAH(AAH) ((AAH) <= LTDC_VerticalSYNC)
+	#define IS_LTDC_HSYNC(HSYNC)   ((HSYNC) <= LTDC_HorizontalSYNC)
+	#define IS_LTDC_VSYNC(VSYNC)   ((VSYNC) <= LTDC_VerticalSYNC)
+	#define IS_LTDC_AHBP(AHBP)     ((AHBP) <= LTDC_HorizontalSYNC)
+	#define IS_LTDC_AVBP(AVBP)     ((AVBP) <= LTDC_VerticalSYNC)
+	#define IS_LTDC_AAW(AAW)       ((AAW) <= LTDC_HorizontalSYNC)
+	#define IS_LTDC_AAH(AAH)       ((AAH) <= LTDC_VerticalSYNC)
 	#define IS_LTDC_TOTALW(TOTALW) ((TOTALW) <= LTDC_HorizontalSYNC)
 	#define IS_LTDC_TOTALH(TOTALH) ((TOTALH) <= LTDC_VerticalSYNC)
 	/**
@@ -230,9 +230,10 @@ typedef struct {
 	 * @{
 	 */
 	#define LTDC_HSPolarity_AL                                                                 \
-		((uint32_t)0x00000000)		  /*!< Horizontal Synchronization is active low. */
-	#define LTDC_HSPolarity_AH LTDC_GCR_HSPOL /*!< Horizontal Synchronization is active high.  \
-						   */
+		((uint32_t)0x00000000) /*!< Horizontal Synchronization is active low. */
+	#define LTDC_HSPolarity_AH                                                                 \
+		LTDC_GCR_HSPOL /*!< Horizontal Synchronization is active high.                     \
+				*/
 
 	#define IS_LTDC_HSPOL(HSPOL)                                                               \
 		(((HSPOL) == LTDC_HSPolarity_AL) || ((HSPOL) == LTDC_HSPolarity_AH))
@@ -268,8 +269,8 @@ typedef struct {
 	/** @defgroup LTDC_PCPolarity
 	 * @{
 	 */
-	#define LTDC_PCPolarity_IPC ((uint32_t)0x00000000) /*!< input pixel clock. */
-	#define LTDC_PCPolarity_IIPC LTDC_GCR_PCPOL	   /*!< inverted input pixel clock. */
+	#define LTDC_PCPolarity_IPC  ((uint32_t)0x00000000) /*!< input pixel clock. */
+	#define LTDC_PCPolarity_IIPC LTDC_GCR_PCPOL	    /*!< inverted input pixel clock. */
 
 	#define IS_LTDC_PCPOL(PCPOL)                                                               \
 		(((PCPOL) == LTDC_PCPolarity_IPC) || ((PCPOL) == LTDC_PCPolarity_IIPC))
@@ -280,10 +281,10 @@ typedef struct {
 	/** @defgroup LTDC_Reload
 	 * @{
 	 */
-	#define LTDC_IMReload LTDC_SRCR_IMR /*!< Immediately Reload. */
-	#define LTDC_VBReload LTDC_SRCR_VBR /*!< Vertical Blanking Reload. */
+	#define LTDC_IMReload		       LTDC_SRCR_IMR /*!< Immediately Reload. */
+	#define LTDC_VBReload		       LTDC_SRCR_VBR /*!< Vertical Blanking Reload. */
 
-	#define IS_LTDC_RELOAD(RELOAD) (((RELOAD) == LTDC_IMReload) || ((RELOAD) == LTDC_VBReload))
+	#define IS_LTDC_RELOAD(RELOAD)	       (((RELOAD) == LTDC_IMReload) || ((RELOAD) == LTDC_VBReload))
 	/**
 	 * @}
 	 */
@@ -291,11 +292,11 @@ typedef struct {
 	/** @defgroup LTDC_Back_Color
 	 * @{
 	 */
-	#define LTDC_Back_Color ((uint32_t)0x000000FF)
+	#define LTDC_Back_Color		       ((uint32_t)0x000000FF)
 
-	#define IS_LTDC_BackBlueValue(BBLUE) ((BBLUE) <= LTDC_Back_Color)
+	#define IS_LTDC_BackBlueValue(BBLUE)   ((BBLUE) <= LTDC_Back_Color)
 	#define IS_LTDC_BackGreenValue(BGREEN) ((BGREEN) <= LTDC_Back_Color)
-	#define IS_LTDC_BackRedValue(BRED) ((BRED) <= LTDC_Back_Color)
+	#define IS_LTDC_BackRedValue(BRED)     ((BRED) <= LTDC_Back_Color)
 	/**
 	 * @}
 	 */
@@ -303,10 +304,10 @@ typedef struct {
 	/** @defgroup LTDC_Position
 	 * @{
 	 */
-	#define LTDC_POS_CY LTDC_CPSR_CYPOS
-	#define LTDC_POS_CX LTDC_CPSR_CXPOS
+	#define LTDC_POS_CY		       LTDC_CPSR_CYPOS
+	#define LTDC_POS_CX		       LTDC_CPSR_CXPOS
 
-	#define IS_LTDC_GET_POS(POS) (((POS) <= LTDC_POS_CY))
+	#define IS_LTDC_GET_POS(POS)	       (((POS) <= LTDC_POS_CY))
 	/**
 	 * @}
 	 */
@@ -314,7 +315,7 @@ typedef struct {
 	/** @defgroup LTDC_LIPosition
 	 * @{
 	 */
-	#define IS_LTDC_LIPOS(LIPOS) ((LIPOS) <= 0x7FF)
+	#define IS_LTDC_LIPOS(LIPOS)	       ((LIPOS) <= 0x7FF)
 	/**
 	 * @}
 	 */
@@ -322,10 +323,10 @@ typedef struct {
 	/** @defgroup LTDC_CurrentStatus
 	 * @{
 	 */
-	#define LTDC_CD_VDES LTDC_CDSR_VDES
-	#define LTDC_CD_HDES LTDC_CDSR_HDES
-	#define LTDC_CD_VSYNC LTDC_CDSR_VSYNCS
-	#define LTDC_CD_HSYNC LTDC_CDSR_HSYNCS
+	#define LTDC_CD_VDES		       LTDC_CDSR_VDES
+	#define LTDC_CD_HDES		       LTDC_CDSR_HDES
+	#define LTDC_CD_VSYNC		       LTDC_CDSR_VSYNCS
+	#define LTDC_CD_HSYNC		       LTDC_CDSR_HSYNCS
 
 	#define IS_LTDC_GET_CD(CD)                                                                 \
 		(((CD) == LTDC_CD_VDES) || ((CD) == LTDC_CD_HDES) || ((CD) == LTDC_CD_VSYNC) ||    \
@@ -337,10 +338,10 @@ typedef struct {
 	/** @defgroup LTDC_Interrupts
 	 * @{
 	 */
-	#define LTDC_IT_LI LTDC_IER_LIE
-	#define LTDC_IT_FU LTDC_IER_FUIE
-	#define LTDC_IT_TERR LTDC_IER_TERRIE
-	#define LTDC_IT_RR LTDC_IER_RRIE
+	#define LTDC_IT_LI     LTDC_IER_LIE
+	#define LTDC_IT_FU     LTDC_IER_FUIE
+	#define LTDC_IT_TERR   LTDC_IER_TERRIE
+	#define LTDC_IT_RR     LTDC_IER_RRIE
 
 	#define IS_LTDC_IT(IT) ((((IT) & (uint32_t)0xFFFFFFF0) == 0x00) && ((IT) != 0x00))
 
@@ -351,10 +352,10 @@ typedef struct {
 	/** @defgroup LTDC_Flag
 	 * @{
 	 */
-	#define LTDC_FLAG_LI LTDC_ISR_LIF
-	#define LTDC_FLAG_FU LTDC_ISR_FUIF
+	#define LTDC_FLAG_LI   LTDC_ISR_LIF
+	#define LTDC_FLAG_FU   LTDC_ISR_FUIF
 	#define LTDC_FLAG_TERR LTDC_ISR_TERRIF
-	#define LTDC_FLAG_RR LTDC_ISR_RRIF
+	#define LTDC_FLAG_RR   LTDC_ISR_RRIF
 
 	#define IS_LTDC_FLAG(FLAG)                                                                 \
 		(((FLAG) == LTDC_FLAG_LI) || ((FLAG) == LTDC_FLAG_FU) ||                           \
@@ -367,13 +368,13 @@ typedef struct {
 	 * @{
 	 */
 	#define LTDC_Pixelformat_ARGB8888 ((uint32_t)0x00000000)
-	#define LTDC_Pixelformat_RGB888 ((uint32_t)0x00000001)
-	#define LTDC_Pixelformat_RGB565 ((uint32_t)0x00000002)
+	#define LTDC_Pixelformat_RGB888	  ((uint32_t)0x00000001)
+	#define LTDC_Pixelformat_RGB565	  ((uint32_t)0x00000002)
 	#define LTDC_Pixelformat_ARGB1555 ((uint32_t)0x00000003)
 	#define LTDC_Pixelformat_ARGB4444 ((uint32_t)0x00000004)
-	#define LTDC_Pixelformat_L8 ((uint32_t)0x00000005)
-	#define LTDC_Pixelformat_AL44 ((uint32_t)0x00000006)
-	#define LTDC_Pixelformat_AL88 ((uint32_t)0x00000007)
+	#define LTDC_Pixelformat_L8	  ((uint32_t)0x00000005)
+	#define LTDC_Pixelformat_AL44	  ((uint32_t)0x00000006)
+	#define LTDC_Pixelformat_AL88	  ((uint32_t)0x00000007)
 
 	#define IS_LTDC_Pixelformat(Pixelformat)                                                   \
 		(((Pixelformat) == LTDC_Pixelformat_ARGB8888) ||                                   \
@@ -392,7 +393,7 @@ typedef struct {
 	/** @defgroup LTDC_BlendingFactor1
 	 * @{
 	 */
-	#define LTDC_BlendingFactor1_CA ((uint32_t)0x00000400)
+	#define LTDC_BlendingFactor1_CA	   ((uint32_t)0x00000400)
 	#define LTDC_BlendingFactor1_PAxCA ((uint32_t)0x00000600)
 
 	#define IS_LTDC_BlendingFactor1(BlendingFactor1)                                           \
@@ -405,7 +406,7 @@ typedef struct {
 	/** @defgroup LTDC_BlendingFactor2
 	 * @{
 	 */
-	#define LTDC_BlendingFactor2_CA ((uint32_t)0x00000005)
+	#define LTDC_BlendingFactor2_CA	   ((uint32_t)0x00000005)
 	#define LTDC_BlendingFactor2_PAxCA ((uint32_t)0x00000007)
 
 	#define IS_LTDC_BlendingFactor2(BlendingFactor2)                                           \
@@ -418,24 +419,24 @@ typedef struct {
 	/** @defgroup LTDC_LAYER_Config
 	 * @{
 	 */
-	#define LTDC_STOPPosition ((uint32_t)0x0000FFFF)
-	#define LTDC_STARTPosition ((uint32_t)0x00000FFF)
+	#define LTDC_STOPPosition		   ((uint32_t)0x0000FFFF)
+	#define LTDC_STARTPosition		   ((uint32_t)0x00000FFF)
 
-	#define LTDC_DefaultColorConfig ((uint32_t)0x000000FF)
-	#define LTDC_ColorFrameBuffer ((uint32_t)0x00001FFF)
-	#define LTDC_LineNumber ((uint32_t)0x000007FF)
+	#define LTDC_DefaultColorConfig		   ((uint32_t)0x000000FF)
+	#define LTDC_ColorFrameBuffer		   ((uint32_t)0x00001FFF)
+	#define LTDC_LineNumber			   ((uint32_t)0x000007FF)
 
-	#define IS_LTDC_HCONFIGST(HCONFIGST) ((HCONFIGST) <= LTDC_STARTPosition)
-	#define IS_LTDC_HCONFIGSP(HCONFIGSP) ((HCONFIGSP) <= LTDC_STOPPosition)
-	#define IS_LTDC_VCONFIGST(VCONFIGST) ((VCONFIGST) <= LTDC_STARTPosition)
-	#define IS_LTDC_VCONFIGSP(VCONFIGSP) ((VCONFIGSP) <= LTDC_STOPPosition)
+	#define IS_LTDC_HCONFIGST(HCONFIGST)	   ((HCONFIGST) <= LTDC_STARTPosition)
+	#define IS_LTDC_HCONFIGSP(HCONFIGSP)	   ((HCONFIGSP) <= LTDC_STOPPosition)
+	#define IS_LTDC_VCONFIGST(VCONFIGST)	   ((VCONFIGST) <= LTDC_STARTPosition)
+	#define IS_LTDC_VCONFIGSP(VCONFIGSP)	   ((VCONFIGSP) <= LTDC_STOPPosition)
 
 	#define IS_LTDC_DEFAULTCOLOR(DEFAULTCOLOR) ((DEFAULTCOLOR) <= LTDC_DefaultColorConfig)
 
-	#define IS_LTDC_CFBP(CFBP) ((CFBP) <= LTDC_ColorFrameBuffer)
-	#define IS_LTDC_CFBLL(CFBLL) ((CFBLL) <= LTDC_ColorFrameBuffer)
+	#define IS_LTDC_CFBP(CFBP)		   ((CFBP) <= LTDC_ColorFrameBuffer)
+	#define IS_LTDC_CFBLL(CFBLL)		   ((CFBLL) <= LTDC_ColorFrameBuffer)
 
-	#define IS_LTDC_CFBLNBR(CFBLNBR) ((CFBLNBR) <= LTDC_LineNumber)
+	#define IS_LTDC_CFBLNBR(CFBLNBR)	   ((CFBLNBR) <= LTDC_LineNumber)
 	/**
 	 * @}
 	 */
@@ -443,9 +444,9 @@ typedef struct {
 	/** @defgroup LTDC_colorkeying_Config
 	 * @{
 	 */
-	#define LTDC_colorkeyingConfig ((uint32_t)0x000000FF)
+	#define LTDC_colorkeyingConfig		   ((uint32_t)0x000000FF)
 
-	#define IS_LTDC_CKEYING(CKEYING) ((CKEYING) <= LTDC_colorkeyingConfig)
+	#define IS_LTDC_CKEYING(CKEYING)	   ((CKEYING) <= LTDC_colorkeyingConfig)
 /**
  * @}
  */
@@ -454,9 +455,9 @@ typedef struct {
  * @{
  */
 
-	#define LTDC_CLUTWR ((uint32_t)0x000000FF)
+	#define LTDC_CLUTWR			   ((uint32_t)0x000000FF)
 
-	#define IS_LTDC_CLUTWR(CLUTWR) ((CLUTWR) <= LTDC_CLUTWR)
+	#define IS_LTDC_CLUTWR(CLUTWR)		   ((CLUTWR) <= LTDC_CLUTWR)
 
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */

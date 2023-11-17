@@ -187,7 +187,7 @@ void *pvPortMallocStack(size_t xSize) PRIVILEGED_FUNCTION;
 void vPortFreeStack(void *pv) PRIVILEGED_FUNCTION;
 #else
 	#define pvPortMallocStack pvPortMalloc
-	#define vPortFreeStack vPortFree
+	#define vPortFreeStack	  vPortFree
 #endif
 
 #if (configUSE_MALLOC_FAILED_HOOK == 1)

@@ -165,15 +165,15 @@
 /* Private define ------------------------------------------------------------*/
 
 /* SPI registers Masks */
-#define CR1_CLEAR_MASK ((uint16_t)0x3040)
+#define CR1_CLEAR_MASK	   ((uint16_t)0x3040)
 #define I2SCFGR_CLEAR_MASK ((uint16_t)0xF040)
 
 /* RCC PLLs masks */
-#define PLLCFGR_PPLR_MASK ((uint32_t)0x70000000)
-#define PLLCFGR_PPLN_MASK ((uint32_t)0x00007FC0)
+#define PLLCFGR_PPLR_MASK  ((uint32_t)0x70000000)
+#define PLLCFGR_PPLN_MASK  ((uint32_t)0x00007FC0)
 
-#define SPI_CR2_FRF ((uint16_t)0x0010)
-#define SPI_SR_TIFRFE ((uint16_t)0x0100)
+#define SPI_CR2_FRF	   ((uint16_t)0x0010)
+#define SPI_SR_TIFRFE	   ((uint16_t)0x0100)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

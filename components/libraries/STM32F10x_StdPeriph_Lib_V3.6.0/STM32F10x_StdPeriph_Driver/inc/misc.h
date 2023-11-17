@@ -120,7 +120,7 @@ bits for subpriority
  * @{
  */
 
-	#define NVIC_VectTab_RAM ((uint32_t)0x20000000)
+	#define NVIC_VectTab_RAM   ((uint32_t)0x20000000)
 	#define NVIC_VectTab_FLASH ((uint32_t)0x08000000)
 	#define IS_NVIC_VECTTAB(VECTTAB)                                                           \
 		(((VECTTAB) == NVIC_VectTab_RAM) || ((VECTTAB) == NVIC_VectTab_FLASH))
@@ -132,8 +132,8 @@ bits for subpriority
  * @{
  */
 
-	#define NVIC_LP_SEVONPEND ((uint8_t)0x10)
-	#define NVIC_LP_SLEEPDEEP ((uint8_t)0x04)
+	#define NVIC_LP_SEVONPEND   ((uint8_t)0x10)
+	#define NVIC_LP_SLEEPDEEP   ((uint8_t)0x04)
 	#define NVIC_LP_SLEEPONEXIT ((uint8_t)0x02)
 	#define IS_NVIC_LP(LP)                                                                     \
 		(((LP) == NVIC_LP_SEVONPEND) || ((LP) == NVIC_LP_SLEEPDEEP) ||                     \
@@ -169,9 +169,9 @@ bits for subpriority
 
 	#define IS_NVIC_PREEMPTION_PRIORITY(PRIORITY) ((PRIORITY) < 0x10)
 
-	#define IS_NVIC_SUB_PRIORITY(PRIORITY) ((PRIORITY) < 0x10)
+	#define IS_NVIC_SUB_PRIORITY(PRIORITY)	      ((PRIORITY) < 0x10)
 
-	#define IS_NVIC_OFFSET(OFFSET) ((OFFSET) < 0x000FFFFF)
+	#define IS_NVIC_OFFSET(OFFSET)		      ((OFFSET) < 0x000FFFFF)
 
 /**
  * @}
@@ -181,8 +181,8 @@ bits for subpriority
  * @{
  */
 
-	#define SysTick_CLKSource_HCLK_Div8 ((uint32_t)0xFFFFFFFB)
-	#define SysTick_CLKSource_HCLK ((uint32_t)0x00000004)
+	#define SysTick_CLKSource_HCLK_Div8	      ((uint32_t)0xFFFFFFFB)
+	#define SysTick_CLKSource_HCLK		      ((uint32_t)0x00000004)
 	#define IS_SYSTICK_CLK_SOURCE(SOURCE)                                                      \
 		(((SOURCE) == SysTick_CLKSource_HCLK) || ((SOURCE) == SysTick_CLKSource_HCLK_Div8))
 /**

@@ -72,7 +72,7 @@
 	((uint32_t)(DMA_ISR_GIF5 | DMA_ISR_TCIF5 | DMA_ISR_HTIF5 | DMA_ISR_TEIF5))
 
 /* DMA2 FLAG mask */
-#define FLAG_Mask ((uint32_t)0x10000000)
+#define FLAG_Mask      ((uint32_t)0x10000000)
 
 /* DMA registers Masks */
 #define CCR_CLEAR_Mask ((uint32_t)0xFFFF800F)

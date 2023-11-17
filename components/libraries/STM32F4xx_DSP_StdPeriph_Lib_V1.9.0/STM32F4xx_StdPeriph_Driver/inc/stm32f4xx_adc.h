@@ -103,19 +103,19 @@ typedef struct {
 	/** @defgroup ADC_Common_mode
 	 * @{
 	 */
-	#define ADC_Mode_Independent ((uint32_t)0x00000000)
-	#define ADC_DualMode_RegSimult_InjecSimult ((uint32_t)0x00000001)
-	#define ADC_DualMode_RegSimult_AlterTrig ((uint32_t)0x00000002)
-	#define ADC_DualMode_InjecSimult ((uint32_t)0x00000005)
-	#define ADC_DualMode_RegSimult ((uint32_t)0x00000006)
-	#define ADC_DualMode_Interl ((uint32_t)0x00000007)
-	#define ADC_DualMode_AlterTrig ((uint32_t)0x00000009)
+	#define ADC_Mode_Independent		     ((uint32_t)0x00000000)
+	#define ADC_DualMode_RegSimult_InjecSimult   ((uint32_t)0x00000001)
+	#define ADC_DualMode_RegSimult_AlterTrig     ((uint32_t)0x00000002)
+	#define ADC_DualMode_InjecSimult	     ((uint32_t)0x00000005)
+	#define ADC_DualMode_RegSimult		     ((uint32_t)0x00000006)
+	#define ADC_DualMode_Interl		     ((uint32_t)0x00000007)
+	#define ADC_DualMode_AlterTrig		     ((uint32_t)0x00000009)
 	#define ADC_TripleMode_RegSimult_InjecSimult ((uint32_t)0x00000011)
-	#define ADC_TripleMode_RegSimult_AlterTrig ((uint32_t)0x00000012)
-	#define ADC_TripleMode_InjecSimult ((uint32_t)0x00000015)
-	#define ADC_TripleMode_RegSimult ((uint32_t)0x00000016)
-	#define ADC_TripleMode_Interl ((uint32_t)0x00000017)
-	#define ADC_TripleMode_AlterTrig ((uint32_t)0x00000019)
+	#define ADC_TripleMode_RegSimult_AlterTrig   ((uint32_t)0x00000012)
+	#define ADC_TripleMode_InjecSimult	     ((uint32_t)0x00000015)
+	#define ADC_TripleMode_RegSimult	     ((uint32_t)0x00000016)
+	#define ADC_TripleMode_Interl		     ((uint32_t)0x00000017)
+	#define ADC_TripleMode_AlterTrig	     ((uint32_t)0x00000019)
 	#define IS_ADC_MODE(MODE)                                                                  \
 		(((MODE) == ADC_Mode_Independent) ||                                               \
 		 ((MODE) == ADC_DualMode_RegSimult_InjecSimult) ||                                 \
@@ -168,11 +168,11 @@ typedef struct {
 	/** @defgroup ADC_delay_between_2_sampling_phases
 	 * @{
 	 */
-	#define ADC_TwoSamplingDelay_5Cycles ((uint32_t)0x00000000)
-	#define ADC_TwoSamplingDelay_6Cycles ((uint32_t)0x00000100)
-	#define ADC_TwoSamplingDelay_7Cycles ((uint32_t)0x00000200)
-	#define ADC_TwoSamplingDelay_8Cycles ((uint32_t)0x00000300)
-	#define ADC_TwoSamplingDelay_9Cycles ((uint32_t)0x00000400)
+	#define ADC_TwoSamplingDelay_5Cycles  ((uint32_t)0x00000000)
+	#define ADC_TwoSamplingDelay_6Cycles  ((uint32_t)0x00000100)
+	#define ADC_TwoSamplingDelay_7Cycles  ((uint32_t)0x00000200)
+	#define ADC_TwoSamplingDelay_8Cycles  ((uint32_t)0x00000300)
+	#define ADC_TwoSamplingDelay_9Cycles  ((uint32_t)0x00000400)
 	#define ADC_TwoSamplingDelay_10Cycles ((uint32_t)0x00000500)
 	#define ADC_TwoSamplingDelay_11Cycles ((uint32_t)0x00000600)
 	#define ADC_TwoSamplingDelay_12Cycles ((uint32_t)0x00000700)
@@ -211,8 +211,8 @@ typedef struct {
 	 */
 	#define ADC_Resolution_12b ((uint32_t)0x00000000)
 	#define ADC_Resolution_10b ((uint32_t)0x01000000)
-	#define ADC_Resolution_8b ((uint32_t)0x02000000)
-	#define ADC_Resolution_6b ((uint32_t)0x03000000)
+	#define ADC_Resolution_8b  ((uint32_t)0x02000000)
+	#define ADC_Resolution_6b  ((uint32_t)0x03000000)
 	#define IS_ADC_RESOLUTION(RESOLUTION)                                                      \
 		(((RESOLUTION) == ADC_Resolution_12b) || ((RESOLUTION) == ADC_Resolution_10b) ||   \
 		 ((RESOLUTION) == ADC_Resolution_8b) || ((RESOLUTION) == ADC_Resolution_6b))
@@ -224,9 +224,9 @@ typedef struct {
 	/** @defgroup ADC_external_trigger_edge_for_regular_channels_conversion
 	 * @{
 	 */
-	#define ADC_ExternalTrigConvEdge_None ((uint32_t)0x00000000)
-	#define ADC_ExternalTrigConvEdge_Rising ((uint32_t)0x10000000)
-	#define ADC_ExternalTrigConvEdge_Falling ((uint32_t)0x20000000)
+	#define ADC_ExternalTrigConvEdge_None	       ((uint32_t)0x00000000)
+	#define ADC_ExternalTrigConvEdge_Rising	       ((uint32_t)0x10000000)
+	#define ADC_ExternalTrigConvEdge_Falling       ((uint32_t)0x20000000)
 	#define ADC_ExternalTrigConvEdge_RisingFalling ((uint32_t)0x30000000)
 	#define IS_ADC_EXT_TRIG_EDGE(EDGE)                                                         \
 		(((EDGE) == ADC_ExternalTrigConvEdge_None) ||                                      \
@@ -240,21 +240,21 @@ typedef struct {
 	/** @defgroup ADC_extrenal_trigger_sources_for_regular_channels_conversion
 	 * @{
 	 */
-	#define ADC_ExternalTrigConv_T1_CC1 ((uint32_t)0x00000000)
-	#define ADC_ExternalTrigConv_T1_CC2 ((uint32_t)0x01000000)
-	#define ADC_ExternalTrigConv_T1_CC3 ((uint32_t)0x02000000)
-	#define ADC_ExternalTrigConv_T2_CC2 ((uint32_t)0x03000000)
-	#define ADC_ExternalTrigConv_T2_CC3 ((uint32_t)0x04000000)
-	#define ADC_ExternalTrigConv_T2_CC4 ((uint32_t)0x05000000)
-	#define ADC_ExternalTrigConv_T2_TRGO ((uint32_t)0x06000000)
-	#define ADC_ExternalTrigConv_T3_CC1 ((uint32_t)0x07000000)
-	#define ADC_ExternalTrigConv_T3_TRGO ((uint32_t)0x08000000)
-	#define ADC_ExternalTrigConv_T4_CC4 ((uint32_t)0x09000000)
-	#define ADC_ExternalTrigConv_T5_CC1 ((uint32_t)0x0A000000)
-	#define ADC_ExternalTrigConv_T5_CC2 ((uint32_t)0x0B000000)
-	#define ADC_ExternalTrigConv_T5_CC3 ((uint32_t)0x0C000000)
-	#define ADC_ExternalTrigConv_T8_CC1 ((uint32_t)0x0D000000)
-	#define ADC_ExternalTrigConv_T8_TRGO ((uint32_t)0x0E000000)
+	#define ADC_ExternalTrigConv_T1_CC1   ((uint32_t)0x00000000)
+	#define ADC_ExternalTrigConv_T1_CC2   ((uint32_t)0x01000000)
+	#define ADC_ExternalTrigConv_T1_CC3   ((uint32_t)0x02000000)
+	#define ADC_ExternalTrigConv_T2_CC2   ((uint32_t)0x03000000)
+	#define ADC_ExternalTrigConv_T2_CC3   ((uint32_t)0x04000000)
+	#define ADC_ExternalTrigConv_T2_CC4   ((uint32_t)0x05000000)
+	#define ADC_ExternalTrigConv_T2_TRGO  ((uint32_t)0x06000000)
+	#define ADC_ExternalTrigConv_T3_CC1   ((uint32_t)0x07000000)
+	#define ADC_ExternalTrigConv_T3_TRGO  ((uint32_t)0x08000000)
+	#define ADC_ExternalTrigConv_T4_CC4   ((uint32_t)0x09000000)
+	#define ADC_ExternalTrigConv_T5_CC1   ((uint32_t)0x0A000000)
+	#define ADC_ExternalTrigConv_T5_CC2   ((uint32_t)0x0B000000)
+	#define ADC_ExternalTrigConv_T5_CC3   ((uint32_t)0x0C000000)
+	#define ADC_ExternalTrigConv_T8_CC1   ((uint32_t)0x0D000000)
+	#define ADC_ExternalTrigConv_T8_TRGO  ((uint32_t)0x0E000000)
 	#define ADC_ExternalTrigConv_Ext_IT11 ((uint32_t)0x0F000000)
 	#define IS_ADC_EXT_TRIG(REGTRIG)                                                           \
 		(((REGTRIG) == ADC_ExternalTrigConv_T1_CC1) ||                                     \
@@ -281,7 +281,7 @@ typedef struct {
 	 * @{
 	 */
 	#define ADC_DataAlign_Right ((uint32_t)0x00000000)
-	#define ADC_DataAlign_Left ((uint32_t)0x00000800)
+	#define ADC_DataAlign_Left  ((uint32_t)0x00000800)
 	#define IS_ADC_DATA_ALIGN(ALIGN)                                                           \
 		(((ALIGN) == ADC_DataAlign_Right) || ((ALIGN) == ADC_DataAlign_Left))
 	/**
@@ -291,16 +291,16 @@ typedef struct {
 	/** @defgroup ADC_channels
 	 * @{
 	 */
-	#define ADC_Channel_0 ((uint8_t)0x00)
-	#define ADC_Channel_1 ((uint8_t)0x01)
-	#define ADC_Channel_2 ((uint8_t)0x02)
-	#define ADC_Channel_3 ((uint8_t)0x03)
-	#define ADC_Channel_4 ((uint8_t)0x04)
-	#define ADC_Channel_5 ((uint8_t)0x05)
-	#define ADC_Channel_6 ((uint8_t)0x06)
-	#define ADC_Channel_7 ((uint8_t)0x07)
-	#define ADC_Channel_8 ((uint8_t)0x08)
-	#define ADC_Channel_9 ((uint8_t)0x09)
+	#define ADC_Channel_0  ((uint8_t)0x00)
+	#define ADC_Channel_1  ((uint8_t)0x01)
+	#define ADC_Channel_2  ((uint8_t)0x02)
+	#define ADC_Channel_3  ((uint8_t)0x03)
+	#define ADC_Channel_4  ((uint8_t)0x04)
+	#define ADC_Channel_5  ((uint8_t)0x05)
+	#define ADC_Channel_6  ((uint8_t)0x06)
+	#define ADC_Channel_7  ((uint8_t)0x07)
+	#define ADC_Channel_8  ((uint8_t)0x08)
+	#define ADC_Channel_9  ((uint8_t)0x09)
 	#define ADC_Channel_10 ((uint8_t)0x0A)
 	#define ADC_Channel_11 ((uint8_t)0x0B)
 	#define ADC_Channel_12 ((uint8_t)0x0C)
@@ -322,7 +322,7 @@ typedef struct {
 		*/
 
 	#define ADC_Channel_Vrefint ((uint8_t)ADC_Channel_17)
-	#define ADC_Channel_Vbat ((uint8_t)ADC_Channel_18)
+	#define ADC_Channel_Vbat    ((uint8_t)ADC_Channel_18)
 
 	#define IS_ADC_CHANNEL(CHANNEL)                                                            \
 		(((CHANNEL) == ADC_Channel_0) || ((CHANNEL) == ADC_Channel_1) ||                   \
@@ -342,11 +342,11 @@ typedef struct {
 	/** @defgroup ADC_sampling_times
 	 * @{
 	 */
-	#define ADC_SampleTime_3Cycles ((uint8_t)0x00)
-	#define ADC_SampleTime_15Cycles ((uint8_t)0x01)
-	#define ADC_SampleTime_28Cycles ((uint8_t)0x02)
-	#define ADC_SampleTime_56Cycles ((uint8_t)0x03)
-	#define ADC_SampleTime_84Cycles ((uint8_t)0x04)
+	#define ADC_SampleTime_3Cycles	 ((uint8_t)0x00)
+	#define ADC_SampleTime_15Cycles	 ((uint8_t)0x01)
+	#define ADC_SampleTime_28Cycles	 ((uint8_t)0x02)
+	#define ADC_SampleTime_56Cycles	 ((uint8_t)0x03)
+	#define ADC_SampleTime_84Cycles	 ((uint8_t)0x04)
 	#define ADC_SampleTime_112Cycles ((uint8_t)0x05)
 	#define ADC_SampleTime_144Cycles ((uint8_t)0x06)
 	#define ADC_SampleTime_480Cycles ((uint8_t)0x07)
@@ -362,9 +362,9 @@ typedef struct {
 	/** @defgroup ADC_external_trigger_edge_for_injected_channels_conversion
 	 * @{
 	 */
-	#define ADC_ExternalTrigInjecConvEdge_None ((uint32_t)0x00000000)
-	#define ADC_ExternalTrigInjecConvEdge_Rising ((uint32_t)0x00100000)
-	#define ADC_ExternalTrigInjecConvEdge_Falling ((uint32_t)0x00200000)
+	#define ADC_ExternalTrigInjecConvEdge_None	    ((uint32_t)0x00000000)
+	#define ADC_ExternalTrigInjecConvEdge_Rising	    ((uint32_t)0x00100000)
+	#define ADC_ExternalTrigInjecConvEdge_Falling	    ((uint32_t)0x00200000)
 	#define ADC_ExternalTrigInjecConvEdge_RisingFalling ((uint32_t)0x00300000)
 	#define IS_ADC_EXT_INJEC_TRIG_EDGE(EDGE)                                                   \
 		(((EDGE) == ADC_ExternalTrigInjecConvEdge_None) ||                                 \
@@ -379,21 +379,21 @@ typedef struct {
 	/** @defgroup ADC_extrenal_trigger_sources_for_injected_channels_conversion
 	 * @{
 	 */
-	#define ADC_ExternalTrigInjecConv_T1_CC4 ((uint32_t)0x00000000)
-	#define ADC_ExternalTrigInjecConv_T1_TRGO ((uint32_t)0x00010000)
-	#define ADC_ExternalTrigInjecConv_T2_CC1 ((uint32_t)0x00020000)
-	#define ADC_ExternalTrigInjecConv_T2_TRGO ((uint32_t)0x00030000)
-	#define ADC_ExternalTrigInjecConv_T3_CC2 ((uint32_t)0x00040000)
-	#define ADC_ExternalTrigInjecConv_T3_CC4 ((uint32_t)0x00050000)
-	#define ADC_ExternalTrigInjecConv_T4_CC1 ((uint32_t)0x00060000)
-	#define ADC_ExternalTrigInjecConv_T4_CC2 ((uint32_t)0x00070000)
-	#define ADC_ExternalTrigInjecConv_T4_CC3 ((uint32_t)0x00080000)
-	#define ADC_ExternalTrigInjecConv_T4_TRGO ((uint32_t)0x00090000)
-	#define ADC_ExternalTrigInjecConv_T5_CC4 ((uint32_t)0x000A0000)
-	#define ADC_ExternalTrigInjecConv_T5_TRGO ((uint32_t)0x000B0000)
-	#define ADC_ExternalTrigInjecConv_T8_CC2 ((uint32_t)0x000C0000)
-	#define ADC_ExternalTrigInjecConv_T8_CC3 ((uint32_t)0x000D0000)
-	#define ADC_ExternalTrigInjecConv_T8_CC4 ((uint32_t)0x000E0000)
+	#define ADC_ExternalTrigInjecConv_T1_CC4   ((uint32_t)0x00000000)
+	#define ADC_ExternalTrigInjecConv_T1_TRGO  ((uint32_t)0x00010000)
+	#define ADC_ExternalTrigInjecConv_T2_CC1   ((uint32_t)0x00020000)
+	#define ADC_ExternalTrigInjecConv_T2_TRGO  ((uint32_t)0x00030000)
+	#define ADC_ExternalTrigInjecConv_T3_CC2   ((uint32_t)0x00040000)
+	#define ADC_ExternalTrigInjecConv_T3_CC4   ((uint32_t)0x00050000)
+	#define ADC_ExternalTrigInjecConv_T4_CC1   ((uint32_t)0x00060000)
+	#define ADC_ExternalTrigInjecConv_T4_CC2   ((uint32_t)0x00070000)
+	#define ADC_ExternalTrigInjecConv_T4_CC3   ((uint32_t)0x00080000)
+	#define ADC_ExternalTrigInjecConv_T4_TRGO  ((uint32_t)0x00090000)
+	#define ADC_ExternalTrigInjecConv_T5_CC4   ((uint32_t)0x000A0000)
+	#define ADC_ExternalTrigInjecConv_T5_TRGO  ((uint32_t)0x000B0000)
+	#define ADC_ExternalTrigInjecConv_T8_CC2   ((uint32_t)0x000C0000)
+	#define ADC_ExternalTrigInjecConv_T8_CC3   ((uint32_t)0x000D0000)
+	#define ADC_ExternalTrigInjecConv_T8_CC4   ((uint32_t)0x000E0000)
 	#define ADC_ExternalTrigInjecConv_Ext_IT15 ((uint32_t)0x000F0000)
 	#define IS_ADC_EXT_INJEC_TRIG(INJTRIG)                                                     \
 		(((INJTRIG) == ADC_ExternalTrigInjecConv_T1_CC4) ||                                \
@@ -433,13 +433,13 @@ typedef struct {
 	/** @defgroup ADC_analog_watchdog_selection
 	 * @{
 	 */
-	#define ADC_AnalogWatchdog_SingleRegEnable ((uint32_t)0x00800200)
-	#define ADC_AnalogWatchdog_SingleInjecEnable ((uint32_t)0x00400200)
+	#define ADC_AnalogWatchdog_SingleRegEnable	  ((uint32_t)0x00800200)
+	#define ADC_AnalogWatchdog_SingleInjecEnable	  ((uint32_t)0x00400200)
 	#define ADC_AnalogWatchdog_SingleRegOrInjecEnable ((uint32_t)0x00C00200)
-	#define ADC_AnalogWatchdog_AllRegEnable ((uint32_t)0x00800000)
-	#define ADC_AnalogWatchdog_AllInjecEnable ((uint32_t)0x00400000)
-	#define ADC_AnalogWatchdog_AllRegAllInjecEnable ((uint32_t)0x00C00000)
-	#define ADC_AnalogWatchdog_None ((uint32_t)0x00000000)
+	#define ADC_AnalogWatchdog_AllRegEnable		  ((uint32_t)0x00800000)
+	#define ADC_AnalogWatchdog_AllInjecEnable	  ((uint32_t)0x00400000)
+	#define ADC_AnalogWatchdog_AllRegAllInjecEnable	  ((uint32_t)0x00C00000)
+	#define ADC_AnalogWatchdog_None			  ((uint32_t)0x00000000)
 	#define IS_ADC_ANALOG_WATCHDOG(WATCHDOG)                                                   \
 		(((WATCHDOG) == ADC_AnalogWatchdog_SingleRegEnable) ||                             \
 		 ((WATCHDOG) == ADC_AnalogWatchdog_SingleInjecEnable) ||                           \
@@ -455,10 +455,10 @@ typedef struct {
 	/** @defgroup ADC_interrupts_definition
 	 * @{
 	 */
-	#define ADC_IT_EOC ((uint16_t)0x0205)
-	#define ADC_IT_AWD ((uint16_t)0x0106)
+	#define ADC_IT_EOC  ((uint16_t)0x0205)
+	#define ADC_IT_AWD  ((uint16_t)0x0106)
 	#define ADC_IT_JEOC ((uint16_t)0x0407)
-	#define ADC_IT_OVR ((uint16_t)0x201A)
+	#define ADC_IT_OVR  ((uint16_t)0x201A)
 	#define IS_ADC_IT(IT)                                                                      \
 		(((IT) == ADC_IT_EOC) || ((IT) == ADC_IT_AWD) || ((IT) == ADC_IT_JEOC) ||          \
 		 ((IT) == ADC_IT_OVR))
@@ -469,12 +469,12 @@ typedef struct {
 	/** @defgroup ADC_flags_definition
 	 * @{
 	 */
-	#define ADC_FLAG_AWD ((uint8_t)0x01)
-	#define ADC_FLAG_EOC ((uint8_t)0x02)
-	#define ADC_FLAG_JEOC ((uint8_t)0x04)
-	#define ADC_FLAG_JSTRT ((uint8_t)0x08)
-	#define ADC_FLAG_STRT ((uint8_t)0x10)
-	#define ADC_FLAG_OVR ((uint8_t)0x20)
+	#define ADC_FLAG_AWD		((uint8_t)0x01)
+	#define ADC_FLAG_EOC		((uint8_t)0x02)
+	#define ADC_FLAG_JEOC		((uint8_t)0x04)
+	#define ADC_FLAG_JSTRT		((uint8_t)0x08)
+	#define ADC_FLAG_STRT		((uint8_t)0x10)
+	#define ADC_FLAG_OVR		((uint8_t)0x20)
 
 	#define IS_ADC_CLEAR_FLAG(FLAG) ((((FLAG) & (uint8_t)0xC0) == 0x00) && ((FLAG) != 0x00))
 	#define IS_ADC_GET_FLAG(FLAG)                                                              \
@@ -488,7 +488,7 @@ typedef struct {
 	/** @defgroup ADC_thresholds
 	 * @{
 	 */
-	#define IS_ADC_THRESHOLD(THRESHOLD) ((THRESHOLD) <= 0xFFF)
+	#define IS_ADC_THRESHOLD(THRESHOLD)	   ((THRESHOLD) <= 0xFFF)
 	/**
 	 * @}
 	 */
@@ -496,7 +496,7 @@ typedef struct {
 	/** @defgroup ADC_injected_offset
 	 * @{
 	 */
-	#define IS_ADC_OFFSET(OFFSET) ((OFFSET) <= 0xFFF)
+	#define IS_ADC_OFFSET(OFFSET)		   ((OFFSET) <= 0xFFF)
 	/**
 	 * @}
 	 */
@@ -504,7 +504,7 @@ typedef struct {
 	/** @defgroup ADC_injected_length
 	 * @{
 	 */
-	#define IS_ADC_INJECTED_LENGTH(LENGTH) (((LENGTH) >= 0x1) && ((LENGTH) <= 0x4))
+	#define IS_ADC_INJECTED_LENGTH(LENGTH)	   (((LENGTH) >= 0x1) && ((LENGTH) <= 0x4))
 	/**
 	 * @}
 	 */
@@ -512,7 +512,7 @@ typedef struct {
 	/** @defgroup ADC_injected_rank
 	 * @{
 	 */
-	#define IS_ADC_INJECTED_RANK(RANK) (((RANK) >= 0x1) && ((RANK) <= 0x4))
+	#define IS_ADC_INJECTED_RANK(RANK)	   (((RANK) >= 0x1) && ((RANK) <= 0x4))
 	/**
 	 * @}
 	 */
@@ -520,7 +520,7 @@ typedef struct {
 	/** @defgroup ADC_regular_length
 	 * @{
 	 */
-	#define IS_ADC_REGULAR_LENGTH(LENGTH) (((LENGTH) >= 0x1) && ((LENGTH) <= 0x10))
+	#define IS_ADC_REGULAR_LENGTH(LENGTH)	   (((LENGTH) >= 0x1) && ((LENGTH) <= 0x10))
 	/**
 	 * @}
 	 */
@@ -528,7 +528,7 @@ typedef struct {
 	/** @defgroup ADC_regular_rank
 	 * @{
 	 */
-	#define IS_ADC_REGULAR_RANK(RANK) (((RANK) >= 0x1) && ((RANK) <= 0x10))
+	#define IS_ADC_REGULAR_RANK(RANK)	   (((RANK) >= 0x1) && ((RANK) <= 0x10))
 	/**
 	 * @}
 	 */

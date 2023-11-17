@@ -676,7 +676,7 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * @param xMessageBuffer The handle of the message buffer to be deleted.
  *
  */
-#define vMessageBufferDelete(xMessageBuffer) vStreamBufferDelete(xMessageBuffer)
+#define vMessageBufferDelete(xMessageBuffer)	     vStreamBufferDelete(xMessageBuffer)
 
 /**
  * message_buffer.h
@@ -693,7 +693,7 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * @return If the message buffer referenced by xMessageBuffer is full then
  * pdTRUE is returned.  Otherwise pdFALSE is returned.
  */
-#define xMessageBufferIsFull(xMessageBuffer) xStreamBufferIsFull(xMessageBuffer)
+#define xMessageBufferIsFull(xMessageBuffer)	     xStreamBufferIsFull(xMessageBuffer)
 
 /**
  * message_buffer.h
@@ -709,7 +709,7 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * pdTRUE is returned.  Otherwise pdFALSE is returned.
  *
  */
-#define xMessageBufferIsEmpty(xMessageBuffer) xStreamBufferIsEmpty(xMessageBuffer)
+#define xMessageBufferIsEmpty(xMessageBuffer)	     xStreamBufferIsEmpty(xMessageBuffer)
 
 /**
  * message_buffer.h
@@ -732,7 +732,7 @@ typedef StreamBufferHandle_t MessageBufferHandle_t;
  * \defgroup xMessageBufferReset xMessageBufferReset
  * \ingroup MessageBufferManagement
  */
-#define xMessageBufferReset(xMessageBuffer) xStreamBufferReset(xMessageBuffer)
+#define xMessageBufferReset(xMessageBuffer)	     xStreamBufferReset(xMessageBuffer)
 
 /**
  * message_buffer.h

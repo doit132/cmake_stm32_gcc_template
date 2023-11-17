@@ -142,8 +142,9 @@ typedef struct {
 	 */
 	#define DCMI_PCKPolarity_Falling                                                           \
 		((uint16_t)0x0000) /*!< Pixel clock active on Falling edge */
-	#define DCMI_PCKPolarity_Rising ((uint16_t)0x0020) /*!< Pixel clock active on Rising edge  \
-							    */
+	#define DCMI_PCKPolarity_Rising                                                            \
+		((uint16_t)0x0020) /*!< Pixel clock active on Rising edge                          \
+				    */
 	#define IS_DCMI_PCKPOLARITY(POLARITY)                                                      \
 		(((POLARITY) == DCMI_PCKPolarity_Falling) ||                                       \
 		 ((POLARITY) == DCMI_PCKPolarity_Rising))
@@ -154,9 +155,10 @@ typedef struct {
 	/** @defgroup DCMI_VSYNC_Polarity
 	 * @{
 	 */
-	#define DCMI_VSPolarity_Low ((uint16_t)0x0000)	/*!< Vertical synchronization active Low */
-	#define DCMI_VSPolarity_High ((uint16_t)0x0080) /*!< Vertical synchronization active High  \
-							 */
+	#define DCMI_VSPolarity_Low ((uint16_t)0x0000) /*!< Vertical synchronization active Low */
+	#define DCMI_VSPolarity_High                                                               \
+		((uint16_t)0x0080) /*!< Vertical synchronization active High                       \
+				    */
 	#define IS_DCMI_VSPOLARITY(POLARITY)                                                       \
 		(((POLARITY) == DCMI_VSPolarity_Low) || ((POLARITY) == DCMI_VSPolarity_High))
 	/**
@@ -166,8 +168,9 @@ typedef struct {
 	/** @defgroup DCMI_HSYNC_Polarity
 	 * @{
 	 */
-	#define DCMI_HSPolarity_Low ((uint16_t)0x0000) /*!< Horizontal synchronization active Low  \
-							*/
+	#define DCMI_HSPolarity_Low                                                                \
+		((uint16_t)0x0000) /*!< Horizontal synchronization active Low                      \
+				    */
 	#define DCMI_HSPolarity_High                                                               \
 		((uint16_t)0x0040) /*!< Horizontal synchronization active High */
 	#define IS_DCMI_HSPOLARITY(POLARITY)                                                       \
@@ -213,11 +216,11 @@ typedef struct {
 	/** @defgroup DCMI_interrupt_sources
 	 * @{
 	 */
-	#define DCMI_IT_FRAME ((uint16_t)0x0001)
-	#define DCMI_IT_OVF ((uint16_t)0x0002)
-	#define DCMI_IT_ERR ((uint16_t)0x0004)
-	#define DCMI_IT_VSYNC ((uint16_t)0x0008)
-	#define DCMI_IT_LINE ((uint16_t)0x0010)
+	#define DCMI_IT_FRAME	      ((uint16_t)0x0001)
+	#define DCMI_IT_OVF	      ((uint16_t)0x0002)
+	#define DCMI_IT_ERR	      ((uint16_t)0x0004)
+	#define DCMI_IT_VSYNC	      ((uint16_t)0x0008)
+	#define DCMI_IT_LINE	      ((uint16_t)0x0010)
 	#define IS_DCMI_CONFIG_IT(IT) ((((IT) & (uint16_t)0xFFE0) == 0x0000) && ((IT) != 0x0000))
 	#define IS_DCMI_GET_IT(IT)                                                                 \
 		(((IT) == DCMI_IT_FRAME) || ((IT) == DCMI_IT_OVF) || ((IT) == DCMI_IT_ERR) ||      \
@@ -232,25 +235,25 @@ typedef struct {
 	/**
 	 * @brief   DCMI SR register
 	 */
-	#define DCMI_FLAG_HSYNC ((uint16_t)0x2001)
-	#define DCMI_FLAG_VSYNC ((uint16_t)0x2002)
-	#define DCMI_FLAG_FNE ((uint16_t)0x2004)
+	#define DCMI_FLAG_HSYNC	  ((uint16_t)0x2001)
+	#define DCMI_FLAG_VSYNC	  ((uint16_t)0x2002)
+	#define DCMI_FLAG_FNE	  ((uint16_t)0x2004)
 	/**
 	 * @brief   DCMI RISR register
 	 */
 	#define DCMI_FLAG_FRAMERI ((uint16_t)0x0001)
-	#define DCMI_FLAG_OVFRI ((uint16_t)0x0002)
-	#define DCMI_FLAG_ERRRI ((uint16_t)0x0004)
+	#define DCMI_FLAG_OVFRI	  ((uint16_t)0x0002)
+	#define DCMI_FLAG_ERRRI	  ((uint16_t)0x0004)
 	#define DCMI_FLAG_VSYNCRI ((uint16_t)0x0008)
-	#define DCMI_FLAG_LINERI ((uint16_t)0x0010)
+	#define DCMI_FLAG_LINERI  ((uint16_t)0x0010)
 	/**
 	 * @brief   DCMI MISR register
 	 */
 	#define DCMI_FLAG_FRAMEMI ((uint16_t)0x1001)
-	#define DCMI_FLAG_OVFMI ((uint16_t)0x1002)
-	#define DCMI_FLAG_ERRMI ((uint16_t)0x1004)
+	#define DCMI_FLAG_OVFMI	  ((uint16_t)0x1002)
+	#define DCMI_FLAG_ERRMI	  ((uint16_t)0x1004)
 	#define DCMI_FLAG_VSYNCMI ((uint16_t)0x1008)
-	#define DCMI_FLAG_LINEMI ((uint16_t)0x1010)
+	#define DCMI_FLAG_LINEMI  ((uint16_t)0x1010)
 	#define IS_DCMI_GET_FLAG(FLAG)                                                             \
 		(((FLAG) == DCMI_FLAG_HSYNC) || ((FLAG) == DCMI_FLAG_VSYNC) ||                     \
 		 ((FLAG) == DCMI_FLAG_FNE) || ((FLAG) == DCMI_FLAG_FRAMERI) ||                     \

@@ -325,7 +325,7 @@ extern "C" {
  * assumption made.  A configASSERT statement should express an invariant that must
  * hold explicit before calling the code. */
 #ifndef configPRECONDITION
-	#define configPRECONDITION(X) configASSERT(X)
+	#define configPRECONDITION(X)	   configASSERT(X)
 	#define configPRECONDITION_DEFINED 0
 #else
 	#define configPRECONDITION_DEFINED 1
@@ -1016,8 +1016,8 @@ extern "C" {
 	/* Either variables of tick type cannot be read atomically, or
 	 * portTICK_TYPE_IS_ATOMIC was not set - map the critical sections used when
 	 * the tick count is returned to the standard critical section macros. */
-	#define portTICK_TYPE_ENTER_CRITICAL() portENTER_CRITICAL()
-	#define portTICK_TYPE_EXIT_CRITICAL() portEXIT_CRITICAL()
+	#define portTICK_TYPE_ENTER_CRITICAL()		    portENTER_CRITICAL()
+	#define portTICK_TYPE_EXIT_CRITICAL()		    portEXIT_CRITICAL()
 	#define portTICK_TYPE_SET_INTERRUPT_MASK_FROM_ISR() portSET_INTERRUPT_MASK_FROM_ISR()
 	#define portTICK_TYPE_CLEAR_INTERRUPT_MASK_FROM_ISR(x)                                     \
 		portCLEAR_INTERRUPT_MASK_FROM_ISR((x))
@@ -1027,7 +1027,7 @@ extern "C" {
 	 * tick count is returned can be defined away. */
 	#define portTICK_TYPE_ENTER_CRITICAL()
 	#define portTICK_TYPE_EXIT_CRITICAL()
-	#define portTICK_TYPE_SET_INTERRUPT_MASK_FROM_ISR() 0
+	#define portTICK_TYPE_SET_INTERRUPT_MASK_FROM_ISR()    0
 	#define portTICK_TYPE_CLEAR_INTERRUPT_MASK_FROM_ISR(x) (void)(x)
 #endif /* if ( portTICK_TYPE_IS_ATOMIC == 0 ) */
 
@@ -1067,37 +1067,37 @@ extern "C" {
 #endif
 
 #if configENABLE_BACKWARD_COMPATIBILITY == 1
-	#define eTaskStateGet eTaskGetState
-	#define portTickType TickType_t
-	#define xTaskHandle TaskHandle_t
-	#define xQueueHandle QueueHandle_t
-	#define xSemaphoreHandle SemaphoreHandle_t
-	#define xQueueSetHandle QueueSetHandle_t
-	#define xQueueSetMemberHandle QueueSetMemberHandle_t
-	#define xTimeOutType TimeOut_t
-	#define xMemoryRegion MemoryRegion_t
-	#define xTaskParameters TaskParameters_t
-	#define xTaskStatusType TaskStatus_t
-	#define xTimerHandle TimerHandle_t
-	#define xCoRoutineHandle CoRoutineHandle_t
-	#define pdTASK_HOOK_CODE TaskHookFunction_t
-	#define portTICK_RATE_MS portTICK_PERIOD_MS
-	#define pcTaskGetTaskName pcTaskGetName
-	#define pcTimerGetTimerName pcTimerGetName
-	#define pcQueueGetQueueName pcQueueGetName
-	#define vTaskGetTaskInfo vTaskGetInfo
+	#define eTaskStateGet		   eTaskGetState
+	#define portTickType		   TickType_t
+	#define xTaskHandle		   TaskHandle_t
+	#define xQueueHandle		   QueueHandle_t
+	#define xSemaphoreHandle	   SemaphoreHandle_t
+	#define xQueueSetHandle		   QueueSetHandle_t
+	#define xQueueSetMemberHandle	   QueueSetMemberHandle_t
+	#define xTimeOutType		   TimeOut_t
+	#define xMemoryRegion		   MemoryRegion_t
+	#define xTaskParameters		   TaskParameters_t
+	#define xTaskStatusType		   TaskStatus_t
+	#define xTimerHandle		   TimerHandle_t
+	#define xCoRoutineHandle	   CoRoutineHandle_t
+	#define pdTASK_HOOK_CODE	   TaskHookFunction_t
+	#define portTICK_RATE_MS	   portTICK_PERIOD_MS
+	#define pcTaskGetTaskName	   pcTaskGetName
+	#define pcTimerGetTimerName	   pcTimerGetName
+	#define pcQueueGetQueueName	   pcQueueGetName
+	#define vTaskGetTaskInfo	   vTaskGetInfo
 	#define xTaskGetIdleRunTimeCounter ulTaskGetIdleRunTimeCounter
 
 	/* Backward compatibility within the scheduler code only - these definitions
 	 * are not really required but are included for completeness. */
-	#define tmrTIMER_CALLBACK TimerCallbackFunction_t
-	#define pdTASK_CODE TaskFunction_t
-	#define xListItem ListItem_t
-	#define xList List_t
+	#define tmrTIMER_CALLBACK	   TimerCallbackFunction_t
+	#define pdTASK_CODE		   TaskFunction_t
+	#define xListItem		   ListItem_t
+	#define xList			   List_t
 
 	/* For libraries that break the list data hiding, and access list structure
 	 * members directly (which is not supposed to be done). */
-	#define pxContainer pvContainer
+	#define pxContainer		   pvContainer
 #endif /* configENABLE_BACKWARD_COMPATIBILITY */
 
 #if (configUSE_ALTERNATIVE_API != 0)

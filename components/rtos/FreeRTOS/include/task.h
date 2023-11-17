@@ -51,15 +51,15 @@ extern "C" {
  * The tskKERNEL_VERSION_MAJOR, tskKERNEL_VERSION_MINOR, tskKERNEL_VERSION_BUILD
  * values will reflect the last released version number.
  */
-#define tskKERNEL_VERSION_NUMBER "V10.5.1"
-#define tskKERNEL_VERSION_MAJOR 10
-#define tskKERNEL_VERSION_MINOR 5
-#define tskKERNEL_VERSION_BUILD 1
+#define tskKERNEL_VERSION_NUMBER    "V10.5.1"
+#define tskKERNEL_VERSION_MAJOR	    10
+#define tskKERNEL_VERSION_MINOR	    5
+#define tskKERNEL_VERSION_BUILD	    1
 
 /* MPU region parameters passed in ulParameters
  * of MemoryRegion_t struct. */
-#define tskMPU_REGION_READ_ONLY (1UL << 0UL)
-#define tskMPU_REGION_READ_WRITE (1UL << 1UL)
+#define tskMPU_REGION_READ_ONLY	    (1UL << 0UL)
+#define tskMPU_REGION_READ_WRITE    (1UL << 1UL)
 #define tskMPU_REGION_EXECUTE_NEVER (1UL << 2UL)
 #define tskMPU_REGION_NORMAL_MEMORY (1UL << 3UL)
 #define tskMPU_REGION_DEVICE_MEMORY (1UL << 4UL)
@@ -69,7 +69,7 @@ extern "C" {
  * configTASK_NOTIFICATION_ARRAY_ENTRIES.  For backward compatibility, any use of the
  * original direct to task notification defaults to using the first index in the
  * array. */
-#define tskDEFAULT_INDEX_TO_NOTIFY (0)
+#define tskDEFAULT_INDEX_TO_NOTIFY  (0)
 
 /**
  * task. h
@@ -200,7 +200,7 @@ typedef enum {
  *
  * \ingroup TaskUtils
  */
-#define tskIDLE_PRIORITY ((UBaseType_t)0U)
+#define tskIDLE_PRIORITY	      ((UBaseType_t)0U)
 
 /**
  * task. h
@@ -210,7 +210,7 @@ typedef enum {
  * \defgroup taskYIELD taskYIELD
  * \ingroup SchedulerControl
  */
-#define taskYIELD() portYIELD()
+#define taskYIELD()		      portYIELD()
 
 /**
  * task. h
@@ -224,7 +224,7 @@ typedef enum {
  * \defgroup taskENTER_CRITICAL taskENTER_CRITICAL
  * \ingroup SchedulerControl
  */
-#define taskENTER_CRITICAL() portENTER_CRITICAL()
+#define taskENTER_CRITICAL()	      portENTER_CRITICAL()
 #define taskENTER_CRITICAL_FROM_ISR() portSET_INTERRUPT_MASK_FROM_ISR()
 
 /**
@@ -239,7 +239,7 @@ typedef enum {
  * \defgroup taskEXIT_CRITICAL taskEXIT_CRITICAL
  * \ingroup SchedulerControl
  */
-#define taskEXIT_CRITICAL() portEXIT_CRITICAL()
+#define taskEXIT_CRITICAL()	      portEXIT_CRITICAL()
 #define taskEXIT_CRITICAL_FROM_ISR(x) portCLEAR_INTERRUPT_MASK_FROM_ISR(x)
 
 /**
@@ -250,7 +250,7 @@ typedef enum {
  * \defgroup taskDISABLE_INTERRUPTS taskDISABLE_INTERRUPTS
  * \ingroup SchedulerControl
  */
-#define taskDISABLE_INTERRUPTS() portDISABLE_INTERRUPTS()
+#define taskDISABLE_INTERRUPTS()      portDISABLE_INTERRUPTS()
 
 /**
  * task. h
@@ -260,14 +260,14 @@ typedef enum {
  * \defgroup taskENABLE_INTERRUPTS taskENABLE_INTERRUPTS
  * \ingroup SchedulerControl
  */
-#define taskENABLE_INTERRUPTS() portENABLE_INTERRUPTS()
+#define taskENABLE_INTERRUPTS()	      portENABLE_INTERRUPTS()
 
 /* Definitions returned by xTaskGetSchedulerState().  taskSCHEDULER_SUSPENDED is
  * 0 to generate more optimal code when configASSERT() is defined as the constant
  * is used in assert() statements. */
-#define taskSCHEDULER_SUSPENDED ((BaseType_t)0)
-#define taskSCHEDULER_NOT_STARTED ((BaseType_t)1)
-#define taskSCHEDULER_RUNNING ((BaseType_t)2)
+#define taskSCHEDULER_SUSPENDED	      ((BaseType_t)0)
+#define taskSCHEDULER_NOT_STARTED     ((BaseType_t)1)
+#define taskSCHEDULER_RUNNING	      ((BaseType_t)2)
 
 /*-----------------------------------------------------------
  * TASK CREATION API

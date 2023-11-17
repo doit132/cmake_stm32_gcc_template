@@ -63,55 +63,55 @@
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* ------------ RCC registers bit address in the alias region ----------- */
-#define RCC_OFFSET (RCC_BASE - PERIPH_BASE)
+#define RCC_OFFSET	   (RCC_BASE - PERIPH_BASE)
 /* --- CR Register ---*/
 /* Alias word address of HSION bit */
-#define CR_OFFSET (RCC_OFFSET + 0x00)
-#define HSION_BitNumber 0x00
-#define CR_HSION_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (HSION_BitNumber * 4))
+#define CR_OFFSET	   (RCC_OFFSET + 0x00)
+#define HSION_BitNumber	   0x00
+#define CR_HSION_BB	   (PERIPH_BB_BASE + (CR_OFFSET * 32) + (HSION_BitNumber * 4))
 /* Alias word address of CSSON bit */
-#define CSSON_BitNumber 0x13
-#define CR_CSSON_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (CSSON_BitNumber * 4))
+#define CSSON_BitNumber	   0x13
+#define CR_CSSON_BB	   (PERIPH_BB_BASE + (CR_OFFSET * 32) + (CSSON_BitNumber * 4))
 /* Alias word address of PLLON bit */
-#define PLLON_BitNumber 0x18
-#define CR_PLLON_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (PLLON_BitNumber * 4))
+#define PLLON_BitNumber	   0x18
+#define CR_PLLON_BB	   (PERIPH_BB_BASE + (CR_OFFSET * 32) + (PLLON_BitNumber * 4))
 /* Alias word address of PLLI2SON bit */
 #define PLLI2SON_BitNumber 0x1A
-#define CR_PLLI2SON_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (PLLI2SON_BitNumber * 4))
+#define CR_PLLI2SON_BB	   (PERIPH_BB_BASE + (CR_OFFSET * 32) + (PLLI2SON_BitNumber * 4))
 
 /* Alias word address of PLLSAION bit */
 #define PLLSAION_BitNumber 0x1C
-#define CR_PLLSAION_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (PLLSAION_BitNumber * 4))
+#define CR_PLLSAION_BB	   (PERIPH_BB_BASE + (CR_OFFSET * 32) + (PLLSAION_BitNumber * 4))
 
 /* --- CFGR Register ---*/
 /* Alias word address of I2SSRC bit */
-#define CFGR_OFFSET (RCC_OFFSET + 0x08)
-#define I2SSRC_BitNumber 0x17
-#define CFGR_I2SSRC_BB (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (I2SSRC_BitNumber * 4))
+#define CFGR_OFFSET	   (RCC_OFFSET + 0x08)
+#define I2SSRC_BitNumber   0x17
+#define CFGR_I2SSRC_BB	   (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (I2SSRC_BitNumber * 4))
 
 /* --- BDCR Register ---*/
 /* Alias word address of RTCEN bit */
-#define BDCR_OFFSET (RCC_OFFSET + 0x70)
-#define RTCEN_BitNumber 0x0F
-#define BDCR_RTCEN_BB (PERIPH_BB_BASE + (BDCR_OFFSET * 32) + (RTCEN_BitNumber * 4))
+#define BDCR_OFFSET	   (RCC_OFFSET + 0x70)
+#define RTCEN_BitNumber	   0x0F
+#define BDCR_RTCEN_BB	   (PERIPH_BB_BASE + (BDCR_OFFSET * 32) + (RTCEN_BitNumber * 4))
 /* Alias word address of BDRST bit */
-#define BDRST_BitNumber 0x10
-#define BDCR_BDRST_BB (PERIPH_BB_BASE + (BDCR_OFFSET * 32) + (BDRST_BitNumber * 4))
+#define BDRST_BitNumber	   0x10
+#define BDCR_BDRST_BB	   (PERIPH_BB_BASE + (BDCR_OFFSET * 32) + (BDRST_BitNumber * 4))
 
 /* --- CSR Register ---*/
 /* Alias word address of LSION bit */
-#define CSR_OFFSET (RCC_OFFSET + 0x74)
-#define LSION_BitNumber 0x00
-#define CSR_LSION_BB (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (LSION_BitNumber * 4))
+#define CSR_OFFSET	   (RCC_OFFSET + 0x74)
+#define LSION_BitNumber	   0x00
+#define CSR_LSION_BB	   (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (LSION_BitNumber * 4))
 
 /* --- DCKCFGR Register ---*/
 /* Alias word address of TIMPRE bit */
-#define DCKCFGR_OFFSET (RCC_OFFSET + 0x8C)
-#define TIMPRE_BitNumber 0x18
-#define DCKCFGR_TIMPRE_BB (PERIPH_BB_BASE + (DCKCFGR_OFFSET * 32) + (TIMPRE_BitNumber * 4))
+#define DCKCFGR_OFFSET	   (RCC_OFFSET + 0x8C)
+#define TIMPRE_BitNumber   0x18
+#define DCKCFGR_TIMPRE_BB  (PERIPH_BB_BASE + (DCKCFGR_OFFSET * 32) + (TIMPRE_BitNumber * 4))
 
 /* --- CFGR Register ---*/
-#define RCC_CFGR_OFFSET (RCC_OFFSET + 0x08)
+#define RCC_CFGR_OFFSET	   (RCC_OFFSET + 0x08)
 #if defined(STM32F410xx)
 	/* Alias word address of MCO1EN bit */
 	#define RCC_MCO1EN_BIT_NUMBER 0x8
@@ -129,19 +129,19 @@
 #define CFGR_MCO1_RESET_MASK ((uint32_t)0xF89FFFFF)
 
 /* RCC Flag Mask */
-#define FLAG_MASK ((uint8_t)0x1F)
+#define FLAG_MASK	     ((uint8_t)0x1F)
 
 /* CR register byte 3 (Bits[23:16]) base address */
-#define CR_BYTE3_ADDRESS ((uint32_t)0x40023802)
+#define CR_BYTE3_ADDRESS     ((uint32_t)0x40023802)
 
 /* CIR register byte 2 (Bits[15:8]) base address */
-#define CIR_BYTE2_ADDRESS ((uint32_t)(RCC_BASE + 0x0C + 0x01))
+#define CIR_BYTE2_ADDRESS    ((uint32_t)(RCC_BASE + 0x0C + 0x01))
 
 /* CIR register byte 3 (Bits[23:16]) base address */
-#define CIR_BYTE3_ADDRESS ((uint32_t)(RCC_BASE + 0x0C + 0x02))
+#define CIR_BYTE3_ADDRESS    ((uint32_t)(RCC_BASE + 0x0C + 0x02))
 
 /* BDCR register base address */
-#define BDCR_ADDRESS (PERIPH_BASE + BDCR_OFFSET)
+#define BDCR_ADDRESS	     (PERIPH_BASE + BDCR_OFFSET)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

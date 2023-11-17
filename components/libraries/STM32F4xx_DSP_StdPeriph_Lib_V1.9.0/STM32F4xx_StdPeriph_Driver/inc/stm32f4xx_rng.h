@@ -66,10 +66,10 @@ extern "C" {
 		/** @defgroup RNG_interrupts_definition
 		 * @{
 		 */
-		#define RNG_IT_CEI ((uint8_t)0x20) /*!< Clock error interrupt */
-		#define RNG_IT_SEI ((uint8_t)0x40) /*!< Seed error interrupt */
+		#define RNG_IT_CEI	      ((uint8_t)0x20) /*!< Clock error interrupt */
+		#define RNG_IT_SEI	      ((uint8_t)0x40) /*!< Seed error interrupt */
 
-		#define IS_RNG_IT(IT) ((((IT) & (uint8_t)0x9F) == 0x00) && ((IT) != 0x00))
+		#define IS_RNG_IT(IT)	      ((((IT) & (uint8_t)0x9F) == 0x00) && ((IT) != 0x00))
 		#define IS_RNG_GET_IT(RNG_IT) (((RNG_IT) == RNG_IT_CEI) || ((RNG_IT) == RNG_IT_SEI))
 /**
  * @}

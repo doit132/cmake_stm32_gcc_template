@@ -71,7 +71,7 @@ extern "C" {
 
 	/*  CMSIS CM0P definitions */
 	#define __CM0PLUS_CMSIS_VERSION_MAIN (0x04) /*!< [31:16] CMSIS HAL main version   */
-	#define __CM0PLUS_CMSIS_VERSION_SUB (0x00)  /*!< [15:0]  CMSIS HAL sub version    */
+	#define __CM0PLUS_CMSIS_VERSION_SUB  (0x00) /*!< [15:0]  CMSIS HAL sub version    */
 	#define __CM0PLUS_CMSIS_VERSION                                                            \
 		((__CM0PLUS_CMSIS_VERSION_MAIN << 16) |                                            \
 		 __CM0PLUS_CMSIS_VERSION_SUB) /*!< CMSIS HAL version number         */
@@ -79,13 +79,13 @@ extern "C" {
 	#define __CORTEX_M (0x00) /*!< Cortex-M Core                    */
 
 	#if defined(__CC_ARM)
-		#define __ASM __asm	  /*!< asm keyword for ARM Compiler          */
-		#define __INLINE __inline /*!< inline keyword for ARM Compiler       */
+		#define __ASM		__asm	 /*!< asm keyword for ARM Compiler          */
+		#define __INLINE	__inline /*!< inline keyword for ARM Compiler       */
 		#define __STATIC_INLINE static __inline
 
 	#elif defined(__GNUC__)
-		#define __ASM __asm	/*!< asm keyword for GNU Compiler          */
-		#define __INLINE inline /*!< inline keyword for GNU Compiler       */
+		#define __ASM		__asm  /*!< asm keyword for GNU Compiler          */
+		#define __INLINE	inline /*!< inline keyword for GNU Compiler       */
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__ICCARM__)
@@ -96,12 +96,12 @@ extern "C" {
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__TMS470__)
-		#define __ASM __asm /*!< asm keyword for TI CCS Compiler       */
+		#define __ASM		__asm /*!< asm keyword for TI CCS Compiler       */
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__TASKING__)
-		#define __ASM __asm	/*!< asm keyword for TASKING Compiler      */
-		#define __INLINE inline /*!< inline keyword for TASKING Compiler   */
+		#define __ASM		__asm  /*!< asm keyword for TASKING Compiler      */
+		#define __INLINE	inline /*!< inline keyword for TASKING Compiler   */
 		#define __STATIC_INLINE static inline
 
 	#elif defined(__CSMC__)
@@ -217,10 +217,9 @@ extern "C" {
 		#ifdef __cplusplus
 			#define __I volatile /*!< Defines 'read only' permissions */
 		#else
-			#define __I                                                                \
-				volatile const /*!< Defines 'read only' permissions */
+			#define __I volatile const /*!< Defines 'read only' permissions */
 		#endif
-		#define __O volatile  /*!< Defines 'write only' permissions                */
+		#define __O  volatile /*!< Defines 'write only' permissions                */
 		#define __IO volatile /*!< Defines 'read / write' permissions              */
 
 /*@} end of group Cortex-M0+ */
@@ -301,20 +300,20 @@ typedef union {
 } xPSR_Type;
 
 		/* xPSR Register Definitions */
-		#define xPSR_N_Pos 31		       /*!< xPSR: N Position */
-		#define xPSR_N_Msk (1UL << xPSR_N_Pos) /*!< xPSR: N Mask */
+		#define xPSR_N_Pos   31			 /*!< xPSR: N Position */
+		#define xPSR_N_Msk   (1UL << xPSR_N_Pos) /*!< xPSR: N Mask */
 
-		#define xPSR_Z_Pos 30		       /*!< xPSR: Z Position */
-		#define xPSR_Z_Msk (1UL << xPSR_Z_Pos) /*!< xPSR: Z Mask */
+		#define xPSR_Z_Pos   30			 /*!< xPSR: Z Position */
+		#define xPSR_Z_Msk   (1UL << xPSR_Z_Pos) /*!< xPSR: Z Mask */
 
-		#define xPSR_C_Pos 29		       /*!< xPSR: C Position */
-		#define xPSR_C_Msk (1UL << xPSR_C_Pos) /*!< xPSR: C Mask */
+		#define xPSR_C_Pos   29			 /*!< xPSR: C Position */
+		#define xPSR_C_Msk   (1UL << xPSR_C_Pos) /*!< xPSR: C Mask */
 
-		#define xPSR_V_Pos 28		       /*!< xPSR: V Position */
-		#define xPSR_V_Msk (1UL << xPSR_V_Pos) /*!< xPSR: V Mask */
+		#define xPSR_V_Pos   28			 /*!< xPSR: V Position */
+		#define xPSR_V_Msk   (1UL << xPSR_V_Pos) /*!< xPSR: V Mask */
 
-		#define xPSR_T_Pos 24		       /*!< xPSR: T Position */
-		#define xPSR_T_Msk (1UL << xPSR_T_Pos) /*!< xPSR: T Mask */
+		#define xPSR_T_Pos   24			 /*!< xPSR: T Position */
+		#define xPSR_T_Msk   (1UL << xPSR_T_Pos) /*!< xPSR: T Mask */
 
 		#define xPSR_ISR_Pos 0				   /*!< xPSR: ISR Position */
 		#define xPSR_ISR_Msk (0x1FFUL /*<< xPSR_ISR_Pos*/) /*!< xPSR: ISR Mask */
@@ -335,8 +334,9 @@ typedef union {
 		#define CONTROL_SPSEL_Msk (1UL << CONTROL_SPSEL_Pos) /*!< CONTROL: SPSEL Mask */
 
 		#define CONTROL_nPRIV_Pos 0 /*!< CONTROL: nPRIV Position */
-		#define CONTROL_nPRIV_Msk (1UL /*<< CONTROL_nPRIV_Pos*/) /*!< CONTROL: nPRIV Mask  \
-									  */
+		#define CONTROL_nPRIV_Msk                                                          \
+			(1UL /*<< CONTROL_nPRIV_Pos*/) /*!< CONTROL: nPRIV Mask                    \
+							*/
 
 /*@} end of group CMSIS_CORE */
 
@@ -386,7 +386,7 @@ typedef struct {
 	uint32_t RESERVED1;
 	__IO uint32_t SHP[2]; /*!< Offset: 0x01C (R/W)  System Handlers Priority Registers. [0] is
 				 RESERVED   */
-	__IO uint32_t SHCSR;  /*!< Offset: 0x024 (R/W)  System Handler Control and State Register  */
+	__IO uint32_t SHCSR; /*!< Offset: 0x024 (R/W)  System Handler Control and State Register  */
 } SCB_Type;
 
 		/* SCB CPUID Register Definitions */
@@ -691,12 +691,12 @@ typedef struct {
  */
 
 		/* Memory mapping of Cortex-M0+ Hardware */
-		#define SCS_BASE (0xE000E000UL)		   /*!< System Control Space Base Address */
+		#define SCS_BASE     (0xE000E000UL)	   /*!< System Control Space Base Address */
 		#define SysTick_BASE (SCS_BASE + 0x0010UL) /*!< SysTick Base Address */
-		#define NVIC_BASE (SCS_BASE + 0x0100UL)	   /*!< NVIC Base Address                 */
-		#define SCB_BASE (SCS_BASE + 0x0D00UL)	   /*!< System Control Block Base Address */
+		#define NVIC_BASE    (SCS_BASE + 0x0100UL) /*!< NVIC Base Address                 */
+		#define SCB_BASE     (SCS_BASE + 0x0D00UL) /*!< System Control Block Base Address */
 
-		#define SCB ((SCB_Type *)SCB_BASE) /*!< SCB configuration struct           */
+		#define SCB	     ((SCB_Type *)SCB_BASE) /*!< SCB configuration struct           */
 		#define SysTick                                                                    \
 			((SysTick_Type *)SysTick_BASE) /*!< SysTick configuration struct       */
 		#define NVIC ((NVIC_Type *)NVIC_BASE)  /*!< NVIC configuration struct          */
@@ -731,8 +731,8 @@ typedef struct {
 		/* Interrupt Priorities are WORD accessible only under ARMv6M                   */
 		/* The following MACROS handle generation of the register offset and byte masks */
 		#define _BIT_SHIFT(IRQn) (((((uint32_t)(int32_t)(IRQn))) & 0x03UL) * 8UL)
-		#define _SHP_IDX(IRQn) ((((((uint32_t)(int32_t)(IRQn)) & 0x0FUL) - 8UL) >> 2UL))
-		#define _IP_IDX(IRQn) ((((uint32_t)(int32_t)(IRQn)) >> 2UL))
+		#define _SHP_IDX(IRQn)	 ((((((uint32_t)(int32_t)(IRQn)) & 0x0FUL) - 8UL) >> 2UL))
+		#define _IP_IDX(IRQn)	 ((((uint32_t)(int32_t)(IRQn)) >> 2UL))
 
 /** \brief  Enable External Interrupt
 

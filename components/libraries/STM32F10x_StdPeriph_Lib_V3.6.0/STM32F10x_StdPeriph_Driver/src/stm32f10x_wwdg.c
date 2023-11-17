@@ -45,22 +45,22 @@
  */
 
 /* ----------- WWDG registers bit address in the alias region ----------- */
-#define WWDG_OFFSET (WWDG_BASE - PERIPH_BASE)
+#define WWDG_OFFSET    (WWDG_BASE - PERIPH_BASE)
 
 /* Alias word address of EWI bit */
-#define CFR_OFFSET (WWDG_OFFSET + 0x04)
-#define EWI_BitNumber 0x09
-#define CFR_EWI_BB (PERIPH_BB_BASE + (CFR_OFFSET * 32) + (EWI_BitNumber * 4))
+#define CFR_OFFSET     (WWDG_OFFSET + 0x04)
+#define EWI_BitNumber  0x09
+#define CFR_EWI_BB     (PERIPH_BB_BASE + (CFR_OFFSET * 32) + (EWI_BitNumber * 4))
 
 /* --------------------- WWDG registers bit mask ------------------------ */
 
 /* CR register bit mask */
-#define CR_WDGA_Set ((uint32_t)0x00000080)
+#define CR_WDGA_Set    ((uint32_t)0x00000080)
 
 /* CFR register bit mask */
 #define CFR_WDGTB_Mask ((uint32_t)0xFFFFFE7F)
-#define CFR_W_Mask ((uint32_t)0xFFFFFF80)
-#define BIT_Mask ((uint8_t)0x7F)
+#define CFR_W_Mask     ((uint32_t)0xFFFFFF80)
+#define BIT_Mask       ((uint8_t)0x7F)
 
 /**
  * @}

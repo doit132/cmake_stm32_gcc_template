@@ -47,7 +47,7 @@ extern "C" {
 		/** @defgroup BITSTREAM_CLOCK  Bit Stream clock source selection
 		 * @{
 		 */
-		#define BITSTREAM_CLOCK_DFSDM2 SYSCFG_MCHDLYCR_BSCKSEL
+		#define BITSTREAM_CLOCK_DFSDM2	SYSCFG_MCHDLYCR_BSCKSEL
 		#define BITSTREAM_CLOCK_TIM2OC1 (uint32_t)0x00000000
 		/**
 		 * @}
@@ -56,8 +56,8 @@ extern "C" {
 		/** @defgroup MCHDLY_CLOCK  MCHDLY Clock enable
 		 * @{
 		 */
-		#define MCHDLY_CLOCK_DFSDM2 SYSCFG_MCHDLYCR_MCHDLY2EN
-		#define MCHDLY_CLOCK_DFSDM1 SYSCFG_MCHDLYCR_MCHDLY1EN
+		#define MCHDLY_CLOCK_DFSDM2	SYSCFG_MCHDLYCR_MCHDLY2EN
+		#define MCHDLY_CLOCK_DFSDM1	SYSCFG_MCHDLYCR_MCHDLY1EN
 		/**
 		 * @}
 		 */
@@ -65,10 +65,10 @@ extern "C" {
 		/** @defgroup DFSDM_CLOCKIN_SOURCE   DFSDM Clock In Source Selection
 		 * @{
 		 */
-		#define DFSDM2_CKIN_PAD (uint32_t)0x00000000
-		#define DFSDM2_CKIN_DM SYSCFG_MCHDLYCR_DFSDM2CFG
-		#define DFSDM1_CKIN_PAD (uint32_t)0x00000000
-		#define DFSDM1_CKIN_DM SYSCFG_MCHDLYCR_DFSDM1CFG
+		#define DFSDM2_CKIN_PAD		(uint32_t)0x00000000
+		#define DFSDM2_CKIN_DM		SYSCFG_MCHDLYCR_DFSDM2CFG
+		#define DFSDM1_CKIN_PAD		(uint32_t)0x00000000
+		#define DFSDM1_CKIN_DM		SYSCFG_MCHDLYCR_DFSDM1CFG
 		/**
 		 * @}
 		 */
@@ -76,10 +76,10 @@ extern "C" {
 		/** @defgroup DFSDM_CLOCKOUT_SOURCE   DFSDM Clock Source Selection
 		 * @{
 		 */
-		#define DFSDM2_CKOUT_DFSDM2 (uint32_t)0x00000000
-		#define DFSDM2_CKOUT_M27 SYSCFG_MCHDLYCR_DFSDM2CKOSEL
-		#define DFSDM1_CKOUT_DFSDM1 (uint32_t)0x00000000U
-		#define DFSDM1_CKOUT_M27 SYSCFG_MCHDLYCR_DFSDM1CKOSEL
+		#define DFSDM2_CKOUT_DFSDM2	(uint32_t)0x00000000
+		#define DFSDM2_CKOUT_M27	SYSCFG_MCHDLYCR_DFSDM2CKOSEL
+		#define DFSDM1_CKOUT_DFSDM1	(uint32_t)0x00000000U
+		#define DFSDM1_CKOUT_M27	SYSCFG_MCHDLYCR_DFSDM1CKOSEL
 		/**
 		 * @}
 		 */
@@ -87,10 +87,10 @@ extern "C" {
 		/** @defgroup DFSDM_DATAIN0_SOURCE   DFSDM Source Selection For DATAIN0
 		 * @{
 		 */
-		#define DATAIN0_DFSDM2_PAD (uint32_t)0x00000000
-		#define DATAIN0_DFSDM2_DATAIN1 SYSCFG_MCHDLYCR_DFSDM2D0SEL
-		#define DATAIN0_DFSDM1_PAD (uint32_t)0x00000000
-		#define DATAIN0_DFSDM1_DATAIN1 SYSCFG_MCHDLYCR_DFSDM1D0SEL
+		#define DATAIN0_DFSDM2_PAD	(uint32_t)0x00000000
+		#define DATAIN0_DFSDM2_DATAIN1	SYSCFG_MCHDLYCR_DFSDM2D0SEL
+		#define DATAIN0_DFSDM1_PAD	(uint32_t)0x00000000
+		#define DATAIN0_DFSDM1_DATAIN1	SYSCFG_MCHDLYCR_DFSDM1D0SEL
 		/**
 		 * @}
 		 */
@@ -98,10 +98,10 @@ extern "C" {
 		/** @defgroup DFSDM_DATAIN2_SOURCE   DFSDM Source Selection For DATAIN2
 		 * @{
 		 */
-		#define DATAIN2_DFSDM2_PAD (uint32_t)0x00000000
-		#define DATAIN2_DFSDM2_DATAIN3 SYSCFG_MCHDLYCR_DFSDM2D2SEL
-		#define DATAIN2_DFSDM1_PAD (uint32_t)0x00000000
-		#define DATAIN2_DFSDM1_DATAIN3 SYSCFG_MCHDLYCR_DFSDM1D2SEL
+		#define DATAIN2_DFSDM2_PAD	(uint32_t)0x00000000
+		#define DATAIN2_DFSDM2_DATAIN3	SYSCFG_MCHDLYCR_DFSDM2D2SEL
+		#define DATAIN2_DFSDM1_PAD	(uint32_t)0x00000000
+		#define DATAIN2_DFSDM1_DATAIN3	SYSCFG_MCHDLYCR_DFSDM1D2SEL
 		/**
 		 * @}
 		 */
@@ -109,8 +109,8 @@ extern "C" {
 		/** @defgroup DFSDM_DATAIN4_SOURCE   DFSDM Source Selection For DATAIN4
 		 * @{
 		 */
-		#define DATAIN4_DFSDM2_PAD (uint32_t)0x00000000
-		#define DATAIN4_DFSDM2_DATAIN5 SYSCFG_MCHDLYCR_DFSDM2D4SEL
+		#define DATAIN4_DFSDM2_PAD	(uint32_t)0x00000000
+		#define DATAIN4_DFSDM2_DATAIN5	SYSCFG_MCHDLYCR_DFSDM2D4SEL
 		/**
 		 * @}
 		 */
@@ -118,8 +118,8 @@ extern "C" {
 		/** @defgroup DFSDM_DATAIN6_SOURCE   DFSDM Source Selection For DATAIN6
 		 * @{
 		 */
-		#define DATAIN6_DFSDM2_PAD (uint32_t)0x00000000
-		#define DATAIN6_DFSDM2_DATAIN7 SYSCFG_MCHDLYCR_DFSDM2D6SEL
+		#define DATAIN6_DFSDM2_PAD	(uint32_t)0x00000000
+		#define DATAIN6_DFSDM2_DATAIN7	SYSCFG_MCHDLYCR_DFSDM2D6SEL
 		/**
 		 * @}
 		 */
@@ -127,10 +127,10 @@ extern "C" {
 		/** @defgroup DFSDM_CLKIN_SOURCE   DFSDM1 Source Selection For CLKIN
 		 * @{
 		 */
-		#define DFSDM1_CLKIN0_TIM4OC2 (uint32_t)0x00000000
-		#define DFSDM1_CLKIN2_TIM4OC2 SYSCFG_MCHDLYCR_DFSDM1CK02SEL
-		#define DFSDM1_CLKIN1_TIM4OC1 (uint32_t)0x00000000
-		#define DFSDM1_CLKIN3_TIM4OC1 SYSCFG_MCHDLYCR_DFSDM1CK13SEL
+		#define DFSDM1_CLKIN0_TIM4OC2	(uint32_t)0x00000000
+		#define DFSDM1_CLKIN2_TIM4OC2	SYSCFG_MCHDLYCR_DFSDM1CK02SEL
+		#define DFSDM1_CLKIN1_TIM4OC1	(uint32_t)0x00000000
+		#define DFSDM1_CLKIN3_TIM4OC1	SYSCFG_MCHDLYCR_DFSDM1CK13SEL
 		/**
 		 * @}
 		 */
@@ -138,14 +138,14 @@ extern "C" {
 		/** @defgroup DFSDM_CLKIN_SOURCE   DFSDM2 Source Selection For CLKIN
 		 * @{
 		 */
-		#define DFSDM2_CLKIN0_TIM3OC4 (uint32_t)0x00000000
-		#define DFSDM2_CLKIN4_TIM3OC4 SYSCFG_MCHDLYCR_DFSDM2CK04SEL
-		#define DFSDM2_CLKIN1_TIM3OC3 (uint32_t)0x00000000
-		#define DFSDM2_CLKIN5_TIM3OC3 SYSCFG_MCHDLYCR_DFSDM2CK15SEL
-		#define DFSDM2_CLKIN2_TIM3OC2 (uint32_t)0x00000000
-		#define DFSDM2_CLKIN6_TIM3OC2 SYSCFG_MCHDLYCR_DFSDM2CK26SEL
-		#define DFSDM2_CLKIN3_TIM3OC1 (uint32_t)0x00000000
-		#define DFSDM2_CLKIN7_TIM3OC1 SYSCFG_MCHDLYCR_DFSDM2CK37SEL
+		#define DFSDM2_CLKIN0_TIM3OC4	(uint32_t)0x00000000
+		#define DFSDM2_CLKIN4_TIM3OC4	SYSCFG_MCHDLYCR_DFSDM2CK04SEL
+		#define DFSDM2_CLKIN1_TIM3OC3	(uint32_t)0x00000000
+		#define DFSDM2_CLKIN5_TIM3OC3	SYSCFG_MCHDLYCR_DFSDM2CK15SEL
+		#define DFSDM2_CLKIN2_TIM3OC2	(uint32_t)0x00000000
+		#define DFSDM2_CLKIN6_TIM3OC2	SYSCFG_MCHDLYCR_DFSDM2CK26SEL
+		#define DFSDM2_CLKIN3_TIM3OC1	(uint32_t)0x00000000
+		#define DFSDM2_CLKIN7_TIM3OC1	SYSCFG_MCHDLYCR_DFSDM2CK37SEL
 	/**
 	 * @}
 	 */
@@ -185,16 +185,16 @@ extern "C" {
 	/** @defgroup SYSCFG_EXTI_Pin_Sources
 	 * @{
 	 */
-	#define EXTI_PinSource0 ((uint8_t)0x00)
-	#define EXTI_PinSource1 ((uint8_t)0x01)
-	#define EXTI_PinSource2 ((uint8_t)0x02)
-	#define EXTI_PinSource3 ((uint8_t)0x03)
-	#define EXTI_PinSource4 ((uint8_t)0x04)
-	#define EXTI_PinSource5 ((uint8_t)0x05)
-	#define EXTI_PinSource6 ((uint8_t)0x06)
-	#define EXTI_PinSource7 ((uint8_t)0x07)
-	#define EXTI_PinSource8 ((uint8_t)0x08)
-	#define EXTI_PinSource9 ((uint8_t)0x09)
+	#define EXTI_PinSource0	 ((uint8_t)0x00)
+	#define EXTI_PinSource1	 ((uint8_t)0x01)
+	#define EXTI_PinSource2	 ((uint8_t)0x02)
+	#define EXTI_PinSource3	 ((uint8_t)0x03)
+	#define EXTI_PinSource4	 ((uint8_t)0x04)
+	#define EXTI_PinSource5	 ((uint8_t)0x05)
+	#define EXTI_PinSource6	 ((uint8_t)0x06)
+	#define EXTI_PinSource7	 ((uint8_t)0x07)
+	#define EXTI_PinSource8	 ((uint8_t)0x08)
+	#define EXTI_PinSource9	 ((uint8_t)0x09)
 	#define EXTI_PinSource10 ((uint8_t)0x0A)
 	#define EXTI_PinSource11 ((uint8_t)0x0B)
 	#define EXTI_PinSource12 ((uint8_t)0x0C)
@@ -217,10 +217,10 @@ extern "C" {
 	/** @defgroup SYSCFG_Memory_Remap_Config
 	 * @{
 	 */
-	#define SYSCFG_MemoryRemap_Flash ((uint8_t)0x00)
+	#define SYSCFG_MemoryRemap_Flash       ((uint8_t)0x00)
 	#define SYSCFG_MemoryRemap_SystemFlash ((uint8_t)0x01)
-	#define SYSCFG_MemoryRemap_SRAM ((uint8_t)0x03)
-	#define SYSCFG_MemoryRemap_SDRAM ((uint8_t)0x04)
+	#define SYSCFG_MemoryRemap_SRAM	       ((uint8_t)0x03)
+	#define SYSCFG_MemoryRemap_SDRAM       ((uint8_t)0x04)
 
 	#if defined(STM32F40_41xxx) || defined(STM32F412xG) || defined(STM32F413_423xx)
 		#define SYSCFG_MemoryRemap_FSMC ((uint8_t)0x02)
@@ -268,7 +268,7 @@ extern "C" {
 	#endif /* STM32F446xx || STM32F469_479xx */
 
 	#if defined(STM32F410xx) || defined(STM32F412xG) || defined(STM32F413_423xx)
-		#define SYSCFG_Break_PVD SYSCFG_CFGR2_PVDL
+		#define SYSCFG_Break_PVD       SYSCFG_CFGR2_PVDL
 		#define SYSCFG_Break_HardFault SYSCFG_CFGR2_CLL
 
 		#define IS_SYSCFG_LOCK_CONFIG(BREAK)                                               \
@@ -281,7 +281,7 @@ extern "C" {
 	/** @defgroup SYSCFG_ETHERNET_Media_Interface
 	 * @{
 	 */
-	#define SYSCFG_ETH_MediaInterface_MII ((uint32_t)0x00000000)
+	#define SYSCFG_ETH_MediaInterface_MII  ((uint32_t)0x00000000)
 	#define SYSCFG_ETH_MediaInterface_RMII ((uint32_t)0x00000001)
 
 	#define IS_SYSCFG_ETH_MEDIA_INTERFACE(INTERFACE)                                           \

@@ -68,21 +68,22 @@
 #endif
 
 /* Values that can be assigned to the ucNotifyState member of the TCB. */
-#define taskNOT_WAITING_NOTIFICATION ((uint8_t)0) /* Must be zero as it is the initialised value.  \
-						   */
-#define taskWAITING_NOTIFICATION ((uint8_t)1)
-#define taskNOTIFICATION_RECEIVED ((uint8_t)2)
+#define taskNOT_WAITING_NOTIFICATION                                                               \
+	((uint8_t)0) /* Must be zero as it is the initialised value.                               \
+		      */
+#define taskWAITING_NOTIFICATION	       ((uint8_t)1)
+#define taskNOTIFICATION_RECEIVED	       ((uint8_t)2)
 
 /*
  * The value used to fill the stack of a task when the task is created.  This
  * is used purely for checking the high water mark for tasks.
  */
-#define tskSTACK_FILL_BYTE (0xa5U)
+#define tskSTACK_FILL_BYTE		       (0xa5U)
 
 /* Bits used to record how a task's stack and TCB were allocated. */
 #define tskDYNAMICALLY_ALLOCATED_STACK_AND_TCB ((uint8_t)0)
-#define tskSTATICALLY_ALLOCATED_STACK_ONLY ((uint8_t)1)
-#define tskSTATICALLY_ALLOCATED_STACK_AND_TCB ((uint8_t)2)
+#define tskSTATICALLY_ALLOCATED_STACK_ONLY     ((uint8_t)1)
+#define tskSTATICALLY_ALLOCATED_STACK_AND_TCB  ((uint8_t)2)
 
 /* If any of the following are set then task stacks are filled with a known
  * value so the high water mark can be determined.  If none of the following are
@@ -97,10 +98,10 @@
 /*
  * Macros used by vListTask to indicate which state a task is in.
  */
-#define tskRUNNING_CHAR ('X')
-#define tskBLOCKED_CHAR ('B')
-#define tskREADY_CHAR ('R')
-#define tskDELETED_CHAR ('D')
+#define tskRUNNING_CHAR	  ('X')
+#define tskBLOCKED_CHAR	  ('B')
+#define tskREADY_CHAR	  ('R')
+#define tskDELETED_CHAR	  ('D')
 #define tskSUSPENDED_CHAR ('S')
 
 /*

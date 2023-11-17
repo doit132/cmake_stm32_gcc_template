@@ -135,8 +135,8 @@
 	/* Private define ------------------------------------------------------------*/
 
 	/* *SAI registers Masks */
-	#define CR1_CLEAR_MASK ((uint32_t)0xFF07C010)
-	#define FRCR_CLEAR_MASK ((uint32_t)0xFFF88000)
+	#define CR1_CLEAR_MASK	 ((uint32_t)0xFF07C010)
+	#define FRCR_CLEAR_MASK	 ((uint32_t)0xFFF88000)
 	#define SLOTR_CLEAR_MASK ((uint32_t)0x0000F020)
 
 /* Private macro -------------------------------------------------------------*/

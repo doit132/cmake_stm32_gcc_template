@@ -45,37 +45,37 @@
  */
 
 /* SPI SPE mask */
-#define CR1_SPE_Set ((uint16_t)0x0040)
-#define CR1_SPE_Reset ((uint16_t)0xFFBF)
+#define CR1_SPE_Set	   ((uint16_t)0x0040)
+#define CR1_SPE_Reset	   ((uint16_t)0xFFBF)
 
 /* I2S I2SE mask */
-#define I2SCFGR_I2SE_Set ((uint16_t)0x0400)
+#define I2SCFGR_I2SE_Set   ((uint16_t)0x0400)
 #define I2SCFGR_I2SE_Reset ((uint16_t)0xFBFF)
 
 /* SPI CRCNext mask */
-#define CR1_CRCNext_Set ((uint16_t)0x1000)
+#define CR1_CRCNext_Set	   ((uint16_t)0x1000)
 
 /* SPI CRCEN mask */
-#define CR1_CRCEN_Set ((uint16_t)0x2000)
-#define CR1_CRCEN_Reset ((uint16_t)0xDFFF)
+#define CR1_CRCEN_Set	   ((uint16_t)0x2000)
+#define CR1_CRCEN_Reset	   ((uint16_t)0xDFFF)
 
 /* SPI SSOE mask */
-#define CR2_SSOE_Set ((uint16_t)0x0004)
-#define CR2_SSOE_Reset ((uint16_t)0xFFFB)
+#define CR2_SSOE_Set	   ((uint16_t)0x0004)
+#define CR2_SSOE_Reset	   ((uint16_t)0xFFFB)
 
 /* SPI registers Masks */
-#define CR1_CLEAR_Mask ((uint16_t)0x3040)
+#define CR1_CLEAR_Mask	   ((uint16_t)0x3040)
 #define I2SCFGR_CLEAR_Mask ((uint16_t)0xF040)
 
 /* SPI or I2S mode selection masks */
-#define SPI_Mode_Select ((uint16_t)0xF7FF)
-#define I2S_Mode_Select ((uint16_t)0x0800)
+#define SPI_Mode_Select	   ((uint16_t)0xF7FF)
+#define I2S_Mode_Select	   ((uint16_t)0x0800)
 
 /* I2S clock source selection masks */
-#define I2S2_CLOCK_SRC ((uint32_t)(0x00020000))
-#define I2S3_CLOCK_SRC ((uint32_t)(0x00040000))
-#define I2S_MUL_MASK ((uint32_t)(0x0000F000))
-#define I2S_DIV_MASK ((uint32_t)(0x000000F0))
+#define I2S2_CLOCK_SRC	   ((uint32_t)(0x00020000))
+#define I2S3_CLOCK_SRC	   ((uint32_t)(0x00040000))
+#define I2S_MUL_MASK	   ((uint32_t)(0x0000F000))
+#define I2S_DIV_MASK	   ((uint32_t)(0x000000F0))
 
 /**
  * @}

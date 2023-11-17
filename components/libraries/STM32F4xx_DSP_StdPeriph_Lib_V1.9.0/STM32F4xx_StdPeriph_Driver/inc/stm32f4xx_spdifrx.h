@@ -78,10 +78,10 @@ typedef struct {
 	/** @defgroup SPDIFRX_Input_Selection SPDIFRX Input Selection
 	 * @{
 	 */
-	#define SPDIFRX_Input_IN0 ((uint32_t)0x00000000)
-	#define SPDIFRX_Input_IN1 ((uint32_t)0x00010000)
-	#define SPDIFRX_Input_IN2 ((uint32_t)0x00020000)
-	#define SPDIFRX_Input_IN3 ((uint32_t)0x00030000)
+	#define SPDIFRX_Input_IN0	  ((uint32_t)0x00000000)
+	#define SPDIFRX_Input_IN1	  ((uint32_t)0x00010000)
+	#define SPDIFRX_Input_IN2	  ((uint32_t)0x00020000)
+	#define SPDIFRX_Input_IN3	  ((uint32_t)0x00030000)
 	#define IS_SPDIFRX_INPUT_SELECT(INPUT)                                                     \
 		(((INPUT) == SPDIFRX_Input_IN1) || ((INPUT) == SPDIFRX_Input_IN2) ||               \
 		 ((INPUT) == SPDIFRX_Input_IN3) || ((INPUT) == SPDIFRX_Input_IN0))
@@ -92,8 +92,8 @@ typedef struct {
 	/** @defgroup SPDIFRX_Max_Retries SPDIFRX Max Retries
 	 * @{
 	 */
-	#define SPDIFRX_1MAX_RETRIES ((uint32_t)0x00000000)
-	#define SPDIFRX_4MAX_RETRIES ((uint32_t)0x00001000)
+	#define SPDIFRX_1MAX_RETRIES  ((uint32_t)0x00000000)
+	#define SPDIFRX_4MAX_RETRIES  ((uint32_t)0x00001000)
 	#define SPDIFRX_16MAX_RETRIES ((uint32_t)0x00002000)
 	#define SPDIFRX_64MAX_RETRIES ((uint32_t)0x00003000)
 	#define IS_SPDIFRX_MAX_RETRIES(RET)                                                        \
@@ -107,7 +107,7 @@ typedef struct {
 	 * @{
 	 */
 	#define SPDIFRX_WaitForActivity_Off ((uint32_t)0x00000000)
-	#define SPDIFRX_WaitForActivity_On ((uint32_t)SPDIFRX_CR_WFA)
+	#define SPDIFRX_WaitForActivity_On  ((uint32_t)SPDIFRX_CR_WFA)
 	#define IS_SPDIFRX_WAIT_FOR_ACTIVITY(VAL)                                                  \
 		(((VAL) == SPDIFRX_WaitForActivity_On) || ((VAL) == SPDIFRX_WaitForActivity_Off))
 	/**
@@ -128,8 +128,8 @@ typedef struct {
 	/** @defgroup SPDIFRX_Block_Synchronization SPDIFRX Block Synchronization
 	 * @{
 	 */
-	#define SPDIFRX_LSB_DataFormat ((uint32_t)0x00000000)
-	#define SPDIFRX_MSB_DataFormat ((uint32_t)0x00000010)
+	#define SPDIFRX_LSB_DataFormat	  ((uint32_t)0x00000000)
+	#define SPDIFRX_MSB_DataFormat	  ((uint32_t)0x00000010)
 	#define SPDIFRX_32BITS_DataFormat ((uint32_t)0x00000020)
 	#define IS_SPDIFRX_DATA_FORMAT(FORMAT)                                                     \
 		(((FORMAT) == SPDIFRX_LSB_DataFormat) || ((FORMAT) == SPDIFRX_MSB_DataFormat) ||   \
@@ -142,7 +142,7 @@ typedef struct {
 	 * @{
 	 */
 	#define SPDIFRX_StereoMode_Disabled ((uint32_t)0x00000000)
-	#define SPDIFRX_StereoMode_Enabled ((uint32_t)SPDIFRX_CR_RXSTEO)
+	#define SPDIFRX_StereoMode_Enabled  ((uint32_t)SPDIFRX_CR_RXSTEO)
 	#define IS_STEREO_MODE(MODE)                                                               \
 		(((MODE) == SPDIFRX_StereoMode_Disabled) || ((MODE) == SPDIFRX_StereoMode_Enabled))
 	/**
@@ -154,7 +154,7 @@ typedef struct {
 	 */
 	#define SPDIFRX_STATE_IDLE ((uint32_t)0x00000000)
 	#define SPDIFRX_STATE_SYNC ((uint32_t)0x00000001)
-	#define SPDIFRX_STATE_RCV ((uint32_t)SPDIFRX_CR_SPDIFEN)
+	#define SPDIFRX_STATE_RCV  ((uint32_t)SPDIFRX_CR_SPDIFEN)
 	#define IS_SPDIFRX_STATE(STATE)                                                            \
 		(((STATE) == SPDIFRX_STATE_IDLE) || ((STATE) == SPDIFRX_STATE_SYNC) ||             \
 		 ((STATE) == SPDIFRX_STATE_RCV))
@@ -165,13 +165,13 @@ typedef struct {
 	/** @defgroup SPDIFRX_Interrupts_Definition SPDIFRX Interrupts Definition
 	 * @{
 	 */
-	#define SPDIFRX_IT_RXNE ((uint32_t)SPDIFRX_IMR_RXNEIE)
-	#define SPDIFRX_IT_CSRNE ((uint32_t)SPDIFRX_IMR_CSRNEIE)
-	#define SPDIFRX_IT_PERRIE ((uint32_t)SPDIFRX_IMR_PERRIE)
-	#define SPDIFRX_IT_OVRIE ((uint32_t)SPDIFRX_IMR_OVRIE)
-	#define SPDIFRX_IT_SBLKIE ((uint32_t)SPDIFRX_IMR_SBLKIE)
+	#define SPDIFRX_IT_RXNE	   ((uint32_t)SPDIFRX_IMR_RXNEIE)
+	#define SPDIFRX_IT_CSRNE   ((uint32_t)SPDIFRX_IMR_CSRNEIE)
+	#define SPDIFRX_IT_PERRIE  ((uint32_t)SPDIFRX_IMR_PERRIE)
+	#define SPDIFRX_IT_OVRIE   ((uint32_t)SPDIFRX_IMR_OVRIE)
+	#define SPDIFRX_IT_SBLKIE  ((uint32_t)SPDIFRX_IMR_SBLKIE)
 	#define SPDIFRX_IT_SYNCDIE ((uint32_t)SPDIFRX_IMR_SYNCDIE)
-	#define SPDIFRX_IT_IFEIE ((uint32_t)SPDIFRX_IMR_IFEIE)
+	#define SPDIFRX_IT_IFEIE   ((uint32_t)SPDIFRX_IMR_IFEIE)
 	#define IS_SPDIFRX_CONFIG_IT(IT)                                                           \
 		(((IT) == SPDIFRX_IT_RXNE) || ((IT) == SPDIFRX_IT_CSRNE) ||                        \
 		 ((IT) == SPDIFRX_IT_PERRIE) || ((IT) == SPDIFRX_IT_OVRIE) ||                      \
@@ -184,15 +184,15 @@ typedef struct {
 	/** @defgroup SPDIFRX_Flags_Definition SPDIFRX Flags Definition
 	 * @{
 	 */
-	#define SPDIFRX_FLAG_RXNE ((uint32_t)SPDIFRX_SR_RXNE)
+	#define SPDIFRX_FLAG_RXNE  ((uint32_t)SPDIFRX_SR_RXNE)
 	#define SPDIFRX_FLAG_CSRNE ((uint32_t)SPDIFRX_SR_CSRNE)
-	#define SPDIFRX_FLAG_PERR ((uint32_t)SPDIFRX_SR_PERR)
-	#define SPDIFRX_FLAG_OVR ((uint32_t)SPDIFRX_SR_OVR)
-	#define SPDIFRX_FLAG_SBD ((uint32_t)SPDIFRX_SR_SBD)
+	#define SPDIFRX_FLAG_PERR  ((uint32_t)SPDIFRX_SR_PERR)
+	#define SPDIFRX_FLAG_OVR   ((uint32_t)SPDIFRX_SR_OVR)
+	#define SPDIFRX_FLAG_SBD   ((uint32_t)SPDIFRX_SR_SBD)
 	#define SPDIFRX_FLAG_SYNCD ((uint32_t)SPDIFRX_SR_SYNCD)
-	#define SPDIFRX_FLAG_FERR ((uint32_t)SPDIFRX_SR_FERR)
-	#define SPDIFRX_FLAG_SERR ((uint32_t)SPDIFRX_SR_SERR)
-	#define SPDIFRX_FLAG_TERR ((uint32_t)SPDIFRX_SR_TERR)
+	#define SPDIFRX_FLAG_FERR  ((uint32_t)SPDIFRX_SR_FERR)
+	#define SPDIFRX_FLAG_SERR  ((uint32_t)SPDIFRX_SR_SERR)
+	#define SPDIFRX_FLAG_TERR  ((uint32_t)SPDIFRX_SR_TERR)
 	#define IS_SPDIFRX_FLAG(FLAG)                                                              \
 		(((FLAG) == SPDIFRX_FLAG_RXNE) || ((FLAG) == SPDIFRX_FLAG_CSRNE) ||                \
 		 ((FLAG) == SPDIFRX_FLAG_PERR) || ((FLAG) == SPDIFRX_FLAG_OVR) ||                  \

@@ -313,50 +313,50 @@ typedef struct {
 	/** @defgroup DSI_DCS_Command
 	 * @{
 	 */
-	#define DSI_ENTER_IDLE_MODE 0x39
-	#define DSI_ENTER_INVERT_MODE 0x21
-	#define DSI_ENTER_NORMAL_MODE 0x13
-	#define DSI_ENTER_PARTIAL_MODE 0x12
-	#define DSI_ENTER_SLEEP_MODE 0x10
-	#define DSI_EXIT_IDLE_MODE 0x38
-	#define DSI_EXIT_INVERT_MODE 0x20
-	#define DSI_EXIT_SLEEP_MODE 0x11
-	#define DSI_GET_3D_CONTROL 0x3F
-	#define DSI_GET_ADDRESS_MODE 0x0B
-	#define DSI_GET_BLUE_CHANNEL 0x08
+	#define DSI_ENTER_IDLE_MODE	  0x39
+	#define DSI_ENTER_INVERT_MODE	  0x21
+	#define DSI_ENTER_NORMAL_MODE	  0x13
+	#define DSI_ENTER_PARTIAL_MODE	  0x12
+	#define DSI_ENTER_SLEEP_MODE	  0x10
+	#define DSI_EXIT_IDLE_MODE	  0x38
+	#define DSI_EXIT_INVERT_MODE	  0x20
+	#define DSI_EXIT_SLEEP_MODE	  0x11
+	#define DSI_GET_3D_CONTROL	  0x3F
+	#define DSI_GET_ADDRESS_MODE	  0x0B
+	#define DSI_GET_BLUE_CHANNEL	  0x08
 	#define DSI_GET_DIAGNOSTIC_RESULT 0x0F
-	#define DSI_GET_DISPLAY_MODE 0x0D
-	#define DSI_GET_GREEN_CHANNEL 0x07
-	#define DSI_GET_PIXEL_FORMAT 0x0C
-	#define DSI_GET_POWER_MODE 0x0A
-	#define DSI_GET_RED_CHANNEL 0x06
-	#define DSI_GET_SCANLINE 0x45
-	#define DSI_GET_SIGNAL_MODE 0x0E
-	#define DSI_NOP 0x00
-	#define DSI_READ_DDB_CONTINUE 0xA8
-	#define DSI_READ_DDB_START 0xA1
-	#define DSI_READ_MEMORY_CONTINUE 0x3E
-	#define DSI_READ_MEMORY_START 0x2E
-	#define DSI_SET_3D_CONTROL 0x3D
-	#define DSI_SET_ADDRESS_MODE 0x36
-	#define DSI_SET_COLUMN_ADDRESS 0x2A
-	#define DSI_SET_DISPLAY_OFF 0x28
-	#define DSI_SET_DISPLAY_ON 0x29
-	#define DSI_SET_GAMMA_CURVE 0x26
-	#define DSI_SET_PAGE_ADDRESS 0x2B
-	#define DSI_SET_PARTIAL_COLUMNS 0x31
-	#define DSI_SET_PARTIAL_ROWS 0x30
-	#define DSI_SET_PIXEL_FORMAT 0x3A
-	#define DSI_SET_SCROLL_AREA 0x33
-	#define DSI_SET_SCROLL_START 0x37
-	#define DSI_SET_TEAR_OFF 0x34
-	#define DSI_SET_TEAR_ON 0x35
-	#define DSI_SET_TEAR_SCANLINE 0x44
-	#define DSI_SET_VSYNC_TIMING 0x40
-	#define DSI_SOFT_RESET 0x01
-	#define DSI_WRITE_LUT 0x2D
+	#define DSI_GET_DISPLAY_MODE	  0x0D
+	#define DSI_GET_GREEN_CHANNEL	  0x07
+	#define DSI_GET_PIXEL_FORMAT	  0x0C
+	#define DSI_GET_POWER_MODE	  0x0A
+	#define DSI_GET_RED_CHANNEL	  0x06
+	#define DSI_GET_SCANLINE	  0x45
+	#define DSI_GET_SIGNAL_MODE	  0x0E
+	#define DSI_NOP			  0x00
+	#define DSI_READ_DDB_CONTINUE	  0xA8
+	#define DSI_READ_DDB_START	  0xA1
+	#define DSI_READ_MEMORY_CONTINUE  0x3E
+	#define DSI_READ_MEMORY_START	  0x2E
+	#define DSI_SET_3D_CONTROL	  0x3D
+	#define DSI_SET_ADDRESS_MODE	  0x36
+	#define DSI_SET_COLUMN_ADDRESS	  0x2A
+	#define DSI_SET_DISPLAY_OFF	  0x28
+	#define DSI_SET_DISPLAY_ON	  0x29
+	#define DSI_SET_GAMMA_CURVE	  0x26
+	#define DSI_SET_PAGE_ADDRESS	  0x2B
+	#define DSI_SET_PARTIAL_COLUMNS	  0x31
+	#define DSI_SET_PARTIAL_ROWS	  0x30
+	#define DSI_SET_PIXEL_FORMAT	  0x3A
+	#define DSI_SET_SCROLL_AREA	  0x33
+	#define DSI_SET_SCROLL_START	  0x37
+	#define DSI_SET_TEAR_OFF	  0x34
+	#define DSI_SET_TEAR_ON		  0x35
+	#define DSI_SET_TEAR_SCANLINE	  0x44
+	#define DSI_SET_VSYNC_TIMING	  0x40
+	#define DSI_SOFT_RESET		  0x01
+	#define DSI_WRITE_LUT		  0x2D
 	#define DSI_WRITE_MEMORY_CONTINUE 0x3C
-	#define DSI_WRITE_MEMORY_START 0x2C
+	#define DSI_WRITE_MEMORY_START	  0x2C
 	/**
 	 * @}
 	 */
@@ -364,9 +364,9 @@ typedef struct {
 	/** @defgroup DSI_Video_Mode_Type
 	 * @{
 	 */
-	#define DSI_VID_MODE_NB_PULSES 0
-	#define DSI_VID_MODE_NB_EVENTS 1
-	#define DSI_VID_MODE_BURST 2
+	#define DSI_VID_MODE_NB_PULSES	  0
+	#define DSI_VID_MODE_NB_EVENTS	  1
+	#define DSI_VID_MODE_BURST	  2
 	#define IS_DSI_VIDEO_MODE_TYPE(VideoModeType)                                              \
 		(((VideoModeType) == DSI_VID_MODE_NB_PULSES) ||                                    \
 		 ((VideoModeType) == DSI_VID_MODE_NB_EVENTS) ||                                    \
@@ -378,7 +378,7 @@ typedef struct {
 	/** @defgroup DSI_Color_Mode
 	 * @{
 	 */
-	#define DSI_COLOR_MODE_FULL 0
+	#define DSI_COLOR_MODE_FULL  0
 	#define DSI_COLOR_MODE_EIGHT DSI_WCR_COLM
 	#define IS_DSI_COLOR_MODE(ColorMode)                                                       \
 		(((ColorMode) == DSI_COLOR_MODE_FULL) || ((ColorMode) == DSI_COLOR_MODE_EIGHT))
@@ -389,7 +389,7 @@ typedef struct {
 	/** @defgroup DSI_ShutDown
 	 * @{
 	 */
-	#define DSI_DISPLAY_ON 0
+	#define DSI_DISPLAY_ON	0
 	#define DSI_DISPLAY_OFF DSI_WCR_SHTDN
 	#define IS_DSI_SHUT_DOWN(ShutDown)                                                         \
 		(((ShutDown) == DSI_DISPLAY_ON) || ((ShutDown) == DSI_DISPLAY_OFF))
@@ -401,7 +401,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_COMMAND_DISABLE 0
-	#define DSI_LP_COMMAND_ENABLE DSI_VMCR_LPCE
+	#define DSI_LP_COMMAND_ENABLE  DSI_VMCR_LPCE
 	#define IS_DSI_LP_COMMAND(LPCommand)                                                       \
 		(((LPCommand) == DSI_LP_COMMAND_DISABLE) || ((LPCommand) == DSI_LP_COMMAND_ENABLE))
 	/**
@@ -412,7 +412,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_HFP_DISABLE 0
-	#define DSI_LP_HFP_ENABLE DSI_VMCR_LPHFPE
+	#define DSI_LP_HFP_ENABLE  DSI_VMCR_LPHFPE
 	#define IS_DSI_LP_HFP(LPHFP)                                                               \
 		(((LPHFP) == DSI_LP_HFP_DISABLE) || ((LPHFP) == DSI_LP_HFP_ENABLE))
 	/**
@@ -423,7 +423,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_HBP_DISABLE 0
-	#define DSI_LP_HBP_ENABLE DSI_VMCR_LPHBPE
+	#define DSI_LP_HBP_ENABLE  DSI_VMCR_LPHBPE
 	#define IS_DSI_LP_HBP(LPHBP)                                                               \
 		(((LPHBP) == DSI_LP_HBP_DISABLE) || ((LPHBP) == DSI_LP_HBP_ENABLE))
 	/**
@@ -434,7 +434,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_VACT_DISABLE 0
-	#define DSI_LP_VACT_ENABLE DSI_VMCR_LPVAE
+	#define DSI_LP_VACT_ENABLE  DSI_VMCR_LPVAE
 	#define IS_DSI_LP_VACTIVE(LPVActive)                                                       \
 		(((LPVActive) == DSI_LP_VACT_DISABLE) || ((LPVActive) == DSI_LP_VACT_ENABLE))
 	/**
@@ -445,7 +445,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_VFP_DISABLE 0
-	#define DSI_LP_VFP_ENABLE DSI_VMCR_LPVFPE
+	#define DSI_LP_VFP_ENABLE  DSI_VMCR_LPVFPE
 	#define IS_DSI_LP_VFP(LPVFP)                                                               \
 		(((LPVFP) == DSI_LP_VFP_DISABLE) || ((LPVFP) == DSI_LP_VFP_ENABLE))
 	/**
@@ -456,7 +456,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_VBP_DISABLE 0
-	#define DSI_LP_VBP_ENABLE DSI_VMCR_LPVBPE
+	#define DSI_LP_VBP_ENABLE  DSI_VMCR_LPVBPE
 	#define IS_DSI_LP_VBP(LPVBP)                                                               \
 		(((LPVBP) == DSI_LP_VBP_DISABLE) || ((LPVBP) == DSI_LP_VBP_ENABLE))
 	/**
@@ -467,7 +467,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_VSYNC_DISABLE 0
-	#define DSI_LP_VSYNC_ENABLE DSI_VMCR_LPVSAE
+	#define DSI_LP_VSYNC_ENABLE  DSI_VMCR_LPVSAE
 	#define IS_DSI_LP_VSYNC(LPVSYNC)                                                           \
 		(((LPVSYNC) == DSI_LP_VSYNC_DISABLE) || ((LPVSYNC) == DSI_LP_VSYNC_ENABLE))
 	/**
@@ -478,7 +478,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_FBTAA_DISABLE 0
-	#define DSI_FBTAA_ENABLE DSI_VMCR_FBTAAE
+	#define DSI_FBTAA_ENABLE  DSI_VMCR_FBTAAE
 	#define IS_DSI_FBTAA(FrameBTAAcknowledge)                                                  \
 		(((FrameBTAAcknowledge) == DSI_FBTAA_DISABLE) ||                                   \
 		 ((FrameBTAAcknowledge) == DSI_FBTAA_ENABLE))
@@ -489,7 +489,7 @@ typedef struct {
 	/** @defgroup DSI_TearingEffectSource
 	 * @{
 	 */
-	#define DSI_TE_DSILINK 0
+	#define DSI_TE_DSILINK	0
 	#define DSI_TE_EXTERNAL DSI_WCFGR_TESRC
 	#define IS_DSI_TE_SOURCE(TESource)                                                         \
 		(((TESource) == DSI_TE_DSILINK) || ((TESource) == DSI_TE_EXTERNAL))
@@ -500,7 +500,7 @@ typedef struct {
 	/** @defgroup DSI_TearingEffectPolarity
 	 * @{
 	 */
-	#define DSI_TE_RISING_EDGE 0
+	#define DSI_TE_RISING_EDGE  0
 	#define DSI_TE_FALLING_EDGE DSI_WCFGR_TEPOL
 	#define IS_DSI_TE_POLARITY(TEPolarity)                                                     \
 		(((TEPolarity) == DSI_TE_RISING_EDGE) || ((TEPolarity) == DSI_TE_FALLING_EDGE))
@@ -512,7 +512,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_VSYNC_FALLING 0
-	#define DSI_VSYNC_RISING DSI_WCFGR_VSPOL
+	#define DSI_VSYNC_RISING  DSI_WCFGR_VSPOL
 	#define IS_DSI_VS_POLARITY(VSPolarity)                                                     \
 		(((VSPolarity) == DSI_VSYNC_FALLING) || ((VSPolarity) == DSI_VSYNC_RISING))
 	/**
@@ -523,7 +523,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_AR_DISABLE 0
-	#define DSI_AR_ENABLE DSI_WCFGR_AR
+	#define DSI_AR_ENABLE  DSI_WCFGR_AR
 	#define IS_DSI_AUTOMATIC_REFRESH(AutomaticRefresh)                                         \
 		(((AutomaticRefresh) == DSI_AR_DISABLE) || ((AutomaticRefresh) == DSI_AR_ENABLE))
 	/**
@@ -534,7 +534,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_TE_ACKNOWLEDGE_DISABLE 0
-	#define DSI_TE_ACKNOWLEDGE_ENABLE DSI_CMCR_TEARE
+	#define DSI_TE_ACKNOWLEDGE_ENABLE  DSI_CMCR_TEARE
 	#define IS_DSI_TE_ACK_REQUEST(TEAcknowledgeRequest)                                        \
 		(((TEAcknowledgeRequest) == DSI_TE_ACKNOWLEDGE_DISABLE) ||                         \
 		 ((TEAcknowledgeRequest) == DSI_TE_ACKNOWLEDGE_ENABLE))
@@ -546,7 +546,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_ACKNOWLEDGE_DISABLE 0
-	#define DSI_ACKNOWLEDGE_ENABLE DSI_CMCR_ARE
+	#define DSI_ACKNOWLEDGE_ENABLE	DSI_CMCR_ARE
 	#define IS_DSI_ACK_REQUEST(AcknowledgeRequest)                                             \
 		(((AcknowledgeRequest) == DSI_ACKNOWLEDGE_DISABLE) ||                              \
 		 ((AcknowledgeRequest) == DSI_ACKNOWLEDGE_ENABLE))
@@ -559,7 +559,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GSW0P_DISABLE 0
-	#define DSI_LP_GSW0P_ENABLE DSI_CMCR_GSW0TX
+	#define DSI_LP_GSW0P_ENABLE  DSI_CMCR_GSW0TX
 	#define IS_DSI_LP_GSW0P(LP_GSW0P)                                                          \
 		(((LP_GSW0P) == DSI_LP_GSW0P_DISABLE) || ((LP_GSW0P) == DSI_LP_GSW0P_ENABLE))
 	/**
@@ -570,7 +570,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GSW1P_DISABLE 0
-	#define DSI_LP_GSW1P_ENABLE DSI_CMCR_GSW1TX
+	#define DSI_LP_GSW1P_ENABLE  DSI_CMCR_GSW1TX
 	#define IS_DSI_LP_GSW1P(LP_GSW1P)                                                          \
 		(((LP_GSW1P) == DSI_LP_GSW1P_DISABLE) || ((LP_GSW1P) == DSI_LP_GSW1P_ENABLE))
 	/**
@@ -581,7 +581,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GSW2P_DISABLE 0
-	#define DSI_LP_GSW2P_ENABLE DSI_CMCR_GSW2TX
+	#define DSI_LP_GSW2P_ENABLE  DSI_CMCR_GSW2TX
 	#define IS_DSI_LP_GSW2P(LP_GSW2P)                                                          \
 		(((LP_GSW2P) == DSI_LP_GSW2P_DISABLE) || ((LP_GSW2P) == DSI_LP_GSW2P_ENABLE))
 	/**
@@ -592,7 +592,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GSR0P_DISABLE 0
-	#define DSI_LP_GSR0P_ENABLE DSI_CMCR_GSR0TX
+	#define DSI_LP_GSR0P_ENABLE  DSI_CMCR_GSR0TX
 	#define IS_DSI_LP_GSR0P(LP_GSR0P)                                                          \
 		(((LP_GSR0P) == DSI_LP_GSR0P_DISABLE) || ((LP_GSR0P) == DSI_LP_GSR0P_ENABLE))
 	/**
@@ -603,7 +603,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GSR1P_DISABLE 0
-	#define DSI_LP_GSR1P_ENABLE DSI_CMCR_GSR1TX
+	#define DSI_LP_GSR1P_ENABLE  DSI_CMCR_GSR1TX
 	#define IS_DSI_LP_GSR1P(LP_GSR1P)                                                          \
 		(((LP_GSR1P) == DSI_LP_GSR1P_DISABLE) || ((LP_GSR1P) == DSI_LP_GSR1P_ENABLE))
 	/**
@@ -614,7 +614,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GSR2P_DISABLE 0
-	#define DSI_LP_GSR2P_ENABLE DSI_CMCR_GSR2TX
+	#define DSI_LP_GSR2P_ENABLE  DSI_CMCR_GSR2TX
 	#define IS_DSI_LP_GSR2P(LP_GSR2P)                                                          \
 		(((LP_GSR2P) == DSI_LP_GSR2P_DISABLE) || ((LP_GSR2P) == DSI_LP_GSR2P_ENABLE))
 	/**
@@ -625,7 +625,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_GLW_DISABLE 0
-	#define DSI_LP_GLW_ENABLE DSI_CMCR_GLWTX
+	#define DSI_LP_GLW_ENABLE  DSI_CMCR_GLWTX
 	#define IS_DSI_LP_GLW(LP_GLW)                                                              \
 		(((LP_GLW) == DSI_LP_GLW_DISABLE) || ((LP_GLW) == DSI_LP_GLW_ENABLE))
 	/**
@@ -636,7 +636,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_DSW0P_DISABLE 0
-	#define DSI_LP_DSW0P_ENABLE DSI_CMCR_DSW0TX
+	#define DSI_LP_DSW0P_ENABLE  DSI_CMCR_DSW0TX
 	#define IS_DSI_LP_DSW0P(LP_DSW0P)                                                          \
 		(((LP_DSW0P) == DSI_LP_DSW0P_DISABLE) || ((LP_DSW0P) == DSI_LP_DSW0P_ENABLE))
 	/**
@@ -647,7 +647,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_DSW1P_DISABLE 0
-	#define DSI_LP_DSW1P_ENABLE DSI_CMCR_DSW1TX
+	#define DSI_LP_DSW1P_ENABLE  DSI_CMCR_DSW1TX
 	#define IS_DSI_LP_DSW1P(LP_DSW1P)                                                          \
 		(((LP_DSW1P) == DSI_LP_DSW1P_DISABLE) || ((LP_DSW1P) == DSI_LP_DSW1P_ENABLE))
 	/**
@@ -658,7 +658,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_DSR0P_DISABLE 0
-	#define DSI_LP_DSR0P_ENABLE DSI_CMCR_DSR0TX
+	#define DSI_LP_DSR0P_ENABLE  DSI_CMCR_DSR0TX
 	#define IS_DSI_LP_DSR0P(LP_DSR0P)                                                          \
 		(((LP_DSR0P) == DSI_LP_DSR0P_DISABLE) || ((LP_DSR0P) == DSI_LP_DSR0P_ENABLE))
 	/**
@@ -669,7 +669,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_DLW_DISABLE 0
-	#define DSI_LP_DLW_ENABLE DSI_CMCR_DLWTX
+	#define DSI_LP_DLW_ENABLE  DSI_CMCR_DLWTX
 	#define IS_DSI_LP_DLW(LP_DLW)                                                              \
 		(((LP_DLW) == DSI_LP_DLW_DISABLE) || ((LP_DLW) == DSI_LP_DLW_ENABLE))
 	/**
@@ -680,7 +680,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_LP_MRDP_DISABLE 0
-	#define DSI_LP_MRDP_ENABLE DSI_CMCR_MRDPS
+	#define DSI_LP_MRDP_ENABLE  DSI_CMCR_MRDPS
 	#define IS_DSI_LP_MRDP(LP_MRDP)                                                            \
 		(((LP_MRDP) == DSI_LP_MRDP_DISABLE) || ((LP_MRDP) == DSI_LP_MRDP_ENABLE))
 	/**
@@ -690,8 +690,8 @@ typedef struct {
 	/** @defgroup DSI_HS_PrespMode
 	 * @{
 	 */
-	#define DSI_HS_PM_DISABLE 0
-	#define DSI_HS_PM_ENABLE DSI_TCCR3_PM
+	#define DSI_HS_PM_DISABLE	       0
+	#define DSI_HS_PM_ENABLE	       DSI_TCCR3_PM
 	/**
 	 * @}
 	 */
@@ -700,7 +700,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_AUTO_CLK_LANE_CTRL_DISABLE 0
-	#define DSI_AUTO_CLK_LANE_CTRL_ENABLE DSI_CLCR_ACR
+	#define DSI_AUTO_CLK_LANE_CTRL_ENABLE  DSI_CLCR_ACR
 	#define IS_DSI_AUTO_CLKLANE_CONTROL(AutoClkLane)                                           \
 		(((AutoClkLane) == DSI_AUTO_CLK_LANE_CTRL_DISABLE) ||                              \
 		 ((AutoClkLane) == DSI_AUTO_CLK_LANE_CTRL_ENABLE))
@@ -711,7 +711,7 @@ typedef struct {
 	/** @defgroup DSI_Number_Of_Lanes
 	 * @{
 	 */
-	#define DSI_ONE_DATA_LANE 0
+	#define DSI_ONE_DATA_LANE  0
 	#define DSI_TWO_DATA_LANES 1
 	#define IS_DSI_NUMBER_OF_LANES(NumberOfLanes)                                              \
 		(((NumberOfLanes) == DSI_ONE_DATA_LANE) || ((NumberOfLanes) == DSI_TWO_DATA_LANES))
@@ -722,9 +722,9 @@ typedef struct {
 	/** @defgroup DSI_FlowControl
 	 * @{
 	 */
-	#define DSI_FLOW_CONTROL_CRC_RX DSI_PCR_CRCRXE
-	#define DSI_FLOW_CONTROL_ECC_RX DSI_PCR_ECCRXE
-	#define DSI_FLOW_CONTROL_BTA DSI_PCR_BTAE
+	#define DSI_FLOW_CONTROL_CRC_RX	 DSI_PCR_CRCRXE
+	#define DSI_FLOW_CONTROL_ECC_RX	 DSI_PCR_ECCRXE
+	#define DSI_FLOW_CONTROL_BTA	 DSI_PCR_BTAE
 	#define DSI_FLOW_CONTROL_EOTP_RX DSI_PCR_ETRXE
 	#define DSI_FLOW_CONTROL_EOTP_TX DSI_PCR_ETTXE
 	#define DSI_FLOW_CONTROL_ALL                                                               \
@@ -745,7 +745,7 @@ typedef struct {
 	#define DSI_RGB666                                                                         \
 		((uint32_t)0x00000003) /*!< The value 0x00000004 can also be used for the RGB666   \
 					  color mode configuration                 */
-	#define DSI_RGB888 ((uint32_t)0x00000005)
+	#define DSI_RGB888			 ((uint32_t)0x00000005)
 	#define IS_DSI_COLOR_CODING(ColorCoding) ((ColorCoding) <= 5)
 
 	/**
@@ -755,8 +755,8 @@ typedef struct {
 	/** @defgroup DSI_LooselyPacked
 	 * @{
 	 */
-	#define DSI_LOOSELY_PACKED_ENABLE DSI_LCOLCR_LPE
-	#define DSI_LOOSELY_PACKED_DISABLE 0
+	#define DSI_LOOSELY_PACKED_ENABLE	 DSI_LCOLCR_LPE
+	#define DSI_LOOSELY_PACKED_DISABLE	 0
 	#define IS_DSI_LOOSELY_PACKED(LooselyPacked)                                               \
 		(((LooselyPacked) == DSI_LOOSELY_PACKED_ENABLE) ||                                 \
 		 ((LooselyPacked) == DSI_LOOSELY_PACKED_DISABLE))
@@ -769,7 +769,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_HSYNC_ACTIVE_HIGH 0
-	#define DSI_HSYNC_ACTIVE_LOW DSI_LPCR_HSP
+	#define DSI_HSYNC_ACTIVE_LOW  DSI_LPCR_HSP
 	#define IS_DSI_HSYNC_POLARITY(HSYNC)                                                       \
 		(((HSYNC) == DSI_HSYNC_ACTIVE_HIGH) || ((HSYNC) == DSI_HSYNC_ACTIVE_LOW))
 	/**
@@ -780,7 +780,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_VSYNC_ACTIVE_HIGH 0
-	#define DSI_VSYNC_ACTIVE_LOW DSI_LPCR_VSP
+	#define DSI_VSYNC_ACTIVE_LOW  DSI_LPCR_VSP
 	#define IS_DSI_VSYNC_POLARITY(VSYNC)                                                       \
 		(((VSYNC) == DSI_VSYNC_ACTIVE_HIGH) || ((VSYNC) == DSI_VSYNC_ACTIVE_LOW))
 	/**
@@ -791,7 +791,7 @@ typedef struct {
 	 * @{
 	 */
 	#define DSI_DATA_ENABLE_ACTIVE_HIGH 0
-	#define DSI_DATA_ENABLE_ACTIVE_LOW DSI_LPCR_DEP
+	#define DSI_DATA_ENABLE_ACTIVE_LOW  DSI_LPCR_DEP
 	#define IS_DSI_DE_POLARITY(DataEnable)                                                     \
 		(((DataEnable) == DSI_DATA_ENABLE_ACTIVE_HIGH) ||                                  \
 		 ((DataEnable) == DSI_DATA_ENABLE_ACTIVE_LOW))
@@ -836,14 +836,14 @@ typedef struct {
 	/** @defgroup DSI_Flags
 	 * @{
 	 */
-	#define DSI_FLAG_TE DSI_WISR_TEIF
-	#define DSI_FLAG_ER DSI_WISR_ERIF
-	#define DSI_FLAG_BUSY DSI_WISR_BUSY
-	#define DSI_FLAG_PLLLS DSI_WISR_PLLLS
-	#define DSI_FLAG_PLLL DSI_WISR_PLLLIF
-	#define DSI_FLAG_PLLU DSI_WISR_PLLUIF
-	#define DSI_FLAG_RRS DSI_WISR_RRS
-	#define DSI_FLAG_RR DSI_WISR_RRIF
+	#define DSI_FLAG_TE	      DSI_WISR_TEIF
+	#define DSI_FLAG_ER	      DSI_WISR_ERIF
+	#define DSI_FLAG_BUSY	      DSI_WISR_BUSY
+	#define DSI_FLAG_PLLLS	      DSI_WISR_PLLLS
+	#define DSI_FLAG_PLLL	      DSI_WISR_PLLLIF
+	#define DSI_FLAG_PLLU	      DSI_WISR_PLLUIF
+	#define DSI_FLAG_RRS	      DSI_WISR_RRS
+	#define DSI_FLAG_RR	      DSI_WISR_RRIF
 
 	#define IS_DSI_CLEAR_FLAG(FLAG)                                                            \
 		(((FLAG) == DSI_FLAG_TE) || ((FLAG) == DSI_FLAG_ER) ||                             \
@@ -861,11 +861,11 @@ typedef struct {
 	/** @defgroup DSI_Interrupts
 	 * @{
 	 */
-	#define DSI_IT_TE DSI_WIER_TEIE
-	#define DSI_IT_ER DSI_WIER_ERIE
+	#define DSI_IT_TE   DSI_WIER_TEIE
+	#define DSI_IT_ER   DSI_WIER_ERIE
 	#define DSI_IT_PLLL DSI_WIER_PLLLIE
 	#define DSI_IT_PLLU DSI_WIER_PLLUIE
-	#define DSI_IT_RR DSI_WIER_RRIE
+	#define DSI_IT_RR   DSI_WIER_RRIE
 
 	#define IS_DSI_IT(IT)                                                                      \
 		(((IT) == DSI_IT_TE) || ((IT) == DSI_IT_ER) || ((IT) == DSI_IT_PLLL) ||            \
@@ -928,17 +928,17 @@ typedef struct {
 	/** @defgroup DSI_Error_Data_Type
 	 * @{
 	 */
-	#define DSI_ERROR_NONE 0
-	#define DSI_ERROR_ACK ((uint32_t)0x00000001) /*!< acknowledge errors          */
-	#define DSI_ERROR_PHY ((uint32_t)0x00000002) /*!< PHY related errors          */
-	#define DSI_ERROR_TX ((uint32_t)0x00000004)  /*!< transmission error          */
-	#define DSI_ERROR_RX ((uint32_t)0x00000008)  /*!< reception error             */
-	#define DSI_ERROR_ECC ((uint32_t)0x00000010) /*!< ECC errors                  */
-	#define DSI_ERROR_CRC ((uint32_t)0x00000020) /*!< CRC error                   */
-	#define DSI_ERROR_PSE ((uint32_t)0x00000040) /*!< Packet Size error           */
-	#define DSI_ERROR_EOT ((uint32_t)0x00000080) /*!< End Of Transmission error   */
-	#define DSI_ERROR_OVF ((uint32_t)0x00000100) /*!< FIFO overflow error         */
-	#define DSI_ERROR_GEN ((uint32_t)0x00000200) /*!< Generic FIFO related errors */
+	#define DSI_ERROR_NONE		0
+	#define DSI_ERROR_ACK		((uint32_t)0x00000001) /*!< acknowledge errors          */
+	#define DSI_ERROR_PHY		((uint32_t)0x00000002) /*!< PHY related errors          */
+	#define DSI_ERROR_TX		((uint32_t)0x00000004) /*!< transmission error          */
+	#define DSI_ERROR_RX		((uint32_t)0x00000008) /*!< reception error             */
+	#define DSI_ERROR_ECC		((uint32_t)0x00000010) /*!< ECC errors                  */
+	#define DSI_ERROR_CRC		((uint32_t)0x00000020) /*!< CRC error                   */
+	#define DSI_ERROR_PSE		((uint32_t)0x00000040) /*!< Packet Size error           */
+	#define DSI_ERROR_EOT		((uint32_t)0x00000080) /*!< End Of Transmission error   */
+	#define DSI_ERROR_OVF		((uint32_t)0x00000100) /*!< FIFO overflow error         */
+	#define DSI_ERROR_GEN		((uint32_t)0x00000200) /*!< Generic FIFO related errors */
 	/**
 	 * @}
 	 */
@@ -946,8 +946,8 @@ typedef struct {
 	/** @defgroup DSI_Lane_Group
 	 * @{
 	 */
-	#define DSI_CLOCK_LANE ((uint32_t)0x00000000)
-	#define DSI_DATA_LANES ((uint32_t)0x00000001)
+	#define DSI_CLOCK_LANE		((uint32_t)0x00000000)
+	#define DSI_DATA_LANES		((uint32_t)0x00000001)
 	#define IS_DSI_LANE_GROUP(Lane) (((Lane) == DSI_CLOCK_LANE) || ((Lane) == DSI_DATA_LANES))
 	/**
 	 * @}
@@ -956,9 +956,9 @@ typedef struct {
 	/** @defgroup DSI_Communication_Delay
 	 * @{
 	 */
-	#define DSI_SLEW_RATE_HSTX ((uint32_t)0x00000000)
-	#define DSI_SLEW_RATE_LPTX ((uint32_t)0x00000001)
-	#define DSI_HS_DELAY ((uint32_t)0x00000002)
+	#define DSI_SLEW_RATE_HSTX	((uint32_t)0x00000000)
+	#define DSI_SLEW_RATE_LPTX	((uint32_t)0x00000001)
+	#define DSI_HS_DELAY		((uint32_t)0x00000002)
 	#define IS_DSI_COMMUNICATION_DELAY(CommDelay)                                              \
 		(((CommDelay) == DSI_SLEW_RATE_HSTX) || ((CommDelay) == DSI_SLEW_RATE_LPTX) ||     \
 		 ((CommDelay) == DSI_HS_DELAY))
@@ -969,7 +969,7 @@ typedef struct {
 	/** @defgroup DSI_CustomLane
 	 * @{
 	 */
-	#define DSI_SWAP_LANE_PINS ((uint32_t)0x00000000)
+	#define DSI_SWAP_LANE_PINS   ((uint32_t)0x00000000)
 	#define DSI_INVERT_HS_SIGNAL ((uint32_t)0x00000001)
 	#define IS_DSI_CUSTOM_LANE(CustomLane)                                                     \
 		(((CustomLane) == DSI_SWAP_LANE_PINS) || ((CustomLane) == DSI_INVERT_HS_SIGNAL))
@@ -993,14 +993,14 @@ typedef struct {
 	/** @defgroup DSI_PHY_Timing
 	 * @{
 	 */
-	#define DSI_TCLK_POST ((uint32_t)0x00000000)
-	#define DSI_TLPX_CLK ((uint32_t)0x00000001)
-	#define DSI_THS_EXIT ((uint32_t)0x00000002)
-	#define DSI_TLPX_DATA ((uint32_t)0x00000003)
-	#define DSI_THS_ZERO ((uint32_t)0x00000004)
-	#define DSI_THS_TRAIL ((uint32_t)0x00000005)
-	#define DSI_THS_PREPARE ((uint32_t)0x00000006)
-	#define DSI_TCLK_ZERO ((uint32_t)0x00000007)
+	#define DSI_TCLK_POST	 ((uint32_t)0x00000000)
+	#define DSI_TLPX_CLK	 ((uint32_t)0x00000001)
+	#define DSI_THS_EXIT	 ((uint32_t)0x00000002)
+	#define DSI_TLPX_DATA	 ((uint32_t)0x00000003)
+	#define DSI_THS_ZERO	 ((uint32_t)0x00000004)
+	#define DSI_THS_TRAIL	 ((uint32_t)0x00000005)
+	#define DSI_THS_PREPARE	 ((uint32_t)0x00000006)
+	#define DSI_TCLK_ZERO	 ((uint32_t)0x00000007)
 	#define DSI_TCLK_PREPARE ((uint32_t)0x00000008)
 	#define IS_DSI_PHY_TIMING(Timing)                                                          \
 		(((Timing) == DSI_TCLK_POST) || ((Timing) == DSI_TLPX_CLK) ||                      \

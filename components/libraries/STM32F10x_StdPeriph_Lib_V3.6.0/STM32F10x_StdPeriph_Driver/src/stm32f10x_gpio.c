@@ -45,27 +45,27 @@
  */
 
 /* ------------ RCC registers bit address in the alias region ----------------*/
-#define AFIO_OFFSET (AFIO_BASE - PERIPH_BASE)
+#define AFIO_OFFSET		(AFIO_BASE - PERIPH_BASE)
 
 /* --- EVENTCR Register -----*/
 
 /* Alias word address of EVOE bit */
-#define EVCR_OFFSET (AFIO_OFFSET + 0x00)
-#define EVOE_BitNumber ((uint8_t)0x07)
-#define EVCR_EVOE_BB (PERIPH_BB_BASE + (EVCR_OFFSET * 32) + (EVOE_BitNumber * 4))
+#define EVCR_OFFSET		(AFIO_OFFSET + 0x00)
+#define EVOE_BitNumber		((uint8_t)0x07)
+#define EVCR_EVOE_BB		(PERIPH_BB_BASE + (EVCR_OFFSET * 32) + (EVOE_BitNumber * 4))
 
 /* ---  MAPR Register ---*/
 /* Alias word address of MII_RMII_SEL bit */
-#define MAPR_OFFSET (AFIO_OFFSET + 0x04)
-#define MII_RMII_SEL_BitNumber ((u8)0x17)
-#define MAPR_MII_RMII_SEL_BB (PERIPH_BB_BASE + (MAPR_OFFSET * 32) + (MII_RMII_SEL_BitNumber * 4))
+#define MAPR_OFFSET		(AFIO_OFFSET + 0x04)
+#define MII_RMII_SEL_BitNumber	((u8)0x17)
+#define MAPR_MII_RMII_SEL_BB	(PERIPH_BB_BASE + (MAPR_OFFSET * 32) + (MII_RMII_SEL_BitNumber * 4))
 
 #define EVCR_PORTPINCONFIG_MASK ((uint16_t)0xFF80)
-#define LSB_MASK ((uint16_t)0xFFFF)
-#define DBGAFR_POSITION_MASK ((uint32_t)0x000F0000)
-#define DBGAFR_SWJCFG_MASK ((uint32_t)0xF0FFFFFF)
-#define DBGAFR_LOCATION_MASK ((uint32_t)0x00200000)
-#define DBGAFR_NUMBITS_MASK ((uint32_t)0x00100000)
+#define LSB_MASK		((uint16_t)0xFFFF)
+#define DBGAFR_POSITION_MASK	((uint32_t)0x000F0000)
+#define DBGAFR_SWJCFG_MASK	((uint32_t)0xF0FFFFFF)
+#define DBGAFR_LOCATION_MASK	((uint32_t)0x00200000)
+#define DBGAFR_NUMBITS_MASK	((uint32_t)0x00100000)
 /**
  * @}
  */

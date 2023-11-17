@@ -129,9 +129,10 @@ typedef struct {
 	 * @{
 	 */
 	#define CEC_BitRisingError_Off                                                             \
-		((uint32_t)0x00000000)		      /*!< Bit Rising Error generation turned Off */
-	#define CEC_BitRisingError_On CEC_CFGR_BREGEN /*!< Bit Rising Error generation turned On   \
-						       */
+		((uint32_t)0x00000000) /*!< Bit Rising Error generation turned Off */
+	#define CEC_BitRisingError_On                                                              \
+		CEC_CFGR_BREGEN /*!< Bit Rising Error generation turned On                         \
+				 */
 
 	#define IS_CEC_BIT_RISING_ERROR(ERROR)                                                     \
 		(((ERROR) == CEC_BitRisingError_Off) || ((ERROR) == CEC_BitRisingError_On))
@@ -193,21 +194,21 @@ typedef struct {
 	/** @defgroup CEC_Interrupt_Configuration_definition
 	 * @{
 	 */
-	#define CEC_IT_TXACKE CEC_IER_TXACKEIE
-	#define CEC_IT_TXERR CEC_IER_TXERRIE
-	#define CEC_IT_TXUDR CEC_IER_TXUDRIE
-	#define CEC_IT_TXEND CEC_IER_TXENDIE
-	#define CEC_IT_TXBR CEC_IER_TXBRIE
-	#define CEC_IT_ARBLST CEC_IER_ARBLSTIE
-	#define CEC_IT_RXACKE CEC_IER_RXACKEIE
-	#define CEC_IT_LBPE CEC_IER_LBPEIE
-	#define CEC_IT_SBPE CEC_IER_SBPEIE
-	#define CEC_IT_BRE CEC_IER_BREIEIE
-	#define CEC_IT_RXOVR CEC_IER_RXOVRIE
-	#define CEC_IT_RXEND CEC_IER_RXENDIE
-	#define CEC_IT_RXBR CEC_IER_RXBRIE
+	#define CEC_IT_TXACKE		CEC_IER_TXACKEIE
+	#define CEC_IT_TXERR		CEC_IER_TXERRIE
+	#define CEC_IT_TXUDR		CEC_IER_TXUDRIE
+	#define CEC_IT_TXEND		CEC_IER_TXENDIE
+	#define CEC_IT_TXBR		CEC_IER_TXBRIE
+	#define CEC_IT_ARBLST		CEC_IER_ARBLSTIE
+	#define CEC_IT_RXACKE		CEC_IER_RXACKEIE
+	#define CEC_IT_LBPE		CEC_IER_LBPEIE
+	#define CEC_IT_SBPE		CEC_IER_SBPEIE
+	#define CEC_IT_BRE		CEC_IER_BREIEIE
+	#define CEC_IT_RXOVR		CEC_IER_RXOVRIE
+	#define CEC_IT_RXEND		CEC_IER_RXENDIE
+	#define CEC_IT_RXBR		CEC_IER_RXBRIE
 
-	#define IS_CEC_IT(IT) ((((IT) & (uint32_t)0xFFFFE000) == 0x00) && ((IT) != 0x00))
+	#define IS_CEC_IT(IT)		((((IT) & (uint32_t)0xFFFFE000) == 0x00) && ((IT) != 0x00))
 
 	#define IS_CEC_GET_IT(IT)                                                                  \
 		(((IT) == CEC_IT_TXACKE) || ((IT) == CEC_IT_TXERR) || ((IT) == CEC_IT_TXUDR) ||    \
@@ -223,18 +224,18 @@ typedef struct {
 	 * @{
 	 */
 	#define CEC_FLAG_TXACKE CEC_ISR_TXACKE
-	#define CEC_FLAG_TXERR CEC_ISR_TXERR
-	#define CEC_FLAG_TXUDR CEC_ISR_TXUDR
-	#define CEC_FLAG_TXEND CEC_ISR_TXEND
-	#define CEC_FLAG_TXBR CEC_ISR_TXBR
+	#define CEC_FLAG_TXERR	CEC_ISR_TXERR
+	#define CEC_FLAG_TXUDR	CEC_ISR_TXUDR
+	#define CEC_FLAG_TXEND	CEC_ISR_TXEND
+	#define CEC_FLAG_TXBR	CEC_ISR_TXBR
 	#define CEC_FLAG_ARBLST CEC_ISR_ARBLST
 	#define CEC_FLAG_RXACKE CEC_ISR_RXACKE
-	#define CEC_FLAG_LBPE CEC_ISR_LBPE
-	#define CEC_FLAG_SBPE CEC_ISR_SBPE
-	#define CEC_FLAG_BRE CEC_ISR_BRE
-	#define CEC_FLAG_RXOVR CEC_ISR_RXOVR
-	#define CEC_FLAG_RXEND CEC_ISR_RXEND
-	#define CEC_FLAG_RXBR CEC_ISR_RXBR
+	#define CEC_FLAG_LBPE	CEC_ISR_LBPE
+	#define CEC_FLAG_SBPE	CEC_ISR_SBPE
+	#define CEC_FLAG_BRE	CEC_ISR_BRE
+	#define CEC_FLAG_RXOVR	CEC_ISR_RXOVR
+	#define CEC_FLAG_RXEND	CEC_ISR_RXEND
+	#define CEC_FLAG_RXBR	CEC_ISR_RXBR
 
 	#define IS_CEC_CLEAR_FLAG(FLAG)                                                            \
 		((((FLAG) & (uint32_t)0xFFFFE000) == 0x00) && ((FLAG) != 0x00))

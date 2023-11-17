@@ -129,9 +129,9 @@ typedef struct {
  * @{
  */
 
-	#define USART_StopBits_1 ((uint16_t)0x0000)
+	#define USART_StopBits_1   ((uint16_t)0x0000)
 	#define USART_StopBits_0_5 ((uint16_t)0x1000)
-	#define USART_StopBits_2 ((uint16_t)0x2000)
+	#define USART_StopBits_2   ((uint16_t)0x2000)
 	#define USART_StopBits_1_5 ((uint16_t)0x3000)
 	#define IS_USART_STOPBITS(STOPBITS)                                                        \
 		(((STOPBITS) == USART_StopBits_1) || ((STOPBITS) == USART_StopBits_0_5) ||         \
@@ -144,9 +144,9 @@ typedef struct {
  * @{
  */
 
-	#define USART_Parity_No ((uint16_t)0x0000)
+	#define USART_Parity_No	  ((uint16_t)0x0000)
 	#define USART_Parity_Even ((uint16_t)0x0400)
-	#define USART_Parity_Odd ((uint16_t)0x0600)
+	#define USART_Parity_Odd  ((uint16_t)0x0600)
 	#define IS_USART_PARITY(PARITY)                                                            \
 		(((PARITY) == USART_Parity_No) || ((PARITY) == USART_Parity_Even) ||               \
 		 ((PARITY) == USART_Parity_Odd))
@@ -169,9 +169,9 @@ typedef struct {
 	/** @defgroup USART_Hardware_Flow_Control
 	 * @{
 	 */
-	#define USART_HardwareFlowControl_None ((uint16_t)0x0000)
-	#define USART_HardwareFlowControl_RTS ((uint16_t)0x0100)
-	#define USART_HardwareFlowControl_CTS ((uint16_t)0x0200)
+	#define USART_HardwareFlowControl_None	  ((uint16_t)0x0000)
+	#define USART_HardwareFlowControl_RTS	  ((uint16_t)0x0100)
+	#define USART_HardwareFlowControl_CTS	  ((uint16_t)0x0200)
 	#define USART_HardwareFlowControl_RTS_CTS ((uint16_t)0x0300)
 	#define IS_USART_HARDWARE_FLOW_CONTROL(CONTROL)                                            \
 		(((CONTROL) == USART_HardwareFlowControl_None) ||                                  \
@@ -186,7 +186,7 @@ typedef struct {
 	 * @{
 	 */
 	#define USART_Clock_Disable ((uint16_t)0x0000)
-	#define USART_Clock_Enable ((uint16_t)0x0800)
+	#define USART_Clock_Enable  ((uint16_t)0x0800)
 	#define IS_USART_CLOCK(CLOCK)                                                              \
 		(((CLOCK) == USART_Clock_Disable) || ((CLOCK) == USART_Clock_Enable))
 /**
@@ -197,9 +197,9 @@ typedef struct {
  * @{
  */
 
-	#define USART_CPOL_Low ((uint16_t)0x0000)
-	#define USART_CPOL_High ((uint16_t)0x0400)
-	#define IS_USART_CPOL(CPOL) (((CPOL) == USART_CPOL_Low) || ((CPOL) == USART_CPOL_High))
+	#define USART_CPOL_Low	      ((uint16_t)0x0000)
+	#define USART_CPOL_High	      ((uint16_t)0x0400)
+	#define IS_USART_CPOL(CPOL)   (((CPOL) == USART_CPOL_Low) || ((CPOL) == USART_CPOL_High))
 
 /**
  * @}
@@ -209,9 +209,9 @@ typedef struct {
  * @{
  */
 
-	#define USART_CPHA_1Edge ((uint16_t)0x0000)
-	#define USART_CPHA_2Edge ((uint16_t)0x0200)
-	#define IS_USART_CPHA(CPHA) (((CPHA) == USART_CPHA_1Edge) || ((CPHA) == USART_CPHA_2Edge))
+	#define USART_CPHA_1Edge      ((uint16_t)0x0000)
+	#define USART_CPHA_2Edge      ((uint16_t)0x0200)
+	#define IS_USART_CPHA(CPHA)   (((CPHA) == USART_CPHA_1Edge) || ((CPHA) == USART_CPHA_2Edge))
 
 /**
  * @}
@@ -222,7 +222,7 @@ typedef struct {
  */
 
 	#define USART_LastBit_Disable ((uint16_t)0x0000)
-	#define USART_LastBit_Enable ((uint16_t)0x0100)
+	#define USART_LastBit_Enable  ((uint16_t)0x0100)
 	#define IS_USART_LASTBIT(LASTBIT)                                                          \
 		(((LASTBIT) == USART_LastBit_Disable) || ((LASTBIT) == USART_LastBit_Enable))
 /**
@@ -233,20 +233,20 @@ typedef struct {
  * @{
  */
 
-	#define USART_IT_PE ((uint16_t)0x0028)
-	#define USART_IT_TXE ((uint16_t)0x0727)
-	#define USART_IT_TC ((uint16_t)0x0626)
+	#define USART_IT_PE   ((uint16_t)0x0028)
+	#define USART_IT_TXE  ((uint16_t)0x0727)
+	#define USART_IT_TC   ((uint16_t)0x0626)
 	#define USART_IT_RXNE ((uint16_t)0x0525)
 	#define USART_IT_ORE_RX                                                                    \
 		((uint16_t)0x0325) /* In case interrupt is generated if the RXNEIE bit is set */
 	#define USART_IT_IDLE ((uint16_t)0x0424)
-	#define USART_IT_LBD ((uint16_t)0x0846)
-	#define USART_IT_CTS ((uint16_t)0x096A)
-	#define USART_IT_ERR ((uint16_t)0x0060)
+	#define USART_IT_LBD  ((uint16_t)0x0846)
+	#define USART_IT_CTS  ((uint16_t)0x096A)
+	#define USART_IT_ERR  ((uint16_t)0x0060)
 	#define USART_IT_ORE_ER                                                                    \
 		((uint16_t)0x0360) /* In case interrupt is generated if the EIE bit is set */
-	#define USART_IT_NE ((uint16_t)0x0260)
-	#define USART_IT_FE ((uint16_t)0x0160)
+	#define USART_IT_NE  ((uint16_t)0x0260)
+	#define USART_IT_FE  ((uint16_t)0x0160)
 
 	/** @defgroup USART_Legacy
 	 * @{
@@ -289,7 +289,7 @@ typedef struct {
  * @{
  */
 
-	#define USART_WakeUp_IdleLine ((uint16_t)0x0000)
+	#define USART_WakeUp_IdleLine	 ((uint16_t)0x0000)
 	#define USART_WakeUp_AddressMark ((uint16_t)0x0800)
 	#define IS_USART_WAKEUP(WAKEUP)                                                            \
 		(((WAKEUP) == USART_WakeUp_IdleLine) || ((WAKEUP) == USART_WakeUp_AddressMark))
@@ -315,7 +315,7 @@ typedef struct {
  */
 
 	#define USART_IrDAMode_LowPower ((uint16_t)0x0004)
-	#define USART_IrDAMode_Normal ((uint16_t)0x0000)
+	#define USART_IrDAMode_Normal	((uint16_t)0x0000)
 	#define IS_USART_IRDA_MODE(MODE)                                                           \
 		(((MODE) == USART_IrDAMode_LowPower) || ((MODE) == USART_IrDAMode_Normal))
 /**
@@ -326,16 +326,16 @@ typedef struct {
  * @{
  */
 
-	#define USART_FLAG_CTS ((uint16_t)0x0200)
-	#define USART_FLAG_LBD ((uint16_t)0x0100)
-	#define USART_FLAG_TXE ((uint16_t)0x0080)
-	#define USART_FLAG_TC ((uint16_t)0x0040)
+	#define USART_FLAG_CTS	((uint16_t)0x0200)
+	#define USART_FLAG_LBD	((uint16_t)0x0100)
+	#define USART_FLAG_TXE	((uint16_t)0x0080)
+	#define USART_FLAG_TC	((uint16_t)0x0040)
 	#define USART_FLAG_RXNE ((uint16_t)0x0020)
 	#define USART_FLAG_IDLE ((uint16_t)0x0010)
-	#define USART_FLAG_ORE ((uint16_t)0x0008)
-	#define USART_FLAG_NE ((uint16_t)0x0004)
-	#define USART_FLAG_FE ((uint16_t)0x0002)
-	#define USART_FLAG_PE ((uint16_t)0x0001)
+	#define USART_FLAG_ORE	((uint16_t)0x0008)
+	#define USART_FLAG_NE	((uint16_t)0x0004)
+	#define USART_FLAG_FE	((uint16_t)0x0002)
+	#define USART_FLAG_PE	((uint16_t)0x0001)
 	#define IS_USART_FLAG(FLAG)                                                                \
 		(((FLAG) == USART_FLAG_PE) || ((FLAG) == USART_FLAG_TXE) ||                        \
 		 ((FLAG) == USART_FLAG_TC) || ((FLAG) == USART_FLAG_RXNE) ||                       \
@@ -347,8 +347,8 @@ typedef struct {
 		((((FLAG) & (uint16_t)0xFC9F) == 0x00) && ((FLAG) != (uint16_t)0x00))
 
 	#define IS_USART_BAUDRATE(BAUDRATE) (((BAUDRATE) > 0) && ((BAUDRATE) < 10500001))
-	#define IS_USART_ADDRESS(ADDRESS) ((ADDRESS) <= 0xF)
-	#define IS_USART_DATA(DATA) ((DATA) <= 0x1FF)
+	#define IS_USART_ADDRESS(ADDRESS)   ((ADDRESS) <= 0xF)
+	#define IS_USART_DATA(DATA)	    ((DATA) <= 0x1FF)
 
 /**
  * @}

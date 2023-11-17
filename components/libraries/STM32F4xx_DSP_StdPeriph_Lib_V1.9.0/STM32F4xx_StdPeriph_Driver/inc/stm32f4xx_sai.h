@@ -197,8 +197,8 @@ typedef struct {
 	 */
 	#define SAI_Mode_MasterTx ((uint32_t)0x00000000)
 	#define SAI_Mode_MasterRx ((uint32_t)0x00000001)
-	#define SAI_Mode_SlaveTx ((uint32_t)0x00000002)
-	#define SAI_Mode_SlaveRx ((uint32_t)0x00000003)
+	#define SAI_Mode_SlaveTx  ((uint32_t)0x00000002)
+	#define SAI_Mode_SlaveRx  ((uint32_t)0x00000003)
 	#define IS_SAI_BLOCK_MODE(MODE)                                                            \
 		(((MODE) == SAI_Mode_MasterTx) || ((MODE) == SAI_Mode_MasterRx) ||                 \
 		 ((MODE) == SAI_Mode_SlaveTx) || ((MODE) == SAI_Mode_SlaveRx))
@@ -210,9 +210,9 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_Free_Protocol ((uint32_t)0x00000000)
+	#define SAI_Free_Protocol  ((uint32_t)0x00000000)
 	#define SAI_SPDIF_Protocol ((uint32_t)SAI_xCR1_PRTCFG_0)
-	#define SAI_AC97_Protocol ((uint32_t)SAI_xCR1_PRTCFG_1)
+	#define SAI_AC97_Protocol  ((uint32_t)SAI_xCR1_PRTCFG_1)
 	#define IS_SAI_BLOCK_PROTOCOL(PROTOCOL)                                                    \
 		(((PROTOCOL) == SAI_Free_Protocol) || ((PROTOCOL) == SAI_SPDIF_Protocol) ||        \
 		 ((PROTOCOL) == SAI_AC97_Protocol))
@@ -224,7 +224,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_DataSize_8b ((uint32_t)0x00000040)
+	#define SAI_DataSize_8b	 ((uint32_t)0x00000040)
 	#define SAI_DataSize_10b ((uint32_t)0x00000060)
 	#define SAI_DataSize_16b ((uint32_t)0x00000080)
 	#define SAI_DataSize_20b ((uint32_t)0x000000A0)
@@ -255,7 +255,7 @@ typedef struct {
 	 */
 
 	#define SAI_ClockStrobing_FallingEdge ((uint32_t)0x00000000)
-	#define SAI_ClockStrobing_RisingEdge ((uint32_t)SAI_xCR1_CKSTR)
+	#define SAI_ClockStrobing_RisingEdge  ((uint32_t)SAI_xCR1_CKSTR)
 	#define IS_SAI_BLOCK_CLOCK_STROBING(CLOCK)                                                 \
 		(((CLOCK) == SAI_ClockStrobing_FallingEdge) ||                                     \
 		 ((CLOCK) == SAI_ClockStrobing_RisingEdge))
@@ -267,8 +267,8 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_Asynchronous ((uint32_t)0x00000000)
-	#define SAI_Synchronous ((uint32_t)SAI_xCR1_SYNCEN_0)
+	#define SAI_Asynchronous    ((uint32_t)0x00000000)
+	#define SAI_Synchronous	    ((uint32_t)SAI_xCR1_SYNCEN_0)
 	#define SAI_Synchronous_Ext ((uint32_t)SAI_xCR1_SYNCEN_1)
 	#define IS_SAI_BLOCK_SYNCHRO(SYNCHRO)                                                      \
 		(((SYNCHRO) == SAI_Synchronous) || ((SYNCHRO) == SAI_Asynchronous) ||              \
@@ -280,7 +280,7 @@ typedef struct {
 	/** @defgroup SAI_Block_SyncExt SAI External synchronisation
 	 * @{
 	 */
-	#define SAI_SyncExt_Disable ((uint32_t)0x00000000)
+	#define SAI_SyncExt_Disable	     ((uint32_t)0x00000000)
 	#define SAI_SyncExt_OutBlockA_Enable ((uint32_t)SAI_GCR_SYNCOUT_0)
 	#define SAI_SyncExt_OutBlockB_Enable ((uint32_t)SAI_GCR_SYNCOUT_1)
 	#define IS_SAI_BLOCK_SYNCEXT(SYNCHRO)                                                      \
@@ -296,7 +296,7 @@ typedef struct {
 	 */
 
 	#define SAI_OutputDrive_Disabled ((uint32_t)0x00000000)
-	#define SAI_OutputDrive_Enabled ((uint32_t)SAI_xCR1_OUTDRIV)
+	#define SAI_OutputDrive_Enabled	 ((uint32_t)SAI_xCR1_OUTDRIV)
 	#define IS_SAI_BLOCK_OUTPUT_DRIVE(DRIVE)                                                   \
 		(((DRIVE) == SAI_OutputDrive_Disabled) || ((DRIVE) == SAI_OutputDrive_Enabled))
 	/**
@@ -307,7 +307,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_MasterDivider_Enabled ((uint32_t)0x00000000)
+	#define SAI_MasterDivider_Enabled  ((uint32_t)0x00000000)
 	#define SAI_MasterDivider_Disabled ((uint32_t)SAI_xCR1_NODIV)
 	#define IS_SAI_BLOCK_NODIVIDER(NODIVIDER)                                                  \
 		(((NODIVIDER) == SAI_MasterDivider_Enabled) ||                                     \
@@ -328,7 +328,7 @@ typedef struct {
 	/** @defgroup SAI_Block_Frame_Length
 	 * @{
 	 */
-	#define IS_SAI_BLOCK_FRAME_LENGTH(LENGTH) ((8 <= (LENGTH)) && ((LENGTH) <= 256))
+	#define IS_SAI_BLOCK_FRAME_LENGTH(LENGTH)    ((8 <= (LENGTH)) && ((LENGTH) <= 256))
 
 	/**
 	 * @}
@@ -337,7 +337,7 @@ typedef struct {
 	/** @defgroup SAI_Block_Active_FrameLength
 	 * @{
 	 */
-	#define IS_SAI_BLOCK_ACTIVE_FRAME(LENGTH) ((1 <= (LENGTH)) && ((LENGTH) <= 128))
+	#define IS_SAI_BLOCK_ACTIVE_FRAME(LENGTH)    ((1 <= (LENGTH)) && ((LENGTH) <= 128))
 
 	/**
 	 * @}
@@ -347,8 +347,8 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_FS_StartFrame ((uint32_t)0x00000000)
-	#define I2S_FS_ChannelIdentification ((uint32_t)SAI_xFRCR_FSDEF)
+	#define SAI_FS_StartFrame		     ((uint32_t)0x00000000)
+	#define I2S_FS_ChannelIdentification	     ((uint32_t)SAI_xFRCR_FSDEF)
 	#define IS_SAI_BLOCK_FS_DEFINITION(DEFINITION)                                             \
 		(((DEFINITION) == SAI_FS_StartFrame) ||                                            \
 		 ((DEFINITION) == I2S_FS_ChannelIdentification))
@@ -360,7 +360,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_FS_ActiveLow ((uint32_t)0x00000000)
+	#define SAI_FS_ActiveLow  ((uint32_t)0x00000000)
 	#define SAI_FS_ActiveHigh ((uint32_t)SAI_xFRCR_FSPO)
 	#define IS_SAI_BLOCK_FS_POLARITY(POLARITY)                                                 \
 		(((POLARITY) == SAI_FS_ActiveLow) || ((POLARITY) == SAI_FS_ActiveHigh))
@@ -372,7 +372,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_FS_FirstBit ((uint32_t)0x00000000)
+	#define SAI_FS_FirstBit	      ((uint32_t)0x00000000)
 	#define SAI_FS_BeforeFirstBit ((uint32_t)SAI_xFRCR_FSOFF)
 	#define IS_SAI_BLOCK_FS_OFFSET(OFFSET)                                                     \
 		(((OFFSET) == SAI_FS_FirstBit) || ((OFFSET) == SAI_FS_BeforeFirstBit))
@@ -392,9 +392,9 @@ typedef struct {
 	/** @defgroup SAI_Block_Slot_Size
 	 * @{
 	 */
-	#define SAI_SlotSize_DataSize ((uint32_t)0x00000000)
-	#define SAI_SlotSize_16b ((uint32_t)SAI_xSLOTR_SLOTSZ_0)
-	#define SAI_SlotSize_32b ((uint32_t)SAI_xSLOTR_SLOTSZ_1)
+	#define SAI_SlotSize_DataSize		     ((uint32_t)0x00000000)
+	#define SAI_SlotSize_16b		     ((uint32_t)SAI_xSLOTR_SLOTSZ_0)
+	#define SAI_SlotSize_32b		     ((uint32_t)SAI_xSLOTR_SLOTSZ_1)
 	#define IS_SAI_BLOCK_SLOT_SIZE(SIZE)                                                       \
 		(((SIZE) == SAI_SlotSize_DataSize) || ((SIZE) == SAI_SlotSize_16b) ||              \
 		 ((SIZE) == SAI_SlotSize_32b))
@@ -415,26 +415,26 @@ typedef struct {
 	/** @defgroup SAI_Block_Slot_Active
 	 * @{
 	 */
-	#define SAI_Slot_NotActive ((uint32_t)0x00000000)
-	#define SAI_SlotActive_0 ((uint32_t)0x00010000)
-	#define SAI_SlotActive_1 ((uint32_t)0x00020000)
-	#define SAI_SlotActive_2 ((uint32_t)0x00040000)
-	#define SAI_SlotActive_3 ((uint32_t)0x00080000)
-	#define SAI_SlotActive_4 ((uint32_t)0x00100000)
-	#define SAI_SlotActive_5 ((uint32_t)0x00200000)
-	#define SAI_SlotActive_6 ((uint32_t)0x00400000)
-	#define SAI_SlotActive_7 ((uint32_t)0x00800000)
-	#define SAI_SlotActive_8 ((uint32_t)0x01000000)
-	#define SAI_SlotActive_9 ((uint32_t)0x02000000)
-	#define SAI_SlotActive_10 ((uint32_t)0x04000000)
-	#define SAI_SlotActive_11 ((uint32_t)0x08000000)
-	#define SAI_SlotActive_12 ((uint32_t)0x10000000)
-	#define SAI_SlotActive_13 ((uint32_t)0x20000000)
-	#define SAI_SlotActive_14 ((uint32_t)0x40000000)
-	#define SAI_SlotActive_15 ((uint32_t)0x80000000)
-	#define SAI_SlotActive_ALL ((uint32_t)0xFFFF0000)
+	#define SAI_Slot_NotActive		 ((uint32_t)0x00000000)
+	#define SAI_SlotActive_0		 ((uint32_t)0x00010000)
+	#define SAI_SlotActive_1		 ((uint32_t)0x00020000)
+	#define SAI_SlotActive_2		 ((uint32_t)0x00040000)
+	#define SAI_SlotActive_3		 ((uint32_t)0x00080000)
+	#define SAI_SlotActive_4		 ((uint32_t)0x00100000)
+	#define SAI_SlotActive_5		 ((uint32_t)0x00200000)
+	#define SAI_SlotActive_6		 ((uint32_t)0x00400000)
+	#define SAI_SlotActive_7		 ((uint32_t)0x00800000)
+	#define SAI_SlotActive_8		 ((uint32_t)0x01000000)
+	#define SAI_SlotActive_9		 ((uint32_t)0x02000000)
+	#define SAI_SlotActive_10		 ((uint32_t)0x04000000)
+	#define SAI_SlotActive_11		 ((uint32_t)0x08000000)
+	#define SAI_SlotActive_12		 ((uint32_t)0x10000000)
+	#define SAI_SlotActive_13		 ((uint32_t)0x20000000)
+	#define SAI_SlotActive_14		 ((uint32_t)0x40000000)
+	#define SAI_SlotActive_15		 ((uint32_t)0x80000000)
+	#define SAI_SlotActive_ALL		 ((uint32_t)0xFFFF0000)
 
-	#define IS_SAI_SLOT_ACTIVE(ACTIVE) ((ACTIVE) != 0)
+	#define IS_SAI_SLOT_ACTIVE(ACTIVE)	 ((ACTIVE) != 0)
 
 	/**
 	 * @}
@@ -444,8 +444,8 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_MonoMode ((uint32_t)SAI_xCR1_MONO)
-	#define SAI_StreoMode ((uint32_t)0x00000000)
+	#define SAI_MonoMode			 ((uint32_t)SAI_xCR1_MONO)
+	#define SAI_StreoMode			 ((uint32_t)0x00000000)
 	#define IS_SAI_BLOCK_MONO_STREO_MODE(MODE)                                                 \
 		(((MODE) == SAI_MonoMode) || ((MODE) == SAI_StreoMode))
 	/**
@@ -457,7 +457,7 @@ typedef struct {
 	 */
 
 	#define SAI_Output_NotReleased ((uint32_t)0x00000000)
-	#define SAI_Output_Released ((uint32_t)SAI_xCR2_TRIS)
+	#define SAI_Output_Released    ((uint32_t)SAI_xCR2_TRIS)
 	#define IS_SAI_BLOCK_TRISTATE_MANAGEMENT(STATE)                                            \
 		(((STATE) == SAI_Output_NotReleased) || ((STATE) == SAI_Output_Released))
 	/**
@@ -468,11 +468,11 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_Threshold_FIFOEmpty ((uint32_t)0x00000000)
-	#define SAI_FIFOThreshold_1QuarterFull ((uint32_t)0x00000001)
-	#define SAI_FIFOThreshold_HalfFull ((uint32_t)0x00000002)
+	#define SAI_Threshold_FIFOEmpty		((uint32_t)0x00000000)
+	#define SAI_FIFOThreshold_1QuarterFull	((uint32_t)0x00000001)
+	#define SAI_FIFOThreshold_HalfFull	((uint32_t)0x00000002)
 	#define SAI_FIFOThreshold_3QuartersFull ((uint32_t)0x00000003)
-	#define SAI_FIFOThreshold_Full ((uint32_t)0x00000004)
+	#define SAI_FIFOThreshold_Full		((uint32_t)0x00000004)
 	#define IS_SAI_BLOCK_FIFO_THRESHOLD(THRESHOLD)                                             \
 		(((THRESHOLD) == SAI_Threshold_FIFOEmpty) ||                                       \
 		 ((THRESHOLD) == SAI_FIFOThreshold_1QuarterFull) ||                                \
@@ -487,7 +487,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_NoCompanding ((uint32_t)0x00000000)
+	#define SAI_NoCompanding	 ((uint32_t)0x00000000)
 	#define SAI_ULaw_1CPL_Companding ((uint32_t)0x00008000)
 	#define SAI_ALaw_1CPL_Companding ((uint32_t)0x0000C000)
 	#define SAI_ULaw_2CPL_Companding ((uint32_t)0x0000A000)
@@ -504,7 +504,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_ZeroValue ((uint32_t)0x00000000)
+	#define SAI_ZeroValue	  ((uint32_t)0x00000000)
 	#define SAI_LastSentValue ((uint32_t)SAI_xCR2_MUTEVAL)
 	#define IS_SAI_BLOCK_MUTE_VALUE(VALUE)                                                     \
 		(((VALUE) == SAI_ZeroValue) || ((VALUE) == SAI_LastSentValue))
@@ -526,13 +526,13 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_IT_OVRUDR ((uint32_t)SAI_xIMR_OVRUDRIE)
-	#define SAI_IT_MUTEDET ((uint32_t)SAI_xIMR_MUTEDETIE)
-	#define SAI_IT_WCKCFG ((uint32_t)SAI_xIMR_WCKCFGIE)
-	#define SAI_IT_FREQ ((uint32_t)SAI_xIMR_FREQIE)
-	#define SAI_IT_CNRDY ((uint32_t)SAI_xIMR_CNRDYIE)
-	#define SAI_IT_AFSDET ((uint32_t)SAI_xIMR_AFSDETIE)
-	#define SAI_IT_LFSDET ((uint32_t)SAI_xIMR_LFSDETIE)
+	#define SAI_IT_OVRUDR			   ((uint32_t)SAI_xIMR_OVRUDRIE)
+	#define SAI_IT_MUTEDET			   ((uint32_t)SAI_xIMR_MUTEDETIE)
+	#define SAI_IT_WCKCFG			   ((uint32_t)SAI_xIMR_WCKCFGIE)
+	#define SAI_IT_FREQ			   ((uint32_t)SAI_xIMR_FREQIE)
+	#define SAI_IT_CNRDY			   ((uint32_t)SAI_xIMR_CNRDYIE)
+	#define SAI_IT_AFSDET			   ((uint32_t)SAI_xIMR_AFSDETIE)
+	#define SAI_IT_LFSDET			   ((uint32_t)SAI_xIMR_LFSDETIE)
 
 	#define IS_SAI_BLOCK_CONFIG_IT(IT)                                                         \
 		(((IT) == SAI_IT_OVRUDR) || ((IT) == SAI_IT_MUTEDET) || ((IT) == SAI_IT_WCKCFG) || \
@@ -546,13 +546,13 @@ typedef struct {
 	 * @{
 	 */
 
-	#define SAI_FLAG_OVRUDR ((uint32_t)SAI_xSR_OVRUDR)
+	#define SAI_FLAG_OVRUDR	 ((uint32_t)SAI_xSR_OVRUDR)
 	#define SAI_FLAG_MUTEDET ((uint32_t)SAI_xSR_MUTEDET)
-	#define SAI_FLAG_WCKCFG ((uint32_t)SAI_xSR_WCKCFG)
-	#define SAI_FLAG_FREQ ((uint32_t)SAI_xSR_FREQ)
-	#define SAI_FLAG_CNRDY ((uint32_t)SAI_xSR_CNRDY)
-	#define SAI_FLAG_AFSDET ((uint32_t)SAI_xSR_AFSDET)
-	#define SAI_FLAG_LFSDET ((uint32_t)SAI_xSR_LFSDET)
+	#define SAI_FLAG_WCKCFG	 ((uint32_t)SAI_xSR_WCKCFG)
+	#define SAI_FLAG_FREQ	 ((uint32_t)SAI_xSR_FREQ)
+	#define SAI_FLAG_CNRDY	 ((uint32_t)SAI_xSR_CNRDY)
+	#define SAI_FLAG_AFSDET	 ((uint32_t)SAI_xSR_AFSDET)
+	#define SAI_FLAG_LFSDET	 ((uint32_t)SAI_xSR_LFSDET)
 
 	#define IS_SAI_BLOCK_GET_FLAG(FLAG)                                                        \
 		(((FLAG) == SAI_FLAG_OVRUDR) || ((FLAG) == SAI_FLAG_MUTEDET) ||                    \
@@ -572,12 +572,12 @@ typedef struct {
 	/** @defgroup SAI_Block_Fifo_Status_Level
 	 * @{
 	 */
-	#define SAI_FIFOStatus_Empty ((uint32_t)0x00000000)
+	#define SAI_FIFOStatus_Empty		((uint32_t)0x00000000)
 	#define SAI_FIFOStatus_Less1QuarterFull ((uint32_t)0x00010000)
-	#define SAI_FIFOStatus_1QuarterFull ((uint32_t)0x00020000)
-	#define SAI_FIFOStatus_HalfFull ((uint32_t)0x00030000)
-	#define SAI_FIFOStatus_3QuartersFull ((uint32_t)0x00040000)
-	#define SAI_FIFOStatus_Full ((uint32_t)0x00050000)
+	#define SAI_FIFOStatus_1QuarterFull	((uint32_t)0x00020000)
+	#define SAI_FIFOStatus_HalfFull		((uint32_t)0x00030000)
+	#define SAI_FIFOStatus_3QuartersFull	((uint32_t)0x00040000)
+	#define SAI_FIFOStatus_Full		((uint32_t)0x00050000)
 
 	#define IS_SAI_BLOCK_FIFO_STATUS(STATUS)                                                   \
 		(((STATUS) == SAI_FIFOStatus_Less1QuarterFull) ||                                  \

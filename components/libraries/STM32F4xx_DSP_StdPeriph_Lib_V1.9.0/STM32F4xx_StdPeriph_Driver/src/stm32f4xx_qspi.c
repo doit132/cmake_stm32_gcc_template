@@ -86,17 +86,17 @@
 	defined(STM32F469_479xx)
 	/* Private typedef -----------------------------------------------------------*/
 	/* Private define ------------------------------------------------------------*/
-	#define QSPI_CR_CLEAR_MASK 0x00FFFFCF
-	#define QSPI_DCR_CLEAR_MASK 0xFFE0F7FE
-	#define QSPI_CCR_CLEAR_MASK 0x90800000
-	#define QSPI_PIR_CLEAR_MASK 0xFFFF0000
-	#define QSPI_LPTR_CLEAR_MASK 0xFFFF0000
-	#define QSPI_CCR_CLEAR_INSTRUCTION_MASK 0xFFFFFF00
-	#define QSPI_CCR_CLEAR_DCY_MASK 0xFFC3FFFF
+	#define QSPI_CR_CLEAR_MASK		 0x00FFFFCF
+	#define QSPI_DCR_CLEAR_MASK		 0xFFE0F7FE
+	#define QSPI_CCR_CLEAR_MASK		 0x90800000
+	#define QSPI_PIR_CLEAR_MASK		 0xFFFF0000
+	#define QSPI_LPTR_CLEAR_MASK		 0xFFFF0000
+	#define QSPI_CCR_CLEAR_INSTRUCTION_MASK	 0xFFFFFF00
+	#define QSPI_CCR_CLEAR_DCY_MASK		 0xFFC3FFFF
 	#define QSPI_CR_CLEAR_FIFOTHRESHOLD_MASK 0xFFFFF0FF
-	#define QSPI_CR_INTERRUPT_MASK 0x001F0000
-	#define QSPI_SR_INTERRUPT_MASK 0x0000001F
-	#define QSPI_FSR_INTERRUPT_MASK 0x0000001B
+	#define QSPI_CR_INTERRUPT_MASK		 0x001F0000
+	#define QSPI_SR_INTERRUPT_MASK		 0x0000001F
+	#define QSPI_FSR_INTERRUPT_MASK		 0x0000001B
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/

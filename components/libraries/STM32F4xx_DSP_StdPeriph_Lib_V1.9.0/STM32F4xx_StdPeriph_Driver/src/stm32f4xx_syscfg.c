@@ -55,29 +55,29 @@
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* ------------ RCC registers bit address in the alias region ----------- */
-#define SYSCFG_OFFSET (SYSCFG_BASE - PERIPH_BASE)
+#define SYSCFG_OFFSET	       (SYSCFG_BASE - PERIPH_BASE)
 /* ---  MEMRMP Register ---*/
 /* Alias word address of UFB_MODE bit */
-#define MEMRMP_OFFSET SYSCFG_OFFSET
-#define UFB_MODE_BitNumber ((uint8_t)0x8)
-#define UFB_MODE_BB (PERIPH_BB_BASE + (MEMRMP_OFFSET * 32) + (UFB_MODE_BitNumber * 4))
+#define MEMRMP_OFFSET	       SYSCFG_OFFSET
+#define UFB_MODE_BitNumber     ((uint8_t)0x8)
+#define UFB_MODE_BB	       (PERIPH_BB_BASE + (MEMRMP_OFFSET * 32) + (UFB_MODE_BitNumber * 4))
 
 /* ---  PMC Register ---*/
 /* Alias word address of MII_RMII_SEL bit */
-#define PMC_OFFSET (SYSCFG_OFFSET + 0x04)
+#define PMC_OFFSET	       (SYSCFG_OFFSET + 0x04)
 #define MII_RMII_SEL_BitNumber ((uint8_t)0x17)
-#define PMC_MII_RMII_SEL_BB (PERIPH_BB_BASE + (PMC_OFFSET * 32) + (MII_RMII_SEL_BitNumber * 4))
+#define PMC_MII_RMII_SEL_BB    (PERIPH_BB_BASE + (PMC_OFFSET * 32) + (MII_RMII_SEL_BitNumber * 4))
 
 /* ---  CMPCR Register ---*/
 /* Alias word address of CMP_PD bit */
-#define CMPCR_OFFSET (SYSCFG_OFFSET + 0x20)
-#define CMP_PD_BitNumber ((uint8_t)0x00)
-#define CMPCR_CMP_PD_BB (PERIPH_BB_BASE + (CMPCR_OFFSET * 32) + (CMP_PD_BitNumber * 4))
+#define CMPCR_OFFSET	       (SYSCFG_OFFSET + 0x20)
+#define CMP_PD_BitNumber       ((uint8_t)0x00)
+#define CMPCR_CMP_PD_BB	       (PERIPH_BB_BASE + (CMPCR_OFFSET * 32) + (CMP_PD_BitNumber * 4))
 
 /* ---  MCHDLYCR Register ---*/
 /* Alias word address of BSCKSEL bit */
-#define MCHDLYCR_OFFSET (SYSCFG_OFFSET + 0x30)
-#define BSCKSEL_BIT_NUMBER POSITION_VAL(SYSCFG_MCHDLYCR_BSCKSEL)
+#define MCHDLYCR_OFFSET	       (SYSCFG_OFFSET + 0x30)
+#define BSCKSEL_BIT_NUMBER     POSITION_VAL(SYSCFG_MCHDLYCR_BSCKSEL)
 #define MCHDLYCR_BSCKSEL_BB                                                                        \
 	(uint32_t)(PERIPH_BB_BASE + (MCHDLYCR_OFFSET * 32) + (BSCKSEL_BIT_NUMBER * 4))
 

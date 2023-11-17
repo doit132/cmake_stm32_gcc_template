@@ -45,39 +45,39 @@
  */
 
 /* ------------ BKP registers bit address in the alias region --------------- */
-#define BKP_OFFSET (BKP_BASE - PERIPH_BASE)
+#define BKP_OFFSET     (BKP_BASE - PERIPH_BASE)
 
 /* --- CR Register ----*/
 
 /* Alias word address of TPAL bit */
-#define CR_OFFSET (BKP_OFFSET + 0x30)
+#define CR_OFFSET      (BKP_OFFSET + 0x30)
 #define TPAL_BitNumber 0x01
-#define CR_TPAL_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPAL_BitNumber * 4))
+#define CR_TPAL_BB     (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPAL_BitNumber * 4))
 
 /* Alias word address of TPE bit */
-#define TPE_BitNumber 0x00
-#define CR_TPE_BB (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPE_BitNumber * 4))
+#define TPE_BitNumber  0x00
+#define CR_TPE_BB      (PERIPH_BB_BASE + (CR_OFFSET * 32) + (TPE_BitNumber * 4))
 
 /* --- CSR Register ---*/
 
 /* Alias word address of TPIE bit */
-#define CSR_OFFSET (BKP_OFFSET + 0x34)
+#define CSR_OFFSET     (BKP_OFFSET + 0x34)
 #define TPIE_BitNumber 0x02
-#define CSR_TPIE_BB (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TPIE_BitNumber * 4))
+#define CSR_TPIE_BB    (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TPIE_BitNumber * 4))
 
 /* Alias word address of TIF bit */
-#define TIF_BitNumber 0x09
-#define CSR_TIF_BB (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TIF_BitNumber * 4))
+#define TIF_BitNumber  0x09
+#define CSR_TIF_BB     (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TIF_BitNumber * 4))
 
 /* Alias word address of TEF bit */
-#define TEF_BitNumber 0x08
-#define CSR_TEF_BB (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEF_BitNumber * 4))
+#define TEF_BitNumber  0x08
+#define CSR_TEF_BB     (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEF_BitNumber * 4))
 
 /* ---------------------- BKP registers bit mask ------------------------ */
 
 /* RTCCR register bit mask */
 #define RTCCR_CAL_MASK ((uint16_t)0xFF80)
-#define RTCCR_MASK ((uint16_t)0xFC7F)
+#define RTCCR_MASK     ((uint16_t)0xFC7F)
 
 /**
  * @}

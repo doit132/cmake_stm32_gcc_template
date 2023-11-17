@@ -140,7 +140,7 @@ typedef struct {
 	/** @defgroup RTC_Synchronous_Predivider
 	 * @{
 	 */
-	#define IS_RTC_SYNCH_PREDIV(PREDIV) ((PREDIV) <= 0x7FFF)
+	#define IS_RTC_SYNCH_PREDIV(PREDIV)  ((PREDIV) <= 0x7FFF)
 
 	/**
 	 * @}
@@ -149,10 +149,10 @@ typedef struct {
 	/** @defgroup RTC_Time_Definitions
 	 * @{
 	 */
-	#define IS_RTC_HOUR12(HOUR) (((HOUR) > 0) && ((HOUR) <= 12))
-	#define IS_RTC_HOUR24(HOUR) ((HOUR) <= 23)
-	#define IS_RTC_MINUTES(MINUTES) ((MINUTES) <= 59)
-	#define IS_RTC_SECONDS(SECONDS) ((SECONDS) <= 59)
+	#define IS_RTC_HOUR12(HOUR)	     (((HOUR) > 0) && ((HOUR) <= 12))
+	#define IS_RTC_HOUR24(HOUR)	     ((HOUR) <= 23)
+	#define IS_RTC_MINUTES(MINUTES)	     ((MINUTES) <= 59)
+	#define IS_RTC_SECONDS(SECONDS)	     ((SECONDS) <= 59)
 
 	/**
 	 * @}
@@ -161,9 +161,9 @@ typedef struct {
 	/** @defgroup RTC_AM_PM_Definitions
 	 * @{
 	 */
-	#define RTC_H12_AM ((uint8_t)0x00)
-	#define RTC_H12_PM ((uint8_t)0x40)
-	#define IS_RTC_H12(PM) (((PM) == RTC_H12_AM) || ((PM) == RTC_H12_PM))
+	#define RTC_H12_AM		     ((uint8_t)0x00)
+	#define RTC_H12_PM		     ((uint8_t)0x40)
+	#define IS_RTC_H12(PM)		     (((PM) == RTC_H12_AM) || ((PM) == RTC_H12_PM))
 
 	/**
 	 * @}
@@ -172,7 +172,7 @@ typedef struct {
 	/** @defgroup RTC_Year_Date_Definitions
 	 * @{
 	 */
-	#define IS_RTC_YEAR(YEAR) ((YEAR) <= 99)
+	#define IS_RTC_YEAR(YEAR)	     ((YEAR) <= 99)
 
 	/**
 	 * @}
@@ -183,20 +183,20 @@ typedef struct {
 	 */
 
 	/* Coded in BCD format */
-	#define RTC_Month_January ((uint8_t)0x01)
-	#define RTC_Month_February ((uint8_t)0x02)
-	#define RTC_Month_March ((uint8_t)0x03)
-	#define RTC_Month_April ((uint8_t)0x04)
-	#define RTC_Month_May ((uint8_t)0x05)
-	#define RTC_Month_June ((uint8_t)0x06)
-	#define RTC_Month_July ((uint8_t)0x07)
-	#define RTC_Month_August ((uint8_t)0x08)
-	#define RTC_Month_September ((uint8_t)0x09)
-	#define RTC_Month_October ((uint8_t)0x10)
-	#define RTC_Month_November ((uint8_t)0x11)
-	#define RTC_Month_December ((uint8_t)0x12)
-	#define IS_RTC_MONTH(MONTH) (((MONTH) >= 1) && ((MONTH) <= 12))
-	#define IS_RTC_DATE(DATE) (((DATE) >= 1) && ((DATE) <= 31))
+	#define RTC_Month_January	     ((uint8_t)0x01)
+	#define RTC_Month_February	     ((uint8_t)0x02)
+	#define RTC_Month_March		     ((uint8_t)0x03)
+	#define RTC_Month_April		     ((uint8_t)0x04)
+	#define RTC_Month_May		     ((uint8_t)0x05)
+	#define RTC_Month_June		     ((uint8_t)0x06)
+	#define RTC_Month_July		     ((uint8_t)0x07)
+	#define RTC_Month_August	     ((uint8_t)0x08)
+	#define RTC_Month_September	     ((uint8_t)0x09)
+	#define RTC_Month_October	     ((uint8_t)0x10)
+	#define RTC_Month_November	     ((uint8_t)0x11)
+	#define RTC_Month_December	     ((uint8_t)0x12)
+	#define IS_RTC_MONTH(MONTH)	     (((MONTH) >= 1) && ((MONTH) <= 12))
+	#define IS_RTC_DATE(DATE)	     (((DATE) >= 1) && ((DATE) <= 31))
 
 /**
  * @}
@@ -206,13 +206,13 @@ typedef struct {
  * @{
  */
 
-	#define RTC_Weekday_Monday ((uint8_t)0x01)
-	#define RTC_Weekday_Tuesday ((uint8_t)0x02)
-	#define RTC_Weekday_Wednesday ((uint8_t)0x03)
-	#define RTC_Weekday_Thursday ((uint8_t)0x04)
-	#define RTC_Weekday_Friday ((uint8_t)0x05)
-	#define RTC_Weekday_Saturday ((uint8_t)0x06)
-	#define RTC_Weekday_Sunday ((uint8_t)0x07)
+	#define RTC_Weekday_Monday	     ((uint8_t)0x01)
+	#define RTC_Weekday_Tuesday	     ((uint8_t)0x02)
+	#define RTC_Weekday_Wednesday	     ((uint8_t)0x03)
+	#define RTC_Weekday_Thursday	     ((uint8_t)0x04)
+	#define RTC_Weekday_Friday	     ((uint8_t)0x05)
+	#define RTC_Weekday_Saturday	     ((uint8_t)0x06)
+	#define RTC_Weekday_Sunday	     ((uint8_t)0x07)
 	#define IS_RTC_WEEKDAY(WEEKDAY)                                                            \
 		(((WEEKDAY) == RTC_Weekday_Monday) || ((WEEKDAY) == RTC_Weekday_Tuesday) ||        \
 		 ((WEEKDAY) == RTC_Weekday_Wednesday) || ((WEEKDAY) == RTC_Weekday_Thursday) ||    \
@@ -239,7 +239,7 @@ typedef struct {
 	/** @defgroup RTC_AlarmDateWeekDay_Definitions
 	 * @{
 	 */
-	#define RTC_AlarmDateWeekDaySel_Date ((uint32_t)0x00000000)
+	#define RTC_AlarmDateWeekDaySel_Date	((uint32_t)0x00000000)
 	#define RTC_AlarmDateWeekDaySel_WeekDay ((uint32_t)0x40000000)
 
 	#define IS_RTC_ALARM_DATE_WEEKDAY_SEL(SEL)                                                 \
@@ -253,13 +253,13 @@ typedef struct {
 	/** @defgroup RTC_AlarmMask_Definitions
 	 * @{
 	 */
-	#define RTC_AlarmMask_None ((uint32_t)0x00000000)
+	#define RTC_AlarmMask_None	  ((uint32_t)0x00000000)
 	#define RTC_AlarmMask_DateWeekDay ((uint32_t)0x80000000)
-	#define RTC_AlarmMask_Hours ((uint32_t)0x00800000)
-	#define RTC_AlarmMask_Minutes ((uint32_t)0x00008000)
-	#define RTC_AlarmMask_Seconds ((uint32_t)0x00000080)
-	#define RTC_AlarmMask_All ((uint32_t)0x80808080)
-	#define IS_ALARM_MASK(MASK) (((MASK)&0x7F7F7F7F) == (uint32_t)RESET)
+	#define RTC_AlarmMask_Hours	  ((uint32_t)0x00800000)
+	#define RTC_AlarmMask_Minutes	  ((uint32_t)0x00008000)
+	#define RTC_AlarmMask_Seconds	  ((uint32_t)0x00000080)
+	#define RTC_AlarmMask_All	  ((uint32_t)0x80808080)
+	#define IS_ALARM_MASK(MASK)	  (((MASK)&0x7F7F7F7F) == (uint32_t)RESET)
 
 	/**
 	 * @}
@@ -268,10 +268,10 @@ typedef struct {
 	/** @defgroup RTC_Alarms_Definitions
 	 * @{
 	 */
-	#define RTC_Alarm_A ((uint32_t)0x00000100)
-	#define RTC_Alarm_B ((uint32_t)0x00000200)
-	#define IS_RTC_ALARM(ALARM) (((ALARM) == RTC_Alarm_A) || ((ALARM) == RTC_Alarm_B))
-	#define IS_RTC_CMD_ALARM(ALARM) (((ALARM) & (RTC_Alarm_A | RTC_Alarm_B)) != (uint32_t)RESET)
+	#define RTC_Alarm_A		  ((uint32_t)0x00000100)
+	#define RTC_Alarm_B		  ((uint32_t)0x00000200)
+	#define IS_RTC_ALARM(ALARM)	  (((ALARM) == RTC_Alarm_A) || ((ALARM) == RTC_Alarm_B))
+	#define IS_RTC_CMD_ALARM(ALARM)	  (((ALARM) & (RTC_Alarm_A | RTC_Alarm_B)) != (uint32_t)RESET)
 
 /**
  * @}
@@ -377,12 +377,12 @@ typedef struct {
 	/** @defgroup RTC_Wakeup_Timer_Definitions
 	 * @{
 	 */
-	#define RTC_WakeUpClock_RTCCLK_Div16 ((uint32_t)0x00000000)
-	#define RTC_WakeUpClock_RTCCLK_Div8 ((uint32_t)0x00000001)
-	#define RTC_WakeUpClock_RTCCLK_Div4 ((uint32_t)0x00000002)
-	#define RTC_WakeUpClock_RTCCLK_Div2 ((uint32_t)0x00000003)
-	#define RTC_WakeUpClock_CK_SPRE_16bits ((uint32_t)0x00000004)
-	#define RTC_WakeUpClock_CK_SPRE_17bits ((uint32_t)0x00000006)
+	#define RTC_WakeUpClock_RTCCLK_Div16	     ((uint32_t)0x00000000)
+	#define RTC_WakeUpClock_RTCCLK_Div8	     ((uint32_t)0x00000001)
+	#define RTC_WakeUpClock_RTCCLK_Div4	     ((uint32_t)0x00000002)
+	#define RTC_WakeUpClock_RTCCLK_Div2	     ((uint32_t)0x00000003)
+	#define RTC_WakeUpClock_CK_SPRE_16bits	     ((uint32_t)0x00000004)
+	#define RTC_WakeUpClock_CK_SPRE_17bits	     ((uint32_t)0x00000006)
 	#define IS_RTC_WAKEUP_CLOCK(CLOCK)                                                         \
 		(((CLOCK) == RTC_WakeUpClock_RTCCLK_Div16) ||                                      \
 		 ((CLOCK) == RTC_WakeUpClock_RTCCLK_Div8) ||                                       \
@@ -398,8 +398,8 @@ typedef struct {
 	/** @defgroup RTC_Time_Stamp_Edges_definitions
 	 * @{
 	 */
-	#define RTC_TimeStampEdge_Rising ((uint32_t)0x00000000)
-	#define RTC_TimeStampEdge_Falling ((uint32_t)0x00000008)
+	#define RTC_TimeStampEdge_Rising       ((uint32_t)0x00000000)
+	#define RTC_TimeStampEdge_Falling      ((uint32_t)0x00000008)
 	#define IS_RTC_TIMESTAMP_EDGE(EDGE)                                                        \
 		(((EDGE) == RTC_TimeStampEdge_Rising) || ((EDGE) == RTC_TimeStampEdge_Falling))
 	/**
@@ -410,9 +410,9 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_Output_Disable ((uint32_t)0x00000000)
-	#define RTC_Output_AlarmA ((uint32_t)0x00200000)
-	#define RTC_Output_AlarmB ((uint32_t)0x00400000)
-	#define RTC_Output_WakeUp ((uint32_t)0x00600000)
+	#define RTC_Output_AlarmA  ((uint32_t)0x00200000)
+	#define RTC_Output_AlarmB  ((uint32_t)0x00400000)
+	#define RTC_Output_WakeUp  ((uint32_t)0x00600000)
 
 	#define IS_RTC_OUTPUT(OUTPUT)                                                              \
 		(((OUTPUT) == RTC_Output_Disable) || ((OUTPUT) == RTC_Output_AlarmA) ||            \
@@ -426,7 +426,7 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_OutputPolarity_High ((uint32_t)0x00000000)
-	#define RTC_OutputPolarity_Low ((uint32_t)0x00100000)
+	#define RTC_OutputPolarity_Low	((uint32_t)0x00100000)
 	#define IS_RTC_OUTPUT_POL(POL)                                                             \
 		(((POL) == RTC_OutputPolarity_High) || ((POL) == RTC_OutputPolarity_Low))
 	/**
@@ -449,8 +449,8 @@ typedef struct {
 /** @defgroup RTC_Calib_Output_selection_Definitions
  * @{
  */
-	#define RTC_CalibOutput_512Hz ((uint32_t)0x00000000)
-	#define RTC_CalibOutput_1Hz ((uint32_t)0x00080000)
+	#define RTC_CalibOutput_512Hz	  ((uint32_t)0x00000000)
+	#define RTC_CalibOutput_1Hz	  ((uint32_t)0x00080000)
 	#define IS_RTC_CALIB_OUTPUT(OUTPUT)                                                        \
 		(((OUTPUT) == RTC_CalibOutput_512Hz) || ((OUTPUT) == RTC_CalibOutput_1Hz))
 	/**
@@ -512,13 +512,13 @@ typedef struct {
 	/** @defgroup RTC_DayLightSaving_Definitions
 	 * @{
 	 */
-	#define RTC_DayLightSaving_SUB1H ((uint32_t)0x00020000)
-	#define RTC_DayLightSaving_ADD1H ((uint32_t)0x00010000)
+	#define RTC_DayLightSaving_SUB1H	 ((uint32_t)0x00020000)
+	#define RTC_DayLightSaving_ADD1H	 ((uint32_t)0x00010000)
 	#define IS_RTC_DAYLIGHT_SAVING(SAVE)                                                       \
 		(((SAVE) == RTC_DayLightSaving_SUB1H) || ((SAVE) == RTC_DayLightSaving_ADD1H))
 
 	#define RTC_StoreOperation_Reset ((uint32_t)0x00000000)
-	#define RTC_StoreOperation_Set ((uint32_t)0x00040000)
+	#define RTC_StoreOperation_Set	 ((uint32_t)0x00040000)
 	#define IS_RTC_STORE_OPERATION(OPERATION)                                                  \
 		(((OPERATION) == RTC_StoreOperation_Reset) ||                                      \
 		 ((OPERATION) == RTC_StoreOperation_Set))
@@ -529,10 +529,10 @@ typedef struct {
 	/** @defgroup RTC_Tamper_Trigger_Definitions
 	 * @{
 	 */
-	#define RTC_TamperTrigger_RisingEdge ((uint32_t)0x00000000)
+	#define RTC_TamperTrigger_RisingEdge  ((uint32_t)0x00000000)
 	#define RTC_TamperTrigger_FallingEdge ((uint32_t)0x00000001)
-	#define RTC_TamperTrigger_LowLevel ((uint32_t)0x00000000)
-	#define RTC_TamperTrigger_HighLevel ((uint32_t)0x00000001)
+	#define RTC_TamperTrigger_LowLevel    ((uint32_t)0x00000000)
+	#define RTC_TamperTrigger_HighLevel   ((uint32_t)0x00000001)
 	#define IS_RTC_TAMPER_TRIGGER(TRIGGER)                                                     \
 		(((TRIGGER) == RTC_TamperTrigger_RisingEdge) ||                                    \
 		 ((TRIGGER) == RTC_TamperTrigger_FallingEdge) ||                                   \
@@ -649,8 +649,8 @@ typedef struct {
 	/** @defgroup RTC_Tamper_Pins_Definitions
 	 * @{
 	 */
-	#define RTC_Tamper_1 RTC_TAFCR_TAMP1E
-	#define RTC_Tamper_2 RTC_TAFCR_TAMP2E
+	#define RTC_Tamper_1	      RTC_TAFCR_TAMP1E
+	#define RTC_Tamper_2	      RTC_TAFCR_TAMP2E
 	#define IS_RTC_TAMPER(TAMPER) (((TAMPER) == RTC_Tamper_1) || ((TAMPER) == RTC_Tamper_2))
 
 	/**
@@ -661,12 +661,12 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_TamperPin_Default ((uint32_t)0x00000000)
-	#define RTC_TamperPin_Pos1 ((uint32_t)0x00010000)
+	#define RTC_TamperPin_Pos1    ((uint32_t)0x00010000)
 	#define IS_RTC_TAMPER_PIN(PIN)                                                             \
 		(((PIN) == RTC_TamperPin_Default) || ((PIN) == RTC_TamperPin_Pos1))
 	/* Legacy Defines */
-	#define RTC_TamperPin_PC13 RTC_TamperPin_Default
-	#define RTC_TamperPin_PI8 RTC_TamperPin_Pos1
+	#define RTC_TamperPin_PC13    RTC_TamperPin_Default
+	#define RTC_TamperPin_PI8     RTC_TamperPin_Pos1
 	/**
 	 * @}
 	 */
@@ -675,7 +675,7 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_TimeStampPin_PC13 ((uint32_t)0x00000000)
-	#define RTC_TimeStampPin_PI8 ((uint32_t)0x00020000)
+	#define RTC_TimeStampPin_PI8  ((uint32_t)0x00020000)
 	#define IS_RTC_TIMESTAMP_PIN(PIN)                                                          \
 		(((PIN) == RTC_TimeStampPin_PC13) || ((PIN) == RTC_TimeStampPin_PI8))
 
@@ -687,7 +687,7 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_OutputType_OpenDrain ((uint32_t)0x00000000)
-	#define RTC_OutputType_PushPull ((uint32_t)0x00040000)
+	#define RTC_OutputType_PushPull	 ((uint32_t)0x00040000)
 	#define IS_RTC_OUTPUT_TYPE(TYPE)                                                           \
 		(((TYPE) == RTC_OutputType_OpenDrain) || ((TYPE) == RTC_OutputType_PushPull))
 
@@ -699,7 +699,7 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_ShiftAdd1S_Reset ((uint32_t)0x00000000)
-	#define RTC_ShiftAdd1S_Set ((uint32_t)0x80000000)
+	#define RTC_ShiftAdd1S_Set   ((uint32_t)0x80000000)
 	#define IS_RTC_SHIFT_ADD1S(SEL)                                                            \
 		(((SEL) == RTC_ShiftAdd1S_Reset) || ((SEL) == RTC_ShiftAdd1S_Set))
 	/**
@@ -719,26 +719,26 @@ typedef struct {
  * @{
  */
 
-	#define RTC_BKP_DR0 ((uint32_t)0x00000000)
-	#define RTC_BKP_DR1 ((uint32_t)0x00000001)
-	#define RTC_BKP_DR2 ((uint32_t)0x00000002)
-	#define RTC_BKP_DR3 ((uint32_t)0x00000003)
-	#define RTC_BKP_DR4 ((uint32_t)0x00000004)
-	#define RTC_BKP_DR5 ((uint32_t)0x00000005)
-	#define RTC_BKP_DR6 ((uint32_t)0x00000006)
-	#define RTC_BKP_DR7 ((uint32_t)0x00000007)
-	#define RTC_BKP_DR8 ((uint32_t)0x00000008)
-	#define RTC_BKP_DR9 ((uint32_t)0x00000009)
-	#define RTC_BKP_DR10 ((uint32_t)0x0000000A)
-	#define RTC_BKP_DR11 ((uint32_t)0x0000000B)
-	#define RTC_BKP_DR12 ((uint32_t)0x0000000C)
-	#define RTC_BKP_DR13 ((uint32_t)0x0000000D)
-	#define RTC_BKP_DR14 ((uint32_t)0x0000000E)
-	#define RTC_BKP_DR15 ((uint32_t)0x0000000F)
-	#define RTC_BKP_DR16 ((uint32_t)0x00000010)
-	#define RTC_BKP_DR17 ((uint32_t)0x00000011)
-	#define RTC_BKP_DR18 ((uint32_t)0x00000012)
-	#define RTC_BKP_DR19 ((uint32_t)0x00000013)
+	#define RTC_BKP_DR0	       ((uint32_t)0x00000000)
+	#define RTC_BKP_DR1	       ((uint32_t)0x00000001)
+	#define RTC_BKP_DR2	       ((uint32_t)0x00000002)
+	#define RTC_BKP_DR3	       ((uint32_t)0x00000003)
+	#define RTC_BKP_DR4	       ((uint32_t)0x00000004)
+	#define RTC_BKP_DR5	       ((uint32_t)0x00000005)
+	#define RTC_BKP_DR6	       ((uint32_t)0x00000006)
+	#define RTC_BKP_DR7	       ((uint32_t)0x00000007)
+	#define RTC_BKP_DR8	       ((uint32_t)0x00000008)
+	#define RTC_BKP_DR9	       ((uint32_t)0x00000009)
+	#define RTC_BKP_DR10	       ((uint32_t)0x0000000A)
+	#define RTC_BKP_DR11	       ((uint32_t)0x0000000B)
+	#define RTC_BKP_DR12	       ((uint32_t)0x0000000C)
+	#define RTC_BKP_DR13	       ((uint32_t)0x0000000D)
+	#define RTC_BKP_DR14	       ((uint32_t)0x0000000E)
+	#define RTC_BKP_DR15	       ((uint32_t)0x0000000F)
+	#define RTC_BKP_DR16	       ((uint32_t)0x00000010)
+	#define RTC_BKP_DR17	       ((uint32_t)0x00000011)
+	#define RTC_BKP_DR18	       ((uint32_t)0x00000012)
+	#define RTC_BKP_DR19	       ((uint32_t)0x00000013)
 	#define IS_RTC_BKP(BKP)                                                                    \
 		(((BKP) == RTC_BKP_DR0) || ((BKP) == RTC_BKP_DR1) || ((BKP) == RTC_BKP_DR2) ||     \
 		 ((BKP) == RTC_BKP_DR3) || ((BKP) == RTC_BKP_DR4) || ((BKP) == RTC_BKP_DR5) ||     \
@@ -754,8 +754,8 @@ typedef struct {
 	/** @defgroup RTC_Input_parameter_format_definitions
 	 * @{
 	 */
-	#define RTC_Format_BIN ((uint32_t)0x000000000)
-	#define RTC_Format_BCD ((uint32_t)0x000000001)
+	#define RTC_Format_BIN	      ((uint32_t)0x000000000)
+	#define RTC_Format_BCD	      ((uint32_t)0x000000001)
 	#define IS_RTC_FORMAT(FORMAT) (((FORMAT) == RTC_Format_BIN) || ((FORMAT) == RTC_Format_BCD))
 
 	/**
@@ -765,21 +765,21 @@ typedef struct {
 	/** @defgroup RTC_Flags_Definitions
 	 * @{
 	 */
-	#define RTC_FLAG_RECALPF ((uint32_t)0x00010000)
-	#define RTC_FLAG_TAMP1F ((uint32_t)0x00002000)
-	#define RTC_FLAG_TAMP2F ((uint32_t)0x00004000)
-	#define RTC_FLAG_TSOVF ((uint32_t)0x00001000)
-	#define RTC_FLAG_TSF ((uint32_t)0x00000800)
-	#define RTC_FLAG_WUTF ((uint32_t)0x00000400)
-	#define RTC_FLAG_ALRBF ((uint32_t)0x00000200)
-	#define RTC_FLAG_ALRAF ((uint32_t)0x00000100)
-	#define RTC_FLAG_INITF ((uint32_t)0x00000040)
-	#define RTC_FLAG_RSF ((uint32_t)0x00000020)
-	#define RTC_FLAG_INITS ((uint32_t)0x00000010)
-	#define RTC_FLAG_SHPF ((uint32_t)0x00000008)
-	#define RTC_FLAG_WUTWF ((uint32_t)0x00000004)
-	#define RTC_FLAG_ALRBWF ((uint32_t)0x00000002)
-	#define RTC_FLAG_ALRAWF ((uint32_t)0x00000001)
+	#define RTC_FLAG_RECALPF      ((uint32_t)0x00010000)
+	#define RTC_FLAG_TAMP1F	      ((uint32_t)0x00002000)
+	#define RTC_FLAG_TAMP2F	      ((uint32_t)0x00004000)
+	#define RTC_FLAG_TSOVF	      ((uint32_t)0x00001000)
+	#define RTC_FLAG_TSF	      ((uint32_t)0x00000800)
+	#define RTC_FLAG_WUTF	      ((uint32_t)0x00000400)
+	#define RTC_FLAG_ALRBF	      ((uint32_t)0x00000200)
+	#define RTC_FLAG_ALRAF	      ((uint32_t)0x00000100)
+	#define RTC_FLAG_INITF	      ((uint32_t)0x00000040)
+	#define RTC_FLAG_RSF	      ((uint32_t)0x00000020)
+	#define RTC_FLAG_INITS	      ((uint32_t)0x00000010)
+	#define RTC_FLAG_SHPF	      ((uint32_t)0x00000008)
+	#define RTC_FLAG_WUTWF	      ((uint32_t)0x00000004)
+	#define RTC_FLAG_ALRBWF	      ((uint32_t)0x00000002)
+	#define RTC_FLAG_ALRAWF	      ((uint32_t)0x00000001)
 	#define IS_RTC_GET_FLAG(FLAG)                                                              \
 		(((FLAG) == RTC_FLAG_TSOVF) || ((FLAG) == RTC_FLAG_TSF) ||                         \
 		 ((FLAG) == RTC_FLAG_WUTF) || ((FLAG) == RTC_FLAG_ALRBF) ||                        \
@@ -797,11 +797,11 @@ typedef struct {
 	/** @defgroup RTC_Interrupts_Definitions
 	 * @{
 	 */
-	#define RTC_IT_TS ((uint32_t)0x00008000)
-	#define RTC_IT_WUT ((uint32_t)0x00004000)
-	#define RTC_IT_ALRB ((uint32_t)0x00002000)
-	#define RTC_IT_ALRA ((uint32_t)0x00001000)
-	#define RTC_IT_TAMP ((uint32_t)0x00000004) /* Used only to Enable the Tamper Interrupt */
+	#define RTC_IT_TS    ((uint32_t)0x00008000)
+	#define RTC_IT_WUT   ((uint32_t)0x00004000)
+	#define RTC_IT_ALRB  ((uint32_t)0x00002000)
+	#define RTC_IT_ALRA  ((uint32_t)0x00001000)
+	#define RTC_IT_TAMP  ((uint32_t)0x00000004) /* Used only to Enable the Tamper Interrupt */
 	#define RTC_IT_TAMP1 ((uint32_t)0x00020000)
 	#define RTC_IT_TAMP2 ((uint32_t)0x00040000)
 
@@ -821,7 +821,7 @@ typedef struct {
 	 * @{
 	 */
 	#define RTC_DigitalCalibConfig RTC_CoarseCalibConfig
-	#define RTC_DigitalCalibCmd RTC_CoarseCalibCmd
+	#define RTC_DigitalCalibCmd    RTC_CoarseCalibCmd
 
 /**
  * @}

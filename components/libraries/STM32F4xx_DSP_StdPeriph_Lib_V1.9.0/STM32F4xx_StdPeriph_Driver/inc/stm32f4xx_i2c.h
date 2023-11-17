@@ -87,9 +87,9 @@ typedef struct {
  * @{
  */
 
-	#define I2C_Mode_I2C ((uint16_t)0x0000)
-	#define I2C_Mode_SMBusDevice ((uint16_t)0x0002)
-	#define I2C_Mode_SMBusHost ((uint16_t)0x000A)
+	#define I2C_Mode_I2C		      ((uint16_t)0x0000)
+	#define I2C_Mode_SMBusDevice	      ((uint16_t)0x0002)
+	#define I2C_Mode_SMBusHost	      ((uint16_t)0x000A)
 	#define IS_I2C_MODE(MODE)                                                                  \
 		(((MODE) == I2C_Mode_I2C) || ((MODE) == I2C_Mode_SMBusDevice) ||                   \
 		 ((MODE) == I2C_Mode_SMBusHost))
@@ -102,7 +102,7 @@ typedef struct {
  */
 
 	#define I2C_DutyCycle_16_9 ((uint16_t)0x4000) /*!< I2C fast mode Tlow/Thigh = 16/9 */
-	#define I2C_DutyCycle_2 ((uint16_t)0xBFFF)    /*!< I2C fast mode Tlow/Thigh = 2 */
+	#define I2C_DutyCycle_2	   ((uint16_t)0xBFFF) /*!< I2C fast mode Tlow/Thigh = 2 */
 	#define IS_I2C_DUTY_CYCLE(CYCLE)                                                           \
 		(((CYCLE) == I2C_DutyCycle_16_9) || ((CYCLE) == I2C_DutyCycle_2))
 /**
@@ -113,7 +113,7 @@ typedef struct {
  * @{
  */
 
-	#define I2C_Ack_Enable ((uint16_t)0x0400)
+	#define I2C_Ack_Enable	((uint16_t)0x0400)
 	#define I2C_Ack_Disable ((uint16_t)0x0000)
 	#define IS_I2C_ACK_STATE(STATE)                                                            \
 		(((STATE) == I2C_Ack_Enable) || ((STATE) == I2C_Ack_Disable))
@@ -126,7 +126,7 @@ typedef struct {
  */
 
 	#define I2C_Direction_Transmitter ((uint8_t)0x00)
-	#define I2C_Direction_Receiver ((uint8_t)0x01)
+	#define I2C_Direction_Receiver	  ((uint8_t)0x01)
 	#define IS_I2C_DIRECTION(DIRECTION)                                                        \
 		(((DIRECTION) == I2C_Direction_Transmitter) ||                                     \
 		 ((DIRECTION) == I2C_Direction_Receiver))
@@ -138,7 +138,7 @@ typedef struct {
  * @{
  */
 
-	#define I2C_AcknowledgedAddress_7bit ((uint16_t)0x4000)
+	#define I2C_AcknowledgedAddress_7bit  ((uint16_t)0x4000)
 	#define I2C_AcknowledgedAddress_10bit ((uint16_t)0xC000)
 	#define IS_I2C_ACKNOWLEDGE_ADDRESS(ADDRESS)                                                \
 		(((ADDRESS) == I2C_AcknowledgedAddress_7bit) ||                                    \
@@ -151,14 +151,14 @@ typedef struct {
  * @{
  */
 
-	#define I2C_Register_CR1 ((uint8_t)0x00)
-	#define I2C_Register_CR2 ((uint8_t)0x04)
-	#define I2C_Register_OAR1 ((uint8_t)0x08)
-	#define I2C_Register_OAR2 ((uint8_t)0x0C)
-	#define I2C_Register_DR ((uint8_t)0x10)
-	#define I2C_Register_SR1 ((uint8_t)0x14)
-	#define I2C_Register_SR2 ((uint8_t)0x18)
-	#define I2C_Register_CCR ((uint8_t)0x1C)
+	#define I2C_Register_CR1   ((uint8_t)0x00)
+	#define I2C_Register_CR2   ((uint8_t)0x04)
+	#define I2C_Register_OAR1  ((uint8_t)0x08)
+	#define I2C_Register_OAR2  ((uint8_t)0x0C)
+	#define I2C_Register_DR	   ((uint8_t)0x10)
+	#define I2C_Register_SR1   ((uint8_t)0x14)
+	#define I2C_Register_SR2   ((uint8_t)0x18)
+	#define I2C_Register_CCR   ((uint8_t)0x1C)
 	#define I2C_Register_TRISE ((uint8_t)0x20)
 	#define IS_I2C_REGISTER(REGISTER)                                                          \
 		(((REGISTER) == I2C_Register_CR1) || ((REGISTER) == I2C_Register_CR2) ||           \
@@ -174,7 +174,7 @@ typedef struct {
  * @{
  */
 
-	#define I2C_NACKPosition_Next ((uint16_t)0x0800)
+	#define I2C_NACKPosition_Next	 ((uint16_t)0x0800)
 	#define I2C_NACKPosition_Current ((uint16_t)0xF7FF)
 	#define IS_I2C_NACK_POSITION(POSITION)                                                     \
 		(((POSITION) == I2C_NACKPosition_Next) || ((POSITION) == I2C_NACKPosition_Current))
@@ -186,7 +186,7 @@ typedef struct {
  * @{
  */
 
-	#define I2C_SMBusAlert_Low ((uint16_t)0x2000)
+	#define I2C_SMBusAlert_Low  ((uint16_t)0x2000)
 	#define I2C_SMBusAlert_High ((uint16_t)0xDFFF)
 	#define IS_I2C_SMBUS_ALERT(ALERT)                                                          \
 		(((ALERT) == I2C_SMBusAlert_Low) || ((ALERT) == I2C_SMBusAlert_High))
@@ -198,7 +198,7 @@ typedef struct {
  * @{
  */
 
-	#define I2C_PECPosition_Next ((uint16_t)0x0800)
+	#define I2C_PECPosition_Next	((uint16_t)0x0800)
 	#define I2C_PECPosition_Current ((uint16_t)0xF7FF)
 	#define IS_I2C_PEC_POSITION(POSITION)                                                      \
 		(((POSITION) == I2C_PECPosition_Next) || ((POSITION) == I2C_PECPosition_Current))
@@ -210,9 +210,9 @@ typedef struct {
  * @{
  */
 
-	#define I2C_IT_BUF ((uint16_t)0x0400)
-	#define I2C_IT_EVT ((uint16_t)0x0200)
-	#define I2C_IT_ERR ((uint16_t)0x0100)
+	#define I2C_IT_BUF	     ((uint16_t)0x0400)
+	#define I2C_IT_EVT	     ((uint16_t)0x0200)
+	#define I2C_IT_ERR	     ((uint16_t)0x0100)
 	#define IS_I2C_CONFIG_IT(IT) ((((IT) & (uint16_t)0xF8FF) == 0x00) && ((IT) != 0x00))
 /**
  * @}
@@ -222,20 +222,20 @@ typedef struct {
  * @{
  */
 
-	#define I2C_IT_SMBALERT ((uint32_t)0x01008000)
-	#define I2C_IT_TIMEOUT ((uint32_t)0x01004000)
-	#define I2C_IT_PECERR ((uint32_t)0x01001000)
-	#define I2C_IT_OVR ((uint32_t)0x01000800)
-	#define I2C_IT_AF ((uint32_t)0x01000400)
-	#define I2C_IT_ARLO ((uint32_t)0x01000200)
-	#define I2C_IT_BERR ((uint32_t)0x01000100)
-	#define I2C_IT_TXE ((uint32_t)0x06000080)
-	#define I2C_IT_RXNE ((uint32_t)0x06000040)
-	#define I2C_IT_STOPF ((uint32_t)0x02000010)
-	#define I2C_IT_ADD10 ((uint32_t)0x02000008)
-	#define I2C_IT_BTF ((uint32_t)0x02000004)
-	#define I2C_IT_ADDR ((uint32_t)0x02000002)
-	#define I2C_IT_SB ((uint32_t)0x02000001)
+	#define I2C_IT_SMBALERT	     ((uint32_t)0x01008000)
+	#define I2C_IT_TIMEOUT	     ((uint32_t)0x01004000)
+	#define I2C_IT_PECERR	     ((uint32_t)0x01001000)
+	#define I2C_IT_OVR	     ((uint32_t)0x01000800)
+	#define I2C_IT_AF	     ((uint32_t)0x01000400)
+	#define I2C_IT_ARLO	     ((uint32_t)0x01000200)
+	#define I2C_IT_BERR	     ((uint32_t)0x01000100)
+	#define I2C_IT_TXE	     ((uint32_t)0x06000080)
+	#define I2C_IT_RXNE	     ((uint32_t)0x06000040)
+	#define I2C_IT_STOPF	     ((uint32_t)0x02000010)
+	#define I2C_IT_ADD10	     ((uint32_t)0x02000008)
+	#define I2C_IT_BTF	     ((uint32_t)0x02000004)
+	#define I2C_IT_ADDR	     ((uint32_t)0x02000002)
+	#define I2C_IT_SB	     ((uint32_t)0x02000001)
 
 	#define IS_I2C_CLEAR_IT(IT)                                                                \
 		((((IT) & (uint16_t)0x20FF) == 0x00) && ((IT) != (uint16_t)0x00))
@@ -258,32 +258,32 @@ typedef struct {
  * @brief  SR2 register flags
  */
 
-	#define I2C_FLAG_DUALF ((uint32_t)0x00800000)
-	#define I2C_FLAG_SMBHOST ((uint32_t)0x00400000)
+	#define I2C_FLAG_DUALF	    ((uint32_t)0x00800000)
+	#define I2C_FLAG_SMBHOST    ((uint32_t)0x00400000)
 	#define I2C_FLAG_SMBDEFAULT ((uint32_t)0x00200000)
-	#define I2C_FLAG_GENCALL ((uint32_t)0x00100000)
-	#define I2C_FLAG_TRA ((uint32_t)0x00040000)
-	#define I2C_FLAG_BUSY ((uint32_t)0x00020000)
-	#define I2C_FLAG_MSL ((uint32_t)0x00010000)
+	#define I2C_FLAG_GENCALL    ((uint32_t)0x00100000)
+	#define I2C_FLAG_TRA	    ((uint32_t)0x00040000)
+	#define I2C_FLAG_BUSY	    ((uint32_t)0x00020000)
+	#define I2C_FLAG_MSL	    ((uint32_t)0x00010000)
 
 /**
  * @brief  SR1 register flags
  */
 
-	#define I2C_FLAG_SMBALERT ((uint32_t)0x10008000)
-	#define I2C_FLAG_TIMEOUT ((uint32_t)0x10004000)
-	#define I2C_FLAG_PECERR ((uint32_t)0x10001000)
-	#define I2C_FLAG_OVR ((uint32_t)0x10000800)
-	#define I2C_FLAG_AF ((uint32_t)0x10000400)
-	#define I2C_FLAG_ARLO ((uint32_t)0x10000200)
-	#define I2C_FLAG_BERR ((uint32_t)0x10000100)
-	#define I2C_FLAG_TXE ((uint32_t)0x10000080)
-	#define I2C_FLAG_RXNE ((uint32_t)0x10000040)
-	#define I2C_FLAG_STOPF ((uint32_t)0x10000010)
-	#define I2C_FLAG_ADD10 ((uint32_t)0x10000008)
-	#define I2C_FLAG_BTF ((uint32_t)0x10000004)
-	#define I2C_FLAG_ADDR ((uint32_t)0x10000002)
-	#define I2C_FLAG_SB ((uint32_t)0x10000001)
+	#define I2C_FLAG_SMBALERT   ((uint32_t)0x10008000)
+	#define I2C_FLAG_TIMEOUT    ((uint32_t)0x10004000)
+	#define I2C_FLAG_PECERR	    ((uint32_t)0x10001000)
+	#define I2C_FLAG_OVR	    ((uint32_t)0x10000800)
+	#define I2C_FLAG_AF	    ((uint32_t)0x10000400)
+	#define I2C_FLAG_ARLO	    ((uint32_t)0x10000200)
+	#define I2C_FLAG_BERR	    ((uint32_t)0x10000100)
+	#define I2C_FLAG_TXE	    ((uint32_t)0x10000080)
+	#define I2C_FLAG_RXNE	    ((uint32_t)0x10000040)
+	#define I2C_FLAG_STOPF	    ((uint32_t)0x10000010)
+	#define I2C_FLAG_ADD10	    ((uint32_t)0x10000008)
+	#define I2C_FLAG_BTF	    ((uint32_t)0x10000004)
+	#define I2C_FLAG_ADDR	    ((uint32_t)0x10000002)
+	#define I2C_FLAG_SB	    ((uint32_t)0x10000001)
 
 	#define IS_I2C_CLEAR_FLAG(FLAG)                                                            \
 		((((FLAG) & (uint16_t)0x20FF) == 0x00) && ((FLAG) != (uint16_t)0x00))
@@ -389,8 +389,9 @@ typedef struct {
 
 	/* Master RECEIVER mode -----------------------------*/
 	/* --EV7 */
-	#define I2C_EVENT_MASTER_BYTE_RECEIVED ((uint32_t)0x00030040) /* BUSY, MSL and RXNE flags  \
-								       */
+	#define I2C_EVENT_MASTER_BYTE_RECEIVED                                                     \
+		((uint32_t)0x00030040) /* BUSY, MSL and RXNE flags                                 \
+					*/
 
 	/* Master TRANSMITTER mode --------------------------*/
 	/* --EV8 */
@@ -535,7 +536,7 @@ typedef struct {
  * @{
  */
 
-	#define IS_I2C_CLOCK_SPEED(SPEED) (((SPEED) >= 0x1) && ((SPEED) <= 400000))
+	#define IS_I2C_CLOCK_SPEED(SPEED)     (((SPEED) >= 0x1) && ((SPEED) <= 400000))
 /**
  * @}
  */

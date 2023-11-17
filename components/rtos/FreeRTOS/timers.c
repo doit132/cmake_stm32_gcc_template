@@ -56,7 +56,7 @@
 #if (configUSE_TIMERS == 1)
 
 /* Misc definitions. */
-	#define tmrNO_DELAY ((TickType_t)0U)
+	#define tmrNO_DELAY		    ((TickType_t)0U)
 	#define tmrMAX_TIME_BEFORE_OVERFLOW ((TickType_t)-1)
 
 /* The name assigned to the timer service task.  This can be overridden by
@@ -66,9 +66,9 @@
 	#endif
 
 /* Bit definitions used in the ucStatus member of a timer structure. */
-	#define tmrSTATUS_IS_ACTIVE ((uint8_t)0x01)
+	#define tmrSTATUS_IS_ACTIVE		  ((uint8_t)0x01)
 	#define tmrSTATUS_IS_STATICALLY_ALLOCATED ((uint8_t)0x02)
-	#define tmrSTATUS_IS_AUTORELOAD ((uint8_t)0x04)
+	#define tmrSTATUS_IS_AUTORELOAD		  ((uint8_t)0x04)
 
 /* The definition of the timers themselves. */
 typedef struct tmrTimerControl /* The old naming convention is used to prevent breaking kernel aware
@@ -353,7 +353,7 @@ xTimerCreateStatic(const char *const pcTimerName, /*lint !e971 Unqualified char 
 }
 
 	#endif /* configSUPPORT_STATIC_ALLOCATION */
-	       /*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
 
 static void
 prvInitialiseNewTimer(const char *const pcTimerName, /*lint !e971 Unqualified char types are allowed

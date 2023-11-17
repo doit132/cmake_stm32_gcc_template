@@ -299,8 +299,8 @@ Don't care  |
 /* Masks Definition */
 #define RTC_TR_RESERVED_MASK ((uint32_t)0x007F7F7F)
 #define RTC_DR_RESERVED_MASK ((uint32_t)0x00FFFF3F)
-#define RTC_INIT_MASK ((uint32_t)0xFFFFFFFF)
-#define RTC_RSF_MASK ((uint32_t)0xFFFFFF5F)
+#define RTC_INIT_MASK	     ((uint32_t)0xFFFFFFFF)
+#define RTC_RSF_MASK	     ((uint32_t)0xFFFFFF5F)
 #define RTC_FLAGS_MASK                                                                             \
 	((uint32_t)(RTC_FLAG_TSOVF | RTC_FLAG_TSF | RTC_FLAG_WUTF | RTC_FLAG_ALRBF |               \
 		    RTC_FLAG_ALRAF | RTC_FLAG_INITF | RTC_FLAG_RSF | RTC_FLAG_INITS |              \
@@ -308,9 +308,9 @@ Don't care  |
 		    RTC_FLAG_TAMP2F | RTC_FLAG_RECALPF | RTC_FLAG_SHPF))
 
 #define INITMODE_TIMEOUT ((uint32_t)0x00010000)
-#define SYNCHRO_TIMEOUT ((uint32_t)0x00020000)
-#define RECALPF_TIMEOUT ((uint32_t)0x00020000)
-#define SHPF_TIMEOUT ((uint32_t)0x00001000)
+#define SYNCHRO_TIMEOUT	 ((uint32_t)0x00020000)
+#define RECALPF_TIMEOUT	 ((uint32_t)0x00020000)
+#define SHPF_TIMEOUT	 ((uint32_t)0x00001000)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

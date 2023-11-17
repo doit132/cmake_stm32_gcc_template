@@ -203,10 +203,10 @@ typedef struct {
  * @{
  */
 
-	#define DMA2D_M2M ((uint32_t)0x00000000)
-	#define DMA2D_M2M_PFC ((uint32_t)0x00010000)
+	#define DMA2D_M2M	((uint32_t)0x00000000)
+	#define DMA2D_M2M_PFC	((uint32_t)0x00010000)
 	#define DMA2D_M2M_BLEND ((uint32_t)0x00020000)
-	#define DMA2D_R2M ((uint32_t)0x00030000)
+	#define DMA2D_R2M	((uint32_t)0x00030000)
 
 	#define IS_DMA2D_MODE(MODE)                                                                \
 		(((MODE) == DMA2D_M2M) || ((MODE) == DMA2D_M2M_PFC) ||                             \
@@ -220,8 +220,8 @@ typedef struct {
 	 * @{
 	 */
 	#define DMA2D_ARGB8888 ((uint32_t)0x00000000)
-	#define DMA2D_RGB888 ((uint32_t)0x00000001)
-	#define DMA2D_RGB565 ((uint32_t)0x00000002)
+	#define DMA2D_RGB888   ((uint32_t)0x00000001)
+	#define DMA2D_RGB565   ((uint32_t)0x00000002)
 	#define DMA2D_ARGB1555 ((uint32_t)0x00000003)
 	#define DMA2D_ARGB4444 ((uint32_t)0x00000004)
 
@@ -237,12 +237,12 @@ typedef struct {
 	/** @defgroup DMA2D_OUTPUT_COLOR
 	 * @{
 	 */
-	#define DMA2D_Output_Color ((uint32_t)0x000000FF)
+	#define DMA2D_Output_Color		((uint32_t)0x000000FF)
 
-	#define IS_DMA2D_OGREEN(OGREEN) ((OGREEN) <= DMA2D_Output_Color)
-	#define IS_DMA2D_ORED(ORED) ((ORED) <= DMA2D_Output_Color)
-	#define IS_DMA2D_OBLUE(OBLUE) ((OBLUE) <= DMA2D_Output_Color)
-	#define IS_DMA2D_OALPHA(OALPHA) ((OALPHA) <= DMA2D_Output_Color)
+	#define IS_DMA2D_OGREEN(OGREEN)		((OGREEN) <= DMA2D_Output_Color)
+	#define IS_DMA2D_ORED(ORED)		((ORED) <= DMA2D_Output_Color)
+	#define IS_DMA2D_OBLUE(OBLUE)		((OBLUE) <= DMA2D_Output_Color)
+	#define IS_DMA2D_OALPHA(OALPHA)		((OALPHA) <= DMA2D_Output_Color)
 
 	/**
 	 * @}
@@ -251,7 +251,7 @@ typedef struct {
 	/** @defgroup DMA2D_OUTPUT_OFFSET
 	 * @{
 	 */
-	#define DMA2D_OUTPUT_OFFSET ((uint32_t)0x00003FFF)
+	#define DMA2D_OUTPUT_OFFSET		((uint32_t)0x00003FFF)
 
 	#define IS_DMA2D_OUTPUT_OFFSET(OOFFSET) ((OOFFSET) <= DMA2D_OUTPUT_OFFSET)
 
@@ -263,11 +263,11 @@ typedef struct {
  * @{
  */
 
-	#define DMA2D_pixel ((uint32_t)0x00003FFF)
-	#define DMA2D_Line ((uint32_t)0x0000FFFF)
+	#define DMA2D_pixel			((uint32_t)0x00003FFF)
+	#define DMA2D_Line			((uint32_t)0x0000FFFF)
 
-	#define IS_DMA2D_LINE(LINE) ((LINE) <= DMA2D_Line)
-	#define IS_DMA2D_PIXEL(PIXEL) ((PIXEL) <= DMA2D_pixel)
+	#define IS_DMA2D_LINE(LINE)		((LINE) <= DMA2D_Line)
+	#define IS_DMA2D_PIXEL(PIXEL)		((PIXEL) <= DMA2D_pixel)
 
 	/**
 	 * @}
@@ -276,11 +276,11 @@ typedef struct {
 	/** @defgroup DMA2D_OFFSET
 	 * @{
 	 */
-	#define OFFSET ((uint32_t)0x00003FFF)
+	#define OFFSET				((uint32_t)0x00003FFF)
 
-	#define IS_DMA2D_FGO(FGO) ((FGO) <= OFFSET)
+	#define IS_DMA2D_FGO(FGO)		((FGO) <= OFFSET)
 
-	#define IS_DMA2D_BGO(BGO) ((BGO) <= OFFSET)
+	#define IS_DMA2D_BGO(BGO)		((BGO) <= OFFSET)
 
 /**
  * @}
@@ -290,17 +290,17 @@ typedef struct {
  * @{
  */
 
-	#define CM_ARGB8888 ((uint32_t)0x00000000)
-	#define CM_RGB888 ((uint32_t)0x00000001)
-	#define CM_RGB565 ((uint32_t)0x00000002)
-	#define CM_ARGB1555 ((uint32_t)0x00000003)
-	#define CM_ARGB4444 ((uint32_t)0x00000004)
-	#define CM_L8 ((uint32_t)0x00000005)
-	#define CM_AL44 ((uint32_t)0x00000006)
-	#define CM_AL88 ((uint32_t)0x00000007)
-	#define CM_L4 ((uint32_t)0x00000008)
-	#define CM_A8 ((uint32_t)0x00000009)
-	#define CM_A4 ((uint32_t)0x0000000A)
+	#define CM_ARGB8888			((uint32_t)0x00000000)
+	#define CM_RGB888			((uint32_t)0x00000001)
+	#define CM_RGB565			((uint32_t)0x00000002)
+	#define CM_ARGB1555			((uint32_t)0x00000003)
+	#define CM_ARGB4444			((uint32_t)0x00000004)
+	#define CM_L8				((uint32_t)0x00000005)
+	#define CM_AL44				((uint32_t)0x00000006)
+	#define CM_AL88				((uint32_t)0x00000007)
+	#define CM_L4				((uint32_t)0x00000008)
+	#define CM_A8				((uint32_t)0x00000009)
+	#define CM_A4				((uint32_t)0x0000000A)
 
 	#define IS_DMA2D_FGCM(FGCM)                                                                \
 		(((FGCM) == CM_ARGB8888) || ((FGCM) == CM_RGB888) || ((FGCM) == CM_RGB565) ||      \
@@ -323,7 +323,7 @@ typedef struct {
  */
 
 	#define CLUT_CM_ARGB8888 ((uint32_t)0x00000000)
-	#define CLUT_CM_RGB888 ((uint32_t)0x00000001)
+	#define CLUT_CM_RGB888	 ((uint32_t)0x00000001)
 
 	#define IS_DMA2D_FG_CLUT_CM(FG_CLUT_CM)                                                    \
 		(((FG_CLUT_CM) == CLUT_CM_ARGB8888) || ((FG_CLUT_CM) == CLUT_CM_RGB888))
@@ -339,21 +339,21 @@ typedef struct {
  * @{
  */
 
-	#define COLOR_VALUE ((uint32_t)0x000000FF)
+	#define COLOR_VALUE				((uint32_t)0x000000FF)
 
-	#define IS_DMA2D_FG_CLUT_SIZE(FG_CLUT_SIZE) ((FG_CLUT_SIZE) <= COLOR_VALUE)
+	#define IS_DMA2D_FG_CLUT_SIZE(FG_CLUT_SIZE)	((FG_CLUT_SIZE) <= COLOR_VALUE)
 
 	#define IS_DMA2D_FG_ALPHA_VALUE(FG_ALPHA_VALUE) ((FG_ALPHA_VALUE) <= COLOR_VALUE)
-	#define IS_DMA2D_FGC_BLUE(FGC_BLUE) ((FGC_BLUE) <= COLOR_VALUE)
-	#define IS_DMA2D_FGC_GREEN(FGC_GREEN) ((FGC_GREEN) <= COLOR_VALUE)
-	#define IS_DMA2D_FGC_RED(FGC_RED) ((FGC_RED) <= COLOR_VALUE)
+	#define IS_DMA2D_FGC_BLUE(FGC_BLUE)		((FGC_BLUE) <= COLOR_VALUE)
+	#define IS_DMA2D_FGC_GREEN(FGC_GREEN)		((FGC_GREEN) <= COLOR_VALUE)
+	#define IS_DMA2D_FGC_RED(FGC_RED)		((FGC_RED) <= COLOR_VALUE)
 
-	#define IS_DMA2D_BG_CLUT_SIZE(BG_CLUT_SIZE) ((BG_CLUT_SIZE) <= COLOR_VALUE)
+	#define IS_DMA2D_BG_CLUT_SIZE(BG_CLUT_SIZE)	((BG_CLUT_SIZE) <= COLOR_VALUE)
 
 	#define IS_DMA2D_BG_ALPHA_VALUE(BG_ALPHA_VALUE) ((BG_ALPHA_VALUE) <= COLOR_VALUE)
-	#define IS_DMA2D_BGC_BLUE(BGC_BLUE) ((BGC_BLUE) <= COLOR_VALUE)
-	#define IS_DMA2D_BGC_GREEN(BGC_GREEN) ((BGC_GREEN) <= COLOR_VALUE)
-	#define IS_DMA2D_BGC_RED(BGC_RED) ((BGC_RED) <= COLOR_VALUE)
+	#define IS_DMA2D_BGC_BLUE(BGC_BLUE)		((BGC_BLUE) <= COLOR_VALUE)
+	#define IS_DMA2D_BGC_GREEN(BGC_GREEN)		((BGC_GREEN) <= COLOR_VALUE)
+	#define IS_DMA2D_BGC_RED(BGC_RED)		((BGC_RED) <= COLOR_VALUE)
 
 /**
  * @}
@@ -363,9 +363,9 @@ typedef struct {
  * @{
  */
 
-	#define NO_MODIF_ALPHA_VALUE ((uint32_t)0x00000000)
-	#define REPLACE_ALPHA_VALUE ((uint32_t)0x00000001)
-	#define COMBINE_ALPHA_VALUE ((uint32_t)0x00000002)
+	#define NO_MODIF_ALPHA_VALUE			((uint32_t)0x00000000)
+	#define REPLACE_ALPHA_VALUE			((uint32_t)0x00000001)
+	#define COMBINE_ALPHA_VALUE			((uint32_t)0x00000002)
 
 	#define IS_DMA2D_FG_ALPHA_MODE(FG_ALPHA_MODE)                                              \
 		(((FG_ALPHA_MODE) == NO_MODIF_ALPHA_VALUE) ||                                      \
@@ -385,12 +385,12 @@ typedef struct {
  * @{
  */
 
-	#define DMA2D_IT_CE DMA2D_CR_CEIE
+	#define DMA2D_IT_CE  DMA2D_CR_CEIE
 	#define DMA2D_IT_CTC DMA2D_CR_CTCIE
 	#define DMA2D_IT_CAE DMA2D_CR_CAEIE
-	#define DMA2D_IT_TW DMA2D_CR_TWIE
-	#define DMA2D_IT_TC DMA2D_CR_TCIE
-	#define DMA2D_IT_TE DMA2D_CR_TEIE
+	#define DMA2D_IT_TW  DMA2D_CR_TWIE
+	#define DMA2D_IT_TC  DMA2D_CR_TCIE
+	#define DMA2D_IT_TE  DMA2D_CR_TEIE
 
 	#define IS_DMA2D_IT(IT)                                                                    \
 		(((IT) == DMA2D_IT_CTC) || ((IT) == DMA2D_IT_CAE) || ((IT) == DMA2D_IT_TW) ||      \
@@ -404,12 +404,12 @@ typedef struct {
  * @{
  */
 
-	#define DMA2D_FLAG_CE DMA2D_ISR_CEIF
+	#define DMA2D_FLAG_CE  DMA2D_ISR_CEIF
 	#define DMA2D_FLAG_CTC DMA2D_ISR_CTCIF
 	#define DMA2D_FLAG_CAE DMA2D_ISR_CAEIF
-	#define DMA2D_FLAG_TW DMA2D_ISR_TWIF
-	#define DMA2D_FLAG_TC DMA2D_ISR_TCIF
-	#define DMA2D_FLAG_TE DMA2D_ISR_TEIF
+	#define DMA2D_FLAG_TW  DMA2D_ISR_TWIF
+	#define DMA2D_FLAG_TC  DMA2D_ISR_TCIF
+	#define DMA2D_FLAG_TE  DMA2D_ISR_TEIF
 
 	#define IS_DMA2D_GET_FLAG(FLAG)                                                            \
 		(((FLAG) == DMA2D_FLAG_CTC) || ((FLAG) == DMA2D_FLAG_CAE) ||                       \
@@ -424,11 +424,11 @@ typedef struct {
  * @{
  */
 
-	#define DEADTIME ((uint32_t)0x000000FF)
+	#define DEADTIME			      ((uint32_t)0x000000FF)
 
-	#define IS_DMA2D_DEAD_TIME(DEAD_TIME) ((DEAD_TIME) <= DEADTIME)
+	#define IS_DMA2D_DEAD_TIME(DEAD_TIME)	      ((DEAD_TIME) <= DEADTIME)
 
-	#define LINE_WATERMARK DMA2D_LWR_LW
+	#define LINE_WATERMARK			      DMA2D_LWR_LW
 
 	#define IS_DMA2D_LineWatermark(LineWatermark) ((LineWatermark) <= LINE_WATERMARK)
 

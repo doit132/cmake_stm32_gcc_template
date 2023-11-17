@@ -63,16 +63,16 @@ typedef enum {
 	/** @defgroup Flash_Latency
 	 * @{
 	 */
-	#define FLASH_Latency_0 ((uint8_t)0x0000)  /*!< FLASH Zero Latency cycle      */
-	#define FLASH_Latency_1 ((uint8_t)0x0001)  /*!< FLASH One Latency cycle       */
-	#define FLASH_Latency_2 ((uint8_t)0x0002)  /*!< FLASH Two Latency cycles      */
-	#define FLASH_Latency_3 ((uint8_t)0x0003)  /*!< FLASH Three Latency cycles    */
-	#define FLASH_Latency_4 ((uint8_t)0x0004)  /*!< FLASH Four Latency cycles     */
-	#define FLASH_Latency_5 ((uint8_t)0x0005)  /*!< FLASH Five Latency cycles     */
-	#define FLASH_Latency_6 ((uint8_t)0x0006)  /*!< FLASH Six Latency cycles      */
-	#define FLASH_Latency_7 ((uint8_t)0x0007)  /*!< FLASH Seven Latency cycles    */
-	#define FLASH_Latency_8 ((uint8_t)0x0008)  /*!< FLASH Eight Latency cycles    */
-	#define FLASH_Latency_9 ((uint8_t)0x0009)  /*!< FLASH Nine Latency cycles     */
+	#define FLASH_Latency_0	 ((uint8_t)0x0000) /*!< FLASH Zero Latency cycle      */
+	#define FLASH_Latency_1	 ((uint8_t)0x0001) /*!< FLASH One Latency cycle       */
+	#define FLASH_Latency_2	 ((uint8_t)0x0002) /*!< FLASH Two Latency cycles      */
+	#define FLASH_Latency_3	 ((uint8_t)0x0003) /*!< FLASH Three Latency cycles    */
+	#define FLASH_Latency_4	 ((uint8_t)0x0004) /*!< FLASH Four Latency cycles     */
+	#define FLASH_Latency_5	 ((uint8_t)0x0005) /*!< FLASH Five Latency cycles     */
+	#define FLASH_Latency_6	 ((uint8_t)0x0006) /*!< FLASH Six Latency cycles      */
+	#define FLASH_Latency_7	 ((uint8_t)0x0007) /*!< FLASH Seven Latency cycles    */
+	#define FLASH_Latency_8	 ((uint8_t)0x0008) /*!< FLASH Eight Latency cycles    */
+	#define FLASH_Latency_9	 ((uint8_t)0x0009) /*!< FLASH Nine Latency cycles     */
 	#define FLASH_Latency_10 ((uint8_t)0x000A) /*!< FLASH Ten Latency cycles      */
 	#define FLASH_Latency_11 ((uint8_t)0x000B) /*!< FLASH Eleven Latency cycles   */
 	#define FLASH_Latency_12 ((uint8_t)0x000C) /*!< FLASH Twelve Latency cycles   */
@@ -112,16 +112,16 @@ typedef enum {
 	/** @defgroup FLASH_Sectors
 	 * @{
 	 */
-	#define FLASH_Sector_0 ((uint16_t)0x0000)  /*!< Sector Number 0   */
-	#define FLASH_Sector_1 ((uint16_t)0x0008)  /*!< Sector Number 1   */
-	#define FLASH_Sector_2 ((uint16_t)0x0010)  /*!< Sector Number 2   */
-	#define FLASH_Sector_3 ((uint16_t)0x0018)  /*!< Sector Number 3   */
-	#define FLASH_Sector_4 ((uint16_t)0x0020)  /*!< Sector Number 4   */
-	#define FLASH_Sector_5 ((uint16_t)0x0028)  /*!< Sector Number 5   */
-	#define FLASH_Sector_6 ((uint16_t)0x0030)  /*!< Sector Number 6   */
-	#define FLASH_Sector_7 ((uint16_t)0x0038)  /*!< Sector Number 7   */
-	#define FLASH_Sector_8 ((uint16_t)0x0040)  /*!< Sector Number 8   */
-	#define FLASH_Sector_9 ((uint16_t)0x0048)  /*!< Sector Number 9   */
+	#define FLASH_Sector_0	((uint16_t)0x0000) /*!< Sector Number 0   */
+	#define FLASH_Sector_1	((uint16_t)0x0008) /*!< Sector Number 1   */
+	#define FLASH_Sector_2	((uint16_t)0x0010) /*!< Sector Number 2   */
+	#define FLASH_Sector_3	((uint16_t)0x0018) /*!< Sector Number 3   */
+	#define FLASH_Sector_4	((uint16_t)0x0020) /*!< Sector Number 4   */
+	#define FLASH_Sector_5	((uint16_t)0x0028) /*!< Sector Number 5   */
+	#define FLASH_Sector_6	((uint16_t)0x0030) /*!< Sector Number 6   */
+	#define FLASH_Sector_7	((uint16_t)0x0038) /*!< Sector Number 7   */
+	#define FLASH_Sector_8	((uint16_t)0x0040) /*!< Sector Number 8   */
+	#define FLASH_Sector_9	((uint16_t)0x0048) /*!< Sector Number 9   */
 	#define FLASH_Sector_10 ((uint16_t)0x0050) /*!< Sector Number 10  */
 	#define FLASH_Sector_11 ((uint16_t)0x0058) /*!< Sector Number 11  */
 	#define FLASH_Sector_12 ((uint16_t)0x0080) /*!< Sector Number 12  */
@@ -193,30 +193,30 @@ typedef enum {
 	/** @defgroup Option_Bytes_Write_Protection
 	 * @{
 	 */
-	#define OB_WRP_Sector_0 ((uint32_t)0x00000001)	 /*!< Write protection of Sector0     */
-	#define OB_WRP_Sector_1 ((uint32_t)0x00000002)	 /*!< Write protection of Sector1     */
-	#define OB_WRP_Sector_2 ((uint32_t)0x00000004)	 /*!< Write protection of Sector2     */
-	#define OB_WRP_Sector_3 ((uint32_t)0x00000008)	 /*!< Write protection of Sector3     */
-	#define OB_WRP_Sector_4 ((uint32_t)0x00000010)	 /*!< Write protection of Sector4     */
-	#define OB_WRP_Sector_5 ((uint32_t)0x00000020)	 /*!< Write protection of Sector5     */
-	#define OB_WRP_Sector_6 ((uint32_t)0x00000040)	 /*!< Write protection of Sector6     */
-	#define OB_WRP_Sector_7 ((uint32_t)0x00000080)	 /*!< Write protection of Sector7     */
-	#define OB_WRP_Sector_8 ((uint32_t)0x00000100)	 /*!< Write protection of Sector8     */
-	#define OB_WRP_Sector_9 ((uint32_t)0x00000200)	 /*!< Write protection of Sector9     */
-	#define OB_WRP_Sector_10 ((uint32_t)0x00000400)	 /*!< Write protection of Sector10    */
-	#define OB_WRP_Sector_11 ((uint32_t)0x00000800)	 /*!< Write protection of Sector11    */
-	#define OB_WRP_Sector_12 ((uint32_t)0x00000001)	 /*!< Write protection of Sector12    */
-	#define OB_WRP_Sector_13 ((uint32_t)0x00000002)	 /*!< Write protection of Sector13    */
-	#define OB_WRP_Sector_14 ((uint32_t)0x00000004)	 /*!< Write protection of Sector14    */
-	#define OB_WRP_Sector_15 ((uint32_t)0x00000008)	 /*!< Write protection of Sector15    */
-	#define OB_WRP_Sector_16 ((uint32_t)0x00000010)	 /*!< Write protection of Sector16    */
-	#define OB_WRP_Sector_17 ((uint32_t)0x00000020)	 /*!< Write protection of Sector17    */
-	#define OB_WRP_Sector_18 ((uint32_t)0x00000040)	 /*!< Write protection of Sector18    */
-	#define OB_WRP_Sector_19 ((uint32_t)0x00000080)	 /*!< Write protection of Sector19    */
-	#define OB_WRP_Sector_20 ((uint32_t)0x00000100)	 /*!< Write protection of Sector20    */
-	#define OB_WRP_Sector_21 ((uint32_t)0x00000200)	 /*!< Write protection of Sector21    */
-	#define OB_WRP_Sector_22 ((uint32_t)0x00000400)	 /*!< Write protection of Sector22    */
-	#define OB_WRP_Sector_23 ((uint32_t)0x00000800)	 /*!< Write protection of Sector23    */
+	#define OB_WRP_Sector_0	  ((uint32_t)0x00000001) /*!< Write protection of Sector0     */
+	#define OB_WRP_Sector_1	  ((uint32_t)0x00000002) /*!< Write protection of Sector1     */
+	#define OB_WRP_Sector_2	  ((uint32_t)0x00000004) /*!< Write protection of Sector2     */
+	#define OB_WRP_Sector_3	  ((uint32_t)0x00000008) /*!< Write protection of Sector3     */
+	#define OB_WRP_Sector_4	  ((uint32_t)0x00000010) /*!< Write protection of Sector4     */
+	#define OB_WRP_Sector_5	  ((uint32_t)0x00000020) /*!< Write protection of Sector5     */
+	#define OB_WRP_Sector_6	  ((uint32_t)0x00000040) /*!< Write protection of Sector6     */
+	#define OB_WRP_Sector_7	  ((uint32_t)0x00000080) /*!< Write protection of Sector7     */
+	#define OB_WRP_Sector_8	  ((uint32_t)0x00000100) /*!< Write protection of Sector8     */
+	#define OB_WRP_Sector_9	  ((uint32_t)0x00000200) /*!< Write protection of Sector9     */
+	#define OB_WRP_Sector_10  ((uint32_t)0x00000400) /*!< Write protection of Sector10    */
+	#define OB_WRP_Sector_11  ((uint32_t)0x00000800) /*!< Write protection of Sector11    */
+	#define OB_WRP_Sector_12  ((uint32_t)0x00000001) /*!< Write protection of Sector12    */
+	#define OB_WRP_Sector_13  ((uint32_t)0x00000002) /*!< Write protection of Sector13    */
+	#define OB_WRP_Sector_14  ((uint32_t)0x00000004) /*!< Write protection of Sector14    */
+	#define OB_WRP_Sector_15  ((uint32_t)0x00000008) /*!< Write protection of Sector15    */
+	#define OB_WRP_Sector_16  ((uint32_t)0x00000010) /*!< Write protection of Sector16    */
+	#define OB_WRP_Sector_17  ((uint32_t)0x00000020) /*!< Write protection of Sector17    */
+	#define OB_WRP_Sector_18  ((uint32_t)0x00000040) /*!< Write protection of Sector18    */
+	#define OB_WRP_Sector_19  ((uint32_t)0x00000080) /*!< Write protection of Sector19    */
+	#define OB_WRP_Sector_20  ((uint32_t)0x00000100) /*!< Write protection of Sector20    */
+	#define OB_WRP_Sector_21  ((uint32_t)0x00000200) /*!< Write protection of Sector21    */
+	#define OB_WRP_Sector_22  ((uint32_t)0x00000400) /*!< Write protection of Sector22    */
+	#define OB_WRP_Sector_23  ((uint32_t)0x00000800) /*!< Write protection of Sector23    */
 	#define OB_WRP_Sector_All ((uint32_t)0x00000FFF) /*!< Write protection of all Sectors */
 
 	#define IS_OB_WRP(SECTOR)                                                                  \
@@ -318,8 +318,8 @@ typedef enum {
 	/** @defgroup FLASH_Option_Bytes_IWatchdog
 	 * @{
 	 */
-	#define OB_IWDG_SW ((uint8_t)0x20) /*!< Software IWDG selected */
-	#define OB_IWDG_HW ((uint8_t)0x00) /*!< Hardware IWDG selected */
+	#define OB_IWDG_SW		  ((uint8_t)0x20) /*!< Software IWDG selected */
+	#define OB_IWDG_HW		  ((uint8_t)0x00) /*!< Hardware IWDG selected */
 	#define IS_OB_IWDG_SOURCE(SOURCE) (((SOURCE) == OB_IWDG_SW) || ((SOURCE) == OB_IWDG_HW))
 	/**
 	 * @}
@@ -328,8 +328,8 @@ typedef enum {
 	/** @defgroup FLASH_Option_Bytes_nRST_STOP
 	 * @{
 	 */
-	#define OB_STOP_NoRST ((uint8_t)0x40) /*!< No reset generated when entering in STOP */
-	#define OB_STOP_RST ((uint8_t)0x00)   /*!< Reset generated when entering in STOP */
+	#define OB_STOP_NoRST		  ((uint8_t)0x40) /*!< No reset generated when entering in STOP */
+	#define OB_STOP_RST		  ((uint8_t)0x00) /*!< Reset generated when entering in STOP */
 	#define IS_OB_STOP_SOURCE(SOURCE) (((SOURCE) == OB_STOP_NoRST) || ((SOURCE) == OB_STOP_RST))
 	/**
 	 * @}
@@ -338,8 +338,8 @@ typedef enum {
 	/** @defgroup FLASH_Option_Bytes_nRST_STDBY
 	 * @{
 	 */
-	#define OB_STDBY_NoRST ((uint8_t)0x80) /*!< No reset generated when entering in STANDBY */
-	#define OB_STDBY_RST ((uint8_t)0x00)   /*!< Reset generated when entering in STANDBY */
+	#define OB_STDBY_NoRST		  ((uint8_t)0x80) /*!< No reset generated when entering in STANDBY */
+	#define OB_STDBY_RST		  ((uint8_t)0x00) /*!< Reset generated when entering in STANDBY */
 	#define IS_OB_STDBY_SOURCE(SOURCE)                                                         \
 		(((SOURCE) == OB_STDBY_NoRST) || ((SOURCE) == OB_STDBY_RST))
 	/**
@@ -352,7 +352,7 @@ typedef enum {
 	#define OB_BOR_LEVEL3 ((uint8_t)0x00) /*!< Supply voltage ranges from 2.70 to 3.60 V */
 	#define OB_BOR_LEVEL2 ((uint8_t)0x04) /*!< Supply voltage ranges from 2.40 to 2.70 V */
 	#define OB_BOR_LEVEL1 ((uint8_t)0x08) /*!< Supply voltage ranges from 2.10 to 2.40 V */
-	#define OB_BOR_OFF ((uint8_t)0x0C)    /*!< Supply voltage ranges from 1.62 to 2.10 V */
+	#define OB_BOR_OFF    ((uint8_t)0x0C) /*!< Supply voltage ranges from 1.62 to 2.10 V */
 	#define IS_OB_BOR(LEVEL)                                                                   \
 		(((LEVEL) == OB_BOR_LEVEL1) || ((LEVEL) == OB_BOR_LEVEL2) ||                       \
 		 ((LEVEL) == OB_BOR_LEVEL3) || ((LEVEL) == OB_BOR_OFF))
@@ -376,7 +376,8 @@ typedef enum {
 	/** @defgroup FLASH_Interrupts
 	 * @{
 	 */
-	#define FLASH_IT_EOP ((uint32_t)0x01000000) /*!< End of FLASH Operation Interrupt source   \
+	#define FLASH_IT_EOP                                                                       \
+		((uint32_t)0x01000000)		    /*!< End of FLASH Operation Interrupt source   \
 						     */
 	#define FLASH_IT_ERR ((uint32_t)0x02000000) /*!< Error Interrupt source */
 	#define IS_FLASH_IT(IT)                                                                    \
@@ -418,11 +419,11 @@ typedef enum {
 	/** @defgroup FLASH_Program_Parallelism
 	 * @{
 	 */
-	#define FLASH_PSIZE_BYTE ((uint32_t)0x00000000)
-	#define FLASH_PSIZE_HALF_WORD ((uint32_t)0x00000100)
-	#define FLASH_PSIZE_WORD ((uint32_t)0x00000200)
+	#define FLASH_PSIZE_BYTE	((uint32_t)0x00000000)
+	#define FLASH_PSIZE_HALF_WORD	((uint32_t)0x00000100)
+	#define FLASH_PSIZE_WORD	((uint32_t)0x00000200)
 	#define FLASH_PSIZE_DOUBLE_WORD ((uint32_t)0x00000300)
-	#define CR_PSIZE_MASK ((uint32_t)0xFFFFFCFF)
+	#define CR_PSIZE_MASK		((uint32_t)0xFFFFFCFF)
 	/**
 	 * @}
 	 */
@@ -430,11 +431,11 @@ typedef enum {
 	/** @defgroup FLASH_Keys
 	 * @{
 	 */
-	#define RDP_KEY ((uint16_t)0x00A5)
-	#define FLASH_KEY1 ((uint32_t)0x45670123)
-	#define FLASH_KEY2 ((uint32_t)0xCDEF89AB)
-	#define FLASH_OPT_KEY1 ((uint32_t)0x08192A3B)
-	#define FLASH_OPT_KEY2 ((uint32_t)0x4C5D6E7F)
+	#define RDP_KEY			((uint16_t)0x00A5)
+	#define FLASH_KEY1		((uint32_t)0x45670123)
+	#define FLASH_KEY2		((uint32_t)0xCDEF89AB)
+	#define FLASH_OPT_KEY1		((uint32_t)0x08192A3B)
+	#define FLASH_OPT_KEY2		((uint32_t)0x4C5D6E7F)
 	/**
 	 * @}
 	 */
@@ -442,28 +443,28 @@ typedef enum {
 	/**
 	 * @brief   ACR register byte 0 (Bits[7:0]) base address
 	 */
-	#define ACR_BYTE0_ADDRESS ((uint32_t)0x40023C00)
+	#define ACR_BYTE0_ADDRESS	((uint32_t)0x40023C00)
 	/**
 	 * @brief   OPTCR register byte 0 (Bits[7:0]) base address
 	 */
-	#define OPTCR_BYTE0_ADDRESS ((uint32_t)0x40023C14)
+	#define OPTCR_BYTE0_ADDRESS	((uint32_t)0x40023C14)
 	/**
 	 * @brief   OPTCR register byte 1 (Bits[15:8]) base address
 	 */
-	#define OPTCR_BYTE1_ADDRESS ((uint32_t)0x40023C15)
+	#define OPTCR_BYTE1_ADDRESS	((uint32_t)0x40023C15)
 	/**
 	 * @brief   OPTCR register byte 2 (Bits[23:16]) base address
 	 */
-	#define OPTCR_BYTE2_ADDRESS ((uint32_t)0x40023C16)
+	#define OPTCR_BYTE2_ADDRESS	((uint32_t)0x40023C16)
 	/**
 	 * @brief   OPTCR register byte 3 (Bits[31:24]) base address
 	 */
-	#define OPTCR_BYTE3_ADDRESS ((uint32_t)0x40023C17)
+	#define OPTCR_BYTE3_ADDRESS	((uint32_t)0x40023C17)
 
 	/**
 	 * @brief   OPTCR1 register byte 0 (Bits[7:0]) base address
 	 */
-	#define OPTCR1_BYTE2_ADDRESS ((uint32_t)0x40023C1A)
+	#define OPTCR1_BYTE2_ADDRESS	((uint32_t)0x40023C1A)
 
 /**
  * @}

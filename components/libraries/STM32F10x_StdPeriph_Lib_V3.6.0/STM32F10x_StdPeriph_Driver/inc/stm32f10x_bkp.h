@@ -56,7 +56,7 @@ extern "C" {
  */
 
 	#define BKP_TamperPinLevel_High ((uint16_t)0x0000)
-	#define BKP_TamperPinLevel_Low ((uint16_t)0x0001)
+	#define BKP_TamperPinLevel_Low	((uint16_t)0x0001)
 	#define IS_BKP_TAMPER_PIN_LEVEL(LEVEL)                                                     \
 		(((LEVEL) == BKP_TamperPinLevel_High) || ((LEVEL) == BKP_TamperPinLevel_Low))
 /**
@@ -67,10 +67,10 @@ extern "C" {
  * @{
  */
 
-	#define BKP_RTCOutputSource_None ((uint16_t)0x0000)
+	#define BKP_RTCOutputSource_None       ((uint16_t)0x0000)
 	#define BKP_RTCOutputSource_CalibClock ((uint16_t)0x0080)
-	#define BKP_RTCOutputSource_Alarm ((uint16_t)0x0100)
-	#define BKP_RTCOutputSource_Second ((uint16_t)0x0300)
+	#define BKP_RTCOutputSource_Alarm      ((uint16_t)0x0100)
+	#define BKP_RTCOutputSource_Second     ((uint16_t)0x0300)
 	#define IS_BKP_RTC_OUTPUT_SOURCE(SOURCE)                                                   \
 		(((SOURCE) == BKP_RTCOutputSource_None) ||                                         \
 		 ((SOURCE) == BKP_RTCOutputSource_CalibClock) ||                                   \
@@ -84,15 +84,15 @@ extern "C" {
  * @{
  */
 
-	#define BKP_DR1 ((uint16_t)0x0004)
-	#define BKP_DR2 ((uint16_t)0x0008)
-	#define BKP_DR3 ((uint16_t)0x000C)
-	#define BKP_DR4 ((uint16_t)0x0010)
-	#define BKP_DR5 ((uint16_t)0x0014)
-	#define BKP_DR6 ((uint16_t)0x0018)
-	#define BKP_DR7 ((uint16_t)0x001C)
-	#define BKP_DR8 ((uint16_t)0x0020)
-	#define BKP_DR9 ((uint16_t)0x0024)
+	#define BKP_DR1	 ((uint16_t)0x0004)
+	#define BKP_DR2	 ((uint16_t)0x0008)
+	#define BKP_DR3	 ((uint16_t)0x000C)
+	#define BKP_DR4	 ((uint16_t)0x0010)
+	#define BKP_DR5	 ((uint16_t)0x0014)
+	#define BKP_DR6	 ((uint16_t)0x0018)
+	#define BKP_DR7	 ((uint16_t)0x001C)
+	#define BKP_DR8	 ((uint16_t)0x0020)
+	#define BKP_DR9	 ((uint16_t)0x0024)
 	#define BKP_DR10 ((uint16_t)0x0028)
 	#define BKP_DR11 ((uint16_t)0x0040)
 	#define BKP_DR12 ((uint16_t)0x0044)

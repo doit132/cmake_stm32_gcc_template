@@ -64,14 +64,14 @@ typedef struct {
 	 * @{
 	 */
 
-	#define IS_LPTIM_ALL_PERIPH(PERIPH) ((PERIPH) == LPTIM1)
+	#define IS_LPTIM_ALL_PERIPH(PERIPH)	 ((PERIPH) == LPTIM1)
 
 	/** @defgroup LPTIM_Clock_Source LPTIM Clock Source
 	 * @{
 	 */
 
 	#define LPTIM_ClockSource_APBClock_LPosc ((uint32_t)0x00000000)
-	#define LPTIM_ClockSource_ULPTIM ((uint32_t)0x00000001)
+	#define LPTIM_ClockSource_ULPTIM	 ((uint32_t)0x00000001)
 	#define IS_LPTIM_CLOCK_SOURCE(SOURCE)                                                      \
 		(((SOURCE) == LPTIM_ClockSource_ULPTIM) ||                                         \
 		 ((SOURCE) == LPTIM_ClockSource_APBClock_LPosc))
@@ -82,13 +82,13 @@ typedef struct {
 	/** @defgroup LPTIM_Clock_Prescaler LPTIM Clock Prescaler
 	 * @{
 	 */
-	#define LPTIM_Prescaler_DIV1 ((uint32_t)0x00000000)
-	#define LPTIM_Prescaler_DIV2 ((uint32_t)0x00000200)
-	#define LPTIM_Prescaler_DIV4 ((uint32_t)0x00000400)
-	#define LPTIM_Prescaler_DIV8 ((uint32_t)0x00000600)
-	#define LPTIM_Prescaler_DIV16 ((uint32_t)0x00000800)
-	#define LPTIM_Prescaler_DIV32 ((uint32_t)0x00000A00)
-	#define LPTIM_Prescaler_DIV64 ((uint32_t)0x00000C00)
+	#define LPTIM_Prescaler_DIV1   ((uint32_t)0x00000000)
+	#define LPTIM_Prescaler_DIV2   ((uint32_t)0x00000200)
+	#define LPTIM_Prescaler_DIV4   ((uint32_t)0x00000400)
+	#define LPTIM_Prescaler_DIV8   ((uint32_t)0x00000600)
+	#define LPTIM_Prescaler_DIV16  ((uint32_t)0x00000800)
+	#define LPTIM_Prescaler_DIV32  ((uint32_t)0x00000A00)
+	#define LPTIM_Prescaler_DIV64  ((uint32_t)0x00000C00)
 	#define LPTIM_Prescaler_DIV128 ((uint32_t)0x00000E00)
 	#define IS_LPTIM_CLOCK_PRESCALER(PRESCALER)                                                \
 		(((PRESCALER) == LPTIM_Prescaler_DIV1) || ((PRESCALER) == LPTIM_Prescaler_DIV2) || \
@@ -105,7 +105,7 @@ typedef struct {
 	 * @{
 	 */
 	#define LPTIM_Waveform_PWM_OnePulse ((uint32_t)0x00000000)
-	#define LPTIM_Waveform_SetOnce ((uint32_t)0x00100000)
+	#define LPTIM_Waveform_SetOnce	    ((uint32_t)0x00100000)
 	#define IS_LPTIM_WAVEFORM(WAVE)                                                            \
 		(((WAVE) == LPTIM_Waveform_SetOnce) || ((WAVE) == LPTIM_Waveform_PWM_OnePulse))
 	/**
@@ -116,7 +116,7 @@ typedef struct {
 	 * @{
 	 */
 	#define LPTIM_OutputPolarity_High ((uint32_t)0x00000000)
-	#define LPTIM_OutputPolarity_Low ((uint32_t)0x00200000)
+	#define LPTIM_OutputPolarity_Low  ((uint32_t)0x00200000)
 	#define IS_LPTIM_OUTPUT_POLARITY(POLARITY)                                                 \
 		(((POLARITY) == LPTIM_OutputPolarity_Low) ||                                       \
 		 ((POLARITY) == LPTIM_OutputPolarity_High))
@@ -127,9 +127,9 @@ typedef struct {
 	/** @defgroup LPTIM_Clock_Polarity LPTIM Clock Polarity
 	 * @{
 	 */
-	#define LPTIM_ClockPolarity_RisingEdge ((uint32_t)0x00000000)
+	#define LPTIM_ClockPolarity_RisingEdge	((uint32_t)0x00000000)
 	#define LPTIM_ClockPolarity_FallingEdge ((uint32_t)0x00000002)
-	#define LPTIM_ClockPolarity_BothEdges ((uint32_t)0x00000004)
+	#define LPTIM_ClockPolarity_BothEdges	((uint32_t)0x00000004)
 	#define IS_LPTIM_CLOCK_POLARITY(POLARITY)                                                  \
 		(((POLARITY) == LPTIM_ClockPolarity_RisingEdge) ||                                 \
 		 ((POLARITY) == LPTIM_ClockPolarity_FallingEdge) ||                                \
@@ -161,9 +161,9 @@ typedef struct {
 	/** @defgroup LPTIM_External_Trigger_Polarity LPTIM External Trigger Polarity
 	 * @{
 	 */
-	#define LPTIM_ExtTRGPolarity_RisingEdge ((uint32_t)0x00020000)
+	#define LPTIM_ExtTRGPolarity_RisingEdge	 ((uint32_t)0x00020000)
 	#define LPTIM_ExtTRGPolarity_FallingEdge ((uint32_t)0x00040000)
-	#define LPTIM_ExtTRGPolarity_BothEdges ((uint32_t)0x00060000)
+	#define LPTIM_ExtTRGPolarity_BothEdges	 ((uint32_t)0x00060000)
 	#define IS_LPTIM_EXT_TRG_POLARITY(POLAR)                                                   \
 		(((POLAR) == LPTIM_ExtTRGPolarity_RisingEdge) ||                                   \
 		 ((POLAR) == LPTIM_ExtTRGPolarity_FallingEdge) ||                                  \
@@ -176,9 +176,9 @@ typedef struct {
 	 * @{
 	 */
 	#define LPTIM_ClockSampleTime_DirectTransistion ((uint32_t)0x00000000)
-	#define LPTIM_ClockSampleTime_2Transistions ((uint32_t)0x00000008)
-	#define LPTIM_ClockSampleTime_4Transistions ((uint32_t)0x00000010)
-	#define LPTIM_ClockSampleTime_8Transistions ((uint32_t)0x00000018)
+	#define LPTIM_ClockSampleTime_2Transistions	((uint32_t)0x00000008)
+	#define LPTIM_ClockSampleTime_4Transistions	((uint32_t)0x00000010)
+	#define LPTIM_ClockSampleTime_8Transistions	((uint32_t)0x00000018)
 	#define IS_LPTIM_CLOCK_SAMPLE_TIME(SAMPLETIME)                                             \
 		(((SAMPLETIME) == LPTIM_ClockSampleTime_DirectTransistion) ||                      \
 		 ((SAMPLETIME) == LPTIM_ClockSampleTime_2Transistions) ||                          \
@@ -192,9 +192,9 @@ typedef struct {
 	 * @{
 	 */
 	#define LPTIM_TrigSampleTime_DirectTransistion ((uint32_t)0x00000000)
-	#define LPTIM_TrigSampleTime_2Transistions ((uint32_t)0x00000040)
-	#define LPTIM_TrigSampleTime_4Transistions ((uint32_t)0x00000080)
-	#define LPTIM_TrigSampleTime_8Transistions ((uint32_t)0x000000C0)
+	#define LPTIM_TrigSampleTime_2Transistions     ((uint32_t)0x00000040)
+	#define LPTIM_TrigSampleTime_4Transistions     ((uint32_t)0x00000080)
+	#define LPTIM_TrigSampleTime_8Transistions     ((uint32_t)0x000000C0)
 	#define IS_LPTIM_TRIG_SAMPLE_TIME(SAMPLETIME)                                              \
 		(((SAMPLETIME) == LPTIM_TrigSampleTime_DirectTransistion) ||                       \
 		 ((SAMPLETIME) == LPTIM_TrigSampleTime_2Transistions) ||                           \
@@ -208,7 +208,7 @@ typedef struct {
 	 * @{
 	 */
 	#define LPTIM_Mode_Continuous ((uint32_t)0x00000004)
-	#define LPTIM_Mode_Single ((uint32_t)0x00000002)
+	#define LPTIM_Mode_Single     ((uint32_t)0x00000002)
 	#define IS_LPTIM_MODE(MODE)                                                                \
 		(((MODE) == LPTIM_Mode_Continuous) || ((MODE) == LPTIM_Mode_Single))
 	/**
@@ -218,7 +218,7 @@ typedef struct {
 	/** @defgroup LPTIM_Updating_Register LPTIM Updating Register
 	 * @{
 	 */
-	#define LPTIM_Update_Immediate ((uint32_t)0x00000000)
+	#define LPTIM_Update_Immediate	 ((uint32_t)0x00000000)
 	#define LPTIM_Update_EndOfPeriod ((uint32_t)0x00400000)
 	#define IS_LPTIM_UPDATE(UPDATE)                                                            \
 		(((UPDATE) == LPTIM_Update_Immediate) || ((UPDATE) == LPTIM_Update_EndOfPeriod))
@@ -229,13 +229,13 @@ typedef struct {
 	/** @defgroup LPTIM_Interrupts_Definition LPTIM Interrupts Definition
 	 * @{
 	 */
-	#define LPTIM_IT_DOWN LPTIM_IER_DOWNIE
-	#define LPTIM_IT_UP LPTIM_IER_UPIE
-	#define LPTIM_IT_ARROK LPTIM_IER_ARROKIE
-	#define LPTIM_IT_CMPOK LPTIM_IER_CMPOKIE
+	#define LPTIM_IT_DOWN	 LPTIM_IER_DOWNIE
+	#define LPTIM_IT_UP	 LPTIM_IER_UPIE
+	#define LPTIM_IT_ARROK	 LPTIM_IER_ARROKIE
+	#define LPTIM_IT_CMPOK	 LPTIM_IER_CMPOKIE
 	#define LPTIM_IT_EXTTRIG LPTIM_IER_EXTTRIGIE
-	#define LPTIM_IT_ARRM LPTIM_IER_ARRMIE
-	#define LPTIM_IT_CMPM LPTIM_IER_CMPMIE
+	#define LPTIM_IT_ARRM	 LPTIM_IER_ARRMIE
+	#define LPTIM_IT_CMPM	 LPTIM_IER_CMPMIE
 	#define IS_LPTIM_IT(IT)                                                                    \
 		(((IT) == LPTIM_IT_DOWN) || ((IT) == LPTIM_IT_UP) || ((IT) == LPTIM_IT_ARROK) ||   \
 		 ((IT) == LPTIM_IT_CMPOK) || ((IT) == LPTIM_IT_EXTTRIG) ||                         \
@@ -252,13 +252,13 @@ typedef struct {
 	/** @defgroup LPTIM_Flag_Definition LPTIM Flag Definition
 	 * @{
 	 */
-	#define LPTIM_FLAG_DOWN LPTIM_ISR_DOWN
-	#define LPTIM_FLAG_UP LPTIM_ISR_UP
-	#define LPTIM_FLAG_ARROK LPTIM_ISR_ARROK
-	#define LPTIM_FLAG_CMPOK LPTIM_ISR_CMPOK
+	#define LPTIM_FLAG_DOWN	   LPTIM_ISR_DOWN
+	#define LPTIM_FLAG_UP	   LPTIM_ISR_UP
+	#define LPTIM_FLAG_ARROK   LPTIM_ISR_ARROK
+	#define LPTIM_FLAG_CMPOK   LPTIM_ISR_CMPOK
 	#define LPTIM_FLAG_EXTTRIG LPTIM_ISR_EXTTRIG
-	#define LPTIM_FLAG_ARRM LPTIM_ISR_ARRM
-	#define LPTIM_FLAG_CMPM LPTIM_ISR_CMPM
+	#define LPTIM_FLAG_ARRM	   LPTIM_ISR_ARRM
+	#define LPTIM_FLAG_CMPM	   LPTIM_ISR_CMPM
 	#define IS_LPTIM_GET_FLAG(FLAG)                                                            \
 		(((FLAG) == LPTIM_FLAG_DOWN) || ((FLAG) == LPTIM_FLAG_UP) ||                       \
 		 ((FLAG) == LPTIM_FLAG_ARROK) || ((FLAG) == LPTIM_FLAG_CMPOK) ||                   \
@@ -271,13 +271,13 @@ typedef struct {
 	/** @defgroup LPTIM_Clear_Flag_Definition LPTIM Clear Flag Definition
 	 * @{
 	 */
-	#define LPTIM_CLEAR_DOWN LPTIM_ICR_DOWNCF
-	#define LPTIM_CLEAR_UP LPTIM_ICR_UPCF
-	#define LPTIM_CLEAR_ARROK LPTIM_ICR_ARROKCF
-	#define LPTIM_CLEAR_CMPOK LPTIM_ICR_CMPOKCF
+	#define LPTIM_CLEAR_DOWN    LPTIM_ICR_DOWNCF
+	#define LPTIM_CLEAR_UP	    LPTIM_ICR_UPCF
+	#define LPTIM_CLEAR_ARROK   LPTIM_ICR_ARROKCF
+	#define LPTIM_CLEAR_CMPOK   LPTIM_ICR_CMPOKCF
 	#define LPTIM_CLEAR_EXTTRIG LPTIM_ICR_EXTTRIGCF
-	#define LPTIM_CLEAR_ARRM LPTIM_ICR_ARRMCF
-	#define LPTIM_CLEAR_CMPM LPTIM_ICR_CMPMCF
+	#define LPTIM_CLEAR_ARRM    LPTIM_ICR_ARRMCF
+	#define LPTIM_CLEAR_CMPM    LPTIM_ICR_CMPMCF
 	#define IS_LPTIM_CLEAR_FLAG(CLEARF)                                                        \
 		(((CLEARF) == LPTIM_CLEAR_DOWN) || ((CLEARF) == LPTIM_CLEAR_UP) ||                 \
 		 ((CLEARF) == LPTIM_CLEAR_ARROK) || ((CLEARF) == LPTIM_CLEAR_CMPOK) ||             \
@@ -298,7 +298,7 @@ typedef struct {
 	/** @defgroup LPTIM_Compare_Value LPTIM Compare Value
 	 * @{
 	 */
-	#define IS_LPTIM_COMPARE(COMPARE) ((COMPARE) <= 0x0000FFFF)
+	#define IS_LPTIM_COMPARE(COMPARE)	((COMPARE) <= 0x0000FFFF)
 	/**
 	 * @}
 	 */
@@ -306,10 +306,10 @@ typedef struct {
 	/** @defgroup LPTIM_Option_Register_Definition LPTIM Option Register Definition
 	 * @{
 	 */
-	#define LPTIM_OP_PAD_AF ((uint32_t)0x00000000)
-	#define LPTIM_OP_PAD_PA4 LPTIM_OR_OR_0
-	#define LPTIM_OP_PAD_PB9 LPTIM_OR_OR_1
-	#define LPTIM_OP_TIM_DAC LPTIM_OR_OR
+	#define LPTIM_OP_PAD_AF			((uint32_t)0x00000000)
+	#define LPTIM_OP_PAD_PA4		LPTIM_OR_OR_0
+	#define LPTIM_OP_PAD_PB9		LPTIM_OR_OR_1
+	#define LPTIM_OP_TIM_DAC		LPTIM_OR_OR
 /**
  * @}
  */

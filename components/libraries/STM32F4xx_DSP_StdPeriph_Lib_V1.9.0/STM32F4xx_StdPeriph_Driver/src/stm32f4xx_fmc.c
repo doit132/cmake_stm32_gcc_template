@@ -50,24 +50,24 @@ const FMC_NORSRAMTimingInitTypeDef FMC_DefaultTimingStruct = {
 };
 /* --------------------- FMC registers bit mask ---------------------------- */
 /* FMC BCRx Mask */
-#define BCR_MBKEN_SET ((uint32_t)0x00000001)
-#define BCR_MBKEN_RESET ((uint32_t)0x000FFFFE)
-#define BCR_FACCEN_SET ((uint32_t)0x00000040)
+#define BCR_MBKEN_SET		   ((uint32_t)0x00000001)
+#define BCR_MBKEN_RESET		   ((uint32_t)0x000FFFFE)
+#define BCR_FACCEN_SET		   ((uint32_t)0x00000040)
 
 /* FMC PCRx Mask */
-#define PCR_PBKEN_SET ((uint32_t)0x00000004)
-#define PCR_PBKEN_RESET ((uint32_t)0x000FFFFB)
-#define PCR_ECCEN_SET ((uint32_t)0x00000040)
-#define PCR_ECCEN_RESET ((uint32_t)0x000FFFBF)
-#define PCR_MEMORYTYPE_NAND ((uint32_t)0x00000008)
+#define PCR_PBKEN_SET		   ((uint32_t)0x00000004)
+#define PCR_PBKEN_RESET		   ((uint32_t)0x000FFFFB)
+#define PCR_ECCEN_SET		   ((uint32_t)0x00000040)
+#define PCR_ECCEN_RESET		   ((uint32_t)0x000FFFBF)
+#define PCR_MEMORYTYPE_NAND	   ((uint32_t)0x00000008)
 
 /* FMC SDCRx write protection Mask*/
 #define SDCR_WriteProtection_RESET ((uint32_t)0x00007DFF)
 
 /* FMC SDCMR Mask*/
-#define SDCMR_CTB1_RESET ((uint32_t)0x003FFFEF)
-#define SDCMR_CTB2_RESET ((uint32_t)0x003FFFF7)
-#define SDCMR_CTB1_2_RESET ((uint32_t)0x003FFFE7)
+#define SDCMR_CTB1_RESET	   ((uint32_t)0x003FFFEF)
+#define SDCMR_CTB2_RESET	   ((uint32_t)0x003FFFF7)
+#define SDCMR_CTB1_2_RESET	   ((uint32_t)0x003FFFE7)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

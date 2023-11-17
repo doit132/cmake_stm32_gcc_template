@@ -130,16 +130,16 @@ typedef struct {
 	#define CRYP_AlgoMode_TDES_CBC ((uint32_t)0x00000008)
 
 	/*!< DES Modes */
-	#define CRYP_AlgoMode_DES_ECB ((uint32_t)0x00000010)
-	#define CRYP_AlgoMode_DES_CBC ((uint32_t)0x00000018)
+	#define CRYP_AlgoMode_DES_ECB  ((uint32_t)0x00000010)
+	#define CRYP_AlgoMode_DES_CBC  ((uint32_t)0x00000018)
 
 	/*!< AES Modes */
-	#define CRYP_AlgoMode_AES_ECB ((uint32_t)0x00000020)
-	#define CRYP_AlgoMode_AES_CBC ((uint32_t)0x00000028)
-	#define CRYP_AlgoMode_AES_CTR ((uint32_t)0x00000030)
-	#define CRYP_AlgoMode_AES_Key ((uint32_t)0x00000038)
-	#define CRYP_AlgoMode_AES_GCM ((uint32_t)0x00080000)
-	#define CRYP_AlgoMode_AES_CCM ((uint32_t)0x00080008)
+	#define CRYP_AlgoMode_AES_ECB  ((uint32_t)0x00000020)
+	#define CRYP_AlgoMode_AES_CBC  ((uint32_t)0x00000028)
+	#define CRYP_AlgoMode_AES_CTR  ((uint32_t)0x00000030)
+	#define CRYP_AlgoMode_AES_Key  ((uint32_t)0x00000038)
+	#define CRYP_AlgoMode_AES_GCM  ((uint32_t)0x00080000)
+	#define CRYP_AlgoMode_AES_CCM  ((uint32_t)0x00080008)
 
 	#define IS_CRYP_ALGOMODE(ALGOMODE)                                                         \
 		(((ALGOMODE) == CRYP_AlgoMode_TDES_ECB) ||                                         \
@@ -157,10 +157,10 @@ typedef struct {
 	 */
 
 	/*!< The phases are valid only for AES-GCM and AES-CCM modes */
-	#define CRYP_Phase_Init ((uint32_t)0x00000000)
-	#define CRYP_Phase_Header CRYP_CR_GCM_CCMPH_0
+	#define CRYP_Phase_Init	   ((uint32_t)0x00000000)
+	#define CRYP_Phase_Header  CRYP_CR_GCM_CCMPH_0
 	#define CRYP_Phase_Payload CRYP_CR_GCM_CCMPH_1
-	#define CRYP_Phase_Final CRYP_CR_GCM_CCMPH
+	#define CRYP_Phase_Final   CRYP_CR_GCM_CCMPH
 
 	#define IS_CRYP_PHASE(PHASE)                                                               \
 		(((PHASE) == CRYP_Phase_Init) || ((PHASE) == CRYP_Phase_Header) ||                 \
@@ -175,8 +175,8 @@ typedef struct {
 	 */
 	#define CRYP_DataType_32b ((uint16_t)0x0000)
 	#define CRYP_DataType_16b ((uint16_t)0x0040)
-	#define CRYP_DataType_8b ((uint16_t)0x0080)
-	#define CRYP_DataType_1b ((uint16_t)0x00C0)
+	#define CRYP_DataType_8b  ((uint16_t)0x0080)
+	#define CRYP_DataType_1b  ((uint16_t)0x00C0)
 	#define IS_CRYP_DATATYPE(DATATYPE)                                                         \
 		(((DATATYPE) == CRYP_DataType_32b) || ((DATATYPE) == CRYP_DataType_16b) ||         \
 		 ((DATATYPE) == CRYP_DataType_8b) || ((DATATYPE) == CRYP_DataType_1b))
@@ -205,8 +205,8 @@ typedef struct {
 							processing a block of data                 \
 							or a key preparation (for                  \
 							AES decryption). */
-	#define CRYP_FLAG_IFEM ((uint8_t)0x01)	/*!< Input Fifo Empty */
-	#define CRYP_FLAG_IFNF ((uint8_t)0x02)	/*!< Input Fifo is Not Full */
+	#define CRYP_FLAG_IFEM	((uint8_t)0x01) /*!< Input Fifo Empty */
+	#define CRYP_FLAG_IFNF	((uint8_t)0x02) /*!< Input Fifo is Not Full */
 	#define CRYP_FLAG_INRIS ((uint8_t)0x22) /*!< Raw interrupt pending */
 	#define CRYP_FLAG_OFNE                                                                     \
 		((uint8_t)0x04)		       /*!< Input Fifo service raw                         \
@@ -228,10 +228,10 @@ typedef struct {
 	/** @defgroup CRYP_interrupts_definition
 	 * @{
 	 */
-	#define CRYP_IT_INI ((uint8_t)0x01)  /*!< IN Fifo Interrupt */
-	#define CRYP_IT_OUTI ((uint8_t)0x02) /*!< OUT Fifo Interrupt */
-	#define IS_CRYP_CONFIG_IT(IT) ((((IT) & (uint8_t)0xFC) == 0x00) && ((IT) != 0x00))
-	#define IS_CRYP_GET_IT(IT) (((IT) == CRYP_IT_INI) || ((IT) == CRYP_IT_OUTI))
+	#define CRYP_IT_INI	       ((uint8_t)0x01) /*!< IN Fifo Interrupt */
+	#define CRYP_IT_OUTI	       ((uint8_t)0x02) /*!< OUT Fifo Interrupt */
+	#define IS_CRYP_CONFIG_IT(IT)  ((((IT) & (uint8_t)0xFC) == 0x00) && ((IT) != 0x00))
+	#define IS_CRYP_GET_IT(IT)     (((IT) == CRYP_IT_INI) || ((IT) == CRYP_IT_OUTI))
 
 	/**
 	 * @}
@@ -240,8 +240,8 @@ typedef struct {
 	/** @defgroup CRYP_Encryption_Decryption_modes_definition
 	 * @{
 	 */
-	#define MODE_ENCRYPT ((uint8_t)0x01)
-	#define MODE_DECRYPT ((uint8_t)0x00)
+	#define MODE_ENCRYPT	       ((uint8_t)0x01)
+	#define MODE_DECRYPT	       ((uint8_t)0x00)
 
 	/**
 	 * @}
@@ -250,8 +250,8 @@ typedef struct {
 	/** @defgroup CRYP_DMA_transfer_requests
 	 * @{
 	 */
-	#define CRYP_DMAReq_DataIN ((uint8_t)0x01)
-	#define CRYP_DMAReq_DataOUT ((uint8_t)0x02)
+	#define CRYP_DMAReq_DataIN     ((uint8_t)0x01)
+	#define CRYP_DMAReq_DataOUT    ((uint8_t)0x02)
 	#define IS_CRYP_DMAREQ(DMAREQ) ((((DMAREQ) & (uint8_t)0xFC) == 0x00) && ((DMAREQ) != 0x00))
 /**
  * @}

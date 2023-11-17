@@ -384,10 +384,10 @@ typedef struct {
 	/** @defgroup FMC_NAND_Bank
 	 * @{
 	 */
-	#define FMC_Bank2_NAND ((uint32_t)0x00000010)
-	#define FMC_Bank3_NAND ((uint32_t)0x00000100)
+	#define FMC_Bank2_NAND		   ((uint32_t)0x00000010)
+	#define FMC_Bank3_NAND		   ((uint32_t)0x00000100)
 
-	#define IS_FMC_NAND_BANK(BANK) (((BANK) == FMC_Bank2_NAND) || ((BANK) == FMC_Bank3_NAND))
+	#define IS_FMC_NAND_BANK(BANK)	   (((BANK) == FMC_Bank2_NAND) || ((BANK) == FMC_Bank3_NAND))
 	/**
 	 * @}
 	 */
@@ -395,7 +395,7 @@ typedef struct {
 	/** @defgroup FMC_PCCARD_Bank
 	 * @{
 	 */
-	#define FMC_Bank4_PCCARD ((uint32_t)0x00001000)
+	#define FMC_Bank4_PCCARD	   ((uint32_t)0x00001000)
 	/**
 	 * @}
 	 */
@@ -403,10 +403,10 @@ typedef struct {
 	/** @defgroup FMC_SDRAM_Bank
 	 * @{
 	 */
-	#define FMC_Bank1_SDRAM ((uint32_t)0x00000000)
-	#define FMC_Bank2_SDRAM ((uint32_t)0x00000001)
+	#define FMC_Bank1_SDRAM		   ((uint32_t)0x00000000)
+	#define FMC_Bank2_SDRAM		   ((uint32_t)0x00000001)
 
-	#define IS_FMC_SDRAM_BANK(BANK) (((BANK) == FMC_Bank1_SDRAM) || ((BANK) == FMC_Bank2_SDRAM))
+	#define IS_FMC_SDRAM_BANK(BANK)	   (((BANK) == FMC_Bank1_SDRAM) || ((BANK) == FMC_Bank2_SDRAM))
 
 /**
  * @}
@@ -421,7 +421,7 @@ typedef struct {
  */
 
 	#define FMC_DataAddressMux_Disable ((uint32_t)0x00000000)
-	#define FMC_DataAddressMux_Enable ((uint32_t)0x00000002)
+	#define FMC_DataAddressMux_Enable  ((uint32_t)0x00000002)
 
 	#define IS_FMC_MUX(MUX)                                                                    \
 		(((MUX) == FMC_DataAddressMux_Disable) || ((MUX) == FMC_DataAddressMux_Enable))
@@ -433,9 +433,9 @@ typedef struct {
  * @{
  */
 
-	#define FMC_MemoryType_SRAM ((uint32_t)0x00000000)
+	#define FMC_MemoryType_SRAM  ((uint32_t)0x00000000)
 	#define FMC_MemoryType_PSRAM ((uint32_t)0x00000004)
-	#define FMC_MemoryType_NOR ((uint32_t)0x00000008)
+	#define FMC_MemoryType_NOR   ((uint32_t)0x00000008)
 
 	#define IS_FMC_MEMORY(MEMORY)                                                              \
 		(((MEMORY) == FMC_MemoryType_SRAM) || ((MEMORY) == FMC_MemoryType_PSRAM) ||        \
@@ -448,7 +448,7 @@ typedef struct {
  * @{
  */
 
-	#define FMC_NORSRAM_MemoryDataWidth_8b ((uint32_t)0x00000000)
+	#define FMC_NORSRAM_MemoryDataWidth_8b	((uint32_t)0x00000000)
 	#define FMC_NORSRAM_MemoryDataWidth_16b ((uint32_t)0x00000010)
 	#define FMC_NORSRAM_MemoryDataWidth_32b ((uint32_t)0x00000020)
 
@@ -465,7 +465,7 @@ typedef struct {
  */
 
 	#define FMC_BurstAccessMode_Disable ((uint32_t)0x00000000)
-	#define FMC_BurstAccessMode_Enable ((uint32_t)0x00000100)
+	#define FMC_BurstAccessMode_Enable  ((uint32_t)0x00000100)
 
 	#define IS_FMC_BURSTMODE(STATE)                                                            \
 		(((STATE) == FMC_BurstAccessMode_Disable) ||                                       \
@@ -478,7 +478,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_AsynchronousWait_Disable ((uint32_t)0x00000000)
-	#define FMC_AsynchronousWait_Enable ((uint32_t)0x00008000)
+	#define FMC_AsynchronousWait_Enable  ((uint32_t)0x00008000)
 
 	#define IS_FMC_ASYNWAIT(STATE)                                                             \
 		(((STATE) == FMC_AsynchronousWait_Disable) ||                                      \
@@ -490,7 +490,7 @@ typedef struct {
 	/** @defgroup FMC_Wait_Signal_Polarity
 	 * @{
 	 */
-	#define FMC_WaitSignalPolarity_Low ((uint32_t)0x00000000)
+	#define FMC_WaitSignalPolarity_Low  ((uint32_t)0x00000000)
 	#define FMC_WaitSignalPolarity_High ((uint32_t)0x00000200)
 
 	#define IS_FMC_WAIT_POLARITY(POLARITY)                                                     \
@@ -504,7 +504,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_WrapMode_Disable ((uint32_t)0x00000000)
-	#define FMC_WrapMode_Enable ((uint32_t)0x00000400)
+	#define FMC_WrapMode_Enable  ((uint32_t)0x00000400)
 
 	#define IS_FMC_WRAP_MODE(MODE)                                                             \
 		(((MODE) == FMC_WrapMode_Disable) || ((MODE) == FMC_WrapMode_Enable))
@@ -529,7 +529,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_WriteOperation_Disable ((uint32_t)0x00000000)
-	#define FMC_WriteOperation_Enable ((uint32_t)0x00001000)
+	#define FMC_WriteOperation_Enable  ((uint32_t)0x00001000)
 
 	#define IS_FMC_WRITE_OPERATION(OPERATION)                                                  \
 		(((OPERATION) == FMC_WriteOperation_Disable) ||                                    \
@@ -542,7 +542,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_WaitSignal_Disable ((uint32_t)0x00000000)
-	#define FMC_WaitSignal_Enable ((uint32_t)0x00002000)
+	#define FMC_WaitSignal_Enable  ((uint32_t)0x00002000)
 
 	#define IS_FMC_WAITE_SIGNAL(SIGNAL)                                                        \
 		(((SIGNAL) == FMC_WaitSignal_Disable) || ((SIGNAL) == FMC_WaitSignal_Enable))
@@ -554,7 +554,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_ExtendedMode_Disable ((uint32_t)0x00000000)
-	#define FMC_ExtendedMode_Enable ((uint32_t)0x00004000)
+	#define FMC_ExtendedMode_Enable	 ((uint32_t)0x00004000)
 
 	#define IS_FMC_EXTENDED_MODE(MODE)                                                         \
 		(((MODE) == FMC_ExtendedMode_Disable) || ((MODE) == FMC_ExtendedMode_Enable))
@@ -567,7 +567,7 @@ typedef struct {
  */
 
 	#define FMC_WriteBurst_Disable ((uint32_t)0x00000000)
-	#define FMC_WriteBurst_Enable ((uint32_t)0x00080000)
+	#define FMC_WriteBurst_Enable  ((uint32_t)0x00080000)
 
 	#define IS_FMC_WRITE_BURST(BURST)                                                          \
 		(((BURST) == FMC_WriteBurst_Disable) || ((BURST) == FMC_WriteBurst_Enable))
@@ -579,7 +579,7 @@ typedef struct {
  * @{
  */
 
-	#define FMC_CClock_SyncOnly ((uint32_t)0x00000000)
+	#define FMC_CClock_SyncOnly  ((uint32_t)0x00000000)
 	#define FMC_CClock_SyncAsync ((uint32_t)0x00100000)
 
 	#define IS_FMC_CONTINOUS_CLOCK(CCLOCK)                                                     \
@@ -599,7 +599,7 @@ typedef struct {
 	/** @defgroup FMC_Address_Hold_Time
 	 * @{
 	 */
-	#define IS_FMC_ADDRESS_HOLD_TIME(TIME) (((TIME) > 0) && ((TIME) <= 15))
+	#define IS_FMC_ADDRESS_HOLD_TIME(TIME)	(((TIME) > 0) && ((TIME) <= 15))
 	/**
 	 * @}
 	 */
@@ -607,7 +607,7 @@ typedef struct {
 	/** @defgroup FMC_Data_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_DATASETUP_TIME(TIME) (((TIME) > 0) && ((TIME) <= 255))
+	#define IS_FMC_DATASETUP_TIME(TIME)	(((TIME) > 0) && ((TIME) <= 255))
 	/**
 	 * @}
 	 */
@@ -615,7 +615,7 @@ typedef struct {
 	/** @defgroup FMC_Bus_Turn_around_Duration
 	 * @{
 	 */
-	#define IS_FMC_TURNAROUND_TIME(TIME) ((TIME) <= 15)
+	#define IS_FMC_TURNAROUND_TIME(TIME)	((TIME) <= 15)
 	/**
 	 * @}
 	 */
@@ -623,7 +623,7 @@ typedef struct {
 	/** @defgroup FMC_CLK_Division
 	 * @{
 	 */
-	#define IS_FMC_CLK_DIV(DIV) (((DIV) > 0) && ((DIV) <= 15))
+	#define IS_FMC_CLK_DIV(DIV)		(((DIV) > 0) && ((DIV) <= 15))
 	/**
 	 * @}
 	 */
@@ -631,7 +631,7 @@ typedef struct {
 	/** @defgroup FMC_Data_Latency
 	 * @{
 	 */
-	#define IS_FMC_DATA_LATENCY(LATENCY) ((LATENCY) <= 15)
+	#define IS_FMC_DATA_LATENCY(LATENCY)	((LATENCY) <= 15)
 	/**
 	 * @}
 	 */
@@ -639,10 +639,10 @@ typedef struct {
 	/** @defgroup FMC_Access_Mode
 	 * @{
 	 */
-	#define FMC_AccessMode_A ((uint32_t)0x00000000)
-	#define FMC_AccessMode_B ((uint32_t)0x10000000)
-	#define FMC_AccessMode_C ((uint32_t)0x20000000)
-	#define FMC_AccessMode_D ((uint32_t)0x30000000)
+	#define FMC_AccessMode_A		((uint32_t)0x00000000)
+	#define FMC_AccessMode_B		((uint32_t)0x10000000)
+	#define FMC_AccessMode_C		((uint32_t)0x20000000)
+	#define FMC_AccessMode_D		((uint32_t)0x30000000)
 
 	#define IS_FMC_ACCESS_MODE(MODE)                                                           \
 		(((MODE) == FMC_AccessMode_A) || ((MODE) == FMC_AccessMode_B) ||                   \
@@ -663,7 +663,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_Waitfeature_Disable ((uint32_t)0x00000000)
-	#define FMC_Waitfeature_Enable ((uint32_t)0x00000002)
+	#define FMC_Waitfeature_Enable	((uint32_t)0x00000002)
 
 	#define IS_FMC_WAIT_FEATURE(FEATURE)                                                       \
 		(((FEATURE) == FMC_Waitfeature_Disable) || ((FEATURE) == FMC_Waitfeature_Enable))
@@ -674,7 +674,7 @@ typedef struct {
 	/** @defgroup FMC_NAND_Data_Width
 	 * @{
 	 */
-	#define FMC_NAND_MemoryDataWidth_8b ((uint32_t)0x00000000)
+	#define FMC_NAND_MemoryDataWidth_8b  ((uint32_t)0x00000000)
 	#define FMC_NAND_MemoryDataWidth_16b ((uint32_t)0x00000010)
 
 	#define IS_FMC_NAND_MEMORY_WIDTH(WIDTH)                                                    \
@@ -688,7 +688,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_ECC_Disable ((uint32_t)0x00000000)
-	#define FMC_ECC_Enable ((uint32_t)0x00000040)
+	#define FMC_ECC_Enable	((uint32_t)0x00000040)
 
 	#define IS_FMC_ECC_STATE(STATE)                                                            \
 		(((STATE) == FMC_ECC_Disable) || ((STATE) == FMC_ECC_Enable))
@@ -699,8 +699,8 @@ typedef struct {
 	/** @defgroup FMC_ECC_Page_Size
 	 * @{
 	 */
-	#define FMC_ECCPageSize_256Bytes ((uint32_t)0x00000000)
-	#define FMC_ECCPageSize_512Bytes ((uint32_t)0x00020000)
+	#define FMC_ECCPageSize_256Bytes  ((uint32_t)0x00000000)
+	#define FMC_ECCPageSize_512Bytes  ((uint32_t)0x00020000)
 	#define FMC_ECCPageSize_1024Bytes ((uint32_t)0x00040000)
 	#define FMC_ECCPageSize_2048Bytes ((uint32_t)0x00060000)
 	#define FMC_ECCPageSize_4096Bytes ((uint32_t)0x00080000)
@@ -717,7 +717,7 @@ typedef struct {
 	/** @defgroup FMC_TCLR_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_TCLR_TIME(TIME) ((TIME) <= 255)
+	#define IS_FMC_TCLR_TIME(TIME)	  ((TIME) <= 255)
 	/**
 	 * @}
 	 */
@@ -725,7 +725,7 @@ typedef struct {
 	/** @defgroup FMC_TAR_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_TAR_TIME(TIME) ((TIME) <= 255)
+	#define IS_FMC_TAR_TIME(TIME)	  ((TIME) <= 255)
 	/**
 	 * @}
 	 */
@@ -733,7 +733,7 @@ typedef struct {
 	/** @defgroup FMC_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_SETUP_TIME(TIME) ((TIME) <= 255)
+	#define IS_FMC_SETUP_TIME(TIME)	  ((TIME) <= 255)
 	/**
 	 * @}
 	 */
@@ -741,7 +741,7 @@ typedef struct {
 	/** @defgroup FMC_Wait_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_WAIT_TIME(TIME) ((TIME) <= 255)
+	#define IS_FMC_WAIT_TIME(TIME)	  ((TIME) <= 255)
 	/**
 	 * @}
 	 */
@@ -749,7 +749,7 @@ typedef struct {
 	/** @defgroup FMC_Hold_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_HOLD_TIME(TIME) ((TIME) <= 255)
+	#define IS_FMC_HOLD_TIME(TIME)	  ((TIME) <= 255)
 	/**
 	 * @}
 	 */
@@ -757,7 +757,7 @@ typedef struct {
 	/** @defgroup FMC_HiZ_Setup_Time
 	 * @{
 	 */
-	#define IS_FMC_HIZ_TIME(TIME) ((TIME) <= 255)
+	#define IS_FMC_HIZ_TIME(TIME)	  ((TIME) <= 255)
 	/**
 	 * @}
 	 */
@@ -773,8 +773,8 @@ typedef struct {
 	/** @defgroup FMC_ColumnBits_Number
 	 * @{
 	 */
-	#define FMC_ColumnBits_Number_8b ((uint32_t)0x00000000)
-	#define FMC_ColumnBits_Number_9b ((uint32_t)0x00000001)
+	#define FMC_ColumnBits_Number_8b  ((uint32_t)0x00000000)
+	#define FMC_ColumnBits_Number_9b  ((uint32_t)0x00000001)
 	#define FMC_ColumnBits_Number_10b ((uint32_t)0x00000002)
 	#define FMC_ColumnBits_Number_11b ((uint32_t)0x00000003)
 
@@ -806,7 +806,7 @@ typedef struct {
 	/** @defgroup FMC_SDMemory_Data_Width
 	 * @{
 	 */
-	#define FMC_SDMemory_Width_8b ((uint32_t)0x00000000)
+	#define FMC_SDMemory_Width_8b  ((uint32_t)0x00000000)
 	#define FMC_SDMemory_Width_16b ((uint32_t)0x00000010)
 	#define FMC_SDMemory_Width_32b ((uint32_t)0x00000020)
 
@@ -850,7 +850,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_Write_Protection_Disable ((uint32_t)0x00000000)
-	#define FMC_Write_Protection_Enable ((uint32_t)0x00000200)
+	#define FMC_Write_Protection_Enable  ((uint32_t)0x00000200)
 
 	#define IS_FMC_WRITE_PROTECTION(WRITE)                                                     \
 		(((WRITE) == FMC_Write_Protection_Disable) ||                                      \
@@ -863,7 +863,7 @@ typedef struct {
 	/** @defgroup FMC_SDClock_Period
 	 * @{
 	 */
-	#define FMC_SDClock_Disable ((uint32_t)0x00000000)
+	#define FMC_SDClock_Disable  ((uint32_t)0x00000000)
 	#define FMC_SDClock_Period_2 ((uint32_t)0x00000800)
 	#define FMC_SDClock_Period_3 ((uint32_t)0x00000C00)
 
@@ -879,7 +879,7 @@ typedef struct {
 	 * @{
 	 */
 	#define FMC_Read_Burst_Disable ((uint32_t)0x00000000)
-	#define FMC_Read_Burst_Enable ((uint32_t)0x00001000)
+	#define FMC_Read_Burst_Enable  ((uint32_t)0x00001000)
 
 	#define IS_FMC_READ_BURST(RBURST)                                                          \
 		(((RBURST) == FMC_Read_Burst_Disable) || ((RBURST) == FMC_Read_Burst_Enable))
@@ -906,7 +906,7 @@ typedef struct {
 	/** @defgroup FMC_LoadToActive_Delay
 	 * @{
 	 */
-	#define IS_FMC_LOADTOACTIVE_DELAY(DELAY) (((DELAY) > 0) && ((DELAY) <= 16))
+	#define IS_FMC_LOADTOACTIVE_DELAY(DELAY)    (((DELAY) > 0) && ((DELAY) <= 16))
 	/**
 	 * @}
 	 */
@@ -922,7 +922,7 @@ typedef struct {
 	/** @defgroup FMC_SelfRefresh_Time
 	 * @{
 	 */
-	#define IS_FMC_SELFREFRESH_TIME(TIME) (((TIME) > 0) && ((TIME) <= 16))
+	#define IS_FMC_SELFREFRESH_TIME(TIME)	    (((TIME) > 0) && ((TIME) <= 16))
 	/**
 	 * @}
 	 */
@@ -930,7 +930,7 @@ typedef struct {
 	/** @defgroup FMC_RowCycle_Delay
 	 * @{
 	 */
-	#define IS_FMC_ROWCYCLE_DELAY(DELAY) (((DELAY) > 0) && ((DELAY) <= 16))
+	#define IS_FMC_ROWCYCLE_DELAY(DELAY)	    (((DELAY) > 0) && ((DELAY) <= 16))
 	/**
 	 * @}
 	 */
@@ -938,7 +938,7 @@ typedef struct {
 	/** @defgroup FMC_Write_Recovery_Time
 	 * @{
 	 */
-	#define IS_FMC_WRITE_RECOVERY_TIME(TIME) (((TIME) > 0) && ((TIME) <= 16))
+	#define IS_FMC_WRITE_RECOVERY_TIME(TIME)    (((TIME) > 0) && ((TIME) <= 16))
 	/**
 	 * @}
 	 */
@@ -946,7 +946,7 @@ typedef struct {
 	/** @defgroup FMC_RP_Delay
 	 * @{
 	 */
-	#define IS_FMC_RP_DELAY(DELAY) (((DELAY) > 0) && ((DELAY) <= 16))
+	#define IS_FMC_RP_DELAY(DELAY)		    (((DELAY) > 0) && ((DELAY) <= 16))
 	/**
 	 * @}
 	 */
@@ -954,7 +954,7 @@ typedef struct {
 	/** @defgroup FMC_RCD_Delay
 	 * @{
 	 */
-	#define IS_FMC_RCD_DELAY(DELAY) (((DELAY) > 0) && ((DELAY) <= 16))
+	#define IS_FMC_RCD_DELAY(DELAY)		    (((DELAY) > 0) && ((DELAY) <= 16))
 
 	/**
 	 * @}
@@ -963,13 +963,13 @@ typedef struct {
 	/** @defgroup FMC_Command_Mode
 	 * @{
 	 */
-	#define FMC_Command_Mode_normal ((uint32_t)0x00000000)
-	#define FMC_Command_Mode_CLK_Enabled ((uint32_t)0x00000001)
-	#define FMC_Command_Mode_PALL ((uint32_t)0x00000002)
-	#define FMC_Command_Mode_AutoRefresh ((uint32_t)0x00000003)
-	#define FMC_Command_Mode_LoadMode ((uint32_t)0x00000004)
-	#define FMC_Command_Mode_Selfrefresh ((uint32_t)0x00000005)
-	#define FMC_Command_Mode_PowerDown ((uint32_t)0x00000006)
+	#define FMC_Command_Mode_normal		    ((uint32_t)0x00000000)
+	#define FMC_Command_Mode_CLK_Enabled	    ((uint32_t)0x00000001)
+	#define FMC_Command_Mode_PALL		    ((uint32_t)0x00000002)
+	#define FMC_Command_Mode_AutoRefresh	    ((uint32_t)0x00000003)
+	#define FMC_Command_Mode_LoadMode	    ((uint32_t)0x00000004)
+	#define FMC_Command_Mode_Selfrefresh	    ((uint32_t)0x00000005)
+	#define FMC_Command_Mode_PowerDown	    ((uint32_t)0x00000006)
 
 	#define IS_FMC_COMMAND_MODE(COMMAND)                                                       \
 		(((COMMAND) == FMC_Command_Mode_normal) ||                                         \
@@ -987,8 +987,8 @@ typedef struct {
 	/** @defgroup FMC_Command_Target
 	 * @{
 	 */
-	#define FMC_Command_Target_bank2 ((uint32_t)0x00000008)
-	#define FMC_Command_Target_bank1 ((uint32_t)0x00000010)
+	#define FMC_Command_Target_bank2   ((uint32_t)0x00000008)
+	#define FMC_Command_Target_bank1   ((uint32_t)0x00000010)
 	#define FMC_Command_Target_bank1_2 ((uint32_t)0x00000018)
 
 	#define IS_FMC_COMMAND_TARGET(TARGET)                                                      \
@@ -1012,7 +1012,7 @@ typedef struct {
 	/** @defgroup FMC_ModeRegister_Definition
 	 * @{
 	 */
-	#define IS_FMC_MODE_REGISTER(CONTENT) ((CONTENT) <= 8191)
+	#define IS_FMC_MODE_REGISTER(CONTENT)	  ((CONTENT) <= 8191)
 
 	/**
 	 * @}
@@ -1021,9 +1021,9 @@ typedef struct {
 	/** @defgroup FMC_Mode_Status
 	 * @{
 	 */
-	#define FMC_NormalMode_Status ((uint32_t)0x00000000)
-	#define FMC_SelfRefreshMode_Status FMC_SDSR_MODES1_0
-	#define FMC_PowerDownMode_Status FMC_SDSR_MODES1_1
+	#define FMC_NormalMode_Status		  ((uint32_t)0x00000000)
+	#define FMC_SelfRefreshMode_Status	  FMC_SDSR_MODES1_0
+	#define FMC_PowerDownMode_Status	  FMC_SDSR_MODES1_1
 
 	#define IS_FMC_MODE_STATUS(STATUS)                                                         \
 		(((STATUS) == FMC_NormalMode_Status) ||                                            \
@@ -1041,10 +1041,10 @@ typedef struct {
 	/** @defgroup FMC_Interrupt_sources
 	 * @{
 	 */
-	#define FMC_IT_RisingEdge ((uint32_t)0x00000008)
-	#define FMC_IT_Level ((uint32_t)0x00000010)
+	#define FMC_IT_RisingEdge  ((uint32_t)0x00000008)
+	#define FMC_IT_Level	   ((uint32_t)0x00000010)
 	#define FMC_IT_FallingEdge ((uint32_t)0x00000020)
-	#define FMC_IT_Refresh ((uint32_t)0x00004000)
+	#define FMC_IT_Refresh	   ((uint32_t)0x00004000)
 
 	#define IS_FMC_IT(IT)                                                                      \
 		((((IT) & (uint32_t)0xFFFFBFC7) == 0x00000000) && ((IT) != 0x00000000))
@@ -1063,12 +1063,12 @@ typedef struct {
 	/** @defgroup FMC_Flags
 	 * @{
 	 */
-	#define FMC_FLAG_RisingEdge ((uint32_t)0x00000001)
-	#define FMC_FLAG_Level ((uint32_t)0x00000002)
+	#define FMC_FLAG_RisingEdge  ((uint32_t)0x00000001)
+	#define FMC_FLAG_Level	     ((uint32_t)0x00000002)
 	#define FMC_FLAG_FallingEdge ((uint32_t)0x00000004)
-	#define FMC_FLAG_FEMPT ((uint32_t)0x00000040)
-	#define FMC_FLAG_Refresh FMC_SDSR_RE
-	#define FMC_FLAG_Busy FMC_SDSR_BUSY
+	#define FMC_FLAG_FEMPT	     ((uint32_t)0x00000040)
+	#define FMC_FLAG_Refresh     FMC_SDSR_RE
+	#define FMC_FLAG_Busy	     FMC_SDSR_BUSY
 
 	#define IS_FMC_GET_FLAG(FLAG)                                                              \
 		(((FLAG) == FMC_FLAG_RisingEdge) || ((FLAG) == FMC_FLAG_Level) ||                  \

@@ -113,25 +113,25 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
  * @{
  */
 
-	#define GPIO_Pin_0 ((uint16_t)0x0001)	/*!< Pin 0 selected */
-	#define GPIO_Pin_1 ((uint16_t)0x0002)	/*!< Pin 1 selected */
-	#define GPIO_Pin_2 ((uint16_t)0x0004)	/*!< Pin 2 selected */
-	#define GPIO_Pin_3 ((uint16_t)0x0008)	/*!< Pin 3 selected */
-	#define GPIO_Pin_4 ((uint16_t)0x0010)	/*!< Pin 4 selected */
-	#define GPIO_Pin_5 ((uint16_t)0x0020)	/*!< Pin 5 selected */
-	#define GPIO_Pin_6 ((uint16_t)0x0040)	/*!< Pin 6 selected */
-	#define GPIO_Pin_7 ((uint16_t)0x0080)	/*!< Pin 7 selected */
-	#define GPIO_Pin_8 ((uint16_t)0x0100)	/*!< Pin 8 selected */
-	#define GPIO_Pin_9 ((uint16_t)0x0200)	/*!< Pin 9 selected */
-	#define GPIO_Pin_10 ((uint16_t)0x0400)	/*!< Pin 10 selected */
-	#define GPIO_Pin_11 ((uint16_t)0x0800)	/*!< Pin 11 selected */
-	#define GPIO_Pin_12 ((uint16_t)0x1000)	/*!< Pin 12 selected */
-	#define GPIO_Pin_13 ((uint16_t)0x2000)	/*!< Pin 13 selected */
-	#define GPIO_Pin_14 ((uint16_t)0x4000)	/*!< Pin 14 selected */
-	#define GPIO_Pin_15 ((uint16_t)0x8000)	/*!< Pin 15 selected */
-	#define GPIO_Pin_All ((uint16_t)0xFFFF) /*!< All pins selected */
+	#define GPIO_Pin_0		   ((uint16_t)0x0001) /*!< Pin 0 selected */
+	#define GPIO_Pin_1		   ((uint16_t)0x0002) /*!< Pin 1 selected */
+	#define GPIO_Pin_2		   ((uint16_t)0x0004) /*!< Pin 2 selected */
+	#define GPIO_Pin_3		   ((uint16_t)0x0008) /*!< Pin 3 selected */
+	#define GPIO_Pin_4		   ((uint16_t)0x0010) /*!< Pin 4 selected */
+	#define GPIO_Pin_5		   ((uint16_t)0x0020) /*!< Pin 5 selected */
+	#define GPIO_Pin_6		   ((uint16_t)0x0040) /*!< Pin 6 selected */
+	#define GPIO_Pin_7		   ((uint16_t)0x0080) /*!< Pin 7 selected */
+	#define GPIO_Pin_8		   ((uint16_t)0x0100) /*!< Pin 8 selected */
+	#define GPIO_Pin_9		   ((uint16_t)0x0200) /*!< Pin 9 selected */
+	#define GPIO_Pin_10		   ((uint16_t)0x0400) /*!< Pin 10 selected */
+	#define GPIO_Pin_11		   ((uint16_t)0x0800) /*!< Pin 11 selected */
+	#define GPIO_Pin_12		   ((uint16_t)0x1000) /*!< Pin 12 selected */
+	#define GPIO_Pin_13		   ((uint16_t)0x2000) /*!< Pin 13 selected */
+	#define GPIO_Pin_14		   ((uint16_t)0x4000) /*!< Pin 14 selected */
+	#define GPIO_Pin_15		   ((uint16_t)0x8000) /*!< Pin 15 selected */
+	#define GPIO_Pin_All		   ((uint16_t)0xFFFF) /*!< All pins selected */
 
-	#define IS_GPIO_PIN(PIN) ((((PIN) & (uint16_t)0x00) == 0x00) && ((PIN) != (uint16_t)0x00))
+	#define IS_GPIO_PIN(PIN)	   ((((PIN) & (uint16_t)0x00) == 0x00) && ((PIN) != (uint16_t)0x00))
 
 	#define IS_GET_GPIO_PIN(PIN)                                                               \
 		(((PIN) == GPIO_Pin_0) || ((PIN) == GPIO_Pin_1) || ((PIN) == GPIO_Pin_2) ||        \
@@ -149,8 +149,8 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
  * @{
  */
 
-	#define GPIO_Remap_SPI1 ((uint32_t)0x00000001)	 /*!< SPI1 Alternate Function mapping */
-	#define GPIO_Remap_I2C1 ((uint32_t)0x00000002)	 /*!< I2C1 Alternate Function mapping */
+	#define GPIO_Remap_SPI1	  ((uint32_t)0x00000001) /*!< SPI1 Alternate Function mapping */
+	#define GPIO_Remap_I2C1	  ((uint32_t)0x00000002) /*!< I2C1 Alternate Function mapping */
 	#define GPIO_Remap_USART1 ((uint32_t)0x00000004) /*!< USART1 Alternate Function mapping */
 	#define GPIO_Remap_USART2 ((uint32_t)0x00000008) /*!< USART2 Alternate Function mapping */
 	#define GPIO_PartialRemap_USART3                                                           \
@@ -171,10 +171,10 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
 		((uint32_t)0x001A0800) /*!< TIM3 Partial Alternate Function mapping */
 	#define GPIO_FullRemap_TIM3                                                                \
 		((uint32_t)0x001A0C00)			/*!< TIM3 Full Alternate Function mapping */
-	#define GPIO_Remap_TIM4 ((uint32_t)0x00001000)	/*!< TIM4 Alternate Function mapping */
+	#define GPIO_Remap_TIM4	 ((uint32_t)0x00001000) /*!< TIM4 Alternate Function mapping */
 	#define GPIO_Remap1_CAN1 ((uint32_t)0x001D4000) /*!< CAN1 Alternate Function mapping */
 	#define GPIO_Remap2_CAN1 ((uint32_t)0x001D6000) /*!< CAN1 Alternate Function mapping */
-	#define GPIO_Remap_PD01 ((uint32_t)0x00008000)	/*!< PD01 Alternate Function mapping */
+	#define GPIO_Remap_PD01	 ((uint32_t)0x00008000) /*!< PD01 Alternate Function mapping */
 	#define GPIO_Remap_TIM5CH4_LSI                                                             \
 		((uint32_t)0x00200001) /*!< LSI connected to TIM5 Channel4 input capture for       \
 					  calibration */
@@ -203,7 +203,7 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
 					  Connectivity line devices) */
 	#define GPIO_Remap_TIM2ITR1_PTP_SOF                                                        \
 		((uint32_t)0x00202000) /*!< Ethernet PTP output or USB OTG SOF (Start of Frame)    \
-					  connected to TIM2 Internal Trigger 1 for calibration                                                        \
+					  connected to TIM2 Internal Trigger 1 for calibration     \
 								 (only for Connectivity line       \
 					  devices) */
 	#define GPIO_Remap_PTP_PPS                                                                 \
@@ -253,7 +253,7 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
 					  density Value line devices) */
 	#define GPIO_Remap_MISC                                                                    \
 		((uint32_t)0x80002000) /*!< Miscellaneous Remap (DMA2 Channel5 Position and DAC    \
-					  Trigger remapping, only for High density Value line                                                                  \
+					  Trigger remapping, only for High density Value line      \
 					  devices) */
 
 	#define IS_GPIO_REMAP(REMAP)                                                               \
@@ -317,16 +317,16 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
  * @{
  */
 
-	#define GPIO_PinSource0 ((uint8_t)0x00)
-	#define GPIO_PinSource1 ((uint8_t)0x01)
-	#define GPIO_PinSource2 ((uint8_t)0x02)
-	#define GPIO_PinSource3 ((uint8_t)0x03)
-	#define GPIO_PinSource4 ((uint8_t)0x04)
-	#define GPIO_PinSource5 ((uint8_t)0x05)
-	#define GPIO_PinSource6 ((uint8_t)0x06)
-	#define GPIO_PinSource7 ((uint8_t)0x07)
-	#define GPIO_PinSource8 ((uint8_t)0x08)
-	#define GPIO_PinSource9 ((uint8_t)0x09)
+	#define GPIO_PinSource0	 ((uint8_t)0x00)
+	#define GPIO_PinSource1	 ((uint8_t)0x01)
+	#define GPIO_PinSource2	 ((uint8_t)0x02)
+	#define GPIO_PinSource3	 ((uint8_t)0x03)
+	#define GPIO_PinSource4	 ((uint8_t)0x04)
+	#define GPIO_PinSource5	 ((uint8_t)0x05)
+	#define GPIO_PinSource6	 ((uint8_t)0x06)
+	#define GPIO_PinSource7	 ((uint8_t)0x07)
+	#define GPIO_PinSource8	 ((uint8_t)0x08)
+	#define GPIO_PinSource9	 ((uint8_t)0x09)
 	#define GPIO_PinSource10 ((uint8_t)0x0A)
 	#define GPIO_PinSource11 ((uint8_t)0x0B)
 	#define GPIO_PinSource12 ((uint8_t)0x0C)
@@ -351,7 +351,7 @@ typedef enum { Bit_RESET = 0, Bit_SET } BitAction;
 	/** @defgroup Ethernet_Media_Interface
 	 * @{
 	 */
-	#define GPIO_ETH_MediaInterface_MII ((u32)0x00000000)
+	#define GPIO_ETH_MediaInterface_MII  ((u32)0x00000000)
 	#define GPIO_ETH_MediaInterface_RMII ((u32)0x00000001)
 
 	#define IS_GPIO_ETH_MEDIA_INTERFACE(INTERFACE)                                             \

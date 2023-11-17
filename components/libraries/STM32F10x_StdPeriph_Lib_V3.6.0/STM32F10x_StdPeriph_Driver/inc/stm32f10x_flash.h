@@ -81,8 +81,9 @@ typedef enum {
  * @{
  */
 
-	#define FLASH_HalfCycleAccess_Enable ((uint32_t)0x00000008) /*!< FLASH Half Cycle Enable   \
-								     */
+	#define FLASH_HalfCycleAccess_Enable                                                       \
+		((uint32_t)0x00000008) /*!< FLASH Half Cycle Enable                                \
+					*/
 	#define FLASH_HalfCycleAccess_Disable                                                      \
 		((uint32_t)0x00000000) /*!< FLASH Half Cycle Disable */
 	#define IS_FLASH_HALFCYCLEACCESS_STATE(STATE)                                              \
@@ -315,11 +316,11 @@ typedef enum {
 		((uint32_t)0x80000000) /*!< STM32 XL-density devices: Write protection of page 62  \
 					  to 511 */
 
-	#define FLASH_WRProt_AllPages ((uint32_t)0xFFFFFFFF) /*!< Write protection of all Pages */
+	#define FLASH_WRProt_AllPages	    ((uint32_t)0xFFFFFFFF) /*!< Write protection of all Pages */
 
-	#define IS_FLASH_WRPROT_PAGE(PAGE) (((PAGE) != 0x00000000))
+	#define IS_FLASH_WRPROT_PAGE(PAGE)  (((PAGE) != 0x00000000))
 
-	#define IS_FLASH_ADDRESS(ADDRESS) (((ADDRESS) >= 0x08000000) && ((ADDRESS) < 0x080FFFFF))
+	#define IS_FLASH_ADDRESS(ADDRESS)   (((ADDRESS) >= 0x08000000) && ((ADDRESS) < 0x080FFFFF))
 
 	#define IS_OB_DATA_ADDRESS(ADDRESS) (((ADDRESS) == 0x1FFFF804) || ((ADDRESS) == 0x1FFFF806))
 
@@ -331,9 +332,9 @@ typedef enum {
  * @{
  */
 
-	#define OB_IWDG_SW ((uint16_t)0x0001) /*!< Software IWDG selected */
-	#define OB_IWDG_HW ((uint16_t)0x0000) /*!< Hardware IWDG selected */
-	#define IS_OB_IWDG_SOURCE(SOURCE) (((SOURCE) == OB_IWDG_SW) || ((SOURCE) == OB_IWDG_HW))
+	#define OB_IWDG_SW		    ((uint16_t)0x0001) /*!< Software IWDG selected */
+	#define OB_IWDG_HW		    ((uint16_t)0x0000) /*!< Hardware IWDG selected */
+	#define IS_OB_IWDG_SOURCE(SOURCE)   (((SOURCE) == OB_IWDG_SW) || ((SOURCE) == OB_IWDG_HW))
 
 /**
  * @}
@@ -343,9 +344,9 @@ typedef enum {
  * @{
  */
 
-	#define OB_STOP_NoRST ((uint16_t)0x0002) /*!< No reset generated when entering in STOP */
-	#define OB_STOP_RST ((uint16_t)0x0000)	 /*!< Reset generated when entering in STOP */
-	#define IS_OB_STOP_SOURCE(SOURCE) (((SOURCE) == OB_STOP_NoRST) || ((SOURCE) == OB_STOP_RST))
+	#define OB_STOP_NoRST		    ((uint16_t)0x0002) /*!< No reset generated when entering in STOP */
+	#define OB_STOP_RST		    ((uint16_t)0x0000) /*!< Reset generated when entering in STOP */
+	#define IS_OB_STOP_SOURCE(SOURCE)   (((SOURCE) == OB_STOP_NoRST) || ((SOURCE) == OB_STOP_RST))
 
 /**
  * @}
@@ -370,12 +371,12 @@ typedef enum {
 		 */
 		#define FLASH_BOOT_Bank1                                                           \
 			((uint16_t)0x0000) /*!< At startup, if boot pins are set in boot from user \
-					      Flash position and this parameter is selected the                                                                \
+					      Flash position and this parameter is selected the    \
 					      device will boot from Bank1(Default) */
 		#define FLASH_BOOT_Bank2                                                           \
 			((uint16_t)0x0001) /*!< At startup, if boot pins are set in boot from user \
-					      Flash position and this parameter is selected the                                                                \
-					      device will boot from Bank 2 or Bank 1, depending on                                                                                      \
+					      Flash position and this parameter is selected the    \
+					      device will boot from Bank 2 or Bank 1, depending on \
 					      the activation of the bank */
 		#define IS_FLASH_BOOT(BOOT)                                                        \
 			(((BOOT) == FLASH_BOOT_Bank1) || ((BOOT) == FLASH_BOOT_Bank2))
@@ -442,8 +443,8 @@ typedef enum {
 		#define FLASH_FLAG_BANK1_WRPRTERR                                                  \
 			FLASH_FLAG_WRPRTERR /*!< FLASH BANK1 Write protected error flag */
 
-		#define FLASH_FLAG_BSY ((uint32_t)0x00000001)	/*!< FLASH Busy flag */
-		#define FLASH_FLAG_EOP ((uint32_t)0x00000020)	/*!< FLASH End of Operation flag */
+		#define FLASH_FLAG_BSY	 ((uint32_t)0x00000001) /*!< FLASH Busy flag */
+		#define FLASH_FLAG_EOP	 ((uint32_t)0x00000020) /*!< FLASH End of Operation flag */
 		#define FLASH_FLAG_PGERR ((uint32_t)0x00000004) /*!< FLASH Program error flag */
 		#define FLASH_FLAG_WRPRTERR                                                        \
 			((uint32_t)0x00000010) /*!< FLASH Write protected error flag */
@@ -462,8 +463,8 @@ typedef enum {
 			 ((FLAG) == FLASH_FLAG_BANK2_PGERR) ||                                     \
 			 ((FLAG) == FLASH_FLAG_BANK2_WRPRTERR))
 	#else
-		#define FLASH_FLAG_BSY ((uint32_t)0x00000001)	/*!< FLASH Busy flag */
-		#define FLASH_FLAG_EOP ((uint32_t)0x00000020)	/*!< FLASH End of Operation flag */
+		#define FLASH_FLAG_BSY	 ((uint32_t)0x00000001) /*!< FLASH Busy flag */
+		#define FLASH_FLAG_EOP	 ((uint32_t)0x00000020) /*!< FLASH End of Operation flag */
 		#define FLASH_FLAG_PGERR ((uint32_t)0x00000004) /*!< FLASH Program error flag */
 		#define FLASH_FLAG_WRPRTERR                                                        \
 			((uint32_t)0x00000010) /*!< FLASH Write protected error flag */

@@ -67,9 +67,9 @@
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-#define CR_MASK ((uint32_t)0xFFFCE0FC)	  /* DMA2D CR Mask */
+#define CR_MASK	   ((uint32_t)0xFFFCE0FC) /* DMA2D CR Mask */
 #define PFCCR_MASK ((uint32_t)0x00FC00C0) /* DMA2D FGPFCCR Mask */
-#define DEAD_MASK ((uint32_t)0xFFFF00FE)  /* DMA2D DEAD Mask */
+#define DEAD_MASK  ((uint32_t)0xFFFF00FE) /* DMA2D DEAD Mask */
 
 /** @defgroup DMA2D_Private_Functions
  * @{

@@ -331,8 +331,8 @@ extern "C" {
  * @brief Macros required for reciprocal calculation in Normalized LMS
  */
 
-	#define DELTA_Q31 (0x100)
-	#define DELTA_Q15 0x5
+	#define DELTA_Q31  (0x100)
+	#define DELTA_Q15  0x5
 	#define INDEX_MASK 0x0000003F
 	#ifndef PI
 		#define PI 3.14159265358979f
@@ -343,19 +343,19 @@ extern "C" {
  */
 
 	#define FAST_MATH_TABLE_SIZE 512
-	#define FAST_MATH_Q31_SHIFT (32 - 10)
-	#define FAST_MATH_Q15_SHIFT (16 - 10)
+	#define FAST_MATH_Q31_SHIFT  (32 - 10)
+	#define FAST_MATH_Q15_SHIFT  (16 - 10)
 	#define CONTROLLER_Q31_SHIFT (32 - 9)
-	#define TABLE_SIZE 256
-	#define TABLE_SPACING_Q31 0x400000
-	#define TABLE_SPACING_Q15 0x80
+	#define TABLE_SIZE	     256
+	#define TABLE_SPACING_Q31    0x400000
+	#define TABLE_SPACING_Q15    0x80
 
 /**
  * @brief Macros required for SINE and COSINE Controller functions
  */
 /* 1.31(q31) Fixed value of 2/360 */
 /* -1 to +1 is divided into 360 values so total spacing is (2/360) */
-	#define INPUT_SPACING 0xB60B61
+	#define INPUT_SPACING	     0xB60B61
 
 /**
  * @brief Macro for Unaligned Support
@@ -420,13 +420,13 @@ typedef double float64_t;
  */
 	#if defined __CC_ARM
 		#define __SIMD32_TYPE int32_t __packed
-		#define CMSIS_UNUSED __attribute__((unused))
+		#define CMSIS_UNUSED  __attribute__((unused))
 	#elif defined __ICCARM__
 		#define __SIMD32_TYPE int32_t __packed
 		#define CMSIS_UNUSED
 	#elif defined __GNUC__
 		#define __SIMD32_TYPE int32_t
-		#define CMSIS_UNUSED __attribute__((unused))
+		#define CMSIS_UNUSED  __attribute__((unused))
 	#elif defined __CSMC__ /* Cosmic */
 		#define __SIMD32_TYPE int32_t
 		#define CMSIS_UNUSED
@@ -437,12 +437,12 @@ typedef double float64_t;
 		#error Unknown compiler
 	#endif
 
-	#define __SIMD32(addr) (*(__SIMD32_TYPE **)&(addr))
+	#define __SIMD32(addr)	     (*(__SIMD32_TYPE **)&(addr))
 	#define __SIMD32_CONST(addr) ((__SIMD32_TYPE *)(addr))
 
 	#define _SIMD32_OFFSET(addr) (*(__SIMD32_TYPE *)(addr))
 
-	#define __SIMD64(addr) (*(int64_t **)&(addr))
+	#define __SIMD64(addr)	     (*(int64_t **)&(addr))
 
 	#if defined(ARM_MATH_CM3) || defined(ARM_MATH_CM0_FAMILY)
 	/**
@@ -2067,8 +2067,8 @@ typedef struct {
  * @param[in]     N          length of the DCT4.
  * @param[in]     Nby2       half of the length of the DCT4.
  * @param[in]     normalize  normalizing factor.
- * @return		arm_status function returns ARM_MATH_SUCCESS if initialization is successful or
- * ARM_MATH_ARGUMENT_ERROR if <code>fftLenReal</code> is not a supported transform length.
+ * @return		arm_status function returns ARM_MATH_SUCCESS if initialization is successful
+ * or ARM_MATH_ARGUMENT_ERROR if <code>fftLenReal</code> is not a supported transform length.
  */
 
 arm_status arm_dct4_init_f32(arm_dct4_instance_f32 *S, arm_rfft_instance_f32 *S_RFFT,
@@ -2107,8 +2107,8 @@ typedef struct {
  * @param[in]     N          length of the DCT4.
  * @param[in]     Nby2       half of the length of the DCT4.
  * @param[in]     normalize  normalizing factor.
- * @return		arm_status function returns ARM_MATH_SUCCESS if initialization is successful or
- * ARM_MATH_ARGUMENT_ERROR if <code>N</code> is not a supported transform length.
+ * @return		arm_status function returns ARM_MATH_SUCCESS if initialization is successful
+ * or ARM_MATH_ARGUMENT_ERROR if <code>N</code> is not a supported transform length.
  */
 
 arm_status arm_dct4_init_q31(arm_dct4_instance_q31 *S, arm_rfft_instance_q31 *S_RFFT,
@@ -2147,8 +2147,8 @@ typedef struct {
  * @param[in]     N          length of the DCT4.
  * @param[in]     Nby2       half of the length of the DCT4.
  * @param[in]     normalize  normalizing factor.
- * @return		arm_status function returns ARM_MATH_SUCCESS if initialization is successful or
- * ARM_MATH_ARGUMENT_ERROR if <code>N</code> is not a supported transform length.
+ * @return		arm_status function returns ARM_MATH_SUCCESS if initialization is successful
+ * or ARM_MATH_ARGUMENT_ERROR if <code>N</code> is not a supported transform length.
  */
 
 arm_status arm_dct4_init_q15(arm_dct4_instance_q15 *S, arm_rfft_instance_q15 *S_RFFT,
@@ -6197,7 +6197,7 @@ static __INLINE q7_t arm_bilinear_interp_q7(arm_bilinear_interp_instance_q7 *S, 
 		a = (q31_t)(((((q63_t)a) << 32) - ((q63_t)x * y) + 0x80000000LL) >> 32)
 
 	// SMMULR
-	#define mult_32x32_keep32_R(a, x, y) a = (q31_t)(((q63_t)x * y + 0x80000000LL) >> 32)
+	#define mult_32x32_keep32_R(a, x, y)  a = (q31_t)(((q63_t)x * y + 0x80000000LL) >> 32)
 
 	// SMMLA
 	#define multAcc_32x32_keep32(a, x, y) a += (q31_t)(((q63_t)x * y) >> 32)
@@ -6206,7 +6206,7 @@ static __INLINE q7_t arm_bilinear_interp_q7(arm_bilinear_interp_instance_q7 *S, 
 	#define multSub_32x32_keep32(a, x, y) a -= (q31_t)(((q63_t)x * y) >> 32)
 
 	// SMMUL
-	#define mult_32x32_keep32(a, x, y) a = (q31_t)(((q63_t)x * y) >> 32)
+	#define mult_32x32_keep32(a, x, y)    a = (q31_t)(((q63_t)x * y) >> 32)
 
 	#if defined(__CC_ARM) // Keil
 

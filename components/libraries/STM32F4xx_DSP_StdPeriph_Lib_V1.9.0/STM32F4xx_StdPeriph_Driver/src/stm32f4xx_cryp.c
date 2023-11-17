@@ -168,7 +168,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-#define FLAG_MASK ((uint8_t)0x20)
+#define FLAG_MASK   ((uint8_t)0x20)
 #define MAX_TIMEOUT ((uint16_t)0xFFFF)
 
 /* Private macro -------------------------------------------------------------*/

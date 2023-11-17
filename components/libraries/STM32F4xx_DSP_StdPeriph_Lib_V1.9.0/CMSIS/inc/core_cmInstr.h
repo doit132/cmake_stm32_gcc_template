@@ -163,7 +163,7 @@ __attribute__((section(".revsh_text"))) __STATIC_INLINE __ASM int32_t __REVSH(in
     \param [in]    value  Number of Bits to rotate
     \return               Rotated value
  */
-	#define __ROR __ror
+	#define __ROR	      __ror
 
 	/** \brief  Breakpoint
 
@@ -221,7 +221,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
     \param [in]    ptr  Pointer to data
     \return             value of type uint8_t at (*ptr)
  */
-		#define __LDREXB(ptr) ((uint8_t)__ldrex(ptr))
+		#define __LDREXB(ptr)	     ((uint8_t)__ldrex(ptr))
 
 		/** \brief  LDR Exclusive (16 bit)
 
@@ -230,7 +230,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
     \param [in]    ptr  Pointer to data
     \return        value of type uint16_t at (*ptr)
  */
-		#define __LDREXH(ptr) ((uint16_t)__ldrex(ptr))
+		#define __LDREXH(ptr)	     ((uint16_t)__ldrex(ptr))
 
 		/** \brief  LDR Exclusive (32 bit)
 
@@ -239,7 +239,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
     \param [in]    ptr  Pointer to data
     \return        value of type uint32_t at (*ptr)
  */
-		#define __LDREXW(ptr) ((uint32_t)__ldrex(ptr))
+		#define __LDREXW(ptr)	     ((uint32_t)__ldrex(ptr))
 
 		/** \brief  STR Exclusive (8 bit)
 
@@ -279,7 +279,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
     This function removes the exclusive lock which is created by LDREX.
 
  */
-		#define __CLREX __clrex
+		#define __CLREX		     __clrex
 
 		/** \brief  Signed Saturate
 
@@ -289,7 +289,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
     \param [in]    sat  Bit position to saturate to (1..32)
     \return             Saturated value
  */
-		#define __SSAT __ssat
+		#define __SSAT		     __ssat
 
 		/** \brief  Unsigned Saturate
 
@@ -299,7 +299,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
     \param [in]    sat  Bit position to saturate to (0..31)
     \return             Saturated value
  */
-		#define __USAT __usat
+		#define __USAT		     __usat
 
 		/** \brief  Rotate Right with Extend (32 bit)
 
@@ -323,7 +323,7 @@ __attribute__((section(".rrx_text"))) __STATIC_INLINE __ASM uint32_t __RRX(uint3
     \param [in]    ptr  Pointer to data
     \return             value of type uint8_t at (*ptr)
  */
-		#define __LDRBT(ptr) ((uint8_t)__ldrt(ptr))
+		#define __LDRBT(ptr)	    ((uint8_t)__ldrt(ptr))
 
 		/** \brief  LDRT Unprivileged (16 bit)
 
@@ -332,7 +332,7 @@ __attribute__((section(".rrx_text"))) __STATIC_INLINE __ASM uint32_t __RRX(uint3
     \param [in]    ptr  Pointer to data
     \return        value of type uint16_t at (*ptr)
  */
-		#define __LDRHT(ptr) ((uint16_t)__ldrt(ptr))
+		#define __LDRHT(ptr)	    ((uint16_t)__ldrt(ptr))
 
 		/** \brief  LDRT Unprivileged (32 bit)
 
@@ -341,7 +341,7 @@ __attribute__((section(".rrx_text"))) __STATIC_INLINE __ASM uint32_t __RRX(uint3
     \param [in]    ptr  Pointer to data
     \return        value of type uint32_t at (*ptr)
  */
-		#define __LDRT(ptr) ((uint32_t)__ldrt(ptr))
+		#define __LDRT(ptr)	    ((uint32_t)__ldrt(ptr))
 
 		/** \brief  STRT Unprivileged (8 bit)
 
@@ -368,7 +368,7 @@ __attribute__((section(".rrx_text"))) __STATIC_INLINE __ASM uint32_t __RRX(uint3
     \param [in]  value  Value to store
     \param [in]    ptr  Pointer to location
  */
-		#define __STRT(value, ptr) __strt(value, ptr)
+		#define __STRT(value, ptr)  __strt(value, ptr)
 
 	#endif /* (__CORTEX_M >= 0x03) || (__CORTEX_SC >= 300) */
 

@@ -136,19 +136,19 @@
 /* Private define ------------------------------------------------------------*/
 
 /* CR register Mask */
-#define CR_CLEAR_MASK ((uint32_t)0x00000FFE)
+#define CR_CLEAR_MASK	  ((uint32_t)0x00000FFE)
 
 /* DAC Dual Channels SWTRIG masks */
-#define DUAL_SWTRIG_SET ((uint32_t)0x00000003)
+#define DUAL_SWTRIG_SET	  ((uint32_t)0x00000003)
 #define DUAL_SWTRIG_RESET ((uint32_t)0xFFFFFFFC)
 
 /* DHR registers offsets */
-#define DHR12R1_OFFSET ((uint32_t)0x00000008)
-#define DHR12R2_OFFSET ((uint32_t)0x00000014)
-#define DHR12RD_OFFSET ((uint32_t)0x00000020)
+#define DHR12R1_OFFSET	  ((uint32_t)0x00000008)
+#define DHR12R2_OFFSET	  ((uint32_t)0x00000014)
+#define DHR12RD_OFFSET	  ((uint32_t)0x00000020)
 
 /* DOR register offset */
-#define DOR_OFFSET ((uint32_t)0x0000002C)
+#define DOR_OFFSET	  ((uint32_t)0x0000002C)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

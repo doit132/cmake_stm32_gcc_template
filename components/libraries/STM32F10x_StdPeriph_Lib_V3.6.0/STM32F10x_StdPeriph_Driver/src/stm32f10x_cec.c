@@ -45,32 +45,32 @@
  */
 
 /* ------------ CEC registers bit address in the alias region ----------- */
-#define CEC_OFFSET (CEC_BASE - PERIPH_BASE)
+#define CEC_OFFSET	(CEC_BASE - PERIPH_BASE)
 
 /* --- CFGR Register ---*/
 
 /* Alias word address of PE bit */
-#define CFGR_OFFSET (CEC_OFFSET + 0x00)
-#define PE_BitNumber 0x00
-#define CFGR_PE_BB (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (PE_BitNumber * 4))
+#define CFGR_OFFSET	(CEC_OFFSET + 0x00)
+#define PE_BitNumber	0x00
+#define CFGR_PE_BB	(PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (PE_BitNumber * 4))
 
 /* Alias word address of IE bit */
-#define IE_BitNumber 0x01
-#define CFGR_IE_BB (PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (IE_BitNumber * 4))
+#define IE_BitNumber	0x01
+#define CFGR_IE_BB	(PERIPH_BB_BASE + (CFGR_OFFSET * 32) + (IE_BitNumber * 4))
 
 /* --- CSR Register ---*/
 
 /* Alias word address of TSOM bit */
-#define CSR_OFFSET (CEC_OFFSET + 0x10)
-#define TSOM_BitNumber 0x00
-#define CSR_TSOM_BB (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TSOM_BitNumber * 4))
+#define CSR_OFFSET	(CEC_OFFSET + 0x10)
+#define TSOM_BitNumber	0x00
+#define CSR_TSOM_BB	(PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TSOM_BitNumber * 4))
 
 /* Alias word address of TEOM bit */
-#define TEOM_BitNumber 0x01
-#define CSR_TEOM_BB (PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEOM_BitNumber * 4))
+#define TEOM_BitNumber	0x01
+#define CSR_TEOM_BB	(PERIPH_BB_BASE + (CSR_OFFSET * 32) + (TEOM_BitNumber * 4))
 
-#define CFGR_CLEAR_Mask (uint8_t)(0xF3)	 /* CFGR register Mask */
-#define FLAG_Mask ((uint32_t)0x00FFFFFF) /* CEC FLAG mask */
+#define CFGR_CLEAR_Mask (uint8_t)(0xF3)	       /* CFGR register Mask */
+#define FLAG_Mask	((uint32_t)0x00FFFFFF) /* CEC FLAG mask */
 
 /**
  * @}

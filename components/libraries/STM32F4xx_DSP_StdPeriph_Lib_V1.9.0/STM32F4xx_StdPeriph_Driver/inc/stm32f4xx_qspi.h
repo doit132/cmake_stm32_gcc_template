@@ -133,12 +133,12 @@ typedef struct {
 	/** @defgroup QSPI_Sample_Shift
 	 * @{
 	 */
-	#define QSPI_SShift_NoShift ((uint32_t)0x00000000)
+	#define QSPI_SShift_NoShift	   ((uint32_t)0x00000000)
 	#define QSPI_SShift_HalfCycleShift ((uint32_t)QUADSPI_CR_SSHIFT)
 	#define IS_QSPI_SSHIFT(SSHIFT)                                                             \
 		(((SSHIFT) == QSPI_SShift_NoShift) || ((SSHIFT) == QSPI_SShift_HalfCycleShift))
 	/* Legacy Defines */
-	#define QUADSPI_CR_SSHIFT_0 QUADSPI_CR_SSHIFT
+	#define QUADSPI_CR_SSHIFT_0	     QUADSPI_CR_SSHIFT
 	/**
 	 * @}
 	 */
@@ -154,8 +154,8 @@ typedef struct {
 	/** @defgroup QSPI_Clock_Mode
 	 * @{
 	 */
-	#define QSPI_CKMode_Mode0 ((uint32_t)0x00000000)
-	#define QSPI_CKMode_Mode3 ((uint32_t)QUADSPI_DCR_CKMODE)
+	#define QSPI_CKMode_Mode0	     ((uint32_t)0x00000000)
+	#define QSPI_CKMode_Mode3	     ((uint32_t)QUADSPI_DCR_CKMODE)
 	#define IS_QSPI_CKMODE(CKMode)                                                             \
 		(((CKMode) == QSPI_CKMode_Mode0) || ((CKMode) == QSPI_CKMode_Mode3))
 	/**
@@ -185,7 +185,7 @@ typedef struct {
 	/** @defgroup QSPI_Flash_Size
 	 * @{
 	 */
-	#define IS_QSPI_FSIZE(FSIZE) (((FSIZE) <= 0x1F))
+	#define IS_QSPI_FSIZE(FSIZE)		    (((FSIZE) <= 0x1F))
 	/**
 	 * @}
 	 */
@@ -193,9 +193,9 @@ typedef struct {
 	/** @defgroup QSPI_Fash_Select
 	 * @{
 	 */
-	#define QSPI_FSelect_1 ((uint32_t)0x00000000)
-	#define QSPI_FSelect_2 ((uint32_t)QUADSPI_CR_FSEL)
-	#define IS_QSPI_FSEL(FLA) (((FLA) == QSPI_FSelect_1) || ((FLA) == QSPI_FSelect_2))
+	#define QSPI_FSelect_1			    ((uint32_t)0x00000000)
+	#define QSPI_FSelect_2			    ((uint32_t)QUADSPI_CR_FSEL)
+	#define IS_QSPI_FSEL(FLA)		    (((FLA) == QSPI_FSelect_1) || ((FLA) == QSPI_FSelect_2))
 	/**
 	 * @}
 	 */
@@ -203,9 +203,9 @@ typedef struct {
 	/** @defgroup QSPI_Dual_Flash
 	 * @{
 	 */
-	#define QSPI_DFlash_Disable ((uint32_t)0x00000000)
-	#define QSPI_DFlash_Enable ((uint32_t)QUADSPI_CR_DFM)
-	#define IS_QSPI_DFM(FLA) (((FLA) == QSPI_DFlash_Enable) || ((FLA) == QSPI_DFlash_Disable))
+	#define QSPI_DFlash_Disable		    ((uint32_t)0x00000000)
+	#define QSPI_DFlash_Enable		    ((uint32_t)QUADSPI_CR_DFM)
+	#define IS_QSPI_DFM(FLA)		    (((FLA) == QSPI_DFlash_Enable) || ((FLA) == QSPI_DFlash_Disable))
 	/**
 	 * @}
 	 */
@@ -214,9 +214,9 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_FMode_Indirect_Write ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_FMode_Indirect_Read ((uint32_t)QUADSPI_CCR_FMODE_0)
-	#define QSPI_ComConfig_FMode_Auto_Polling ((uint32_t)QUADSPI_CCR_FMODE_1)
-	#define QSPI_ComConfig_FMode_Memory_Mapped ((uint32_t)QUADSPI_CCR_FMODE)
+	#define QSPI_ComConfig_FMode_Indirect_Read  ((uint32_t)QUADSPI_CCR_FMODE_0)
+	#define QSPI_ComConfig_FMode_Auto_Polling   ((uint32_t)QUADSPI_CCR_FMODE_1)
+	#define QSPI_ComConfig_FMode_Memory_Mapped  ((uint32_t)QUADSPI_CCR_FMODE)
 	#define IS_QSPI_FMODE(FMODE)                                                               \
 		(((FMODE) == QSPI_ComConfig_FMode_Indirect_Write) ||                               \
 		 ((FMODE) == QSPI_ComConfig_FMode_Indirect_Read) ||                                \
@@ -230,7 +230,7 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_DDRMode_Disable ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_DDRMode_Enable ((uint32_t)QUADSPI_CCR_DDRM)
+	#define QSPI_ComConfig_DDRMode_Enable  ((uint32_t)QUADSPI_CCR_DDRM)
 	#define IS_QSPI_DDRMODE(DDRMODE)                                                           \
 		(((DDRMODE) == QSPI_ComConfig_DDRMode_Disable) ||                                  \
 		 ((DDRMODE) == QSPI_ComConfig_DDRMode_Enable))
@@ -242,7 +242,7 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_DHHC_Disable ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_DHHC_Enable ((uint32_t)QUADSPI_CCR_DHHC)
+	#define QSPI_ComConfig_DHHC_Enable  ((uint32_t)QUADSPI_CCR_DHHC)
 	#define IS_QSPI_DHHC(DHHC)                                                                 \
 		(((DHHC) == QSPI_ComConfig_DHHC_Disable) || ((DHHC) == QSPI_ComConfig_DHHC_Enable))
 	/**
@@ -253,7 +253,7 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_SIOOMode_Disable ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_SIOOMode_Enable ((uint32_t)QUADSPI_CCR_SIOO)
+	#define QSPI_ComConfig_SIOOMode_Enable	((uint32_t)QUADSPI_CCR_SIOO)
 	#define IS_QSPI_SIOOMODE(SIOOMODE)                                                         \
 		(((SIOOMODE) == QSPI_ComConfig_SIOOMode_Disable) ||                                \
 		 ((SIOOMODE) == QSPI_ComConfig_SIOOMode_Enable))
@@ -265,9 +265,9 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_DMode_NoData ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_DMode_1Line ((uint32_t)QUADSPI_CCR_DMODE_0)
-	#define QSPI_ComConfig_DMode_2Line ((uint32_t)QUADSPI_CCR_DMODE_1)
-	#define QSPI_ComConfig_DMode_4Line ((uint32_t)QUADSPI_CCR_DMODE)
+	#define QSPI_ComConfig_DMode_1Line  ((uint32_t)QUADSPI_CCR_DMODE_0)
+	#define QSPI_ComConfig_DMode_2Line  ((uint32_t)QUADSPI_CCR_DMODE_1)
+	#define QSPI_ComConfig_DMode_4Line  ((uint32_t)QUADSPI_CCR_DMODE)
 	#define IS_QSPI_DMODE(DMODE)                                                               \
 		(((DMODE) == QSPI_ComConfig_DMode_NoData) ||                                       \
 		 ((DMODE) == QSPI_ComConfig_DMode_1Line) ||                                        \
@@ -280,7 +280,7 @@ typedef struct {
 	/** @defgroup QSPI_ComConfig_AlternateBytesSize
 	 * @{
 	 */
-	#define QSPI_ComConfig_ABSize_8bit ((uint32_t)0x00000000)
+	#define QSPI_ComConfig_ABSize_8bit  ((uint32_t)0x00000000)
 	#define QSPI_ComConfig_ABSize_16bit ((uint32_t)QUADSPI_CCR_ABSIZE_0)
 	#define QSPI_ComConfig_ABSize_24bit ((uint32_t)QUADSPI_CCR_ABSIZE_1)
 	#define QSPI_ComConfig_ABSize_32bit ((uint32_t)QUADSPI_CCR_ABSIZE)
@@ -297,9 +297,9 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_ABMode_NoAlternateByte ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_ABMode_1Line ((uint32_t)QUADSPI_CCR_ABMODE_0)
-	#define QSPI_ComConfig_ABMode_2Line ((uint32_t)QUADSPI_CCR_ABMODE_1)
-	#define QSPI_ComConfig_ABMode_4Line ((uint32_t)QUADSPI_CCR_ABMODE)
+	#define QSPI_ComConfig_ABMode_1Line	      ((uint32_t)QUADSPI_CCR_ABMODE_0)
+	#define QSPI_ComConfig_ABMode_2Line	      ((uint32_t)QUADSPI_CCR_ABMODE_1)
+	#define QSPI_ComConfig_ABMode_4Line	      ((uint32_t)QUADSPI_CCR_ABMODE)
 	#define IS_QSPI_ABMODE(ABMODE)                                                             \
 		(((ABMODE) == QSPI_ComConfig_ABMode_NoAlternateByte) ||                            \
 		 ((ABMODE) == QSPI_ComConfig_ABMode_1Line) ||                                      \
@@ -312,7 +312,7 @@ typedef struct {
 	/** @defgroup QSPI_ComConfig_AddressSize
 	 * @{
 	 */
-	#define QSPI_ComConfig_ADSize_8bit ((uint32_t)0x00000000)
+	#define QSPI_ComConfig_ADSize_8bit  ((uint32_t)0x00000000)
 	#define QSPI_ComConfig_ADSize_16bit ((uint32_t)QUADSPI_CCR_ADSIZE_0)
 	#define QSPI_ComConfig_ADSize_24bit ((uint32_t)QUADSPI_CCR_ADSIZE_1)
 	#define QSPI_ComConfig_ADSize_32bit ((uint32_t)QUADSPI_CCR_ADSIZE)
@@ -329,9 +329,9 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_ADMode_NoAddress ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_ADMode_1Line ((uint32_t)QUADSPI_CCR_ADMODE_0)
-	#define QSPI_ComConfig_ADMode_2Line ((uint32_t)QUADSPI_CCR_ADMODE_1)
-	#define QSPI_ComConfig_ADMode_4Line ((uint32_t)QUADSPI_CCR_ADMODE)
+	#define QSPI_ComConfig_ADMode_1Line	((uint32_t)QUADSPI_CCR_ADMODE_0)
+	#define QSPI_ComConfig_ADMode_2Line	((uint32_t)QUADSPI_CCR_ADMODE_1)
+	#define QSPI_ComConfig_ADMode_4Line	((uint32_t)QUADSPI_CCR_ADMODE)
 	#define IS_QSPI_ADMODE(ADMODE)                                                             \
 		(((ADMODE) == QSPI_ComConfig_ADMode_NoAddress) ||                                  \
 		 ((ADMODE) == QSPI_ComConfig_ADMode_1Line) ||                                      \
@@ -345,9 +345,9 @@ typedef struct {
 	 * @{
 	 */
 	#define QSPI_ComConfig_IMode_NoInstruction ((uint32_t)0x00000000)
-	#define QSPI_ComConfig_IMode_1Line ((uint32_t)QUADSPI_CCR_IMODE_0)
-	#define QSPI_ComConfig_IMode_2Line ((uint32_t)QUADSPI_CCR_IMODE_1)
-	#define QSPI_ComConfig_IMode_4Line ((uint32_t)QUADSPI_CCR_IMODE)
+	#define QSPI_ComConfig_IMode_1Line	   ((uint32_t)QUADSPI_CCR_IMODE_0)
+	#define QSPI_ComConfig_IMode_2Line	   ((uint32_t)QUADSPI_CCR_IMODE_1)
+	#define QSPI_ComConfig_IMode_4Line	   ((uint32_t)QUADSPI_CCR_IMODE)
 	#define IS_QSPI_IMODE(IMODE)                                                               \
 		(((IMODE) == QSPI_ComConfig_IMode_NoInstruction) ||                                \
 		 ((IMODE) == QSPI_ComConfig_IMode_1Line) ||                                        \
@@ -368,13 +368,13 @@ typedef struct {
 	/** @defgroup QSPI_InterruptsDefinition
 	 * @{
 	 */
-	#define QSPI_IT_TO (uint32_t)(QUADSPI_CR_TOIE | QUADSPI_SR_TOF)
-	#define QSPI_IT_SM (uint32_t)(QUADSPI_CR_SMIE | QUADSPI_SR_SMF)
-	#define QSPI_IT_FT (uint32_t)(QUADSPI_CR_FTIE | QUADSPI_SR_FTF)
-	#define QSPI_IT_TC (uint32_t)(QUADSPI_CR_TCIE | QUADSPI_SR_TCF)
-	#define QSPI_IT_TE (uint32_t)(QUADSPI_CR_TEIE | QUADSPI_SR_TEF)
-	#define IS_QSPI_IT(IT) ((((IT)&0xFFE0FFE0) == 0) && ((IT) != 0))
-	#define IS_QSPI_CLEAR_IT(IT) ((((IT)&0xFFE4FFE4) == 0) && ((IT) != 0))
+	#define QSPI_IT_TO			 (uint32_t)(QUADSPI_CR_TOIE | QUADSPI_SR_TOF)
+	#define QSPI_IT_SM			 (uint32_t)(QUADSPI_CR_SMIE | QUADSPI_SR_SMF)
+	#define QSPI_IT_FT			 (uint32_t)(QUADSPI_CR_FTIE | QUADSPI_SR_FTF)
+	#define QSPI_IT_TC			 (uint32_t)(QUADSPI_CR_TCIE | QUADSPI_SR_TCF)
+	#define QSPI_IT_TE			 (uint32_t)(QUADSPI_CR_TEIE | QUADSPI_SR_TEF)
+	#define IS_QSPI_IT(IT)			 ((((IT)&0xFFE0FFE0) == 0) && ((IT) != 0))
+	#define IS_QSPI_CLEAR_IT(IT)		 ((((IT)&0xFFE4FFE4) == 0) && ((IT) != 0))
 	/**
 	 * @}
 	 */
@@ -382,12 +382,12 @@ typedef struct {
 	/** @defgroup QSPI_FlagsDefinition
 	 * @{
 	 */
-	#define QSPI_FLAG_TO QUADSPI_SR_TOF
-	#define QSPI_FLAG_SM QUADSPI_SR_SMF
-	#define QSPI_FLAG_FT QUADSPI_SR_FTF
-	#define QSPI_FLAG_TC QUADSPI_SR_TCF
-	#define QSPI_FLAG_TE QUADSPI_SR_TEF
-	#define QSPI_FLAG_BUSY QUADSPI_SR_BUSY
+	#define QSPI_FLAG_TO			 QUADSPI_SR_TOF
+	#define QSPI_FLAG_SM			 QUADSPI_SR_SMF
+	#define QSPI_FLAG_FT			 QUADSPI_SR_FTF
+	#define QSPI_FLAG_TC			 QUADSPI_SR_TCF
+	#define QSPI_FLAG_TE			 QUADSPI_SR_TEF
+	#define QSPI_FLAG_BUSY			 QUADSPI_SR_BUSY
 	#define IS_QSPI_GET_FLAG(FLAG)                                                             \
 		(((FLAG) == QSPI_FLAG_TO) || ((FLAG) == QSPI_FLAG_SM) ||                           \
 		 ((FLAG) == QSPI_FLAG_FT) || ((FLAG) == QSPI_FLAG_TC) ||                           \
@@ -403,9 +403,9 @@ typedef struct {
 	/** @defgroup QSPI_Polling_Match_Mode
 	 * @{
 	 */
-	#define QSPI_PMM_AND ((uint32_t)0x00000000)
-	#define QSPI_PMM_OR ((uint32_t)QUADSPI_CR_PMM)
-	#define IS_QSPI_PMM(PMM) (((PMM) == QSPI_PMM_AND) || ((PMM) == QSPI_PMM_OR))
+	#define QSPI_PMM_AND			     ((uint32_t)0x00000000)
+	#define QSPI_PMM_OR			     ((uint32_t)QUADSPI_CR_PMM)
+	#define IS_QSPI_PMM(PMM)		     (((PMM) == QSPI_PMM_AND) || ((PMM) == QSPI_PMM_OR))
 	/**
 	 * @}
 	 */
@@ -413,7 +413,7 @@ typedef struct {
 	/** @defgroup QSPI_Polling_Interval
 	 * @{
 	 */
-	#define IS_QSPI_PIR(PIR) ((PIR) <= QUADSPI_PIR_INTERVAL)
+	#define IS_QSPI_PIR(PIR)		     ((PIR) <= QUADSPI_PIR_INTERVAL)
 	/**
 	 * @}
 	 */
@@ -421,7 +421,7 @@ typedef struct {
 	/** @defgroup QSPI_Timeout
 	 * @{
 	 */
-	#define IS_QSPI_TIMEOUT(TIMEOUT) ((TIMEOUT) <= QUADSPI_LPTR_TIMEOUT)
+	#define IS_QSPI_TIMEOUT(TIMEOUT)	     ((TIMEOUT) <= QUADSPI_LPTR_TIMEOUT)
 	/**
 	 * @}
 	 */
@@ -429,7 +429,7 @@ typedef struct {
 	/** @defgroup QSPI_DummyCycle
 	 * @{
 	 */
-	#define IS_QSPI_DCY(DCY) ((DCY) <= 0x1F)
+	#define IS_QSPI_DCY(DCY)		     ((DCY) <= 0x1F)
 	/**
 	 * @}
 	 */

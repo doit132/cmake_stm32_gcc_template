@@ -115,53 +115,53 @@
 #define CR1_DISCNUM_RESET ((uint32_t)0xFFFF1FFF)
 
 /* ADC AWDCH mask */
-#define CR1_AWDCH_RESET ((uint32_t)0xFFFFFFE0)
+#define CR1_AWDCH_RESET	  ((uint32_t)0xFFFFFFE0)
 
 /* ADC Analog watchdog enable mode mask */
 #define CR1_AWDMode_RESET ((uint32_t)0xFF3FFDFF)
 
 /* CR1 register Mask */
-#define CR1_CLEAR_MASK ((uint32_t)0xFCFFFEFF)
+#define CR1_CLEAR_MASK	  ((uint32_t)0xFCFFFEFF)
 
 /* ADC EXTEN mask */
-#define CR2_EXTEN_RESET ((uint32_t)0xCFFFFFFF)
+#define CR2_EXTEN_RESET	  ((uint32_t)0xCFFFFFFF)
 
 /* ADC JEXTEN mask */
-#define CR2_JEXTEN_RESET ((uint32_t)0xFFCFFFFF)
+#define CR2_JEXTEN_RESET  ((uint32_t)0xFFCFFFFF)
 
 /* ADC JEXTSEL mask */
 #define CR2_JEXTSEL_RESET ((uint32_t)0xFFF0FFFF)
 
 /* CR2 register Mask */
-#define CR2_CLEAR_MASK ((uint32_t)0xC0FFF7FD)
+#define CR2_CLEAR_MASK	  ((uint32_t)0xC0FFF7FD)
 
 /* ADC SQx mask */
-#define SQR3_SQ_SET ((uint32_t)0x0000001F)
-#define SQR2_SQ_SET ((uint32_t)0x0000001F)
-#define SQR1_SQ_SET ((uint32_t)0x0000001F)
+#define SQR3_SQ_SET	  ((uint32_t)0x0000001F)
+#define SQR2_SQ_SET	  ((uint32_t)0x0000001F)
+#define SQR1_SQ_SET	  ((uint32_t)0x0000001F)
 
 /* ADC L Mask */
-#define SQR1_L_RESET ((uint32_t)0xFF0FFFFF)
+#define SQR1_L_RESET	  ((uint32_t)0xFF0FFFFF)
 
 /* ADC JSQx mask */
-#define JSQR_JSQ_SET ((uint32_t)0x0000001F)
+#define JSQR_JSQ_SET	  ((uint32_t)0x0000001F)
 
 /* ADC JL mask */
-#define JSQR_JL_SET ((uint32_t)0x00300000)
-#define JSQR_JL_RESET ((uint32_t)0xFFCFFFFF)
+#define JSQR_JL_SET	  ((uint32_t)0x00300000)
+#define JSQR_JL_RESET	  ((uint32_t)0xFFCFFFFF)
 
 /* ADC SMPx mask */
-#define SMPR1_SMP_SET ((uint32_t)0x00000007)
-#define SMPR2_SMP_SET ((uint32_t)0x00000007)
+#define SMPR1_SMP_SET	  ((uint32_t)0x00000007)
+#define SMPR2_SMP_SET	  ((uint32_t)0x00000007)
 
 /* ADC JDRx registers offset */
-#define JDR_OFFSET ((uint8_t)0x28)
+#define JDR_OFFSET	  ((uint8_t)0x28)
 
 /* ADC CDR register base address */
-#define CDR_ADDRESS ((uint32_t)0x40012308)
+#define CDR_ADDRESS	  ((uint32_t)0x40012308)
 
 /* ADC CCR register Mask */
-#define CR_CLEAR_MASK ((uint32_t)0xFFFC30E0)
+#define CR_CLEAR_MASK	  ((uint32_t)0xFFFC30E0)
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

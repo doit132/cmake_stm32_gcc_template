@@ -83,8 +83,8 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_AnalogFilter_Enable ((uint32_t)0x00000000)
-	#define FMPI2C_AnalogFilter_Disable FMPI2C_CR1_ANFOFF
+	#define FMPI2C_AnalogFilter_Enable   ((uint32_t)0x00000000)
+	#define FMPI2C_AnalogFilter_Disable  FMPI2C_CR1_ANFOFF
 
 	#define IS_FMPI2C_ANALOG_FILTER(FILTER)                                                    \
 		(((FILTER) == FMPI2C_AnalogFilter_Enable) ||                                       \
@@ -106,9 +106,9 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_Mode_FMPI2C ((uint32_t)0x00000000)
-	#define FMPI2C_Mode_SMBusDevice FMPI2C_CR1_SMBDEN
-	#define FMPI2C_Mode_SMBusHost FMPI2C_CR1_SMBHEN
+	#define FMPI2C_Mode_FMPI2C		 ((uint32_t)0x00000000)
+	#define FMPI2C_Mode_SMBusDevice		 FMPI2C_CR1_SMBDEN
+	#define FMPI2C_Mode_SMBusHost		 FMPI2C_CR1_SMBHEN
 
 	#define IS_FMPI2C_MODE(MODE)                                                               \
 		(((MODE) == FMPI2C_Mode_FMPI2C) || ((MODE) == FMPI2C_Mode_SMBusDevice) ||          \
@@ -121,10 +121,10 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_Ack_Enable ((uint32_t)0x00000000)
-	#define FMPI2C_Ack_Disable FMPI2C_CR2_NACK
+	#define FMPI2C_Ack_Enable		 ((uint32_t)0x00000000)
+	#define FMPI2C_Ack_Disable		 FMPI2C_CR2_NACK
 
-	#define IS_FMPI2C_ACK(ACK) (((ACK) == FMPI2C_Ack_Enable) || ((ACK) == FMPI2C_Ack_Disable))
+	#define IS_FMPI2C_ACK(ACK)		 (((ACK) == FMPI2C_Ack_Enable) || ((ACK) == FMPI2C_Ack_Disable))
 	/**
 	 * @}
 	 */
@@ -133,7 +133,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_AcknowledgedAddress_7bit ((uint32_t)0x00000000)
+	#define FMPI2C_AcknowledgedAddress_7bit	 ((uint32_t)0x00000000)
 	#define FMPI2C_AcknowledgedAddress_10bit FMPI2C_OAR1_OA1MODE
 
 	#define IS_FMPI2C_ACKNOWLEDGE_ADDRESS(ADDRESS)                                             \
@@ -156,8 +156,8 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_Direction_Transmitter ((uint16_t)0x0000)
-	#define FMPI2C_Direction_Receiver ((uint16_t)0x0400)
+	#define FMPI2C_Direction_Transmitter	 ((uint16_t)0x0000)
+	#define FMPI2C_Direction_Receiver	 ((uint16_t)0x0400)
 
 	#define IS_FMPI2C_DIRECTION(DIRECTION)                                                     \
 		(((DIRECTION) == FMPI2C_Direction_Transmitter) ||                                  \
@@ -170,10 +170,10 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_DMAReq_Tx FMPI2C_CR1_TXDMAEN
-	#define FMPI2C_DMAReq_Rx FMPI2C_CR1_RXDMAEN
+	#define FMPI2C_DMAReq_Tx		 FMPI2C_CR1_TXDMAEN
+	#define FMPI2C_DMAReq_Rx		 FMPI2C_CR1_RXDMAEN
 
-	#define IS_FMPI2C_DMA_REQ(REQ) ((((REQ) & (uint32_t)0xFFFF3FFF) == 0x00) && ((REQ) != 0x00))
+	#define IS_FMPI2C_DMA_REQ(REQ)		 ((((REQ) & (uint32_t)0xFFFF3FFF) == 0x00) && ((REQ) != 0x00))
 	/**
 	 * @}
 	 */
@@ -201,14 +201,14 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_OA2_NoMask ((uint8_t)0x00)
-	#define FMPI2C_OA2_Mask01 ((uint8_t)0x01)
-	#define FMPI2C_OA2_Mask02 ((uint8_t)0x02)
-	#define FMPI2C_OA2_Mask03 ((uint8_t)0x03)
-	#define FMPI2C_OA2_Mask04 ((uint8_t)0x04)
-	#define FMPI2C_OA2_Mask05 ((uint8_t)0x05)
-	#define FMPI2C_OA2_Mask06 ((uint8_t)0x06)
-	#define FMPI2C_OA2_Mask07 ((uint8_t)0x07)
+	#define FMPI2C_OA2_NoMask		 ((uint8_t)0x00)
+	#define FMPI2C_OA2_Mask01		 ((uint8_t)0x01)
+	#define FMPI2C_OA2_Mask02		 ((uint8_t)0x02)
+	#define FMPI2C_OA2_Mask03		 ((uint8_t)0x03)
+	#define FMPI2C_OA2_Mask04		 ((uint8_t)0x04)
+	#define FMPI2C_OA2_Mask05		 ((uint8_t)0x05)
+	#define FMPI2C_OA2_Mask06		 ((uint8_t)0x06)
+	#define FMPI2C_OA2_Mask07		 ((uint8_t)0x07)
 
 	#define IS_FMPI2C_OWN_ADDRESS2_MASK(MASK)                                                  \
 		(((MASK) == FMPI2C_OA2_NoMask) || ((MASK) == FMPI2C_OA2_Mask01) ||                 \
@@ -234,17 +234,17 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_Register_CR1 ((uint8_t)0x00)
-	#define FMPI2C_Register_CR2 ((uint8_t)0x04)
-	#define FMPI2C_Register_OAR1 ((uint8_t)0x08)
-	#define FMPI2C_Register_OAR2 ((uint8_t)0x0C)
-	#define FMPI2C_Register_TIMINGR ((uint8_t)0x10)
-	#define FMPI2C_Register_TIMEOUTR ((uint8_t)0x14)
-	#define FMPI2C_Register_ISR ((uint8_t)0x18)
-	#define FMPI2C_Register_ICR ((uint8_t)0x1C)
-	#define FMPI2C_Register_PECR ((uint8_t)0x20)
-	#define FMPI2C_Register_RXDR ((uint8_t)0x24)
-	#define FMPI2C_Register_TXDR ((uint8_t)0x28)
+	#define FMPI2C_Register_CR1	   ((uint8_t)0x00)
+	#define FMPI2C_Register_CR2	   ((uint8_t)0x04)
+	#define FMPI2C_Register_OAR1	   ((uint8_t)0x08)
+	#define FMPI2C_Register_OAR2	   ((uint8_t)0x0C)
+	#define FMPI2C_Register_TIMINGR	   ((uint8_t)0x10)
+	#define FMPI2C_Register_TIMEOUTR   ((uint8_t)0x14)
+	#define FMPI2C_Register_ISR	   ((uint8_t)0x18)
+	#define FMPI2C_Register_ICR	   ((uint8_t)0x1C)
+	#define FMPI2C_Register_PECR	   ((uint8_t)0x20)
+	#define FMPI2C_Register_RXDR	   ((uint8_t)0x24)
+	#define FMPI2C_Register_TXDR	   ((uint8_t)0x28)
 
 	#define IS_FMPI2C_REGISTER(REGISTER)                                                       \
 		(((REGISTER) == FMPI2C_Register_CR1) || ((REGISTER) == FMPI2C_Register_CR2) ||     \
@@ -262,13 +262,13 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_IT_ERRI FMPI2C_CR1_ERRIE
-	#define FMPI2C_IT_TCI FMPI2C_CR1_TCIE
-	#define FMPI2C_IT_STOPI FMPI2C_CR1_STOPIE
-	#define FMPI2C_IT_NACKI FMPI2C_CR1_NACKIE
-	#define FMPI2C_IT_ADDRI FMPI2C_CR1_ADDRIE
-	#define FMPI2C_IT_RXI FMPI2C_CR1_RXIE
-	#define FMPI2C_IT_TXI FMPI2C_CR1_TXIE
+	#define FMPI2C_IT_ERRI		FMPI2C_CR1_ERRIE
+	#define FMPI2C_IT_TCI		FMPI2C_CR1_TCIE
+	#define FMPI2C_IT_STOPI		FMPI2C_CR1_STOPIE
+	#define FMPI2C_IT_NACKI		FMPI2C_CR1_NACKIE
+	#define FMPI2C_IT_ADDRI		FMPI2C_CR1_ADDRIE
+	#define FMPI2C_IT_RXI		FMPI2C_CR1_RXIE
+	#define FMPI2C_IT_TXI		FMPI2C_CR1_TXIE
 
 	#define IS_FMPI2C_CONFIG_IT(IT) ((((IT) & (uint32_t)0xFFFFFF01) == 0x00) && ((IT) != 0x00))
 
@@ -280,21 +280,21 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_FLAG_TXE FMPI2C_ISR_TXE
-	#define FMPI2C_FLAG_TXIS FMPI2C_ISR_TXIS
-	#define FMPI2C_FLAG_RXNE FMPI2C_ISR_RXNE
-	#define FMPI2C_FLAG_ADDR FMPI2C_ISR_ADDR
-	#define FMPI2C_FLAG_NACKF FMPI2C_ISR_NACKF
-	#define FMPI2C_FLAG_STOPF FMPI2C_ISR_STOPF
-	#define FMPI2C_FLAG_TC FMPI2C_ISR_TC
-	#define FMPI2C_FLAG_TCR FMPI2C_ISR_TCR
-	#define FMPI2C_FLAG_BERR FMPI2C_ISR_BERR
-	#define FMPI2C_FLAG_ARLO FMPI2C_ISR_ARLO
-	#define FMPI2C_FLAG_OVR FMPI2C_ISR_OVR
-	#define FMPI2C_FLAG_PECERR FMPI2C_ISR_PECERR
-	#define FMPI2C_FLAG_TIMEOUT FMPI2C_ISR_TIMEOUT
-	#define FMPI2C_FLAG_ALERT FMPI2C_ISR_ALERT
-	#define FMPI2C_FLAG_BUSY FMPI2C_ISR_BUSY
+	#define FMPI2C_FLAG_TXE		FMPI2C_ISR_TXE
+	#define FMPI2C_FLAG_TXIS	FMPI2C_ISR_TXIS
+	#define FMPI2C_FLAG_RXNE	FMPI2C_ISR_RXNE
+	#define FMPI2C_FLAG_ADDR	FMPI2C_ISR_ADDR
+	#define FMPI2C_FLAG_NACKF	FMPI2C_ISR_NACKF
+	#define FMPI2C_FLAG_STOPF	FMPI2C_ISR_STOPF
+	#define FMPI2C_FLAG_TC		FMPI2C_ISR_TC
+	#define FMPI2C_FLAG_TCR		FMPI2C_ISR_TCR
+	#define FMPI2C_FLAG_BERR	FMPI2C_ISR_BERR
+	#define FMPI2C_FLAG_ARLO	FMPI2C_ISR_ARLO
+	#define FMPI2C_FLAG_OVR		FMPI2C_ISR_OVR
+	#define FMPI2C_FLAG_PECERR	FMPI2C_ISR_PECERR
+	#define FMPI2C_FLAG_TIMEOUT	FMPI2C_ISR_TIMEOUT
+	#define FMPI2C_FLAG_ALERT	FMPI2C_ISR_ALERT
+	#define FMPI2C_FLAG_BUSY	FMPI2C_ISR_BUSY
 
 	#define IS_FMPI2C_CLEAR_FLAG(FLAG)                                                         \
 		((((FLAG) & (uint32_t)0xFFFF4000) == 0x00) && ((FLAG) != 0x00))
@@ -317,19 +317,19 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_IT_TXIS FMPI2C_ISR_TXIS
-	#define FMPI2C_IT_RXNE FMPI2C_ISR_RXNE
-	#define FMPI2C_IT_ADDR FMPI2C_ISR_ADDR
-	#define FMPI2C_IT_NACKF FMPI2C_ISR_NACKF
-	#define FMPI2C_IT_STOPF FMPI2C_ISR_STOPF
-	#define FMPI2C_IT_TC FMPI2C_ISR_TC
-	#define FMPI2C_IT_TCR FMPI2C_ISR_TCR
-	#define FMPI2C_IT_BERR FMPI2C_ISR_BERR
-	#define FMPI2C_IT_ARLO FMPI2C_ISR_ARLO
-	#define FMPI2C_IT_OVR FMPI2C_ISR_OVR
-	#define FMPI2C_IT_PECERR FMPI2C_ISR_PECERR
-	#define FMPI2C_IT_TIMEOUT FMPI2C_ISR_TIMEOUT
-	#define FMPI2C_IT_ALERT FMPI2C_ISR_ALERT
+	#define FMPI2C_IT_TXIS	       FMPI2C_ISR_TXIS
+	#define FMPI2C_IT_RXNE	       FMPI2C_ISR_RXNE
+	#define FMPI2C_IT_ADDR	       FMPI2C_ISR_ADDR
+	#define FMPI2C_IT_NACKF	       FMPI2C_ISR_NACKF
+	#define FMPI2C_IT_STOPF	       FMPI2C_ISR_STOPF
+	#define FMPI2C_IT_TC	       FMPI2C_ISR_TC
+	#define FMPI2C_IT_TCR	       FMPI2C_ISR_TCR
+	#define FMPI2C_IT_BERR	       FMPI2C_ISR_BERR
+	#define FMPI2C_IT_ARLO	       FMPI2C_ISR_ARLO
+	#define FMPI2C_IT_OVR	       FMPI2C_ISR_OVR
+	#define FMPI2C_IT_PECERR       FMPI2C_ISR_PECERR
+	#define FMPI2C_IT_TIMEOUT      FMPI2C_ISR_TIMEOUT
+	#define FMPI2C_IT_ALERT	       FMPI2C_ISR_ALERT
 
 	#define IS_FMPI2C_CLEAR_IT(IT) ((((IT) & (uint32_t)0xFFFFC001) == 0x00) && ((IT) != 0x00))
 
@@ -349,7 +349,7 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_Reload_Mode FMPI2C_CR2_RELOAD
+	#define FMPI2C_Reload_Mode  FMPI2C_CR2_RELOAD
 	#define FMPI2C_AutoEnd_Mode FMPI2C_CR2_AUTOEND
 	#define FMPI2C_SoftEnd_Mode ((uint32_t)0x00000000)
 
@@ -365,9 +365,9 @@ typedef struct {
 	 * @{
 	 */
 
-	#define FMPI2C_No_StartStop ((uint32_t)0x00000000)
-	#define FMPI2C_Generate_Stop FMPI2C_CR2_STOP
-	#define FMPI2C_Generate_Start_Read (uint32_t)(FMPI2C_CR2_START | FMPI2C_CR2_RD_WRN)
+	#define FMPI2C_No_StartStop	    ((uint32_t)0x00000000)
+	#define FMPI2C_Generate_Stop	    FMPI2C_CR2_STOP
+	#define FMPI2C_Generate_Start_Read  (uint32_t)(FMPI2C_CR2_START | FMPI2C_CR2_RD_WRN)
 	#define FMPI2C_Generate_Start_Write FMPI2C_CR2_START
 
 	#define IS_START_STOP_MODE(MODE)                                                           \

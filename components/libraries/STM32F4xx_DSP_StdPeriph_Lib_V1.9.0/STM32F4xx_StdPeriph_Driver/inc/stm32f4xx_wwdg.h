@@ -57,7 +57,7 @@ extern "C" {
 		(((PRESCALER) == WWDG_Prescaler_1) || ((PRESCALER) == WWDG_Prescaler_2) ||         \
 		 ((PRESCALER) == WWDG_Prescaler_4) || ((PRESCALER) == WWDG_Prescaler_8))
 	#define IS_WWDG_WINDOW_VALUE(VALUE) ((VALUE) <= 0x7F)
-	#define IS_WWDG_COUNTER(COUNTER) (((COUNTER) >= 0x40) && ((COUNTER) <= 0x7F))
+	#define IS_WWDG_COUNTER(COUNTER)    (((COUNTER) >= 0x40) && ((COUNTER) <= 0x7F))
 
 /**
  * @}

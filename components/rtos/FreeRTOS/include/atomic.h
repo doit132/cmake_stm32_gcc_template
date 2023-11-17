@@ -71,7 +71,7 @@ extern "C" {
 
 	/* Nested interrupt scheme is NOT supported in this port. */
 	#define ATOMIC_ENTER_CRITICAL() portENTER_CRITICAL()
-	#define ATOMIC_EXIT_CRITICAL() portEXIT_CRITICAL()
+	#define ATOMIC_EXIT_CRITICAL()	portEXIT_CRITICAL()
 
 #endif /* portSET_INTERRUPT_MASK_FROM_ISR() */
 

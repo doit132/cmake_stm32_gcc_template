@@ -197,7 +197,7 @@ __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
     This function enables FIQ interrupts by clearing the F-bit in the CPSR.
     Can only be executed in Privileged modes.
  */
-		#define __enable_fault_irq __enable_fiq
+		#define __enable_fault_irq  __enable_fiq
 
 		/** \brief  Disable FIQ
 

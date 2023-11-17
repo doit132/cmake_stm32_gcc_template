@@ -76,9 +76,9 @@ typedef enum {
 } GPIOSpeed_TypeDef;
 
 	/* Add legacy definition */
-	#define GPIO_Speed_2MHz GPIO_Low_Speed
-	#define GPIO_Speed_25MHz GPIO_Medium_Speed
-	#define GPIO_Speed_50MHz GPIO_Fast_Speed
+	#define GPIO_Speed_2MHz	  GPIO_Low_Speed
+	#define GPIO_Speed_25MHz  GPIO_Medium_Speed
+	#define GPIO_Speed_50MHz  GPIO_Fast_Speed
 	#define GPIO_Speed_100MHz GPIO_High_Speed
 
 	#define IS_GPIO_SPEED(SPEED)                                                               \
@@ -134,25 +134,25 @@ typedef struct {
 	/** @defgroup GPIO_pins_define
 	 * @{
 	 */
-	#define GPIO_Pin_0 ((uint16_t)0x0001)	/* Pin 0 selected */
-	#define GPIO_Pin_1 ((uint16_t)0x0002)	/* Pin 1 selected */
-	#define GPIO_Pin_2 ((uint16_t)0x0004)	/* Pin 2 selected */
-	#define GPIO_Pin_3 ((uint16_t)0x0008)	/* Pin 3 selected */
-	#define GPIO_Pin_4 ((uint16_t)0x0010)	/* Pin 4 selected */
-	#define GPIO_Pin_5 ((uint16_t)0x0020)	/* Pin 5 selected */
-	#define GPIO_Pin_6 ((uint16_t)0x0040)	/* Pin 6 selected */
-	#define GPIO_Pin_7 ((uint16_t)0x0080)	/* Pin 7 selected */
-	#define GPIO_Pin_8 ((uint16_t)0x0100)	/* Pin 8 selected */
-	#define GPIO_Pin_9 ((uint16_t)0x0200)	/* Pin 9 selected */
-	#define GPIO_Pin_10 ((uint16_t)0x0400)	/* Pin 10 selected */
-	#define GPIO_Pin_11 ((uint16_t)0x0800)	/* Pin 11 selected */
-	#define GPIO_Pin_12 ((uint16_t)0x1000)	/* Pin 12 selected */
-	#define GPIO_Pin_13 ((uint16_t)0x2000)	/* Pin 13 selected */
-	#define GPIO_Pin_14 ((uint16_t)0x4000)	/* Pin 14 selected */
-	#define GPIO_Pin_15 ((uint16_t)0x8000)	/* Pin 15 selected */
-	#define GPIO_Pin_All ((uint16_t)0xFFFF) /* All pins selected */
+	#define GPIO_Pin_0	 ((uint16_t)0x0001) /* Pin 0 selected */
+	#define GPIO_Pin_1	 ((uint16_t)0x0002) /* Pin 1 selected */
+	#define GPIO_Pin_2	 ((uint16_t)0x0004) /* Pin 2 selected */
+	#define GPIO_Pin_3	 ((uint16_t)0x0008) /* Pin 3 selected */
+	#define GPIO_Pin_4	 ((uint16_t)0x0010) /* Pin 4 selected */
+	#define GPIO_Pin_5	 ((uint16_t)0x0020) /* Pin 5 selected */
+	#define GPIO_Pin_6	 ((uint16_t)0x0040) /* Pin 6 selected */
+	#define GPIO_Pin_7	 ((uint16_t)0x0080) /* Pin 7 selected */
+	#define GPIO_Pin_8	 ((uint16_t)0x0100) /* Pin 8 selected */
+	#define GPIO_Pin_9	 ((uint16_t)0x0200) /* Pin 9 selected */
+	#define GPIO_Pin_10	 ((uint16_t)0x0400) /* Pin 10 selected */
+	#define GPIO_Pin_11	 ((uint16_t)0x0800) /* Pin 11 selected */
+	#define GPIO_Pin_12	 ((uint16_t)0x1000) /* Pin 12 selected */
+	#define GPIO_Pin_13	 ((uint16_t)0x2000) /* Pin 13 selected */
+	#define GPIO_Pin_14	 ((uint16_t)0x4000) /* Pin 14 selected */
+	#define GPIO_Pin_15	 ((uint16_t)0x8000) /* Pin 15 selected */
+	#define GPIO_Pin_All	 ((uint16_t)0xFFFF) /* All pins selected */
 
-	#define GPIO_PIN_MASK ((uint32_t)0x0000FFFF) /* PIN mask for assert test */
+	#define GPIO_PIN_MASK	 ((uint32_t)0x0000FFFF) /* PIN mask for assert test */
 	#define IS_GPIO_PIN(PIN) (((PIN)&GPIO_PIN_MASK) != (uint32_t)0x00)
 	#define IS_GET_GPIO_PIN(PIN)                                                               \
 		(((PIN) == GPIO_Pin_0) || ((PIN) == GPIO_Pin_1) || ((PIN) == GPIO_Pin_2) ||        \
@@ -168,16 +168,16 @@ typedef struct {
 	/** @defgroup GPIO_Pin_sources
 	 * @{
 	 */
-	#define GPIO_PinSource0 ((uint8_t)0x00)
-	#define GPIO_PinSource1 ((uint8_t)0x01)
-	#define GPIO_PinSource2 ((uint8_t)0x02)
-	#define GPIO_PinSource3 ((uint8_t)0x03)
-	#define GPIO_PinSource4 ((uint8_t)0x04)
-	#define GPIO_PinSource5 ((uint8_t)0x05)
-	#define GPIO_PinSource6 ((uint8_t)0x06)
-	#define GPIO_PinSource7 ((uint8_t)0x07)
-	#define GPIO_PinSource8 ((uint8_t)0x08)
-	#define GPIO_PinSource9 ((uint8_t)0x09)
+	#define GPIO_PinSource0	 ((uint8_t)0x00)
+	#define GPIO_PinSource1	 ((uint8_t)0x01)
+	#define GPIO_PinSource2	 ((uint8_t)0x02)
+	#define GPIO_PinSource3	 ((uint8_t)0x03)
+	#define GPIO_PinSource4	 ((uint8_t)0x04)
+	#define GPIO_PinSource5	 ((uint8_t)0x05)
+	#define GPIO_PinSource6	 ((uint8_t)0x06)
+	#define GPIO_PinSource7	 ((uint8_t)0x07)
+	#define GPIO_PinSource8	 ((uint8_t)0x08)
+	#define GPIO_PinSource9	 ((uint8_t)0x09)
 	#define GPIO_PinSource10 ((uint8_t)0x0A)
 	#define GPIO_PinSource11 ((uint8_t)0x0B)
 	#define GPIO_PinSource12 ((uint8_t)0x0C)
@@ -205,10 +205,10 @@ typedef struct {
 	 * @brief   AF 0 selection
 	 */
 	#define GPIO_AF_RTC_50Hz ((uint8_t)0x00) /* RTC_50Hz Alternate Function mapping */
-	#define GPIO_AF_MCO ((uint8_t)0x00) /* MCO (MCO1 and MCO2) Alternate Function mapping */
+	#define GPIO_AF_MCO	 ((uint8_t)0x00) /* MCO (MCO1 and MCO2) Alternate Function mapping */
 	#define GPIO_AF_TAMPER                                                                     \
 		((uint8_t)0x00) /* TAMPER (TAMPER_1 and TAMPER_2) Alternate Function mapping */
-	#define GPIO_AF_SWJ ((uint8_t)0x00)   /* SWJ (SWD and JTAG) Alternate Function mapping */
+	#define GPIO_AF_SWJ   ((uint8_t)0x00) /* SWJ (SWD and JTAG) Alternate Function mapping */
 	#define GPIO_AF_TRACE ((uint8_t)0x00) /* TRACE Alternate Function mapping */
 	#if defined(STM32F446xx)
 		#define GPIO_AF0_TIM2 ((uint8_t)0x00) /* TIM2 Alternate Function mapping */
@@ -225,15 +225,15 @@ typedef struct {
 	/**
 	 * @brief   AF 2 selection
 	 */
-	#define GPIO_AF_TIM3 ((uint8_t)0x02) /* TIM3 Alternate Function mapping */
-	#define GPIO_AF_TIM4 ((uint8_t)0x02) /* TIM4 Alternate Function mapping */
-	#define GPIO_AF_TIM5 ((uint8_t)0x02) /* TIM5 Alternate Function mapping */
+	#define GPIO_AF_TIM3  ((uint8_t)0x02) /* TIM3 Alternate Function mapping */
+	#define GPIO_AF_TIM4  ((uint8_t)0x02) /* TIM4 Alternate Function mapping */
+	#define GPIO_AF_TIM5  ((uint8_t)0x02) /* TIM5 Alternate Function mapping */
 
 	/**
 	 * @brief   AF 3 selection
 	 */
-	#define GPIO_AF_TIM8 ((uint8_t)0x03)  /* TIM8 Alternate Function mapping */
-	#define GPIO_AF_TIM9 ((uint8_t)0x03)  /* TIM9 Alternate Function mapping */
+	#define GPIO_AF_TIM8  ((uint8_t)0x03) /* TIM8 Alternate Function mapping */
+	#define GPIO_AF_TIM9  ((uint8_t)0x03) /* TIM9 Alternate Function mapping */
 	#define GPIO_AF_TIM10 ((uint8_t)0x03) /* TIM10 Alternate Function mapping */
 	#define GPIO_AF_TIM11 ((uint8_t)0x03) /* TIM11 Alternate Function mapping */
 	#if defined(STM32F446xx)
@@ -301,10 +301,10 @@ typedef struct {
 	#define GPIO_AF_USART1 ((uint8_t)0x07) /* USART1 Alternate Function mapping  */
 	#define GPIO_AF_USART2 ((uint8_t)0x07) /* USART2 Alternate Function mapping  */
 	#define GPIO_AF_USART3 ((uint8_t)0x07) /* USART3 Alternate Function mapping  */
-	#define GPIO_AF7_SPI3 ((uint8_t)0x07)  /* SPI3/I2S3ext Alternate Function mapping */
+	#define GPIO_AF7_SPI3  ((uint8_t)0x07) /* SPI3/I2S3ext Alternate Function mapping */
 	#if defined(STM32F413_423xx)
 		#define GPIO_AF7_DFSDM2 ((uint8_t)0x07) /* DFSDM2 Alternate Function mapping */
-		#define GPIO_AF7_SAI1 ((uint8_t)0x07)	/* SAI1 Alternate Function mapping       */
+		#define GPIO_AF7_SAI1	((uint8_t)0x07) /* SAI1 Alternate Function mapping       */
 	#endif						/* STM32F413_423xx */
 
 	/**
@@ -315,15 +315,15 @@ typedef struct {
 	/**
 	 * @brief   AF 8 selection
 	 */
-	#define GPIO_AF_UART4 ((uint8_t)0x08)  /* UART4 Alternate Function mapping  */
-	#define GPIO_AF_UART5 ((uint8_t)0x08)  /* UART5 Alternate Function mapping  */
-	#define GPIO_AF_USART6 ((uint8_t)0x08) /* USART6 Alternate Function mapping */
-	#define GPIO_AF_UART7 ((uint8_t)0x08)  /* UART7 Alternate Function mapping  */
-	#define GPIO_AF_UART8 ((uint8_t)0x08)  /* UART8 Alternate Function mapping  */
+	#define GPIO_AF_UART4	((uint8_t)0x08) /* UART4 Alternate Function mapping  */
+	#define GPIO_AF_UART5	((uint8_t)0x08) /* UART5 Alternate Function mapping  */
+	#define GPIO_AF_USART6	((uint8_t)0x08) /* USART6 Alternate Function mapping */
+	#define GPIO_AF_UART7	((uint8_t)0x08) /* UART7 Alternate Function mapping  */
+	#define GPIO_AF_UART8	((uint8_t)0x08) /* UART8 Alternate Function mapping  */
 	#if defined(STM32F412xG) || defined(STM32F413_423xx)
 		#define GPIO_AF8_USART3 ((uint8_t)0x08) /* USART3 Alternate Function mapping */
 		#define GPIO_AF8_DFSDM1 ((uint8_t)0x08) /* DFSDM Alternate Function mapping  */
-		#define GPIO_AF8_CAN1 ((uint8_t)0x08)	/* CAN1 Alternate Function mapping   */
+		#define GPIO_AF8_CAN1	((uint8_t)0x08) /* CAN1 Alternate Function mapping   */
 	#endif						/* STM32F412xG || STM32F413_423xx */
 	#if defined(STM32F446xx)
 		#define GPIO_AF8_SAI2 ((uint8_t)0x08) /* SAI2 Alternate Function mapping */
@@ -333,8 +333,8 @@ typedef struct {
 	/**
 	 * @brief   AF 9 selection
 	 */
-	#define GPIO_AF_CAN1 ((uint8_t)0x09)  /* CAN1 Alternate Function mapping  */
-	#define GPIO_AF_CAN2 ((uint8_t)0x09)  /* CAN2 Alternate Function mapping  */
+	#define GPIO_AF_CAN1  ((uint8_t)0x09) /* CAN1 Alternate Function mapping  */
+	#define GPIO_AF_CAN2  ((uint8_t)0x09) /* CAN2 Alternate Function mapping  */
 	#define GPIO_AF_TIM12 ((uint8_t)0x09) /* TIM12 Alternate Function mapping */
 	#define GPIO_AF_TIM13 ((uint8_t)0x09) /* TIM13 Alternate Function mapping */
 	#define GPIO_AF_TIM14 ((uint8_t)0x09) /* TIM14 Alternate Function mapping */
@@ -373,23 +373,23 @@ typedef struct {
 		#define GPIO_AF10_QUADSPI ((uint8_t)0x0A) /* QuadSPI Alternate Function mapping */
 	#endif /* STM32F412xG || STM32F413_423xx || STM32F446xx || STM32F469_479xx */
 	#if defined(STM32F412xG) || defined(STM32F413_423xx)
-		#define GPIO_AF10_FMC ((uint8_t)0xA)	/* FMC Alternate Function mapping    */
+		#define GPIO_AF10_FMC	 ((uint8_t)0xA) /* FMC Alternate Function mapping    */
 		#define GPIO_AF10_DFSDM1 ((uint8_t)0xA) /* DFSDM Alternate Function mapping  */
 	#endif						/* STM32F412xG || STM32F413_423xx */
 	#if defined(STM32F413_423xx)
 		#define GPIO_AF10_DFSDM2 ((uint8_t)0x0A) /* DFSDM2 Alternate Function mapping */
-		#define GPIO_AF10_SAI1 ((uint8_t)0x0A)	 /* SAI1 Alternate Function mapping   */
+		#define GPIO_AF10_SAI1	 ((uint8_t)0x0A) /* SAI1 Alternate Function mapping   */
 	#endif						 /* STM32F413_423xx */
 	/**
 	 * @brief   AF 11 selection
 	 */
 	#define GPIO_AF_ETH ((uint8_t)0x0B) /* ETHERNET Alternate Function mapping */
 	#if defined(STM32F413_423xx)
-		#define GPIO_AF11_UART4 ((uint8_t)0x0B)	 /* UART4 Alternate Function mapping  */
-		#define GPIO_AF11_UART5 ((uint8_t)0x0B)	 /* UART5 Alternate Function mapping  */
-		#define GPIO_AF11_UART9 ((uint8_t)0x0B)	 /* UART9 Alternate Function mapping  */
+		#define GPIO_AF11_UART4	 ((uint8_t)0x0B) /* UART4 Alternate Function mapping  */
+		#define GPIO_AF11_UART5	 ((uint8_t)0x0B) /* UART5 Alternate Function mapping  */
+		#define GPIO_AF11_UART9	 ((uint8_t)0x0B) /* UART9 Alternate Function mapping  */
 		#define GPIO_AF11_UART10 ((uint8_t)0x0B) /* UART10 Alternate Function mapping */
-		#define GPIO_AF11_CAN3 ((uint8_t)0x0B)	 /* CAN3 Alternate Function mapping   */
+		#define GPIO_AF11_CAN3	 ((uint8_t)0x0B) /* CAN3 Alternate Function mapping   */
 	#endif						 /* STM32F413_423xx */
 
 	/**
@@ -529,7 +529,7 @@ typedef struct {
  * @{
  */
 
-	#define GPIO_Mode_AIN GPIO_Mode_AN
+	#define GPIO_Mode_AIN	GPIO_Mode_AN
 
 	#define GPIO_AF_OTG1_FS GPIO_AF_OTG_FS
 	#define GPIO_AF_OTG2_HS GPIO_AF_OTG_HS

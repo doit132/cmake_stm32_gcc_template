@@ -51,15 +51,15 @@ const FSMC_NORSRAMTimingInitTypeDef FSMC_DefaultTimingStruct = {
 
 /* --------------------- FSMC registers bit mask ---------------------------- */
 /* FSMC BCRx Mask */
-#define BCR_MBKEN_SET ((uint32_t)0x00000001)
-#define BCR_MBKEN_RESET ((uint32_t)0x000FFFFE)
-#define BCR_FACCEN_SET ((uint32_t)0x00000040)
+#define BCR_MBKEN_SET	    ((uint32_t)0x00000001)
+#define BCR_MBKEN_RESET	    ((uint32_t)0x000FFFFE)
+#define BCR_FACCEN_SET	    ((uint32_t)0x00000040)
 
 /* FSMC PCRx Mask */
-#define PCR_PBKEN_SET ((uint32_t)0x00000004)
-#define PCR_PBKEN_RESET ((uint32_t)0x000FFFFB)
-#define PCR_ECCEN_SET ((uint32_t)0x00000040)
-#define PCR_ECCEN_RESET ((uint32_t)0x000FFFBF)
+#define PCR_PBKEN_SET	    ((uint32_t)0x00000004)
+#define PCR_PBKEN_RESET	    ((uint32_t)0x000FFFFB)
+#define PCR_ECCEN_SET	    ((uint32_t)0x00000040)
+#define PCR_ECCEN_RESET	    ((uint32_t)0x000FFFBF)
 #define PCR_MEMORYTYPE_NAND ((uint32_t)0x00000008)
 
 /* Private macro -------------------------------------------------------------*/

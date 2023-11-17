@@ -98,7 +98,7 @@
 	/* Private typedef -----------------------------------------------------------*/
 	/* Private define ------------------------------------------------------------*/
 	#define BROADCAST_ADDRESS ((uint32_t)0x0000F)
-	#define CFGR_CLEAR_MASK ((uint32_t)0x7000FE00) /* CFGR register Mask */
+	#define CFGR_CLEAR_MASK	  ((uint32_t)0x7000FE00) /* CFGR register Mask */
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

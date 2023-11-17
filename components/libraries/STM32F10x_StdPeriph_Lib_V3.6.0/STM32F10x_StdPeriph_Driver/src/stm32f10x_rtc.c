@@ -41,7 +41,7 @@
 /** @defgroup RTC_Private_Defines
  * @{
  */
-#define RTC_LSB_MASK ((uint32_t)0x0000FFFF)  /*!< RTC LSB Mask */
+#define RTC_LSB_MASK  ((uint32_t)0x0000FFFF) /*!< RTC LSB Mask */
 #define PRLH_MSB_MASK ((uint32_t)0x000F0000) /*!< RTC Prescaler MSB Mask */
 
 /**

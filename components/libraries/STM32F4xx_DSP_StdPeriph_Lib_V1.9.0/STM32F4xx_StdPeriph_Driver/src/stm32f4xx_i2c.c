@@ -97,9 +97,9 @@
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 
-#define CR1_CLEAR_MASK ((uint16_t)0xFBF5) /*<! I2C registers Masks */
-#define FLAG_MASK ((uint32_t)0x00FFFFFF)  /*<! I2C FLAG mask */
-#define ITEN_MASK ((uint32_t)0x07000000)  /*<! I2C Interrupt Enable mask */
+#define CR1_CLEAR_MASK ((uint16_t)0xFBF5)     /*<! I2C registers Masks */
+#define FLAG_MASK      ((uint32_t)0x00FFFFFF) /*<! I2C FLAG mask */
+#define ITEN_MASK      ((uint32_t)0x07000000) /*<! I2C Interrupt Enable mask */
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/

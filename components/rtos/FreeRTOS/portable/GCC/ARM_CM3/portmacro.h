@@ -44,13 +44,13 @@ extern "C" {
  */
 
 /* Type definitions. */
-#define portCHAR char
-#define portFLOAT float
-#define portDOUBLE double
-#define portLONG long
-#define portSHORT short
+#define portCHAR       char
+#define portFLOAT      float
+#define portDOUBLE     double
+#define portLONG       long
+#define portSHORT      short
 #define portSTACK_TYPE uint32_t
-#define portBASE_TYPE long
+#define portBASE_TYPE  long
 
 typedef portSTACK_TYPE StackType_t;
 typedef long BaseType_t;
@@ -61,7 +61,7 @@ typedef uint16_t TickType_t;
 	#define portMAX_DELAY (TickType_t)0xffff
 #else
 typedef uint32_t TickType_t;
-	#define portMAX_DELAY (TickType_t)0xffffffffUL
+	#define portMAX_DELAY		(TickType_t)0xffffffffUL
 
 	/* 32-bit tick type on a 32-bit architecture, so reads of the tick count do
 	 * not need to be guarded with a critical section. */
@@ -70,10 +70,10 @@ typedef uint32_t TickType_t;
 /*-----------------------------------------------------------*/
 
 /* Architecture specifics. */
-#define portSTACK_GROWTH (-1)
+#define portSTACK_GROWTH   (-1)
 #define portTICK_PERIOD_MS ((TickType_t)1000 / configTICK_RATE_HZ)
 #define portBYTE_ALIGNMENT 8
-#define portDONT_DISCARD __attribute__((used))
+#define portDONT_DISCARD   __attribute__((used))
 /*-----------------------------------------------------------*/
 
 /* Scheduler utilities. */
@@ -88,7 +88,7 @@ typedef uint32_t TickType_t;
 		__asm volatile("isb");                                                             \
 	}
 
-#define portNVIC_INT_CTRL_REG (*((volatile uint32_t *)0xe000ed04))
+#define portNVIC_INT_CTRL_REG  (*((volatile uint32_t *)0xe000ed04))
 #define portNVIC_PENDSVSET_BIT (1UL << 28UL)
 #define portEND_SWITCHING_ISR(xSwitchRequired)                                                     \
 	do {                                                                                       \
@@ -101,12 +101,12 @@ typedef uint32_t TickType_t;
 /* Critical section management. */
 extern void vPortEnterCritical(void);
 extern void vPortExitCritical(void);
-#define portSET_INTERRUPT_MASK_FROM_ISR() ulPortRaiseBASEPRI()
-#define portCLEAR_INTERRUPT_MASK_FROM_ISR(x) vPortSetBASEPRI(x)
-#define portDISABLE_INTERRUPTS() vPortRaiseBASEPRI()
-#define portENABLE_INTERRUPTS() vPortSetBASEPRI(0)
-#define portENTER_CRITICAL() vPortEnterCritical()
-#define portEXIT_CRITICAL() vPortExitCritical()
+#define portSET_INTERRUPT_MASK_FROM_ISR()		 ulPortRaiseBASEPRI()
+#define portCLEAR_INTERRUPT_MASK_FROM_ISR(x)		 vPortSetBASEPRI(x)
+#define portDISABLE_INTERRUPTS()			 vPortRaiseBASEPRI()
+#define portENABLE_INTERRUPTS()				 vPortSetBASEPRI(0)
+#define portENTER_CRITICAL()				 vPortEnterCritical()
+#define portEXIT_CRITICAL()				 vPortExitCritical()
 
 /*-----------------------------------------------------------*/
 
@@ -114,7 +114,7 @@ extern void vPortExitCritical(void);
  * not necessary for to use this port.  They are defined so the common demo files
  * (which build with all the ports) will build. */
 #define portTASK_FUNCTION_PROTO(vFunction, pvParameters) void vFunction(void *pvParameters)
-#define portTASK_FUNCTION(vFunction, pvParameters) void vFunction(void *pvParameters)
+#define portTASK_FUNCTION(vFunction, pvParameters)	 void vFunction(void *pvParameters)
 /*-----------------------------------------------------------*/
 
 /* Tickless idle/low power functionality. */

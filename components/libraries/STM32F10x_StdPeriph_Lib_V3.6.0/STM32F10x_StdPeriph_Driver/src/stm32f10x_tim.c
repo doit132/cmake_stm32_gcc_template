@@ -46,8 +46,8 @@
 
 /* ---------------------- TIM registers bit mask ------------------------ */
 #define SMCR_ETR_Mask ((uint16_t)0x00FF)
-#define CCMR_Offset ((uint16_t)0x0018)
-#define CCER_CCE_Set ((uint16_t)0x0001)
+#define CCMR_Offset   ((uint16_t)0x0018)
+#define CCER_CCE_Set  ((uint16_t)0x0001)
 #define CCER_CCNE_Set ((uint16_t)0x0004)
 
 /**

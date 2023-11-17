@@ -84,10 +84,10 @@ typedef struct {
 	/** @defgroup HASH_Algo_Selection
 	 * @{
 	 */
-	#define HASH_AlgoSelection_SHA1 ((uint32_t)0x0000) /*!< HASH function is SHA1   */
-	#define HASH_AlgoSelection_SHA224 HASH_CR_ALGO_1   /*!< HASH function is SHA224 */
-	#define HASH_AlgoSelection_SHA256 HASH_CR_ALGO	   /*!< HASH function is SHA256 */
-	#define HASH_AlgoSelection_MD5 HASH_CR_ALGO_0	   /*!< HASH function is MD5    */
+	#define HASH_AlgoSelection_SHA1	  ((uint32_t)0x0000) /*!< HASH function is SHA1   */
+	#define HASH_AlgoSelection_SHA224 HASH_CR_ALGO_1     /*!< HASH function is SHA224 */
+	#define HASH_AlgoSelection_SHA256 HASH_CR_ALGO	     /*!< HASH function is SHA256 */
+	#define HASH_AlgoSelection_MD5	  HASH_CR_ALGO_0     /*!< HASH function is MD5    */
 
 	#define IS_HASH_ALGOSELECTION(ALGOSELECTION)                                               \
 		(((ALGOSELECTION) == HASH_AlgoSelection_SHA1) ||                                   \
@@ -133,7 +133,7 @@ typedef struct {
 	 * @{
 	 */
 	#define HASH_HMACKeyType_ShortKey ((uint32_t)0x00000000) /*!< HMAC Key is <= 64 bytes */
-	#define HASH_HMACKeyType_LongKey HASH_CR_LKEY		 /*!< HMAC Key is > 64 bytes  */
+	#define HASH_HMACKeyType_LongKey  HASH_CR_LKEY		 /*!< HMAC Key is > 64 bytes  */
 
 	#define IS_HASH_HMAC_KEYTYPE(KEYTYPE)                                                      \
 		(((KEYTYPE) == HASH_HMACKeyType_ShortKey) ||                                       \
@@ -173,8 +173,7 @@ typedef struct {
 	#define HASH_FLAG_DINIS                                                                    \
 		HASH_SR_DINIS /*!< 16 locations are free in the DIN : A new block can be entered   \
 				 into the input buffer */
-	#define HASH_FLAG_DCIS                                                                     \
-		HASH_SR_DCIS /*!< Digest calculation complete */
+	#define HASH_FLAG_DCIS HASH_SR_DCIS /*!< Digest calculation complete */
 	#define HASH_FLAG_DMAS                                                                     \
 		HASH_SR_DMAS /*!< DMA interface is enabled (DMAE=1) or a transfer is ongoing */
 	#define HASH_FLAG_BUSY                                                                     \
