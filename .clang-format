@@ -8,6 +8,8 @@ AlignConsecutiveDeclarations: None
 AlignEscapedNewlinesLeft: false
 AlignOperands:   Align
 AlignTrailingComments: true
+# 宏对齐
+AlignConsecutiveMacros: AcrossEmptyLinesAndComments
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
