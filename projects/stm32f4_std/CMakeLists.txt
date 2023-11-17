@@ -106,7 +106,7 @@ INCLUDE_DIRECTORIES(
 SET(USER_SOURCE
     ${CMAKE_SOURCE_DIR}/src/stm32f4xx_it.c
     ${CMAKE_SOURCE_DIR}/src/system_stm32f4xx.c
-    ${CMAKE_SOURCE_DIR}/src/main.c
+    # ${CMAKE_SOURCE_DIR}/src/main.c
     )
 
 # ------------------------------------------------

@@ -1,9 +1,10 @@
 {
-    // 关掉 c/c++ 插件中与 ccls 冲突的功能, 因为 ccls 扩展不提供任何调试器集成, 用以下设置来禁用 vscode-cpptools 的编辑器支持, 同时仍然保留调试器功能
-    // "C_Cpp.autocomplete": "disabled",
+    // 关掉 c/c++ 插件中与 ccls 相同的功能, 不然补全候选项就会出现重复项
+    // 因为 ccls 扩展不提供任何调试器集成, 用以下设置来禁用 vscode-cpptools 的编辑器支持, 同时仍然保留调试器功能
+    "C_Cpp.autocomplete": "disabled",
     "C_Cpp.formatting": "disabled",
     "C_Cpp.errorSquiggles": "disabled",
-    // "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.intelliSenseEngine": "disabled",
     "files.associations": {
         ".clang-format": "yaml",
         "*.toml": "toml",
@@ -21,7 +22,8 @@
         "sys.h": "c",
         "main.h": "c",
         "stm32f4xx.h": "c",
-        "stm32f4xx_gpio.h": "c"
+        "stm32f4xx_gpio.h": "c",
+        "stm32f4xx_conf.h": "c"
     },
     "clangd.detectExtensionConflicts": true,
     "clangd.arguments": [

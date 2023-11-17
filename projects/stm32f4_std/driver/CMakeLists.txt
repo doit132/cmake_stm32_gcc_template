@@ -1,8 +1,9 @@
 TARGET_SOURCES(
-  ${PROJECT_NAME}
-  PRIVATE # {{BEGIN_TARGET_SOURCES}}
-          ${CMAKE_CURRENT_LIST_DIR}/led/led.c
-          # {{END_TARGET_SOURCES}}
+    ${PROJECT_NAME}
+    PRIVATE   # {{BEGIN_TARGET_SOURCES}}
+    ${CMAKE_CURRENT_LIST_DIR}/led/led.c
+    ${CMAKE_CURRENT_LIST_DIR}/led/led_test.c
+    # {{END_TARGET_SOURCES}}
 )
 
 # Add the Common/inc directory to the project include list
